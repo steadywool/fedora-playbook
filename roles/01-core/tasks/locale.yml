@@ -1,7 +1,0 @@
----
-- name: Install locales
-  locale_gen:
-    name: "{{ locale }}"
-
-- name: Set locales
-  command: localectl set-locale "{{ locale }}"

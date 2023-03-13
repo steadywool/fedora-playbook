@@ -1,8 +1,0 @@
----
-- name: Include the packages
-  ansible.builtin.include_tasks:
-    file: packages.yml
-
-- name: Include the services
-  ansible.builtin.include_tasks:
-    file: services.yml

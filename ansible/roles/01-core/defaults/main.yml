@@ -1,0 +1,23 @@
+---
+kernel: linux-hardened
+timezone: Europe/Paris
+locale: en_US.UTF-8
+keymap: fr
+hostname: blue-duck
+
+core_packages:
+  - base
+  - base-devel
+  - linux-firmware
+  - linux-hardened
+  - pacman-contrib
+  - intel-ucode
+  - apparmor
+  - btrfs-progs
+  - ntfs-3g
+  - zip
+  - unzip
+  - unrar
+  - p7zip
+  - git
+  - wget

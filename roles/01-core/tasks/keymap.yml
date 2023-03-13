@@ -1,3 +1,0 @@
----
-- name: Set keymap
-  command: localectl set-keymap "{{ keymap }}"
