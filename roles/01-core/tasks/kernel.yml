@@ -1,0 +1,14 @@
+---
+- name: Create mkinitcpio config
+  ansible.builtin.copy:
+    src: mkinitcpio.conf
+    dest: /etc/mkinitcpio.conf
+
+- name: check if linux image exists
+  stat:
+    path: /boot/initramfs-{{ kernel }}.img
+  register: kernel_image
+
+- name: Run mkinitcpio
+  command: mkinitcpio -p "{{ kernel }}"
+  when: not kernel_image.stat.exists

@@ -1,0 +1,42 @@
+---
+- name: Enable docker service
+  ansible.builtin.systemd:
+    name: docker.service
+    state: started
+    enabled: true
+
+- name: Enable tlp service
+  ansible.builtin.systemd:
+    name: tlp.service
+    state: started
+    enabled: true
+
+- name: Enable bluetooth service
+  ansible.builtin.systemd:
+    name: bluetooth.service
+    state: started
+    enabled: true
+
+- name: Enable NetworkManager service
+  ansible.builtin.systemd:
+    name: NetworkManager.service
+    state: started
+    enabled: true
+
+- name: Enable firewalld service
+  ansible.builtin.systemd:
+    name: firewalld.service
+    state: started
+    enabled: true
+
+- name: Enable cups service
+  ansible.builtin.systemd:
+    name: cups.service
+    state: started
+    enabled: true
+
+- name: Enable nix-daemon service
+  ansible.builtin.systemd:
+    name: nix-daemon.service
+    state: started
+    enabled: true

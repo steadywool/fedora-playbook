@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  become: yes
+
+  tasks:
+    - ansible.builtin.include_role:
+        name: 01-core
+      tags: core
+
+    - ansible.builtin.include_role:
+        name: 02-system
+      tags: system
+
+    - ansible.builtin.include_role:
+        name: 03-user
+      tags: user
