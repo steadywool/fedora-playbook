@@ -1,8 +1,10 @@
 ---
-- name: Include packages
-  ansible.builtin.include_tasks:
+- name: Import packages
+  ansible.builtin.import_tasks:
     file: packages.yml
+  tags: packages
 
-- name: Include flatpak
-  ansible.builtin.include_tasks:
+- name: Import flatpak
+  ansible.builtin.import_tasks:
     file: flatpak.yml
+  tags: packages

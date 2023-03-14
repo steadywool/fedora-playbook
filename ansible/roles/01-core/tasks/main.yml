@@ -1,28 +1,30 @@
 ---
-- name: Include packages
-  ansible.builtin.include_tasks:
+- name: Import packages
+  ansible.builtin.import_tasks:
     file: packages.yml
+  tags: packages
 
-- name: Include kernel
-  ansible.builtin.include_tasks:
+- name: Import kernel
+  ansible.builtin.import_tasks:
     file: kernel.yml
 
-- name: Include services
-  ansible.builtin.include_tasks:
+- name: Import services
+  ansible.builtin.import_tasks:
     file: services.yml
+  tags: services
 
-- name: Include bootloader
-  ansible.builtin.include_tasks:
+- name: Import bootloader
+  ansible.builtin.import_tasks:
     file: boot.yml
 
-- name: Include hostname
-  ansible.builtin.include_tasks:
+- name: Import hostname
+  ansible.builtin.import_tasks:
     file: hostname.yml
 
-- name: Include locales
-  ansible.builtin.include_tasks:
+- name: Import locales
+  ansible.builtin.import_tasks:
     file: locale.yml
 
-- name: Include timezone
-  ansible.builtin.include_tasks:
+- name: Import timezone
+  ansible.builtin.import_tasks:
     file: timezone.yml

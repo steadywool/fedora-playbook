@@ -1,6 +1,4 @@
 ---
-kernel: linux-hardened
-esp_path: /boot
 timezone: Europe/Paris
 locale: en_US.UTF-8
 keymap: fr
@@ -10,7 +8,7 @@ core_packages:
   # Utils
   - base
   - base-devel
-  - "{{ kernel }}"
+  - linux-hardened
   - linux-firmware
   - pacman-contrib
   - intel-ucode
