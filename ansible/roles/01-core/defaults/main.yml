@@ -1,5 +1,6 @@
 ---
 kernel: linux-hardened
+esp_dir: /boot
 timezone: Europe/Paris
 locale: en_US.UTF-8
 keymap: fr
@@ -8,8 +9,8 @@ hostname: blue-duck
 core_packages:
   - base
   - base-devel
+  - "{{ kernel }}"
   - linux-firmware
-  - linux-hardened
   - pacman-contrib
   - intel-ucode
   - apparmor
