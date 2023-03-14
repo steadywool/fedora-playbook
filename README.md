@@ -56,6 +56,8 @@ $ cd ansible-dotfiles/ansible
 # ansible-playbook playbook.yml --ask-vault-pass
 ```
 
+If you don't add the `--ask-vault-pass`, the user role is disabled.
+
 ## Configuration
 
 You can perform partially run of playbook using tags:
