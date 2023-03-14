@@ -1,0 +1,10 @@
+---
+- name: Install terminal packages
+  community.general.pacman:
+    name: "{{ terminal_packages }}"
+    state: present
+
+- name: Install desktop packages
+  community.general.pacman:
+    name: "{{ desktop_packages }}"
+    state: present

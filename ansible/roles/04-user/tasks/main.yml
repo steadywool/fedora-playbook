@@ -1,0 +1,20 @@
+---
+- name: Include the user vault
+  ansible.builtin.include_vars:
+    file: user.yml
+  when: user is defined
+
+- name: Include user
+  ansible.builtin.include_tasks:
+    file: user.yml
+  when: user is defined
+
+- name: Include dotfiles
+  ansible.builtin.include_tasks:
+    file: dotfiles.yml
+  when: user is defined
+
+- name: Include services
+  ansible.builtin.include_tasks:
+    file: services.yml
+  when: user is defined
