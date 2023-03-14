@@ -1,14 +1,10 @@
 ---
-- name: Check if systemd-boot is installed
-  stat:
-    path: {{ esp_dir }}/EFI/BOOT/BOOTX64.EFI
-  register: boot_efi
-
 - name: Install systemd-boot
-  command: bootctl install
-  when: not boot_efi.stat.exists
+  command: "bootctl install --esp-path={{ esp_path }}"
+  args:
+    creates: "{{ esp_path }}/EFI/BOOT/BOOTX64.EFI"
 
 - name: Create bootloader entries
   ansible.builtin.copy:
     src: loader/
-    dest: {{ esp_dir }}/loader
+    dest: "{{ esp_path }}/loader"

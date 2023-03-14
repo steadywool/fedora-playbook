@@ -1,20 +1,5 @@
 ---
-- name: Install tools packages
+- name: Install system packages
   community.general.pacman:
-    name: "{{ tools_packages }}"
-
-- name: Install desktop packages
-  community.general.pacman:
-    name: "{{ desktop_packages }}"
-
-- name: Install AUR helper using makepkg
-  kewlfft.aur.aur:
-    name: "{{ aur_helper }}"
-    use: makepkg
-  become_user: "{{ user.name }}"
-
-- name: Install AUR packages
-  kewlfft.aur.aur:
-    use: "{{ aur_helper }}"
-    name: "{{ aur_packages }}"
-  become_user: "{{ user.name }}"
+    name: "{{ system_packages }}"
+    state: present

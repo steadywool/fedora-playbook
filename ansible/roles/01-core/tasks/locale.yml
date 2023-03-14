@@ -4,4 +4,7 @@
     name: "{{ locale }}"
 
 - name: Set locales
-  command: localectl set-locale "{{ locale }}"
+  command: "localectl set-locale {{ locale }}"
+
+- name: Set keymap
+  command: "localectl set-keymap {{ keymap }}"

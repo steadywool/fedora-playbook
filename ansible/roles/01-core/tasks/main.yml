@@ -19,10 +19,6 @@
   ansible.builtin.include_tasks:
     file: hostname.yml
 
-- name: Include keymaps
-  ansible.builtin.include_tasks:
-    file: keymap.yml
-
 - name: Include locales
   ansible.builtin.include_tasks:
     file: locale.yml

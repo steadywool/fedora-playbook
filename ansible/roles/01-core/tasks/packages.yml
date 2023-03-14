@@ -2,3 +2,4 @@
 - name: Install core packages
   community.general.pacman:
     name: "{{ core_packages }}"
+    state: present

@@ -12,5 +12,9 @@
       tags: system
 
     - ansible.builtin.import_role:
-        name: 03-user
+        name: 03-desktop
+      tags: desktop
+
+    - ansible.builtin.import_role:
+        name: 04-user
       tags: user

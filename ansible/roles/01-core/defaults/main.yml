@@ -1,24 +1,32 @@
 ---
 kernel: linux-hardened
-esp_dir: /boot
+esp_path: /boot
 timezone: Europe/Paris
 locale: en_US.UTF-8
 keymap: fr
 hostname: blue-duck
 
 core_packages:
+  # Utils
   - base
   - base-devel
   - "{{ kernel }}"
   - linux-firmware
   - pacman-contrib
   - intel-ucode
+
+  # Administration
   - apparmor
+  - usbguard
+  - firewalld
+  - arch-audit
+
+  # Filesystem
   - btrfs-progs
   - ntfs-3g
+
+  # Compression
   - zip
   - unzip
   - unrar
   - p7zip
-  - git
-  - wget
