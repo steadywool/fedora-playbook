@@ -26,9 +26,9 @@ Here is the structure of the Playbook:
         └── vars
 ```
 
-The variables are present in the "defaults" and "vars" files. You can edit them to customize your installation.
+The variables are present in the `/defaults` and `/vars` files. You can edit them to customize your installation.
 
-Dotfiles are located in the "files" folder of the "04-user" role. They are automatically copied to your user directory.
+Dotfiles are located in the `/files` folder of the `04-user` role. They are automatically copied to your user directory.
 
 ## Installation
 
@@ -76,7 +76,7 @@ In the future, each task will have an assigned tag.
 ## FAQ
 - **How to create a user ?**
 
-In my case, I created a [vault](https://docs.ansible.com/ansible/latest/vault_guide/index.html) in the "vars" folder of the "04-user" role with these variables in it:
+In my case, I created a [vault](https://docs.ansible.com/ansible/latest/vault_guide/index.html) in the `/vars` folder of the `04-user` role with these variables in it:
 ```
 user:
   name: USER
@@ -91,5 +91,6 @@ All I had to do after that was import this file:
 - name: Include the user vault
   ansible.builtin.include_vars:
     file: user.yml
+  when: user is defined
 ```
 <sup>main.yml</sup>
