@@ -15,12 +15,6 @@ core_packages:
   - pacman-contrib
   - intel-ucode
 
-  # Administration
-  - apparmor
-  - usbguard
-  - firewalld
-  - arch-audit
-
   # Filesystem
   - btrfs-progs
   - ntfs-3g

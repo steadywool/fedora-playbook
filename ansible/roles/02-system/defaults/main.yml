@@ -5,6 +5,12 @@ system_packages:
   - tlp
   - realtime-privileges
 
+  # Administration
+  - apparmor
+  - usbguard
+  - firewalld
+  - arch-audit
+
   # Networking
   - networkmanager
   - bluez

@@ -70,9 +70,9 @@ $ cd ansible-dotfiles/ansible
 
 ## Configuration
 
-You can perform partially run of playbook using tags:
+You can perform partially run of playbook using tags. Here we skip the "user" part:
 ```
-# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml --ask-vault-pass --tags desktop,user
+# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml --ask-vault-pass --tags core,system,desktop
 ```
 
 Available tags are:
@@ -84,10 +84,7 @@ Available tags are:
 - services
 - dotfiles
 
-You can skip the "user" part like this:
-```
-# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml --tags core,system,desktop
-```
+This playbook does not update the system.
 
 ## FAQ
 - **How to create a user ?**
@@ -99,13 +96,5 @@ user:
   password: PASSWORD
   groups: GROUP1,GROUP2
   shell: SHELL
-```
-<sup>user.yml</sup>
-
-All I had to do after that was import this file:
-```
-- name: Include the user vault
-  ansible.builtin.include_vars:
-    file: user.yml
 ```
 <sup>main.yml</sup>
