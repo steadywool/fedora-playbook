@@ -1,7 +1,9 @@
 ---
+locale:
+  lang: en_US.UTF-8
+  keymap: fr
+
 timezone: Europe/Paris
-locale: en_US.UTF-8
-keymap: fr
 hostname: blue-duck
 
 core_packages:

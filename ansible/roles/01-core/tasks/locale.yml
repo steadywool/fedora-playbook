@@ -1,10 +1,11 @@
 ---
-- name: Install locales
-  locale_gen:
-    name: "{{ locale }}"
+- name: Ensure locales are installed
+  community.general.locale_gen:
+    name: "{{ locale.lang }}"
+    state: present
 
-- name: Set locales
-  command: "localectl set-locale {{ locale }}"
+- name: Set locale
+  command: "localectl set-locale LANG={{ locale.lang }}"
 
 - name: Set keymap
-  command: "localectl set-keymap {{ keymap }}"
+  command: "localectl set-keymap {{ locale.keymap }}"

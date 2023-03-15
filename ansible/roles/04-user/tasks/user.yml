@@ -8,9 +8,7 @@
     storage: "luks"
 
 - name: add sudoers file
-  copy:
+  ansible.builtin.copy:
     src: sudoers_kani
     dest: /etc/sudoers.d/kani
-    owner: root
-    group: root
     mode: 0440
