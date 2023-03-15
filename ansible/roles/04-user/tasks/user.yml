@@ -1,4 +1,9 @@
 ---
+- name: Check if user is created
+  command: "getent passwd {{ user.name }}"
+  register: user_exists
+  ignore_errors: true
+
 - name: Add user
   community.general.homectl:
     name: "{{ user.name }}"
@@ -6,9 +11,10 @@
     memberof: "{{ user.groups }}"
     shell: "{{ user.shell }}"
     storage: "luks"
+  when: user_exists.rc != 0
 
 - name: add sudoers file
   ansible.builtin.copy:
-    src: sudoers_kani
-    dest: /etc/sudoers.d/kani
+    src: sudoers_wheel
+    dest: /etc/sudoers.d/wheel
     mode: 0440

@@ -21,12 +21,12 @@ Here is the structure of the Playbook:
     │   ├── defaults
     │   └── tasks
     └── 04-user
+        ├── defaults
         ├── files
-        ├── tasks
-        └── vars
+        └── tasks
 ```
 
-The variables are present in the `/defaults` and `/vars` files. You can edit them to customize your installation.
+The variables are present in the `/defaults` directories. You can edit them to customize your installation.
 
 Dotfiles are located in the `/files` folder of the `04-user` role. They are automatically copied to your user directory.
 
@@ -58,21 +58,21 @@ Or if you haven't chrooted yet:
 
 All you have to do now is launch the Ansible Playbook:
 ```
-# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml --ask-vault-pass
+# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml
 ```
 
 Or you can use this Playbook like this:
 ```
 $ git clone https://github.com/Kaniville/ansible-dotfiles.git
 $ cd ansible-dotfiles/ansible
-# ansible-playbook playbook.yml --ask-vault-pass
+# ansible-playbook playbook.yml
 ```
 
 ## Configuration
 
 You can perform partially run of playbook using tags. Here we skip the "user" part:
 ```
-# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml --ask-vault-pass --tags core,system,desktop
+# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml -t core,system,desktop
 ```
 
 Available tags are:
@@ -85,16 +85,3 @@ Available tags are:
 - dotfiles
 
 This playbook does not update the system.
-
-## FAQ
-- **How to create a user ?**
-
-In my case, I created a [vault](https://docs.ansible.com/ansible/latest/vault_guide/index.html) in the `/vars` folder of the `04-user` role with these variables in it:
-```
-user:
-  name: USER
-  password: PASSWORD
-  groups: GROUP1,GROUP2
-  shell: SHELL
-```
-<sup>main.yml</sup>
