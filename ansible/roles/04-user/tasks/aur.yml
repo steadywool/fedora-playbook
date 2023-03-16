@@ -1,0 +1,19 @@
+---
+- name: Check if helper is already installed
+  stat:
+    path: /usr/bin/yay
+  register: yay_installed
+
+- name: Clone helper
+  ansible.builtin.git:
+    repo: https://aur.archlinux.org/yay-bin.git
+    dest: /tmp/yay
+    clone: yes
+    update: yes
+  become_user: "{{ user.name }}"
+  when: not yay_installed.stat.exists
+
+- name: Build helper
+  shell: "cd /tmp/yay && makepkg -si --noconfirm"
+  become_user: "{{ user.name }}"
+  when: not yay_installed.stat.exists
