@@ -5,17 +5,21 @@
 
   tasks:
     - ansible.builtin.import_role:
-        name: 01-core
+        name: core
       tags: core
 
     - ansible.builtin.import_role:
-        name: 02-system
+        name: system
       tags: system
 
     - ansible.builtin.import_role:
-        name: 03-desktop
+        name: security
+      tags: security
+
+    - ansible.builtin.import_role:
+        name: desktop
       tags: desktop
 
     - ansible.builtin.import_role:
-        name: 04-user
+        name: user
       tags: user

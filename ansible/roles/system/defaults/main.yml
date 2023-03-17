@@ -9,13 +9,6 @@ system_packages:
   - man-db
   - tree
 
-  # Administration
-  - apparmor
-  - usbguard
-  - firewalld
-  - arch-audit
-  - firejail
-
   # Networking
   - networkmanager
   - bluez

@@ -10,17 +10,20 @@ Here is the structure of the Playbook:
 ```
 ├── playbook.yml
 └── roles
-    ├── 01-core
+    ├── core
     │   ├── defaults
     │   ├── files
     │   └── tasks
-    ├── 02-system
+    ├── desktop
     │   ├── defaults
     │   └── tasks
-    ├── 03-desktop
+    ├── security
     │   ├── defaults
     │   └── tasks
-    └── 04-user
+    ├── system
+    │   ├── defaults
+    │   └── tasks
+    └── user
         ├── defaults
         ├── files
         └── tasks
@@ -28,7 +31,7 @@ Here is the structure of the Playbook:
 
 The variables are present in the `/defaults` directories. You can edit them to customize your installation.
 
-Dotfiles are located in the [`/files` folder of the `04-user` role](ansible/roles/04-user/files/dotfiles). They are automatically copied to your user directory.
+Dotfiles are located in the [`/files` folder of the `user` role](ansible/roles/user/files/dotfiles). They are automatically copied to your user directory.
 
 Here is the partitioning I use:
 
@@ -78,6 +81,7 @@ You can perform partially run of playbook using tags. Here we skip the "user" pa
 Available tags are:
 - core
 - system
+- security
 - desktop
 - user
 - packages

@@ -5,18 +5,6 @@
     state: started
     enabled: true
 
-- name: Enable apparmor service
-  ansible.builtin.systemd:
-    name: apparmor.service
-    state: started
-    enabled: true
-
-- name: Enable firewalld service
-  ansible.builtin.systemd:
-    name: firewalld.service
-    state: started
-    enabled: true
-
 - name: Enable NetworkManager service
   ansible.builtin.systemd:
     name: NetworkManager.service
