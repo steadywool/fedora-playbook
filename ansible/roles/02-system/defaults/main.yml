@@ -4,12 +4,16 @@ system_packages:
   - udisks2
   - tlp
   - realtime-privileges
+  - git
+  - wget
+  - man-db
 
   # Administration
   - apparmor
   - usbguard
   - firewalld
   - arch-audit
+  - firejail
 
   # Networking
   - networkmanager

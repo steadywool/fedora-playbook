@@ -16,3 +16,10 @@
     name: systemd-homed.service
     state: started
     enabled: true
+
+- name: Enable auditd service
+  ansible.builtin.systemd:
+    name: auditd.service
+    state: started
+    enabled: true
+

@@ -8,3 +8,8 @@
   ansible.builtin.import_tasks:
     file: services.yml
   tags: services
+
+- name: Import apparmor profiles
+  ansible.builtin.import_tasks:
+    file: apparmor.yml
+  tags: security

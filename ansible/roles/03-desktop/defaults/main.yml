@@ -10,10 +10,7 @@ terminal_packages:
 
   # Development
   - ansible
-  - git
-  - wget
   - jq
-  - man-db
   - rclone
   - npm
 
