@@ -6,7 +6,9 @@ Linux Dotfiles managed with Ansible and Git 🌸
 
 ## Structure
 
-The variables are present in the `/defaults` directories. You can edit them to customize your installation.
+The variables are present in the `roles/ROLE_NAME/defaults` directories. You can edit them to customize your installation.
+
+Variables used by all roles are in the `group_var` directory.
 
 Dotfiles are located in the `/files/dotfiles` directories of each roles.
 
@@ -57,14 +59,21 @@ You can perform partially run of playbook using tags:
 
 Available tags are:
 - core
+- user
 - system
 - security
-- user
 - desktop
 - development
 - network
 - packages
 - services
 - dotfiles
+
+For example, to only download and install my dotfiles, do:
+```
+# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml -t dotfiles
+```
+
+⚠️ **Be sure to change the user variable in the group_vars directory.**
 
 ⚠️ **This playbook does not update the system.**

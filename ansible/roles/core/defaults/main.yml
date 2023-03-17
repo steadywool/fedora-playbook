@@ -24,3 +24,6 @@ core_packages:
   - unzip
   - unrar
   - p7zip
+
+  # Editor
+  - nano

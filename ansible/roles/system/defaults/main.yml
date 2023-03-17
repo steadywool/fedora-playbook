@@ -9,7 +9,6 @@ system_packages:
   - man-db
   - tree
   - htop
-  - nano
   - ansible
 
   # Android
