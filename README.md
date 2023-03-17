@@ -6,9 +6,7 @@ Linux Dotfiles managed with Ansible and Git 🌸
 
 ## Structure
 
-The variables are present in the `roles/ROLE_NAME/defaults` directories. You can edit them to customize your installation.
-
-Variables used by all roles are in the `group_var` directory.
+Variables are present in the `group_var` & `roles/ROLE_NAME/defaults` directories. You can edit them to customize your installation.
 
 Dotfiles are located in the `/files/dotfiles` directories of each roles.
 
