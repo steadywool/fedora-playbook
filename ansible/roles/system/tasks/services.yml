@@ -5,18 +5,6 @@
     state: started
     enabled: true
 
-- name: Enable NetworkManager service
-  ansible.builtin.systemd:
-    name: NetworkManager.service
-    state: started
-    enabled: true
-
-- name: Enable bluetooth service
-  ansible.builtin.systemd:
-    name: bluetooth.service
-    state: started
-    enabled: true
-
 - name: Enable docker service
   ansible.builtin.systemd:
     name: docker.service

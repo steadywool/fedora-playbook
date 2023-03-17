@@ -23,3 +23,7 @@
     - ansible.builtin.import_role:
         name: user
       tags: user
+
+    - ansible.builtin.import_role:
+        name: network
+      tags: network

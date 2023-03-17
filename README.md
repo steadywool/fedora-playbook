@@ -17,6 +17,9 @@ Here is the structure of the Playbook:
     ├── desktop
     │   ├── defaults
     │   └── tasks
+    ├── network
+    │   ├── defaults
+    │   └── tasks
     ├── security
     │   ├── defaults
     │   └── tasks
@@ -73,9 +76,9 @@ $ cd ansible-dotfiles/ansible
 
 ## Configuration
 
-You can perform partially run of playbook using tags. Here we skip the "user" part:
+You can perform partially run of playbook using tags:
 ```
-# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml -t core,system,desktop
+# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml -t packages,services
 ```
 
 Available tags are:
@@ -84,6 +87,7 @@ Available tags are:
 - security
 - desktop
 - user
+- network
 - packages
 - services
 - dotfiles

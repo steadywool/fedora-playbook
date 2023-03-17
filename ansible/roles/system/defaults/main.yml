@@ -9,10 +9,7 @@ system_packages:
   - man-db
   - tree
 
-  # Networking
-  - networkmanager
-  - bluez
-  - bluez-utils
+  # Android
   - android-tools
   - scrcpy
 

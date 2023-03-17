@@ -1,0 +1,5 @@
+---
+network_packages:
+  - networkmanager
+  - bluez
+  - bluez-utils
