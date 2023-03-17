@@ -8,3 +8,8 @@
   ansible.builtin.import_tasks:
     file: flatpak.yml
   tags: packages
+
+- name: Import dotfiles
+  ansible.builtin.import_tasks:
+    file: dotfiles.yml
+  tags: dotfiles

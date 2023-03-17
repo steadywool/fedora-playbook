@@ -1,0 +1,9 @@
+development_packages:
+  - neovim
+  - npm
+  - picocom
+  - tmux
+  - ranger
+  - atool
+  - zsh
+  - rclone

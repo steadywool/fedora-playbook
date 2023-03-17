@@ -6,35 +6,9 @@ Linux Dotfiles managed with Ansible and Git 🌸
 
 ## Structure
 
-Here is the structure of the Playbook:
-```
-├── playbook.yml
-└── roles
-    ├── core
-    │   ├── defaults
-    │   ├── files
-    │   └── tasks
-    ├── desktop
-    │   ├── defaults
-    │   └── tasks
-    ├── network
-    │   ├── defaults
-    │   └── tasks
-    ├── security
-    │   ├── defaults
-    │   └── tasks
-    ├── system
-    │   ├── defaults
-    │   └── tasks
-    └── user
-        ├── defaults
-        ├── files
-        └── tasks
-```
-
 The variables are present in the `/defaults` directories. You can edit them to customize your installation.
 
-Dotfiles are located in the [`/files` folder of the `user` role](ansible/roles/user/files/dotfiles). They are automatically copied to your user directory.
+Dotfiles are located in the `/files/dotfiles` directories of each roles.
 
 Here is the partitioning I use:
 
@@ -59,7 +33,7 @@ Be sure that Ansible & Git are installed in your system:
 
 Or if you haven't chrooted yet:
 ```
-# pacstrap -K /mnt ansible git
+# pacstrap -K /mnt base ansible git
 ```
 
 All you have to do now is launch the Ansible Playbook:
@@ -85,8 +59,9 @@ Available tags are:
 - core
 - system
 - security
-- desktop
 - user
+- desktop
+- development
 - network
 - packages
 - services

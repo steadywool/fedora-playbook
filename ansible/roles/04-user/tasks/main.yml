@@ -3,11 +3,6 @@
   ansible.builtin.import_tasks:
     file: user.yml
 
-- name: Import dotfiles
-  ansible.builtin.import_tasks:
-    file: dotfiles.yml
-  tags: dotfiles
-
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml

@@ -8,6 +8,9 @@ system_packages:
   - wget
   - man-db
   - tree
+  - htop
+  - nano
+  - ansible
 
   # Android
   - android-tools
@@ -34,3 +37,6 @@ system_packages:
   - flatpak
   - xdg-desktop-portal-gnome
   - xdg-desktop-portal-wlr
+
+  # Goodies
+  - neofetch
