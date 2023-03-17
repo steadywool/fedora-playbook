@@ -76,4 +76,6 @@ For example, to only download and install my dotfiles, do:
 
 ⚠️ **Be sure to change the user variable in the group_vars directory.**
 
+⚠️ **In dotfiles, some configurations take for granted the use of certain roles.**
+
 ⚠️ **This playbook does not update the system.**
