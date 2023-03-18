@@ -1,4 +1,11 @@
 ---
+locale:
+  lang: en_US.UTF-8
+  keymap: fr
+
+timezone: Europe/Paris
+hostname: blue-duck
+
 user:
   name: kani
   password: kani # Change the password here

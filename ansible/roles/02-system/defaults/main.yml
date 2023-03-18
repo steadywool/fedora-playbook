@@ -49,6 +49,7 @@ system_packages:
   - atool
   - rclone
   - picocom
+  - udisks2
 
   # Other
   - realtime-privileges

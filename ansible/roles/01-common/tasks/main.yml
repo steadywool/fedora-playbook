@@ -3,28 +3,3 @@
   ansible.builtin.import_tasks:
     file: packages.yml
   tags: packages
-
-- name: Import kernel
-  ansible.builtin.import_tasks:
-    file: kernel.yml
-
-- name: Import bootloader
-  ansible.builtin.import_tasks:
-    file: boot.yml
-
-- name: Import hostname
-  ansible.builtin.import_tasks:
-    file: hostname.yml
-
-- name: Import locales
-  ansible.builtin.import_tasks:
-    file: locale.yml
-
-- name: Import timezone
-  ansible.builtin.import_tasks:
-    file: timezone.yml
-
-- name: Import services
-  ansible.builtin.import_tasks:
-    file: services.yml
-  tags: services

@@ -1,11 +1,4 @@
 ---
-locale:
-  lang: en_US.UTF-8
-  keymap: fr
-
-timezone: Europe/Paris
-hostname: blue-duck
-
 common_packages:
   # Core
   - base
@@ -29,10 +22,8 @@ common_packages:
   - nano
 
   # Utils
-  - udisks2
   - git
   - wget
   - man-db
   - tree
-  - htop
   - ansible
