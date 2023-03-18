@@ -4,4 +4,3 @@
 
 - name: Create firejail symlinks
   command: firecfg
-  become_user: "{{ user.name }}"
