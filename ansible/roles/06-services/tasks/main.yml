@@ -1,8 +1,0 @@
----
-- name: Import services
-  ansible.builtin.import_tasks:
-    file: services.yml
-
-- name: Import user services
-  ansible.builtin.import_tasks:
-    file: user_services.yml

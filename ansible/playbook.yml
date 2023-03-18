@@ -9,12 +9,12 @@
       tags: common
 
     - ansible.builtin.import_role:
-        name: 02-system
-      tags: system
+        name: 02-users
+      tags: users
 
     - ansible.builtin.import_role:
-        name: 03-users
-      tags: users
+        name: 03-system
+      tags: system
 
     - ansible.builtin.import_role:
         name: 04-configuration
@@ -23,7 +23,3 @@
     - ansible.builtin.import_role:
         name: 05-desktop
       tags: desktop
-
-    - ansible.builtin.import_role:
-        name: 06-services
-      tags: services

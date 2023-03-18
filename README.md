@@ -48,6 +48,8 @@ $ cd ansible-dotfiles/ansible
 # ansible-playbook playbook.yml
 ```
 
+⚠️ **Make sure you are connected to your network via Ethernet, starting NetworkManager may disconnect you.**
+
 ## Configuration
 
 You can perform partially run of playbook using tags:
@@ -57,8 +59,8 @@ You can perform partially run of playbook using tags:
 
 Available tags are:
 - common
-- system
 - user
+- system
 - configuration
 - desktop
 - services
