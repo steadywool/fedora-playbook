@@ -25,6 +25,7 @@ desktop_packages:
   - light
   - gammastep
   - foot
+  - kanshi
 
   # Appearance
   - papirus-icon-theme
