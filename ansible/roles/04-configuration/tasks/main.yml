@@ -1,0 +1,12 @@
+---
+- name: Import AUR
+  ansible.builtin.import_tasks:
+    file: aur.yml
+
+- name: Import flatpak
+  ansible.builtin.import_tasks:
+    file: flatpak.yml
+
+- name: Import firejail
+  ansible.builtin.import_tasks:
+    file: firejail.yml

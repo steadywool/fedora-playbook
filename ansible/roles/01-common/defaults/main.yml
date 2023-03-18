@@ -1,0 +1,38 @@
+---
+locale:
+  lang: en_US.UTF-8
+  keymap: fr
+
+timezone: Europe/Paris
+hostname: blue-duck
+
+common_packages:
+  # Core
+  - base
+  - base-devel
+  - linux-hardened
+  - linux-firmware
+  - pacman-contrib
+  - intel-ucode
+
+  # Filesystem
+  - btrfs-progs
+  - ntfs-3g
+
+  # Compression
+  - zip
+  - unzip
+  - unrar
+  - p7zip
+
+  # Editor
+  - nano
+
+  # Utils
+  - udisks2
+  - git
+  - wget
+  - man-db
+  - tree
+  - htop
+  - ansible

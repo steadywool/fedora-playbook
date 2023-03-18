@@ -1,0 +1,54 @@
+---
+system_packages:
+  # Administration
+  - apparmor
+  - usbguard
+  - firewalld
+  - arch-audit
+  - firejail
+
+  # Power
+  - tlp
+
+  # Networking
+  - networkmanager
+  - bluez
+  - bluez-utils
+  - android-tools
+  - scrcpy
+
+  # Multimedia
+  - pipewire-alsa
+  - pipewire-jack
+  - pipewire-pulse
+  - wireplumber
+
+  # Virtualization
+  - docker
+  - docker-compose
+  - docker-scan
+  - qemu-base
+  - distrobox
+
+  # Printing
+  - cups
+  - ghostscript
+
+  # Packages
+  - flatpak
+  - xdg-desktop-portal-gnome
+  - xdg-desktop-portal-wlr
+  - npm
+
+  # Terminal
+  - zsh
+  - htop
+  - tmux
+  - ranger
+  - neovim
+  - atool
+  - rclone
+  - picocom
+
+  # Other
+  - realtime-privileges

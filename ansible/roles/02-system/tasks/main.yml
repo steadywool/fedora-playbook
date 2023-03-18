@@ -1,0 +1,5 @@
+---
+- name: Import packages
+  ansible.builtin.import_tasks:
+    file: packages.yml
+  tags: packages

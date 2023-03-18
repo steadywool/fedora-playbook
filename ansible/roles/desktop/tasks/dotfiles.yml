@@ -1,7 +1,0 @@
----
-- name: Install user dotfiles
-  ansible.builtin.copy:
-    src: dotfiles/
-    dest: "/home/{{ user.name }}"
-    owner: "{{ user.name }}"
-    group: "{{ user.name }}"

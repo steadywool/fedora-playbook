@@ -1,7 +1,0 @@
----
-security_packages:
-  - apparmor
-  - usbguard
-  - firewalld
-  - arch-audit
-  - firejail
