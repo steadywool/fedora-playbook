@@ -25,7 +25,6 @@ desktop_packages:
   - light
   - gammastep
   - foot
-  - kanshi
 
   # Appearance
   - papirus-icon-theme
@@ -41,6 +40,9 @@ desktop_packages:
   - nautilus
   - gvfs-mtp
   - gvfs-smb
+
+  # Goodies
+  - neofetch
 
 flatpak_packages:
   - org.gnome.eog
