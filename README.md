@@ -1,6 +1,6 @@
-# Dotfiles
+# Configuration 🌸
 
-Linux Dotfiles managed with Ansible and Git 🌸
+Linux Dotfiles managed with Ansible and Git.
 
 ![](src/screenshot.png)
 
