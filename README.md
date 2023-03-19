@@ -1,14 +1,12 @@
 # Configuration 🌸
 
-Linux Dotfiles managed with Ansible and Git.
+ArchLinux configuration managed with Ansible.
 
 ![](src/screenshot.png)
 
 ## Structure
 
 Variables are present in the `ansible/group_vars` & `ansible/roles/ROLE_NAME/defaults` directories. You can edit them to customize your installation.
-
-Dotfiles are located in the [`/files/dotfiles`](ansible/roles/02-users/files/dotfiles) directory of the user role.
 
 Here is the partitioning I use:
 

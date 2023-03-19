@@ -27,3 +27,4 @@ common_packages:
   - man-db
   - tree
   - ansible
+  - rsync

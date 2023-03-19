@@ -1,10 +1,22 @@
 ---
+- name: Clone user dotfiles
+  ansible.builtin.git:
+    repo: https://github.com/kaniville/dotfiles.git
+    dest: /tmp/dotfiles
+    clone: yes
+    update: yes
+  become_user: "{{ user.name }}"
+
 - name: Install user dotfiles
-  ansible.builtin.copy:
-    src: dotfiles/
+  ansible.posix.synchronize: 
+    src: /tmp/dotfiles/
     dest: "/home/{{ user.name }}"
-    owner: "{{ user.name }}"
-    group: "{{ user.name }}"
+    rsync_opts:
+      - "--exclude=.git"
+      - "--exclude=src"
+      - "--exclude=LICENSE"
+      - "--exclude=README.md"
+  become_user: "{{ user.name }}"
 
 - name: Install ranger devicons
   ansible.builtin.git:
