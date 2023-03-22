@@ -6,6 +6,13 @@
     - stage-1
     - packages
 
+- name: Import flatpak
+  ansible.builtin.import_tasks:
+    file: flatpak.yml
+  tags:
+    - stage-1
+    - flatpak
+
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml
@@ -19,10 +26,3 @@
   tags:
     - stage-2
     - aur
-
-- name: Import flatpak
-  ansible.builtin.import_tasks:
-    file: flatpak.yml
-  tags:
-    - stage-2
-    - flatpak

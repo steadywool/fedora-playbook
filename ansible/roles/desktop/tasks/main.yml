@@ -10,6 +10,6 @@
   ansible.builtin.import_tasks:
     file: flatpak.yml
   tags:
-    - stage-2
+    - stage-1
     - packages
     - flatpak
