@@ -6,13 +6,6 @@
     - stage-1
     - packages
 
-- name: Import services
-  ansible.builtin.import_tasks:
-    file: services.yml
-  tags:
-    - stage-2
-    - services
-
 - name: Import kernel
   ansible.builtin.import_tasks:
     file: kernel.yml
@@ -47,3 +40,10 @@
   tags:
     - stage-1
     - timezone
+
+- name: Import services
+  ansible.builtin.import_tasks:
+    file: services.yml
+  tags:
+    - stage-2
+    - services
