@@ -59,3 +59,4 @@ flatpak_packages:
   - org.gnome.Characters
   - com.usebottles.bottles
   - org.gimp.GIMP
+  - org.gnome.Boxes
