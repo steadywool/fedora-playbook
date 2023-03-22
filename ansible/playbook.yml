@@ -5,21 +5,17 @@
 
   tasks:
     - ansible.builtin.import_role:
-        name: 01-common
+        name: common
       tags: common
 
     - ansible.builtin.import_role:
-        name: 02-system
-      tags: system
-
-    - ansible.builtin.import_role:
-        name: 03-users
+        name: users
       tags: users
 
     - ansible.builtin.import_role:
-        name: 04-configuration
-      tags: configuration
+        name: system
+      tags: system
 
     - ansible.builtin.import_role:
-        name: 05-desktop
+        name: desktop
       tags: desktop

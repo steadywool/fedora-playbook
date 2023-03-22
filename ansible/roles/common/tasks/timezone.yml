@@ -1,0 +1,14 @@
+- name: Set timezone
+  ansible.builtin.file:
+    src: "/usr/share/zoneinfo/{{ timezone }}"
+    dest: "/etc/localtime"
+    state: link
+
+- name: Check if adjtime exist
+  stat:
+    path: /etc/adjtime
+  register: clock_file
+
+- name: Set clock
+  command: hwclock --systohc
+  when: not clock_file.stat.exists

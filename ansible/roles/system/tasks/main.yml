@@ -1,0 +1,28 @@
+---
+- name: Import packages
+  ansible.builtin.import_tasks:
+    file: packages.yml
+  tags:
+    - stage-1
+    - packages
+
+- name: Import services
+  ansible.builtin.import_tasks:
+    file: services.yml
+  tags:
+    - stage-2
+    - services
+
+- name: Import AUR
+  ansible.builtin.import_tasks:
+    file: aur.yml
+  tags:
+    - stage-2
+    - aur
+
+- name: Import flatpak
+  ansible.builtin.import_tasks:
+    file: flatpak.yml
+  tags:
+    - stage-2
+    - flatpak

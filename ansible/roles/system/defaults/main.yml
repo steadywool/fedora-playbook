@@ -5,7 +5,6 @@ system_packages:
   - usbguard
   - firewalld
   - arch-audit
-  - firejail
 
   # Power
   - tlp
