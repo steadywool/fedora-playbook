@@ -43,7 +43,7 @@ You can now start your system to finalize the configuration
 
 Connect to your network this way:
 ```
-systemctl start NetworkManager && nmtui
+# systemctl start NetworkManager && nmtui
 ```
 
 Then start the playbook in stage 2:
@@ -51,14 +51,9 @@ Then start the playbook in stage 2:
 # ansible-pull -U https://github.com/kaniville/ansible-configuration.git ansible/playbook.yml -t stage-2
 ```
 
-⚠️ **This playbook does not update the system.**
-
 ## Configuration
 
-You can perform partially run of playbook using tags. For exemple, to install only dotfiles and start services:
-```
-# ansible-pull -U https://github.com/kaniville/ansible-dotfiles.git ansible/playbook.yml -t dotfiles,services
-```
+You can perform partially run of playbook using tags.
 
 Available tags are:
 - stage-1
@@ -79,4 +74,6 @@ Available tags are:
 - aur
 - flatpak
 
-⚠️ **Be sure to change variables in the group_vars directory.**
+After the installation, you can run this playbook without tags to change some settings and install additional packages:
+
+⚠️ **This playbook does not update the system.**
