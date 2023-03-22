@@ -7,22 +7,17 @@
 - name: Import kernel
   ansible.builtin.import_tasks:
     file: kernel.yml
+  tags: kernel
 
 - name: Import bootloader
   ansible.builtin.import_tasks:
     file: boot.yml
+  tags: boot
 
-- name: Import hostname
+- name: Import initialize
   ansible.builtin.import_tasks:
-    file: hostname.yml
-
-- name: Import locales
-  ansible.builtin.import_tasks:
-    file: locale.yml
-
-- name: Import timezone
-  ansible.builtin.import_tasks:
-    file: timezone.yml
+    file: initialize.yml
+  tags: init
 
 - name: Import services
   ansible.builtin.import_tasks:

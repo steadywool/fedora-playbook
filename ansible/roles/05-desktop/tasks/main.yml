@@ -7,4 +7,6 @@
 - name: Import flatpak
   ansible.builtin.import_tasks:
     file: flatpak.yml
-  tags: packages
+  tags:
+    - packages
+    - flatpak

@@ -6,6 +6,7 @@
 
 - name: Install systemd-boot
   command: bootctl install
+  ignore_errors: true
   when: not boot_efi.stat.exists
 
 - name: Create bootloader entries

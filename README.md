@@ -47,12 +47,19 @@ You can perform partially run of playbook using tags. For exemple, to install on
 
 Available tags are:
 - common
-- user
+- users
 - system
 - configuration
 - desktop
+
+- user
 - services
 - dotfiles
 - packages
+- init
+- boot
+- kernel
+- aur
+- flatpak
 
 ⚠️ **Be sure to change variables in the group_vars directory.**

@@ -1,0 +1,3 @@
+---
+- name: Use systemd-firstboot
+  command: systemd-firstboot --prompt
