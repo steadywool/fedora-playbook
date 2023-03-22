@@ -3,47 +3,45 @@
   ansible.builtin.import_tasks:
     file: packages.yml
   tags:
-    - stage-1
+    - chroot
     - packages
 
 - name: Import kernel
   ansible.builtin.import_tasks:
     file: kernel.yml
   tags:
-    - stage-1
+    - chroot
     - kernel
 
 - name: Import bootloader
   ansible.builtin.import_tasks:
     file: boot.yml
   tags:
-    - stage-1
+    - chroot
     - boot
 
 - name: Import hostname
   ansible.builtin.import_tasks:
     file: hostname.yml
   tags:
-    - stage-1
+    - chroot
     - hostname
 
 - name: Import locale
   ansible.builtin.import_tasks:
     file: locale.yml
   tags:
-    - stage-1
+    - chroot
     - locale
 
 - name: Import timezone
   ansible.builtin.import_tasks:
     file: timezone.yml
   tags:
-    - stage-1
+    - chroot
     - timezone
 
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml
-  tags:
-    - stage-2
-    - services
+  tags: services

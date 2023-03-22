@@ -29,9 +29,9 @@ Be sure that Ansible & Git are installed in your system:
 # pacman -S ansible git
 ```
 
-Then start the playbook in stage 1:
+Then start the playbook with the chroot tag. It will install every packages and configure the system:
 ```
-# ansible-pull -U https://github.com/kaniville/ansible-configuration.git ansible/playbook.yml -t stage-1
+# ansible-pull -U https://github.com/kaniville/ansible-configuration.git ansible/playbook.yml -t chroot
 ```
 
 After that, create a password for the root user:
@@ -39,16 +39,16 @@ After that, create a password for the root user:
 # passwd root
 ```
 
-You can now start your system to finalize the configuration
+You can now start your system to finalize the configuration.
 
 Connect to your network this way:
 ```
 # systemctl start NetworkManager && nmtui
 ```
 
-Then start the playbook in stage 2:
+Then start the playbook without the chroot tag:
 ```
-# ansible-pull -U https://github.com/kaniville/ansible-configuration.git ansible/playbook.yml -t stage-2
+# ansible-pull -U https://github.com/kaniville/ansible-configuration.git ansible/playbook.yml
 ```
 
 ## Configuration
@@ -56,8 +56,7 @@ Then start the playbook in stage 2:
 You can perform partially run of playbook using tags.
 
 Available tags are:
-- stage-1
-- stage-2
+- chroot
 - common
 - users
 - system
@@ -74,6 +73,6 @@ Available tags are:
 - aur
 - flatpak
 
-After the installation, you can run this playbook without tags to change some settings and install additional packages:
+After the installation, you can run this playbook to change some settings and install additional packages.
 
 ⚠️ **This playbook does not update the system.**

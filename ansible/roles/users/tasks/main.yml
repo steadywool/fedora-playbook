@@ -2,20 +2,14 @@
 - name: Import user
   ansible.builtin.import_tasks:
     file: user.yml
-  tags:
-    - stage-2
-    - user
+  tags: user
 
 - name: Import dotfiles
   ansible.builtin.import_tasks:
     file: dotfiles.yml
-  tags:
-    - stage-2
-    - dotfiles
+  tags: dotfiles
 
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml
-  tags:
-    - stage-2
-    - services
+  tags: services
