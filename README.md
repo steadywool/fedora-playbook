@@ -63,12 +63,10 @@ You can perform partially run of playbook using tags. For exemple, to install on
 Available tags are:
 - stage-1
 - stage-2
-
 - common
 - users
 - system
 - desktop
-
 - packages
 - services
 - hostname
