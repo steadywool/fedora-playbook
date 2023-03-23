@@ -60,6 +60,7 @@ flatpak_packages:
   - com.usebottles.bottles
   - org.gimp.GIMP
   - org.gnome.Boxes
+  - org.gnome.seahorse.Application
 
 aur_packages:
   - ankama-launcher
