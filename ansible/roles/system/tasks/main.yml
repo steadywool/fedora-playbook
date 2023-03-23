@@ -13,6 +13,20 @@
     - chroot
     - flatpak
 
+- name: Import sudoers
+  ansible.builtin.import_tasks:
+    file: sudoers.yml
+  tags:
+    - chroot
+    - sudo
+
+- name: Import usbguard
+  ansible.builtin.import_tasks:
+    file: usbguard.yml
+  tags:
+    - chroot
+    - usbguard
+
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml
@@ -22,13 +36,3 @@
   ansible.builtin.import_tasks:
     file: aur.yml
   tags: aur
-
-- name: Import sudoers
-  ansible.builtin.import_tasks:
-    file: sudoers.yml
-  tags: sudo
-
-- name: Import usbguard
-  ansible.builtin.import_tasks:
-    file: usbguard.yml
-  tags: usbguard
