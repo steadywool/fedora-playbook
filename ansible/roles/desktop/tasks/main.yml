@@ -13,3 +13,10 @@
     - chroot
     - packages
     - flatpak
+
+- name: Import AUR
+  ansible.builtin.import_tasks:
+    file: aur.yml
+  tags:
+    - packages
+    - aur
