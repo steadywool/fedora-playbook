@@ -77,6 +77,8 @@ Available tags are:
 - dotfiles
 - aur
 - flatpak
+- sudo
+- usbguard
 
 After the installation, you can run this playbook to change some settings and install additional packages.
 

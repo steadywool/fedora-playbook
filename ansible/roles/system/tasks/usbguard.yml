@@ -1,0 +1,7 @@
+---
+- name: Add wheel group to usbguard
+  ansible.builtin.lineinfile:
+    path: /etc/usbguard/usbguard-daemon.conf
+    state: present
+    regexp: '^IPCAllowedGroups='
+    line: 'IPCAllowedGroupss=wheel'

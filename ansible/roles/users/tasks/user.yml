@@ -12,9 +12,3 @@
     shell: "{{ user.shell }}"
     storage: "luks"
   when: user_exists.rc != 0
-
-- name: add sudoers file
-  ansible.builtin.copy:
-    src: sudoers_wheel
-    dest: /etc/sudoers.d/wheel
-    mode: 0440

@@ -22,3 +22,13 @@
   ansible.builtin.import_tasks:
     file: aur.yml
   tags: aur
+
+- name: Import sudoers
+  ansible.builtin.import_tasks:
+    file: sudoers.yml
+  tags: sudo
+
+- name: Import usbguard
+  ansible.builtin.import_tasks:
+    file: usbguard.yml
+  tags: usbguard

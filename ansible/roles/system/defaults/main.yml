@@ -45,8 +45,12 @@ system_packages:
   - neovim
   - atool
   - rclone
-  - picocom
   - udisks2
+
+  # Development
+  - picocom
+  - nmap
+  - tcpdump
 
   # Other
   - realtime-privileges
