@@ -29,12 +29,17 @@ Be sure that Ansible & Git are installed in your system:
 # pacman -S ansible git
 ```
 
-Then start the playbook with the chroot tag. It will install every packages and configure the system:
+Then install the AUR collection:
+```
+# ansible-galaxy collection install kewlfft.aur
+```
+
+After that, you can start the playbook with the chroot tag. It will install every packages and configure the system:
 ```
 # ansible-pull -U https://github.com/kaniville/ansible-configuration.git ansible/playbook.yml -t chroot
 ```
 
-After that, create a password for the root user:
+Before exiting chroot, create a password for the root user:
 ```
 # passwd root
 ```

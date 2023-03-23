@@ -1,19 +1,7 @@
 ---
-- name: Check if helper is already installed
-  stat:
-    path: /usr/bin/yay
-  register: helper_installed
-
-- name: Clone helper
-  ansible.builtin.git:
-    repo: https://aur.archlinux.org/yay-bin.git
-    dest: /tmp/yay
-    clone: yes
-    update: yes
+- name: Install AUR helper
+  kewlfft.aur.aur:
+    use: makepkg
+    name: yay
+    state: present
   become_user: "{{ user.name }}"
-  when: not helper_installed.stat.exists
-
-- name: Build helper
-  shell: "cd /tmp/yay && makepkg -si --noconfirm"
-  become_user: "{{ user.name }}"
-  when: not helper_installed.stat.exists

@@ -60,3 +60,7 @@ flatpak_packages:
   - com.usebottles.bottles
   - org.gimp.GIMP
   - org.gnome.Boxes
+
+aur_packages:
+  - ankama-launcher
+  - ttf-ms-win11-auto
