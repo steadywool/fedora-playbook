@@ -46,6 +46,7 @@ system_packages:
   - atool
   - rclone
   - udisks2
+  - task
 
   # Development
   - picocom
