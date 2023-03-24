@@ -79,6 +79,7 @@ Available tags are:
 - flatpak
 - sudo
 - usbguard
+- firejail
 
 After the installation, you can run this playbook to change some settings and install additional packages.
 
