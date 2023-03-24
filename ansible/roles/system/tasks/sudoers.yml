@@ -1,3 +1,4 @@
+---
 - name: Set sudoers
   ansible.builtin.copy:
     dest: /etc/sudoers.d/wheel

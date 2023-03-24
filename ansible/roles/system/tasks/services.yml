@@ -1,3 +1,4 @@
+---
 - name: Enable tlp service
   ansible.builtin.systemd:
     name: tlp.service

@@ -1,3 +1,4 @@
+---
 - name: Set timezone
   ansible.builtin.file:
     src: "/usr/share/zoneinfo/{{ timezone }}"
