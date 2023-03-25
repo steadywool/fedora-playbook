@@ -21,6 +21,7 @@ desktop_packages:
   - libnotify
   - grim
   - slurp
+  - swappy
   - fuzzel
   - light
   - gammastep
