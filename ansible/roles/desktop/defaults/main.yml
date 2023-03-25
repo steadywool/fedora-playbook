@@ -1,14 +1,4 @@
 desktop_packages:
-  # Utils
-  - polkit-gnome
-  - gnome-keyring
-  - xorg-xwayland
-  - xsettingsd
-  - xdg-utils
-  - xdg-user-dirs
-  - wl-clipboard
-  - jq
-
   # WM
   - sway
   - python-i3ipc
@@ -19,13 +9,28 @@ desktop_packages:
   - swaylock
   - dunst
   - libnotify
+  - fuzzel
+  - foot
+
+  # Tools
+  - polkit-gnome
+  - gnome-keyring
+  - xorg-xwayland
+  - xsettingsd
+  - xdg-utils
+  - xdg-user-dirs
+  - wl-clipboard
+  - jq
   - grim
   - slurp
-  - swappy
-  - fuzzel
   - light
   - gammastep
-  - foot
+
+  # Applications
+  - swappy
+  - nautilus
+  - gvfs-mtp
+  - gvfs-smb
 
   # Appearance
   - papirus-icon-theme
@@ -36,11 +41,6 @@ desktop_packages:
   - ttf-dejavu
   - noto-fonts
   - noto-fonts-emoji
-
-  # Applications
-  - nautilus
-  - gvfs-mtp
-  - gvfs-smb
 
   # Goodies
   - neofetch

@@ -32,11 +32,10 @@ system_packages:
   - cups
   - ghostscript
 
-  # Packages
+  # Flatpak
   - flatpak
   - xdg-desktop-portal-gnome
   - xdg-desktop-portal-wlr
-  - npm
 
   # Terminal
   - zsh
@@ -53,6 +52,7 @@ system_packages:
   - picocom
   - nmap
   - tcpdump
+  - npm
 
   # Other
   - realtime-privileges
