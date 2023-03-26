@@ -23,7 +23,7 @@ desktop_packages:
   - jq
   - grim
   - slurp
-  - light
+  - brightnessctl
   - gammastep
 
   # Applications
