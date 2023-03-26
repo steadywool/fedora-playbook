@@ -2,6 +2,6 @@
 - name: Install AUR helper
   kewlfft.aur.aur:
     use: makepkg
-    name: yay
+    name: yay-bin
     state: present
   become_user: "{{ user.name }}"

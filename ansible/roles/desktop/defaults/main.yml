@@ -65,3 +65,4 @@ flatpak_packages:
 aur_packages:
   - ankama-launcher
   - ttf-ms-win11-auto
+  - cliphist-bin
