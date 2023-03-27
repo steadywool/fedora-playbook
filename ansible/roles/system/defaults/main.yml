@@ -47,6 +47,7 @@ system_packages:
   - rclone
   - udisks2
   - task
+  - fzf
 
   # Development
   - picocom
