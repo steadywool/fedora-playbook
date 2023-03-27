@@ -27,7 +27,6 @@ desktop_packages:
   - gammastep
 
   # Applications
-  - swappy
   - nautilus
   - gvfs-mtp
   - gvfs-smb
@@ -55,12 +54,14 @@ flatpak_packages:
   - org.libreoffice.LibreOffice
   - org.mozilla.firefox
   - org.keepassxc.KeePassXC
-  - com.valvesoftware.Steam
   - org.gnome.Characters
   - com.usebottles.bottles
   - org.gimp.GIMP
   - org.gnome.Boxes
   - org.gnome.seahorse.Application
+  - com.valvesoftware.Steam
+  - sh.ppy.osu
+  - com.mojang.Minecraft
 
 aur_packages:
   - ankama-launcher
