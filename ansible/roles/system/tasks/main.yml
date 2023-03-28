@@ -41,3 +41,8 @@
   ansible.builtin.import_tasks:
     file: firejail.yml
   tags: firejail
+
+- name: Import Pacman hooks
+  ansible.builtin.import_tasks:
+    file: hooks.yml
+  tags: hooks

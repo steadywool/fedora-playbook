@@ -1,0 +1,12 @@
+[Trigger]
+Type = Package
+Operation = Upgrade
+Target = *
+
+[Action]
+Description = Create snapshots
+Depends = btrfs-progs
+When = PreTransaction
+Exec = /etc/pacman.d/hooks.bin/btrfs-snapshot.sh
+AbortOnFail
+NeedsTargets

@@ -1,7 +1,7 @@
 ---
 - name: Clone user dotfiles
   ansible.builtin.git:
-    repo: https://github.com/kaniville/dotfiles.git
+    repo: "{{ dotfiles }}"
     dest: /tmp/dotfiles
     clone: yes
     update: yes
