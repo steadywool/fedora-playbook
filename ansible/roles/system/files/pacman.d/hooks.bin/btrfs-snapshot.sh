@@ -42,6 +42,5 @@ delete_snapshot() {
     done
 }
 
-# Execute the function
 create_snapshot
 delete_snapshot
