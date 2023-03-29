@@ -8,5 +8,3 @@ Description = Create snapshots
 Depends = btrfs-progs
 When = PreTransaction
 Exec = /usr/local/bin/snapshot.py -i "hook" -c -d
-AbortOnFail
-NeedsTargets

@@ -19,9 +19,12 @@ argument_parser.add_argument('-c', '--create', action="store_true", help='Create
 argument_parser.add_argument('-d', '--delete', action="store_true", help='Remove old snapshots')
 option = argument_parser.parse_args()
 
-# Config parser setup
-config_parser = configparser.RawConfigParser()
-config_parser.read('/etc/snapshot/snapshot.conf')
+try:
+    # Config parser setup
+    config_parser = configparser.RawConfigParser()
+    config_parser.read('/etc/snapshot/snapshot.conf')
+except:
+    sys.exit("File not found !")
 
 try:
     # Dictionary from each sections
@@ -29,15 +32,15 @@ try:
     main_dictionary = dict(config_parser.items('main'))
 except:
     sys.exit("Sections not found !")
-else:
-    try:
-        # Constants from the main section
-        snapshot_dir = ast.literal_eval(main_dictionary['snapshot_dir'])
-        keep_snapshots = int(main_dictionary['keep_snapshots'])
-        date_format = ast.literal_eval(main_dictionary['date_format'])
-        current_date = datetime.datetime.now().strftime(date_format)
-    except:
-        sys.exit("Main items not found !")
+
+try:
+    # Constants from the main section
+    snapshot_dir = ast.literal_eval(main_dictionary['snapshot_dir'])
+    keep_snapshots = int(main_dictionary['keep_snapshots'])
+    date_format = ast.literal_eval(main_dictionary['date_format'])
+    current_date = datetime.datetime.now().strftime(date_format)
+except:
+    sys.exit("Main items not found !")
 
 # Create snapshots
 def create_snapshot():
