@@ -4,7 +4,9 @@ Operation = Upgrade
 Target = *
 
 [Action]
-Description = Automatic snapshots
+Description = Create snapshots
 Depends = btrfs-progs
 When = PreTransaction
-Exec = /etc/pacman.d/hooks.bin/btrfs-snapshot.sh
+Exec = /usr/local/bin/snapshot.py
+AbortOnFail
+NeedsTargets

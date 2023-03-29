@@ -42,7 +42,7 @@
     file: firejail.yml
   tags: firejail
 
-- name: Import Pacman hooks
+- name: Import snapshot script
   ansible.builtin.import_tasks:
-    file: hooks.yml
-  tags: hooks
+    file: snapshot.yml
+  tags: snapshot
