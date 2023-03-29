@@ -12,7 +12,14 @@ import argparse # Pass arguments to the script
 # Only execute this script as root
 if not os.geteuid() == 0: sys.exit("Execute this script as root !")
 
-# Parser setup
+# Argument parser setup
+argument_parser = argparse.ArgumentParser()
+argument_parser.add_argument('-i', '--info', default='default', help='Add additionnal information', required=False)
+argument_parser.add_argument('-c', '--create', action="store_true", help='Create snapshots')
+argument_parser.add_argument('-d', '--delete', action="store_true", help='Remove old snapshots')
+option = argument_parser.parse_args()
+
+# Config parser setup
 config_parser = configparser.RawConfigParser()
 config_parser.read('/etc/snapshot/snapshot.conf')
 
@@ -38,9 +45,10 @@ def create_snapshot():
 
         # Values from each items of the subvolumes section
         subvol_directory = ast.literal_eval(subvolume_dictionary[subvol_name])
+        subvol_information = option.info
 
         try:
-            subprocess.run(['btrfs', 'subvolume', 'snapshot', '-r', f'{subvol_directory}', f'{snapshot_dir}/{current_date}_{subvol_name}'], check=True)
+            subprocess.run(['btrfs', 'subvolume', 'snapshot', '-r', f'{subvol_directory}', f'{snapshot_dir}/{current_date}_{subvol_information}_{subvol_name}'], check=True)
         except:
             sys.exit("Creation of snapshots failed.")
 
@@ -49,7 +57,7 @@ def delete_snapshot():
     for subvol_name in subvolume_dictionary:
 
         # Sort every snapshots from the directory by date of creation
-        old_snapshots = sorted(glob.glob(os.path.join(snapshot_dir, f'*{subvol_name}*')), key=os.path.getmtime)
+        old_snapshots = sorted(glob.glob(os.path.join(snapshot_dir, f'*{subvol_name}')), key=os.path.getmtime)
 
         try:
             # Here I slice everything except the last snapshots
@@ -58,14 +66,6 @@ def delete_snapshot():
         except:
             sys.exit("Deletion of snapshots failed.")
 
-# Create an ArgumentParser object
-argument_parser = argparse.ArgumentParser()
-
-# Add optional options
-argument_parser.add_argument('-c', '--create', help='Create snapshots', action="store_true")
-argument_parser.add_argument('-d', '--delete', help='Remove old snapshots', action="store_true")
-
 # Assigns a function to the options
-option = argument_parser.parse_args()
 if option.create: create_snapshot()
 if option.delete: delete_snapshot()
