@@ -26,7 +26,7 @@ else:
     try:
         # Constants from the main section
         snapshot_dir = ast.literal_eval(main_dictionary['snapshot_dir'])
-        keep_snapshots = int(main_dictionary['keep_snapshots'])
+        automatic_snapshots = int(main_dictionary['automatic_snapshots'])
         date_format = ast.literal_eval(main_dictionary['date_format'])
         current_date = datetime.datetime.now().strftime(date_format)
     except:
@@ -53,7 +53,7 @@ def delete_snapshot():
 
         try:
             # Here I slice everything except the last snapshots
-            for snap in old_snapshots[:-keep_snapshots]:
+            for snap in old_snapshots[:-automatic_snapshots]:
                 subprocess.run(['btrfs', 'subvolume', 'delete', f'{snap}'], check=True)
         except:
             sys.exit("Deletion of snapshots failed.")
