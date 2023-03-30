@@ -54,7 +54,6 @@ flatpak_packages:
   - org.libreoffice.LibreOffice
   - org.mozilla.firefox
   - org.keepassxc.KeePassXC
-  - org.gnome.Characters
   - com.usebottles.bottles
   - org.gimp.GIMP
   - org.gnome.Boxes
