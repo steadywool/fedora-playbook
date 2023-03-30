@@ -61,6 +61,7 @@ flatpak_packages:
   - com.valvesoftware.Steam
   - sh.ppy.osu
   - com.mojang.Minecraft
+  - com.spotify.Client
 
 aur_packages:
   - ankama-launcher

@@ -48,12 +48,14 @@ system_packages:
   - udisks2
   - task
   - fzf
+  - ripgrep
 
   # Development
   - picocom
   - nmap
   - tcpdump
   - npm
+  - inetutils
 
   # Other
   - realtime-privileges
