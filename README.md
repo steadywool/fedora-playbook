@@ -2,7 +2,7 @@
 
 ArchLinux configuration managed with Ansible.
 
-![](src/screenshot.png)
+![](src/screenshot-1.png)
 
 ## Structure
 
