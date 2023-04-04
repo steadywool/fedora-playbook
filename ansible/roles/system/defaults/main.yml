@@ -12,10 +12,20 @@ system_packages:
 
   # Networking
   - networkmanager
-  - bluez
-  - bluez-utils
+  - picocom
+  - nmap
+  - tcpdump
+  - inetutils
+  - bind
+  - whois
+
+  # Android
   - android-tools
   - scrcpy
+
+  # Bluetooth
+  - bluez
+  - bluez-utils
 
   # Multimedia
   - pipewire-alsa
@@ -32,30 +42,28 @@ system_packages:
   - cups
   - ghostscript
 
+  # Disk
+  - udisks2
+
   # Flatpak
   - flatpak
   - xdg-desktop-portal-gnome
   - xdg-desktop-portal-wlr
 
   # Terminal
-  - zsh
   - htop
   - tmux
   - ranger
-  - neovim
+  - zsh
   - atool
   - rclone
-  - udisks2
   - task
   - fzf
   - ripgrep
 
   # Development
-  - picocom
-  - nmap
-  - tcpdump
+  - neovim
   - npm
-  - inetutils
 
   # Other
   - realtime-privileges
