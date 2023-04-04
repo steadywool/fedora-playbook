@@ -62,6 +62,7 @@ flatpak_packages:
   - sh.ppy.osu
   - com.mojang.Minecraft
   - com.spotify.Client
+  - org.filezillaproject.Filezilla
 
 aur_packages:
   - ankama-launcher
