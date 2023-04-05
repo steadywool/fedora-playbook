@@ -36,7 +36,7 @@ Then install the AUR collection:
 
 After that, you can start the playbook with the chroot tag. It will install every packages and configure the system:
 ```
-# ansible-pull -U https://github.com/kaniville/ansible-configuration.git ansible/playbook.yml -t chroot
+# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t chroot
 ```
 
 Before exiting chroot, create a password for the root user:
@@ -53,7 +53,7 @@ Connect to your network this way:
 
 Then start the playbook without the chroot tag:
 ```
-# ansible-pull -U https://github.com/kaniville/ansible-configuration.git ansible/playbook.yml
+# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml
 ```
 
 ## Configuration

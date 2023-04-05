@@ -47,8 +47,6 @@ system_packages:
 
   # Flatpak
   - flatpak
-  - xdg-desktop-portal-gnome
-  - xdg-desktop-portal-wlr
 
   # Terminal
   - htop

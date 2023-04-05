@@ -14,8 +14,6 @@ desktop_packages:
   - gnome-keyring
   - xorg-xwayland
   - xsettingsd
-  - xdg-utils
-  - xdg-user-dirs
   - wl-clipboard
   - jq
   - grim
@@ -25,6 +23,12 @@ desktop_packages:
   - python-i3ipc
   - python-psutil
   - libappindicator-gtk3
+
+  # XDG
+  - xdg-utils
+  - xdg-user-dirs
+  - xdg-desktop-portal-gnome
+  - xdg-desktop-portal-wlr
 
   # Applications
   - nautilus
