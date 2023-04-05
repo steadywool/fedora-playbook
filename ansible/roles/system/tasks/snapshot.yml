@@ -1,16 +1,25 @@
 ---
-- name: Copy hooks files
+- name: Clone BTRFS-snapman
+  ansible.builtin.git:
+    repo: https://github.com/Kaniville/btrfs-snapman
+    dest: /tmp/btrfs-snapman
+    clone: yes
+    update: yes
+
+- name: Copy hook file
   ansible.builtin.copy:
-    src: snapshot/hooks/snapshot.hook
-    dest: /etc/pacman.d/hooks/snapshot.hook
+    src: /tmp/btrfs-snapman/snapman.hook
+    dest: /etc/pacman.d/hooks/
+    force: yes
+
+- name: Copy configuration file
+  ansible.builtin.copy:
+    src: /tmp/btrfs-snapman/snapman.conf
+    dest: /etc/snapman/
+    force: yes
 
 - name: Copy script
   ansible.builtin.copy:
-    src: snapshot/bin/snapshot.py
-    dest: /usr/local/bin/snapshot.py
+    src: /tmp/btrfs-snapman/snapman.py
+    dest: /usr/local/bin/snapman
     mode: '0755'
-
-- name: Copy script config
-  ansible.builtin.copy:
-    src: snapshot/config/snapshot.conf
-    dest: /etc/snapshot/snapshot.conf

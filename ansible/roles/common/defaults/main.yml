@@ -4,6 +4,8 @@ common_packages:
   - base
   - base-devel
   - linux-hardened
+  - linux-hardened-headers
+  - dkms
   - linux-firmware
   - pacman-contrib
   - intel-ucode

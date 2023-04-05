@@ -4,4 +4,4 @@
     path: /etc/usbguard/usbguard-daemon.conf
     state: present
     regexp: '^IPCAllowedGroups='
-    line: 'IPCAllowedGroupss=wheel'
+    line: 'IPCAllowedGroups=wheel'
