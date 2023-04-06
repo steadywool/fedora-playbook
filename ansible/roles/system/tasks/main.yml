@@ -34,6 +34,13 @@
     - chroot
     - usbguard
 
+- name: Import snapshot script
+  ansible.builtin.import_tasks:
+    file: snapshot.yml
+  tags:
+    - chroot
+    - snapshot
+
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml
@@ -43,10 +50,3 @@
   ansible.builtin.import_tasks:
     file: firejail.yml
   tags: firejail
-
-- name: Import snapshot script
-  ansible.builtin.import_tasks:
-    file: snapshot.yml
-  tags:
-    - chroot
-    - snapshot

@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Upgrade
+Target = *
+
+[Action]
+Description = Create snapshots
+Depends = btrfs-progs
+When = PreTransaction
+Exec = /usr/local/bin/snapshot -i "hook" -c -d
