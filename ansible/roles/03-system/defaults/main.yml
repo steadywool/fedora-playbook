@@ -34,8 +34,10 @@ system_packages:
   - wireplumber
 
   # Virtualization
-  - docker
-  - docker-compose
+  - podman
+  - podman-compose
+  - fuse-overlayfs
+  - aardvark-dns
   - distrobox
 
   # Printing

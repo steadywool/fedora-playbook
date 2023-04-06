@@ -17,7 +17,7 @@ Here is the partitioning I use:
 | `/dev/sda3`             |                                                               | Luks2      |               |
 | `/dev/mapper/luks_root` |`noatime,compress=zstd,subvol=@`                               | Btrfs      | `/`           |
 | `/dev/mapper/luks_root` |`nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.snapshots` | Btrfs      | `/.snapshots` |
-| `/dev/mapper/luks_root` |`nodev,nosuid,noatime,compress=zstd,subvol=@var`               | Btrfs      | `/var`        |
+| `/dev/mapper/luks_root` |`noatime,compress=zstd,subvol=@var`                            | Btrfs      | `/var`        |
 | `/dev/sda4`             | `nodev,nosuid`                                                | Ext4       | `/home`       |
 
 ## Installation
