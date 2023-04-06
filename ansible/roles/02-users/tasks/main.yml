@@ -9,6 +9,11 @@
     file: dotfiles.yml
   tags: dotfiles
 
+- name: Import subuid/subgid
+  ansible.builtin.import_tasks:
+    file: uid-gid.yml
+  tags: user
+
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml

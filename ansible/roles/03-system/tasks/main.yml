@@ -9,43 +9,32 @@
 - name: Import flatpak
   ansible.builtin.import_tasks:
     file: flatpak.yml
-  tags:
-    - chroot
-    - flatpak
+  tags: flatpak
 
 - name: Import sudoers
   ansible.builtin.import_tasks:
     file: sudoers.yml
-  tags:
-    - chroot
-    - sudo
+  tags: sudo
 
 - name: Import usbguard
   ansible.builtin.import_tasks:
     file: usbguard.yml
-  tags:
-    - chroot
-    - usbguard
+  tags: usbguard
 
 - name: Import snapshot script
   ansible.builtin.import_tasks:
     file: snapshot.yml
-  tags:
-    - chroot
-    - snapshot
+  tags: snapshot
 
 - name: Import AUR
   ansible.builtin.import_tasks:
     file: aur.yml
-  tags:
-    - aur
-    - packages
+  tags: aur
 
 - name: Import modules
   ansible.builtin.import_tasks:
     file: modules.yml
-  tags:
-    - kernel
+  tags: kernel
 
 - name: Import services
   ansible.builtin.import_tasks:

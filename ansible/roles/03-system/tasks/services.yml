@@ -29,12 +29,6 @@
     state: started
     enabled: true
 
-- name: Enable docker service
-  ansible.builtin.systemd:
-    name: docker.service
-    state: started
-    enabled: true
-
 - name: Enable cups service
   ansible.builtin.systemd:
     name: cups.service

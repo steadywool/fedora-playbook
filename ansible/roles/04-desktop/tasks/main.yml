@@ -9,14 +9,9 @@
 - name: Import flatpak
   ansible.builtin.import_tasks:
     file: flatpak.yml
-  tags:
-    - chroot
-    - packages
-    - flatpak
+  tags: flatpak
 
 - name: Import AUR
   ansible.builtin.import_tasks:
     file: aur.yml
-  tags:
-    - packages
-    - aur
+  tags: aur
