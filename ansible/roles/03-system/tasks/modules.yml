@@ -1,5 +1,0 @@
----
-- name: Load kernel modules at boot
-  ansible.builtin.copy:
-    src: modules-load.d/
-    dest: /etc/modules-load.d

@@ -67,6 +67,7 @@ Available tags are:
 - common
 - users
 - system
+- tools
 - desktop
 - packages
 - services

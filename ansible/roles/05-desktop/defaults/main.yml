@@ -57,6 +57,7 @@ flatpak_packages:
   - org.pulseaudio.pavucontrol
   - org.libreoffice.LibreOffice
   - org.mozilla.firefox
+  - org.chromium.Chromium
   - org.keepassxc.KeePassXC
   - com.usebottles.bottles
   - org.gimp.GIMP

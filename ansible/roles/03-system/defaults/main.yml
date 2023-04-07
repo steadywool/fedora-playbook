@@ -67,7 +67,3 @@ system_packages:
 
   # Other
   - realtime-privileges
-
-aur_packages:
-  - lkrg-dkms
-  - binder_linux-dkms

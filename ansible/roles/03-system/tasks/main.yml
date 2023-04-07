@@ -6,42 +6,17 @@
     - chroot
     - packages
 
-- name: Import flatpak
-  ansible.builtin.import_tasks:
-    file: flatpak.yml
-  tags: flatpak
-
-- name: Import sudoers
-  ansible.builtin.import_tasks:
-    file: sudoers.yml
-  tags: sudo
-
-- name: Import usbguard
-  ansible.builtin.import_tasks:
-    file: usbguard.yml
-  tags: usbguard
-
-- name: Import snapshot script
-  ansible.builtin.import_tasks:
-    file: snapshot.yml
-  tags: snapshot
-
 - name: Import AUR
   ansible.builtin.import_tasks:
     file: aur.yml
   tags: aur
 
-- name: Import modules
+- name: Import flatpak
   ansible.builtin.import_tasks:
-    file: modules.yml
-  tags: kernel
+    file: flatpak.yml
+  tags: flatpak
 
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml
   tags: services
-
-- name: Import Firejail
-  ansible.builtin.import_tasks:
-    file: firejail.yml
-  tags: firejail

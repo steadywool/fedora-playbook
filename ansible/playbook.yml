@@ -17,5 +17,9 @@
       tags: system
 
     - ansible.builtin.import_role:
-        name: 04-desktop
+        name: 04-tools
+      tags: tools
+
+    - ansible.builtin.import_role:
+        name: 05-desktop
       tags: desktop
