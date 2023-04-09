@@ -15,6 +15,7 @@ desktop_packages:
   - xorg-xwayland
   - xsettingsd
   - wl-clipboard
+  - cliphist
   - jq
   - grim
   - slurp
@@ -30,11 +31,6 @@ desktop_packages:
   - xdg-desktop-portal-gnome
   - xdg-desktop-portal-wlr
 
-  # Applications
-  - nautilus
-  - gvfs-mtp
-  - gvfs-smb
-
   # Appearance
   - papirus-icon-theme
 
@@ -45,31 +41,5 @@ desktop_packages:
   - noto-fonts
   - noto-fonts-emoji
 
-  # Goodies
-  - neofetch
-
-flatpak_packages:
-  - org.gnome.eog
-  - io.mpv.Mpv
-  - org.gnome.Evince
-  - com.github.tchx84.Flatseal
-  - com.discordapp.Discord
-  - org.pulseaudio.pavucontrol
-  - org.libreoffice.LibreOffice
-  - org.mozilla.firefox
-  - org.chromium.Chromium
-  - org.keepassxc.KeePassXC
-  - com.usebottles.bottles
-  - org.gimp.GIMP
-  - org.gnome.Boxes
-  - org.gnome.seahorse.Application
-  - com.valvesoftware.Steam
-  - sh.ppy.osu
-  - com.mojang.Minecraft
-  - com.spotify.Client
-  - org.filezillaproject.Filezilla
-
 aur_packages:
-  - ankama-launcher
   - ttf-ms-win11-auto
-  - cliphist

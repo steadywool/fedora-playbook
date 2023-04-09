@@ -4,6 +4,11 @@
     file: packages.yml
   tags: packages
 
+- name: Import flatpak
+  ansible.builtin.import_tasks:
+    file: flatpak.yml
+  tags: flatpak
+
 - name: Import AUR
   ansible.builtin.import_tasks:
     file: aur.yml

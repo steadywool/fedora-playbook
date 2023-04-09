@@ -39,7 +39,7 @@ After that, you can start the playbook with the chroot tag. It will install ever
 # ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t chroot
 ```
 
-ℹ️ **With the "chroot" tag, only packages from the official repository, and the basic configuration will be installed.**
+ℹ️ **With the "chroot" tag, only basic packages from the official repository (core & system), and the basic configuration (core) will be installed.**
 
 Before exiting chroot, create a password for the root user:
 ```
@@ -64,11 +64,12 @@ You can perform partially run of playbook using tags.
 
 Available tags are:
 - chroot
-- common
+- core
 - users
 - system
 - tools
 - desktop
+- applications
 - packages
 - services
 - hostname
