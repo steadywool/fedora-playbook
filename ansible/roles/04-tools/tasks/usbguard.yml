@@ -1,7 +1,7 @@
 ---
-- name: Add wheel group to usbguard
+- name: Add user to usbguard
   ansible.builtin.lineinfile:
     path: /etc/usbguard/usbguard-daemon.conf
     state: present
-    regexp: '^IPCAllowedGroups='
-    line: 'IPCAllowedGroups=wheel'
+    regexp: '^IPCAllowedUsers=root'
+    line: "IPCAllowedUsers=root {{ user.name }}"
