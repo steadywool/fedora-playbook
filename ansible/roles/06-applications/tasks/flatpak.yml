@@ -4,3 +4,4 @@
     name: "{{ flatpak_packages }}"
     state: present
     method: user
+  become_user: "{{ user.name }}"
