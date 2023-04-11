@@ -9,7 +9,7 @@ hostname: blue-swan
 user:
   name: kani
   password: kani # Change the password here
-  groups: wheel,users,video,audio,games,adbusers,realtime
+  groups: users,video,audio,games,adbusers,realtime
   shell: /bin/zsh
 
 dotfiles: https://github.com/kaniville/linux-dotfiles.git

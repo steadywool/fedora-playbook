@@ -1,6 +1,6 @@
 ---
 - name: Set sudoers
   ansible.builtin.copy:
-    dest: /etc/sudoers.d/wheel
-    content: "%wheel ALL=(ALL:ALL) ALL"
+    dest: "/etc/sudoers.d/{{ user.name }}"
+    content: "{{ user.name }} ALL=(ALL:ALL) ALL"
     force: yes
