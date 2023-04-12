@@ -6,11 +6,11 @@
 
 - name: Check if kernel image exist
   stat:
-    path: /boot/initramfs-linux-hardened.img
+    path: "/boot/initramfs-{{ kernel.name }}.img"
   register: kernel_image
 
 - name: Run mkinitcpio
-  command: mkinitcpio -p linux-hardened
+  command: "mkinitcpio -p {{ kernel.name }}"
   when: not kernel_image.stat.exists
 
 - name: Configure kernel parameters at boot

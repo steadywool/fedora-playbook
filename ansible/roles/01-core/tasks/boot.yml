@@ -9,7 +9,23 @@
   ignore_errors: true
   when: not boot_efi.stat.exists
 
+- name: Create bootloader configuration
+  ansible.builtin.blockinfile:
+    path: /boot/loader/loader.conf
+    block: |
+      default archlinux.conf
+      timeout 3
+      console-mode keep
+      editor no
+    create: true
+
 - name: Create bootloader entries
-  ansible.builtin.copy:
-    src: loader/
-    dest: /boot/loader
+  ansible.builtin.blockinfile:
+    path: /boot/loader/entries/archlinux.conf
+    block: |
+      title Arch Linux
+      linux vmlinuz-{{ kernel.name }}
+      initrd {{ kernel.microcode}}.img
+      initrd initramfs-{{ kernel.name }}.img
+      options {{ kernel.options }}
+    create: true

@@ -3,10 +3,10 @@ common_packages:
   # Core
   - base
   - base-devel
-  - linux-hardened
+  - "{{ kernel.name }}"
   - linux-firmware
   - pacman-contrib
-  - intel-ucode
+  - "{{ kernel.microcode }}"
 
   # Filesystem
   - btrfs-progs
