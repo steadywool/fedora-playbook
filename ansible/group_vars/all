@@ -19,3 +19,5 @@ user:
   shell: /bin/zsh
 
 dotfiles: https://github.com/kaniville/linux-dotfiles.git
+
+# vim: ft=yaml
