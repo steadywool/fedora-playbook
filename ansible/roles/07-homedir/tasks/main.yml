@@ -13,3 +13,8 @@
   ansible.builtin.import_tasks:
     file: flatpak.yml
   tags: flatpak
+
+- name: Import XDG
+  ansible.builtin.import_tasks:
+    file: xdg.yml
+  tags: xdg

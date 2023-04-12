@@ -7,7 +7,7 @@
 - name: Set sudoers
   ansible.builtin.copy:
     dest: /etc/sudoers.d/aur_builder
-    content: aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman
+    content: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
     force: yes
 
 - name: Install AUR helper

@@ -1,0 +1,4 @@
+---
+- name: Generate XDG User Dir
+  ansible.builtin.command: xdg-user-dirs-update
+  become_user: "{{ user.name }}"
