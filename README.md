@@ -21,9 +21,9 @@ Here is the partitioning I use:
 | `/dev/mapper/luks_root/@` |                                                                | Btrfs      | `/var/cache`  |
 | `/dev/mapper/luks_root/@` |                                                                | Btrfs      | `/var/tmp`    |
 | `/dev/sda3`               | `nodev,nosuid`                                                 | Ext4       | `/home`       |
-| `/.swap/swapfile`         |                                                                | swap       | [none]        |
+| `/.swap/swapfile`         |                                                                | Swap       | [none]        |
 
-Don't forget to edit `ansible/roles/01-core/files/loader/entries/hardened.conf` if you don't use this structure.
+Don't forget to edit `ansible/group_vars/all`.
 
 ## Installation
 

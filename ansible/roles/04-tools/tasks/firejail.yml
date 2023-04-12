@@ -1,6 +1,6 @@
 ---
 - name: Load firejail profile
-  command: apparmor_parser -r /etc/apparmor.d/firejail-default
+  ansible.builtin.command: apparmor_parser -r /etc/apparmor.d/firejail-default
 
 - name: Create firejail symlinks
-  command: firecfg
+  ansible.builtin.command: firecfg

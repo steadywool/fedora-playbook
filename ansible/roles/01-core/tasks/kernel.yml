@@ -1,16 +1,16 @@
 ---
 - name: Create mkinitcpio config
   ansible.builtin.copy:
-    src: mkinitcpio.conf
     dest: /etc/mkinitcpio.conf
+    content: "HOOKS=({{ kernel.hooks }})"
 
 - name: Check if kernel image exist
-  stat:
+  ansible.builtin.stat:
     path: "/boot/initramfs-{{ kernel.name }}.img"
   register: kernel_image
 
 - name: Run mkinitcpio
-  command: "mkinitcpio -p {{ kernel.name }}"
+  ansible.builtin.command: "mkinitcpio -p {{ kernel.name }}"
   when: not kernel_image.stat.exists
 
 - name: Configure kernel parameters at boot

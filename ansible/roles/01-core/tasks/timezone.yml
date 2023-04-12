@@ -6,10 +6,10 @@
     state: link
 
 - name: Check if adjtime exist
-  stat:
+  ansible.builtin.stat:
     path: /etc/adjtime
   register: clock_file
 
 - name: Set clock
-  command: hwclock --systohc
+  ansible.builtin.command: hwclock --systohc
   when: not clock_file.stat.exists

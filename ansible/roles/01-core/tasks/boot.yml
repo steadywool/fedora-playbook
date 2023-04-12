@@ -1,31 +1,31 @@
 ---
 - name: Check if BOOTX64 exist
-  stat:
+  ansible.builtin.stat:
     path: /boot/EFI/BOOT/BOOTX64.EFI
   register: boot_efi
 
 - name: Install systemd-boot
-  command: bootctl install
+  ansible.builtin.command: bootctl install
   ignore_errors: true
   when: not boot_efi.stat.exists
 
 - name: Create bootloader configuration
-  ansible.builtin.blockinfile:
-    path: /boot/loader/loader.conf
-    block: |
+  ansible.builtin.copy:
+    dest: /boot/loader/loader.conf
+    content: |
       default archlinux.conf
       timeout 3
       console-mode keep
       editor no
-    create: true
+    force: yes
 
 - name: Create bootloader entries
-  ansible.builtin.blockinfile:
-    path: /boot/loader/entries/archlinux.conf
-    block: |
+  ansible.builtin.copy:
+    dest: /boot/loader/entries/archlinux.conf
+    content: |
       title Arch Linux
       linux vmlinuz-{{ kernel.name }}
       initrd {{ kernel.microcode}}.img
       initrd initramfs-{{ kernel.name }}.img
       options {{ kernel.options }}
-    create: true
+    force: yes
