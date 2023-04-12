@@ -1,0 +1,15 @@
+---
+- name: Import dotfiles
+  ansible.builtin.import_tasks:
+    file: dotfiles.yml
+  tags: dotfiles
+
+- name: Import services
+  ansible.builtin.import_tasks:
+    file: services.yml
+  tags: dotfiles
+
+- name: Import flatpak
+  ansible.builtin.import_tasks:
+    file: flatpak.yml
+  tags: flatpak

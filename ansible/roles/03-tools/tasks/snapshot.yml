@@ -1,0 +1,19 @@
+---
+- name: Copy hooks files
+  ansible.builtin.copy:
+    src: snapshot/snapshot.hook
+    dest: /etc/pacman.d/hooks/
+    force: yes
+
+- name: Copy script
+  ansible.builtin.copy:
+    src: snapshot/snapshot.py
+    dest: /usr/local/bin/snapshot
+    force: yes
+    mode: '0755'
+
+- name: Copy script config
+  ansible.builtin.copy:
+    src: snapshot/snapshot.conf
+    dest: /etc/snapshot/
+    force: yes

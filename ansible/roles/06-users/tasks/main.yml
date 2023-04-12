@@ -1,0 +1,25 @@
+---
+- name: Import user
+  ansible.builtin.import_tasks:
+    file: user.yml
+  tags: user
+
+- name: Import sudoers
+  ansible.builtin.import_tasks:
+    file: sudoers.yml
+  tags: sudo
+
+- name: Import subuid/subgid
+  ansible.builtin.import_tasks:
+    file: uid-gid.yml
+  tags: user
+
+- name: Import usbguard
+  ansible.builtin.import_tasks:
+    file: usbguard.yml
+  tags: usbguard
+
+- name: Import flatpak
+  ansible.builtin.import_tasks:
+    file: flatpak.yml
+  tags: flatpak

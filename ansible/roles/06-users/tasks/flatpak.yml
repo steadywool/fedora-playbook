@@ -1,0 +1,8 @@
+---
+- name: add flathub remote (user)
+  community.general.flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    state: present
+    method: user
+  become_user: "{{ user.name }}"

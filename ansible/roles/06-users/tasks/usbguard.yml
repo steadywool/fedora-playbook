@@ -1,0 +1,7 @@
+---
+- name: Add user to usbguard
+  ansible.builtin.lineinfile:
+    path: /etc/usbguard/usbguard-daemon.conf
+    state: present
+    regexp: '^IPCAllowedUsers=root'
+    line: "IPCAllowedUsers=root {{ user.name }}"

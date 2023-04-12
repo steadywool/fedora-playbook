@@ -4,26 +4,51 @@
   become: yes
 
   tasks:
-    - ansible.builtin.import_role:
+    - name: (LIVE) Core configuration & packages
+      ansible.builtin.import_role:
         name: 01-core
-      tags: core
+      tags:
+        - LIVE
+        - core
 
-    - ansible.builtin.import_role:
-        name: 02-users
-      tags: users
+    - name: (LIVE) Install system packages
+      ansible.builtin.import_role:
+        name: 02-system
+      tags:
+        - LIVE
+        - system
 
-    - ansible.builtin.import_role:
-        name: 03-system
-      tags: system
+    - name: (ROOT) Configure tools
+      ansible.builtin.import_role:
+        name: 03-tools
+      tags:
+        - ROOT
+        - tools
 
-    - ansible.builtin.import_role:
-        name: 04-tools
-      tags: tools
+    - name: (ROOT) Starting Services
+      ansible.builtin.import_role:
+        name: 04-services
+      tags:
+        - ROOT
+        - services
 
-    - ansible.builtin.import_role:
+    - name: (ROOT) Installation & configuration of the desktop
+      ansible.builtin.import_role:
         name: 05-desktop
-      tags: desktop
+      tags:
+        - ROOT
+        - desktop
 
-    - ansible.builtin.import_role:
-        name: 06-applications
-      tags: applications
+    - name: (ROOT) User creation & configuration
+      ansible.builtin.import_role:
+        name: 06-users
+      tags:
+        - ROOT
+        - users
+
+    - name: (USER) Installation of dotfiles
+      ansible.builtin.import_role:
+        name: 07-homedir
+      tags:
+        - USER
+        - homedir

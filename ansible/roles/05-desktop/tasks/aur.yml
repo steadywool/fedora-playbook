@@ -4,4 +4,5 @@
     use: yay
     name: "{{ aur_packages }}"
     state: present
-  become_user: "{{ user.name }}"
+  ignore_errors: true
+  become_user: aur_builder

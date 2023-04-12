@@ -1,5 +1,0 @@
----
-- name: Install applications packages
-  community.general.pacman:
-    name: "{{ applications_packages }}"
-    state: present

@@ -1,0 +1,8 @@
+---
+- name: Enable battery-notifier
+  ansible.builtin.systemd:
+    name: battery-notifier.timer
+    state: started
+    enabled: true
+    scope: user
+  become_user: "{{ user.name }}"

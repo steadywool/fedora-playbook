@@ -1,0 +1,18 @@
+---
+- name: Enable timesyncd service
+  ansible.builtin.systemd:
+    name: systemd-timesyncd.service
+    state: started
+    enabled: true
+
+- name: Enable resolved service
+  ansible.builtin.systemd:
+    name: systemd-resolved.service
+    state: started
+    enabled: true
+
+- name: Enable homed service
+  ansible.builtin.systemd:
+    name: systemd-homed.service
+    state: started
+    enabled: true

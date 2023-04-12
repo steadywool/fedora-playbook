@@ -1,0 +1,22 @@
+---
+- name: Check if user is created
+  ansible.builtin.command: "getent passwd {{ user.name }}"
+  register: user_exists
+  ignore_errors: true
+
+- name: Add user with systemd-homed
+  community.general.homectl:
+    name: "{{ user.name }}"
+    password: "{{ user.password }}"
+    memberof: "{{ user.groups }}"
+    shell: "{{ user.shell }}"
+    storage: "luks"
+  when: user_exists.rc != 0
+
+#- name: Add user
+#  ansible.builtin.user:
+#    name: "{{ user.name }}"
+#    password: "{{ user.password }}"
+#    groups: "{{ user.groups }}"
+#    shell: " {{ user.shell }}"
+#  when: user_exists.rc != 0

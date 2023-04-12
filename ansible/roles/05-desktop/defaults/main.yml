@@ -41,5 +41,14 @@ desktop_packages:
   - noto-fonts
   - noto-fonts-emoji
 
+  # File manager
+  - nautilus
+  - gvfs-mtp
+  - gvfs-smb
+
+  # Goodies
+  - neofetch
+
 aur_packages:
   - ttf-ms-win11-auto
+  - ankama-launcher

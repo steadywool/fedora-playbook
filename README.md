@@ -28,6 +28,8 @@ Don't forget to edit `ansible/group_vars/all`.
 
 First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/title/Installation_guide) and chroot into your system.
 
+⚠️ **By default, this playbook uses `linux-hardened` as kernel and follows the above partitioning !**
+
 Be sure that Ansible & Git are installed in your system:
 ```
 # pacman -S ansible git
@@ -38,61 +40,78 @@ Then install the AUR collection:
 # ansible-galaxy collection install kewlfft.aur
 ```
 
-After that, you can start the playbook with the chroot tag. It will install every packages and configure the system:
+After that, you can start the playbook with the LIVE tag. This will set up a basic but functional system:
 ```
-# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t chroot
+# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t LIVE
 ```
-
-ℹ️ **With the "chroot" tag, only basic packages from the official repository (core & system), and the basic configuration (core) will be installed.**
 
 Before exiting chroot, create a password for the root user:
 ```
 # passwd root
 ```
 
-You can now start your system to finalize the configuration.
+You can now start your system.
 
 Connect to your network this way:
 ```
 # systemctl start NetworkManager && nmtui
 ```
 
-Then start the playbook without the chroot tag:
+You can use the ROOT tag to further configure it:
 ```
-# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml
+# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t ROOT
 ```
 
 ℹ️ **By default this playbook use Systemd-homed to create the default user.
-A configuration exists in `ansible/roles/02-users/tasks/user.yml` to create a traditional user if needed.**
+A configuration exists in `ansible/roles/06-users/tasks/user.yml` to create a traditional user if needed.**
+
+Finally, leave the root session to connect with your user, and use the USER tag to finalize your configuration:
+```
+# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t USER
+```
+
+ℹ️ **If your user cannot use sudo, start your user session, then start another root session from which
+you will run this command. Systemd-homed users must start their sessions in order to write to them.**
 
 ## Configuration
 
 You can perform partially run of playbook using tags.
 
 Available tags are:
-- chroot
+- LIVE
+- ROOT
+- USER
 - core
-- users
 - system
 - tools
-- desktop
-- applications
-- packages
 - services
+- desktop
+- users
+- homedir
 - hostname
 - timezone
 - locale
 - boot
 - kernel
-- user
-- dotfiles
+- packages
 - aur
+- firejail
+- snapshot
+- user
 - flatpak
 - sudo
 - usbguard
-- firejail
-- snapshot
+- dotfiles
 
 After the installation, you can run this playbook to change some settings and install additional packages.
 
 ⚠️ **This playbook does not update the system.**
+
+## Usage
+
+You can use this playbook without tags to reconfigure your entire system:
+```
+# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml
+```
+
+⚠️ **You need to run this playbook as root !**

@@ -1,0 +1,6 @@
+---
+- name: Enable cups service
+  ansible.builtin.systemd:
+    name: cups.service
+    state: started
+    enabled: true

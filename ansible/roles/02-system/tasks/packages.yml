@@ -1,0 +1,5 @@
+---
+- name: Install system packages
+  community.general.pacman:
+    name: "{{ system_packages }}"
+    state: present

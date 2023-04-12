@@ -1,0 +1,19 @@
+---
+- name: Create aur_builder user
+  ansible.builtin.user:
+    name: aur_builder
+    create_home: yes
+
+- name: Set sudoers
+  ansible.builtin.copy:
+    dest: /etc/sudoers.d/aur_builder
+    content: aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman
+    force: yes
+
+- name: Install AUR helper
+  kewlfft.aur.aur:
+    use: makepkg
+    name: yay
+    state: present
+  ignore_errors: true
+  become_user: aur_builder
