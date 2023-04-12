@@ -3,6 +3,7 @@
   ansible.builtin.copy:
     dest: /etc/mkinitcpio.conf
     content: "HOOKS=({{ kernel.hooks }})"
+    force: yes
 
 - name: Check if kernel image exist
   ansible.builtin.stat:
