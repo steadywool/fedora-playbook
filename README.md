@@ -12,16 +12,15 @@ Here is the partitioning I use:
 
 | Partition                 | Mount Options                                                  | Filesystem | Mount Point   |
 |---------------------------|----------------------------------------------------------------|------------|---------------|
-| `/dev/sda1`               |`nodev,noexec,nosuid`                                           | FAT-32     | `/boot`       |
-| `/dev/sda2`               |                                                                | Luks2      |               |
-| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                               | Btrfs      | `/`           |
-| `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.snapshots` | Btrfs      | `/.snapshots` |
-| `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.swap`      | Btrfs      | `/.swap`      |
-| `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@var_log`    | Btrfs      | `/var/log`    |
-| `/dev/mapper/luks_root/@` |                                                                | Btrfs      | `/var/cache`  |
-| `/dev/mapper/luks_root/@` |                                                                | Btrfs      | `/var/tmp`    |
-| `/dev/sda3`               | `nodev,nosuid`                                                 | Ext4       | `/home`       |
-| `/.swap/swapfile`         |                                                                | Swap       | [none]        |
+| `/dev/sda1`               |`nodev,noexec,nosuid`                                           | vfat       | `/boot`       |
+| `/dev/sda2`               |                                                                | swap       | none          |
+| `/dev/sda3`               |                                                                | luks2      |               |
+| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                               | btrfs      | `/`           |
+| `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.snapshots` | btrfs      | `/.snapshots` |
+| `/dev/mapper/luks_root`   | `nodev,exec,nosuid,noatime,compress=zstd,subvol=@home`         | btrfs      | `/home`       |
+| `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@var_log`    | btrfs      | `/var/log`    |
+| `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/cache`  |
+| `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/tmp`    |
 
 Don't forget to edit `ansible/group_vars/all`.
 
