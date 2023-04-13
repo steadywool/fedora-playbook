@@ -1,0 +1,5 @@
+---
+- name: Install tools packages
+  community.general.pacman:
+    name: "{{ tools_packages }}"
+    state: present

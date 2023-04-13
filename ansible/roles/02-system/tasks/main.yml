@@ -3,3 +3,18 @@
   ansible.builtin.import_tasks:
     file: packages.yml
   tags: packages
+
+- name: Import hostname
+  ansible.builtin.import_tasks:
+    file: hostname.yml
+  tags: hostname
+
+- name: Import locale
+  ansible.builtin.import_tasks:
+    file: locale.yml
+  tags: locale
+
+- name: Import timezone
+  ansible.builtin.import_tasks:
+    file: timezone.yml
+  tags: timezone

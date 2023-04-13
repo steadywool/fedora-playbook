@@ -11,26 +11,26 @@
         - LIVE
         - core
 
-    - name: (LIVE) Install system packages
+    - name: (LIVE) Install system packages & configure the system
       ansible.builtin.import_role:
         name: 02-system
       tags:
         - LIVE
         - system
 
-    - name: (ROOT) Configure tools
-      ansible.builtin.import_role:
-        name: 03-tools
-      tags:
-        - ROOT
-        - tools
-
     - name: (ROOT) Starting Services
       ansible.builtin.import_role:
-        name: 04-services
+        name: 03-services
       tags:
         - ROOT
         - services
+
+    - name: (ROOT) Install & configure tools
+      ansible.builtin.import_role:
+        name: 04-tools
+      tags:
+        - ROOT
+        - tools
 
     - name: (ROOT) Installation & configuration of the desktop
       ansible.builtin.import_role:

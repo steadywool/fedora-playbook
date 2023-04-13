@@ -46,9 +46,5 @@ desktop_packages:
   - gvfs-mtp
   - gvfs-smb
 
-  # Goodies
-  - neofetch
-
 aur_packages:
   - ttf-ms-win11-auto
-  - ankama-launcher

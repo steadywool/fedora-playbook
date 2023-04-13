@@ -11,16 +11,6 @@ system_packages:
 
   # Networking
   - networkmanager
-  - picocom
-  - nmap
-  - tcpdump
-  - inetutils
-  - bind
-  - whois
-
-  # Android
-  - android-tools
-  - scrcpy
 
   # Bluetooth
   - bluez
@@ -48,21 +38,3 @@ system_packages:
 
   # Flatpak
   - flatpak
-
-  # Terminal
-  - htop
-  - tmux
-  - ranger
-  - zsh
-  - atool
-  - rclone
-  - task
-  - fzf
-  - ripgrep
-
-  # Development
-  - neovim
-  - npm
-
-  # Other
-  - realtime-privileges

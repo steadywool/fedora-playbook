@@ -1,6 +1,6 @@
 ---
-common_packages:
-  # Core
+core_packages:
+  # Base
   - base
   - base-devel
   - "{{ kernel.name }}"

@@ -1,5 +1,5 @@
 ---
-- name: Install common packages
+- name: Install core packages
   community.general.pacman:
-    name: "{{ common_packages }}"
+    name: "{{ core_packages }}"
     state: present

@@ -1,0 +1,34 @@
+---
+tools_packages:
+  # Networking
+  - picocom
+  - nmap
+  - tcpdump
+  - inetutils
+  - bind
+  - whois
+
+  # Android
+  - android-tools
+  - scrcpy
+
+  # Terminal
+  - htop
+  - tmux
+  - ranger
+  - zsh
+  - atool
+  - rclone
+  - task
+  - fzf
+  - ripgrep
+
+  # Development
+  - neovim
+  - npm
+
+  # Other
+  - realtime-privileges
+
+  # Goodies
+  - neofetch

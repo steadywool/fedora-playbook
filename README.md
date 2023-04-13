@@ -18,7 +18,7 @@ Here is the partitioning I use:
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                               | btrfs      | `/`           |
 | `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.snapshots` | btrfs      | `/.snapshots` |
 | `/dev/mapper/luks_root`   | `nodev,exec,nosuid,noatime,compress=zstd,subvol=@home`         | btrfs      | `/home`       |
-| `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@var_log`    | btrfs      | `/var/log`    |
+| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@var_log`    | btrfs      | `/var/log`    |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/cache`  |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/tmp`    |
 
@@ -30,9 +30,9 @@ First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/titl
 
 ⚠️ **By default, this playbook uses `linux-hardened` as kernel and follows the above partitioning !**
 
-Be sure that Ansible & Git are installed in your system:
+Be sure that Ansible is installed in your system:
 ```
-# pacman -S ansible git
+# pacman -S ansible
 ```
 
 Then install the AUR collection:
@@ -70,8 +70,7 @@ Finally, leave the root session to connect with your user, and use the USER tag 
 # ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t USER
 ```
 
-ℹ️ **If your user cannot use sudo, start your user session, then start another root session from which
-you will run this command. Systemd-homed users must start their sessions in order to write to them.**
+ℹ️ **Systemd-homed users must start their sessions in order to write to them (because of encryption).**
 
 ## Configuration
 
@@ -83,8 +82,8 @@ Available tags are:
 - USER
 - core
 - system
-- tools
 - services
+- tools
 - desktop
 - users
 - homedir
