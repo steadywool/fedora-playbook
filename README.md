@@ -17,10 +17,12 @@ Here is the partitioning I use:
 | `/dev/sda3`               |                                                                | luks2      |               |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                               | btrfs      | `/`           |
 | `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.snapshots` | btrfs      | `/.snapshots` |
-| `/dev/mapper/luks_root`   | `nodev,exec,nosuid,noatime,compress=zstd,subvol=@home`         | btrfs      | `/home`       |
+| `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@opt`               | btrfs      | `/opt`        |
+| `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@srv`               | btrfs      | `/srv`        |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@var_log`                        | btrfs      | `/var/log`    |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/cache`  |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/tmp`    |
+| `/dev/sda4`               | `nodev,nosuid`                                                 | ext4       | `/home`       |
 
 Don't forget to edit `ansible/group_vars/all`.
 
