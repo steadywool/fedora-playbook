@@ -1,0 +1,7 @@
+---
+- name: Don't shutdown the computer if the power button is pressed
+  ansible.builtin.lineinfile:
+    path: /etc/systemd/logind.conf
+    state: present
+    regexp: '^#HandlePowerKey=poweroff'
+    line: "HandlePowerKey=ignore"

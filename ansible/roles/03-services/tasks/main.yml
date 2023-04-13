@@ -28,8 +28,3 @@
   ansible.builtin.import_tasks:
     file: printer.yml
   tags: printer-services
-
-- name: Import virtualisation services
-  ansible.builtin.import_tasks:
-    file: virtualisation.yml
-  tags: virtualisation-services

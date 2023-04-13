@@ -1,8 +1,0 @@
----
-- name: Enable podman
-  ansible.builtin.systemd:
-    name: podman.service
-    state: started
-    enabled: true
-    scope: user
-  become_user: "{{ user.name }}"

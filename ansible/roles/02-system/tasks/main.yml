@@ -18,3 +18,8 @@
   ansible.builtin.import_tasks:
     file: timezone.yml
   tags: timezone
+
+- name: Import systemd-logind
+  ansible.builtin.import_tasks:
+    file: systemd-logind.yml
+  tags: logind

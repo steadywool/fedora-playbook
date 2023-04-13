@@ -18,7 +18,7 @@ Here is the partitioning I use:
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                               | btrfs      | `/`           |
 | `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.snapshots` | btrfs      | `/.snapshots` |
 | `/dev/mapper/luks_root`   | `nodev,exec,nosuid,noatime,compress=zstd,subvol=@home`         | btrfs      | `/home`       |
-| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@var_log`    | btrfs      | `/var/log`    |
+| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@var_log`                        | btrfs      | `/var/log`    |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/cache`  |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/tmp`    |
 
@@ -80,18 +80,19 @@ Available tags are:
 - LIVE
 - ROOT
 - USER
-- core
-- system
-- services
-- tools
-- desktop
-- users
-- homedir
+- 01-core
+- 02-system
+- 03-services
+- 04-tools
+- 05-desktop
+- 06-users
+- 07-homedir
+- boot
+- kernel
 - hostname
 - timezone
 - locale
-- boot
-- kernel
+- logind
 - packages
 - aur
 - firejail
@@ -99,6 +100,7 @@ Available tags are:
 - user
 - flatpak
 - sudo
+- services
 - usbguard
 - dotfiles
 - xdg

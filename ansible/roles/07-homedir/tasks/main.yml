@@ -7,7 +7,7 @@
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml
-  tags: dotfiles
+  tags: services
 
 - name: Import flatpak
   ansible.builtin.import_tasks:
