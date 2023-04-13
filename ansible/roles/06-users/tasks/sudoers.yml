@@ -1,5 +1,5 @@
 ---
-- name: Set sudoers
+- name: Set user permission
   ansible.builtin.copy:
     dest: "/etc/sudoers.d/{{ user.name }}"
     content: "{{ user.name }} ALL=(ALL:ALL) ALL"

@@ -1,19 +1,20 @@
 ---
-- name: Create aur_builder user
+- name: Create builder user
   ansible.builtin.user:
-    name: aur_builder
+    name: "{{ aur.user }}"
+    state: present
     create_home: yes
 
-- name: Set sudoers
+- name: Set builder permission
   ansible.builtin.copy:
-    dest: /etc/sudoers.d/aur_builder
-    content: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
+    dest: "/etc/sudoers.d/{{ aur.user }}"
+    content: "{{ aur.user }} ALL=(ALL) NOPASSWD: /usr/bin/pacman"
     force: yes
 
 - name: Install AUR helper
   kewlfft.aur.aur:
     use: makepkg
-    name: yay
+    name: "{{ aur.helper }}"
     state: present
   ignore_errors: true
-  become_user: aur_builder
+  become_user: "{{ aur.user }}"
