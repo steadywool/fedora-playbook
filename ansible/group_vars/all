@@ -8,13 +8,11 @@ hostname: blue-swan
 
 kernel:
   name: linux-hardened
-  options: cryptdevice=/dev/sda3:luks-root root=/dev/mapper/luks-root rootflags=subvol=@ lsm=landlock,lockdown,yama,apparmor,bpf lockdown=integrity quiet rw
+  options: cryptdevice=/dev/sda2:luks-root root=/dev/mapper/luks-root rootflags=subvol=@ lsm=landlock,lockdown,yama,apparmor,bpf lockdown=integrity quiet rw
   microcode: intel-ucode
   hooks: base udev autodetect modconf kms keyboard keymap consolefont block encrypt filesystems fsck
 
-aur:
-  helper: yay
-  user: builder
+aur_helper: yay-bin
 
 user:
   name: kani

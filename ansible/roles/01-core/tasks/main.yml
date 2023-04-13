@@ -4,12 +4,17 @@
     file: packages.yml
   tags: packages
 
-- name: Import kernel
+- name: Import hostname
   ansible.builtin.import_tasks:
-    file: kernel.yml
-  tags: kernel
+    file: hostname.yml
+  tags: hostname
 
-- name: Import bootloader
+- name: Import locale
   ansible.builtin.import_tasks:
-    file: boot.yml
-  tags: boot
+    file: locale.yml
+  tags: locale
+
+- name: Import timezone
+  ansible.builtin.import_tasks:
+    file: timezone.yml
+  tags: timezone

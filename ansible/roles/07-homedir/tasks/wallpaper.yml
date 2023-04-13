@@ -1,5 +1,0 @@
----
-- name: Copy wallpapers
-  ansible.builtin.copy:
-    src: Wallpaper
-    dest: "/home/{{ user.name }}/Pictures/"

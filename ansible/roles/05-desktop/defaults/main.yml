@@ -45,6 +45,3 @@ desktop_packages:
   - nautilus
   - gvfs-mtp
   - gvfs-smb
-
-aur_packages:
-  - ttf-ms-win11-auto

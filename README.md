@@ -4,75 +4,68 @@ ArchLinux configuration managed with Ansible.
 
 ![](src/screenshot-1.png)
 
-## Structure
+## Preambule
 
-Variables are present in the `ansible/group_vars` & `ansible/roles/ROLE_NAME/defaults` directories. You can edit them to customize your installation.
+⚠️ **Important variables are present in the `ansible/group_vars` directory. You need to edit them to customize your installation.**
 
 Here is the partitioning I use:
 
 | Partition                 | Mount Options                                                  | Filesystem | Mount Point   |
 |---------------------------|----------------------------------------------------------------|------------|---------------|
 | `/dev/sda1`               |`nodev,noexec,nosuid`                                           | vfat       | `/boot`       |
-| `/dev/sda2`               |                                                                | swap       | none          |
-| `/dev/sda3`               |                                                                | luks2      |               |
+| `/dev/sda2`               |                                                                | luks2      |               |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                               | btrfs      | `/`           |
 | `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.snapshots` | btrfs      | `/.snapshots` |
+| `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.swap`      | btrfs      | `/.swap`      |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@opt`               | btrfs      | `/opt`        |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@srv`               | btrfs      | `/srv`        |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@var_log`                        | btrfs      | `/var/log`    |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/cache`  |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/tmp`    |
-| `/dev/sda4`               | `nodev,nosuid`                                                 | ext4       | `/home`       |
-
-Don't forget to edit `ansible/group_vars/all`.
+| `/dev/sda3`               | `nodev,nosuid`                                                 | ext4       | `/home`       |
+| `/.swap/swapfile`         |                                                                | swap       | none          |
 
 ## Installation
 
 First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/title/Installation_guide) and chroot into your system.
 
-⚠️ **By default, this playbook uses `linux-hardened` as kernel and follows the above partitioning !**
-
-Be sure that Ansible is installed in your system:
+Then, let's clone the repository into a directory (for example, `/mnt`):
 ```
-# pacman -S ansible
+# git clone https://github.com/Kaniville/ansible-configuration.git /mnt/ansible-configuration
 ```
 
-Then install the AUR collection:
+The installation will be done in 3 steps, for each step we will use a different tag.
+Let's use first the **LIVE** tag to install the necessary configuration to start the system:
 ```
-# ansible-galaxy collection install kewlfft.aur
-```
-
-After that, you can start the playbook with the LIVE tag. This will set up a basic but functional system:
-```
-# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t LIVE
+# cd /mnt/ansible-configuration
+# ansible-playbook ansible/playbook.yml -t LIVE
 ```
 
-Before exiting chroot, create a password for the root user:
+After that, let's create a password for the root account:
 ```
 # passwd root
 ```
 
-You can now start your system.
-
-Connect to your network this way:
+Quit the chroot and start your new system.
+Start the `NetworkManager` service and configure your connection with `nmtui`:
 ```
-# systemctl start NetworkManager && nmtui
-```
-
-You can use the ROOT tag to further configure it:
-```
-# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t ROOT
+# systemctl start NetworkManager
+# nmtui
 ```
 
-ℹ️ **By default this playbook use Systemd-homed to create the default user.
-A configuration exists in `ansible/roles/06-users/tasks/user.yml` to create a traditional user if needed.**
-
-Finally, leave the root session to connect with your user, and use the USER tag to finalize your configuration:
+We will now use the **ROOT** tag:
 ```
-# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml -t USER
+# cd /mnt/ansible-configuration
+# ansible-playbook ansible/playbook.yml -t ROOT
 ```
 
-ℹ️ **Systemd-homed users must start their sessions in order to write to them (because of encryption).**
+⚠️ **Don't forget to modify the variables in `group_vars`, especially the user password !**
+
+Finally, start your user session and use the **USER** tag:
+```
+# cd /mnt/ansible-configuration
+# ansible-playbook ansible/playbook.yml -t USER
+```
 
 ## Configuration
 
@@ -107,15 +100,6 @@ Available tags are:
 - dotfiles
 - xdg
 
-After the installation, you can run this playbook to change some settings and install additional packages.
+After the installation, you can run this playbook without tag to change some settings and install additional packages.
 
 ⚠️ **This playbook does not update the system.**
-
-## Usage
-
-You can use this playbook without tags to reconfigure your entire system:
-```
-# ansible-pull -U https://github.com/Kaniville/ansible-configuration.git ansible/playbook.yml
-```
-
-⚠️ **You need to run this playbook as root !**

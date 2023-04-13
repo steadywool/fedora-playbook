@@ -10,3 +10,9 @@
     name: apparmor.service
     state: started
     enabled: true
+
+- name: Enable usbguard service
+  ansible.builtin.systemd:
+    name: usbguard.service
+    state: started
+    enabled: true

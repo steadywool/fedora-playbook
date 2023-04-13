@@ -18,8 +18,3 @@
   ansible.builtin.import_tasks:
     file: usbguard.yml
   tags: usbguard
-
-- name: Import flatpak
-  ansible.builtin.import_tasks:
-    file: flatpak.yml
-  tags: flatpak

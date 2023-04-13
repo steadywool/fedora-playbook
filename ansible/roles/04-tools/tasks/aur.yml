@@ -1,20 +1,45 @@
 ---
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: pacman
+
 - name: Create builder user
   ansible.builtin.user:
-    name: "{{ aur.user }}"
+    name: builder
     state: present
     create_home: yes
+  when: not aur_helper in ansible_facts.packages
 
 - name: Set builder permission
   ansible.builtin.copy:
-    dest: "/etc/sudoers.d/{{ aur.user }}"
-    content: "{{ aur.user }} ALL=(ALL) NOPASSWD: /usr/bin/pacman"
+    dest: /etc/sudoers.d/builder
+    content: "builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
     force: yes
+  when: not aur_helper in ansible_facts.packages
 
-- name: Install AUR helper
-  kewlfft.aur.aur:
-    use: makepkg
-    name: "{{ aur.helper }}"
-    state: present
-  ignore_errors: true
-  become_user: "{{ aur.user }}"
+- name: Clone helper
+  ansible.builtin.git:
+    repo: "https://aur.archlinux.org/{{ aur_helper }}.git"
+    dest: "/home/builder/{{ aur_helper}}"
+    clone: yes
+    update: yes
+  become_user: builder
+  when: not aur_helper in ansible_facts.packages
+
+- name: Build helper
+  shell: "cd /home/builder/{{ aur_helper }} && makepkg -si --noconfirm"
+  become_user: builder
+  when: not aur_helper in ansible_facts.packages
+
+- name: Remove builder user
+  ansible.builtin.user:
+    name: builder
+    state: absent
+    remove: yes
+  when: not aur_helper in ansible_facts.packages
+
+- name: Remove builder permission
+  ansible.builtin.file:
+    path: /etc/sudoers.d/builder
+    state: absent
+  when: not aur_helper in ansible_facts.packages
