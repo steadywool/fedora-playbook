@@ -9,15 +9,12 @@ import os  # //
 import sys  # Exit the program if something is wrong
 import argparse  # Pass arguments to the script
 
-# Only execute this script as root
-if not os.geteuid() == 0:
-    sys.exit("Execute this script as root !")
-
 # Argument parser setup
 argument_parser = argparse.ArgumentParser()
 argument_parser.add_argument('-i', '--info', default='default', help='add additionnal information', required=False)
 argument_parser.add_argument('-c', '--create', action="store_true", help='create snapshots')
-argument_parser.add_argument('-d', '--delete', action="store_true", help='remove old snapshots')
+argument_parser.add_argument('-d', '--delete', action="store_true", help='delete old snapshots')
+argument_parser.add_argument('-w', '--wipe', action="store_true", help='wipe snapshots')
 option = argument_parser.parse_args()
 
 try:
@@ -76,8 +73,24 @@ def delete_snapshot():
             sys.exit("Deletion of snapshots failed.")
 
 
+# Wipe all snapshots
+def wipe_snapshot():
+    # Get every subvolumes from the snapshot dir
+    snapshot_dictionary = os.listdir(f'{snapshot_dir}')
+
+    # Here I delete every subvolumes inside the snapshot dir
+    for snapshot_name in snapshot_dictionary:
+        try:
+            subprocess.run(
+                ['btrfs', 'subvolume', 'delete', f'{snapshot_dir}/{snapshot_name}'], check=True)
+        except:
+            sys.exit("Deletion of snapshots failed.")
+
+
 # Assigns a function to the options
 if option.create:
     create_snapshot()
 if option.delete:
     delete_snapshot()
+if option.wipe:
+    wipe_snapshot()
