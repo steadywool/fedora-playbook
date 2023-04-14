@@ -75,6 +75,11 @@ def delete_snapshot():
 
 # Wipe all snapshots
 def wipe_snapshot():
+    # Ask if we really want to delete all our subvolumes
+    ask_wipe = input("Do you want to delete ALL your subvolumes ? This action is irreversible (y|n): ")
+    if ask_wipe.lower() != "y":
+        sys.exit("Cancellation of the deletion !")
+
     # Get every subvolumes from the snapshot dir
     snapshot_dictionary = os.listdir(f'{snapshot_dir}')
 
