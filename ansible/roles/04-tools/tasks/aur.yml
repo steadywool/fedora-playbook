@@ -36,10 +36,8 @@
     name: builder
     state: absent
     remove: yes
-  when: not aur_helper in ansible_facts.packages
 
 - name: Remove builder permission
   ansible.builtin.file:
     path: /etc/sudoers.d/builder
     state: absent
-  when: not aur_helper in ansible_facts.packages

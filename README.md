@@ -31,7 +31,7 @@ First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/titl
 
 Then, let's clone the repository into a directory (for example, `/mnt`):
 ```
-# git clone https://github.com/Kaniville/ansible-configuration.git /mnt/ansible-configuration
+# git clone https://github.com/kaniville/ansible-configuration.git /mnt/ansible-configuration
 ```
 
 The installation will be done in 3 steps, for each step we will use a different tag.
