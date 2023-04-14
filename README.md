@@ -90,7 +90,6 @@ Available tags are:
 - logind
 - packages
 - aur
-- firejail
 - snapshot
 - user
 - flatpak

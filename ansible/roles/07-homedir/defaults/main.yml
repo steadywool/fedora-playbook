@@ -4,6 +4,7 @@ flatpak_packages:
   - org.gnome.eog
   - org.gnome.Evince
   - org.gnome.Boxes
+  - org.gnome.Calculator
   - org.gnome.seahorse.Application
   - org.pulseaudio.pavucontrol
   - org.libreoffice.LibreOffice
