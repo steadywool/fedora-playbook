@@ -19,7 +19,7 @@ tools_packages:
   - zsh
   - atool
   - rclone
-  - task
+  - calcurse
   - fzf
   - ripgrep
 
