@@ -28,7 +28,6 @@ desktop_packages:
   # XDG
   - xdg-utils
   - xdg-user-dirs
-  - xdg-desktop-portal-gnome
   - xdg-desktop-portal-wlr
 
   # Appearance
