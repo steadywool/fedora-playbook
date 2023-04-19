@@ -19,6 +19,7 @@ user:
   password: kani # Change the password here
   groups: wheel,video,audio,games,adbusers,realtime
   shell: /bin/zsh
+  privileges: True
 
 dotfiles: https://github.com/kaniville/linux-dotfiles.git
 

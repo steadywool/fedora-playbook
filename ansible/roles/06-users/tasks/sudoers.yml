@@ -1,6 +1,13 @@
 ---
-- name: Set user permission
+- name: Set user permissions
   ansible.builtin.copy:
     dest: "/etc/sudoers.d/{{ user.name }}"
     content: "{{ user.name }} ALL=(ALL:ALL) ALL"
     force: yes
+  when: user.privileges is True
+
+- name: Remove user permissions
+  ansible.builtin.file:
+    path: "/etc/sudoers.d/{{ user.name }}"
+    state: absent
+  when: user.privileges is False
