@@ -1,9 +1,4 @@
 flatpak_packages:
-  - org.gnome.eog
-  - org.gnome.Evince
-  - org.gnome.Calculator
-  - org.gnome.FileRoller
-  - org.gnome.seahorse.Application
   - org.mozilla.firefox
   - org.chromium.Chromium
   - org.libreoffice.LibreOffice
@@ -12,7 +7,6 @@ flatpak_packages:
   - org.filezillaproject.Filezilla
   - org.guitarix.Guitarix
   - org.rncbc.qpwgraph
-  - com.github.tchx84.Flatseal
   - com.valvesoftware.Steam
   - com.mojang.Minecraft
   - com.spotify.Client
