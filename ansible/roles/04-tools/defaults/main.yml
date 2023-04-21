@@ -12,7 +12,8 @@ tools_packages:
   - android-tools
   - scrcpy
 
-  # Terminal
+  # CLI
+  - wl-clipboard
   - htop
   - tmux
   - ranger

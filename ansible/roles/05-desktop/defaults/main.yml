@@ -1,37 +1,25 @@
 desktop_packages:
-  # WM
-  - sway
-  - swaybg
-  - swayidle
-  - swaylock
-  - dunst
-  - libnotify
-  - fuzzel
-  - foot
-
-  # Tools
-  - polkit-gnome
+  # Gnome
+  - gdm
+  - gnome-shell
+  - gnome-control-center
   - gnome-keyring
-  - xorg-xwayland
-  - xsettingsd
-  - wl-clipboard
-  - cliphist
-  - jq
-  - grim
-  - slurp
-  - brightnessctl
-  - gammastep
-  - python-i3ipc
-  - python-psutil
-  - libappindicator-gtk3
+  - gnome-terminal
+  - nautilus
+  - gnome-software
+  - gnome-software-packagekit-plugin
 
   # XDG
   - xdg-utils
   - xdg-user-dirs
-  - xdg-desktop-portal-wlr
+  - xdg-desktop-portal-gnome
 
   # Appearance
   - papirus-icon-theme
+
+  # GVFS
+  - gvfs-mtp
+  - gvfs-smb
 
   # Fonts
   - ttf-jetbrains-mono-nerd
@@ -39,8 +27,3 @@ desktop_packages:
   - ttf-dejavu
   - noto-fonts
   - noto-fonts-emoji
-
-  # File manager
-  - nautilus
-  - gvfs-mtp
-  - gvfs-smb

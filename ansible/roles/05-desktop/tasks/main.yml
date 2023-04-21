@@ -4,7 +4,17 @@
     file: packages.yml
   tags: packages
 
-- name: Import systemd-logind
+- name: Import flatpak
   ansible.builtin.import_tasks:
-    file: systemd-logind.yml
-  tags: logind
+    file: flatpak.yml
+  tags: flatpak
+
+- name: Import locales
+  ansible.builtin.import_tasks:
+    file: locale.yml
+  tags: locale
+
+- name: Import services
+  ansible.builtin.import_tasks:
+    file: services.yml
+  tags: services

@@ -1,11 +1,11 @@
 flatpak_packages:
-  - org.mozilla.firefox
-  - org.chromium.Chromium
   - org.gnome.eog
   - org.gnome.Evince
   - org.gnome.Calculator
+  - org.gnome.FileRoller
   - org.gnome.seahorse.Application
-  - org.pulseaudio.pavucontrol
+  - org.mozilla.firefox
+  - org.chromium.Chromium
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
@@ -13,10 +13,10 @@ flatpak_packages:
   - org.guitarix.Guitarix
   - org.rncbc.qpwgraph
   - com.github.tchx84.Flatseal
-  - com.usebottles.bottles
   - com.valvesoftware.Steam
   - com.mojang.Minecraft
   - com.spotify.Client
   - com.discordapp.Discord
-  - io.mpv.Mpv
+  - com.usebottles.bottles
   - sh.ppy.osu
+  - io.mpv.Mpv

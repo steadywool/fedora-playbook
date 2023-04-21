@@ -1,0 +1,6 @@
+---
+- name: Enable GDM service
+  ansible.builtin.systemd:
+    name: gdm.service
+    state: started
+    enabled: true

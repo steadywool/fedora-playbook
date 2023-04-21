@@ -1,7 +1,7 @@
 ---
-- name: Enable battery-notifier
+- name: Enable wallpaper-changer
   ansible.builtin.systemd:
-    name: battery-notifier.timer
+    name: wallpaper-changer.timer
     state: started
     enabled: true
     scope: user

@@ -1,0 +1,3 @@
+---
+- name: Set X11 locale
+  ansible.builtin.command: localectl set-x11-keymap fr

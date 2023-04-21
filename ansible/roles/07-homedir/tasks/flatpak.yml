@@ -7,7 +7,7 @@
     method: user
   become_user: "{{ user.name }}"
 
-- name: Install flatpak packages
+- name: Install flatpak packages (user)
   community.general.flatpak:
     name: "{{ flatpak_packages }}"
     state: present

@@ -4,10 +4,10 @@
     dest: "/etc/sudoers.d/{{ user.name }}"
     content: "{{ user.name }} ALL=(ALL:ALL) ALL"
     force: yes
-  when: user.privileges is True
+  when: user.privileges
 
 - name: Remove user permissions
   ansible.builtin.file:
     path: "/etc/sudoers.d/{{ user.name }}"
     state: absent
-  when: user.privileges is False
+  when: not user.privileges

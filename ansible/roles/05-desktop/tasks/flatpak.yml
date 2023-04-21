@@ -1,7 +1,7 @@
 ---
-- name: remove flathub remote (system)
+- name: add flathub remote (system)
   community.general.flatpak_remote:
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
-    state: absent
+    state: present
     method: system
