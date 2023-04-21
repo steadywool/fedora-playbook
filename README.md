@@ -2,8 +2,6 @@
 
 ArchLinux configuration managed with Ansible.
 
-![](src/screenshot-1.png)
-
 ## Preambule
 
 ⚠️ **Important variables are present in the `ansible/group_vars` directory. You need to edit them to customize your installation.**

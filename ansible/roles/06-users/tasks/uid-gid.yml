@@ -4,7 +4,7 @@
     content: "{{ user.name }}:600000:65536"
     force: yes
 
-- name: Set subid
+- name: Set subgid
   ansible.builtin.copy:
     dest: /etc/subgid
     content: "{{ user.name }}:600000:65536"
