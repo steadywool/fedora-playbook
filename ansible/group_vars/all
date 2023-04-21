@@ -17,7 +17,7 @@ aur_helper: yay-bin
 user:
   name: kani
   password: kani # Change the password here
-  groups: wheel,video,audio,games,adbusers,realtime
+  groups: video,audio,games,adbusers,realtime
   shell: /bin/zsh
   privileges: True
 

@@ -97,7 +97,7 @@ Available tags are:
 - services
 - usbguard
 - dotfiles
-- xdg
+- gsettings
 
 After the installation, you can run this playbook without tag to change some settings and install additional packages.
 

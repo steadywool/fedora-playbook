@@ -4,10 +4,10 @@ desktop_packages:
   - gnome-shell
   - gnome-control-center
   - gnome-keyring
-  - gnome-terminal
   - nautilus
   - gnome-software
   - gnome-software-packagekit-plugin
+  - alacritty
 
   # XDG
   - xdg-utils
@@ -29,10 +29,15 @@ desktop_packages:
   - noto-fonts-emoji
 
 flatpak_packages:
+  # Core
   - org.gnome.eog
   - org.gnome.Evince
   - org.gnome.Calculator
+  - org.gnome.Music
+  - org.gnome.Characters
+
+  # Tools
+  - ca.desrt.dconf-editor
   - org.gnome.FileRoller
   - org.gnome.seahorse.Application
-  - com.github.tchx84.Flatseal
   - org.videolan.VLC

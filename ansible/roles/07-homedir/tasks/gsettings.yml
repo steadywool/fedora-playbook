@@ -1,0 +1,21 @@
+---
+- name: Configure keyboard
+  community.general.dconf:
+    key: "/org/gnome/desktop/input-sources/sources"
+    value: "[('xkb', '{{ locale.keymap }}')]"
+    state: present
+  become_user: "{{ user.name }}"
+
+- name: Configure touchpad
+  community.general.dconf:
+    key: "/org/gnome/desktop/peripherals/touchpad/click-method"
+    value: "areas"
+    state: present
+  become_user: "{{ user.name }}"
+
+- name: Configure icon theme
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "Papirus"
+    state: present
+  become_user: "{{ user.name }}"

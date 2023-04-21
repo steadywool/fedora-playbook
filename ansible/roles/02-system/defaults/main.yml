@@ -5,6 +5,7 @@ system_packages:
   - usbguard
   - firewalld
   - arch-audit
+  - fwupd
 
   # Power
   - tlp

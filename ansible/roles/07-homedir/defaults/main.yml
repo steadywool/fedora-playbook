@@ -1,15 +1,25 @@
 flatpak_packages:
+  # Browser
   - org.mozilla.firefox
   - org.chromium.Chromium
+
+  # Tools
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
+  - com.github.tchx84.Flatseal
+  - com.usebottles.bottles
   - org.filezillaproject.Filezilla
+
+  # Music
+  - com.spotify.Client
   - org.guitarix.Guitarix
   - org.rncbc.qpwgraph
+
+  # Games
   - com.valvesoftware.Steam
-  - com.mojang.Minecraft
-  - com.spotify.Client
-  - com.discordapp.Discord
-  - com.usebottles.bottles
   - sh.ppy.osu
+  - com.mojang.Minecraft
+
+  # Chat
+  - com.discordapp.Discord

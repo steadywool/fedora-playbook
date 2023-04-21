@@ -13,3 +13,8 @@
   ansible.builtin.import_tasks:
     file: flatpak.yml
   tags: flatpak
+
+- name: Import gnome settings
+  ansible.builtin.import_tasks:
+    file: gsettings.yml
+  tags: gsettings
