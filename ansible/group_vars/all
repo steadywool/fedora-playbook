@@ -17,9 +17,8 @@ aur_helper: yay-bin
 user:
   name: kani
   password: kani # Change the password here
-  groups: video,audio,games,adbusers,realtime
+  groups: wheel,adbusers,realtime # Wheel group give the user privileges
   shell: /bin/zsh
-  privileges: True
 
 dotfiles: https://github.com/kaniville/linux-dotfiles.git
 

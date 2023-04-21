@@ -13,3 +13,8 @@
   ansible.builtin.import_tasks:
     file: snapshot.yml
   tags: snapshot
+
+- name: Import usbguard
+  ansible.builtin.import_tasks:
+    file: usbguard.yml
+  tags: usbguard
