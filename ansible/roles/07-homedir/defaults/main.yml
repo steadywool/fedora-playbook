@@ -13,4 +13,3 @@ flatpak_packages:
   - com.discordapp.Discord
   - com.usebottles.bottles
   - sh.ppy.osu
-  - io.mpv.Mpv

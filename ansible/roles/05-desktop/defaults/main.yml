@@ -35,3 +35,4 @@ flatpak_packages:
   - org.gnome.FileRoller
   - org.gnome.seahorse.Application
   - com.github.tchx84.Flatseal
+  - org.videolan.VLC
