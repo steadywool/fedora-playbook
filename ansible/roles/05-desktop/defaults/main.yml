@@ -23,6 +23,10 @@ desktop_packages:
   - gvfs-mtp
   - gvfs-smb
 
+  # Gstreamer
+  - gst-plugin-pipewire # Needed for video capture
+  - gst-plugins-good # Needed for video capture
+
   # Fonts
   - ttf-jetbrains-mono-nerd
   - ttf-liberation
