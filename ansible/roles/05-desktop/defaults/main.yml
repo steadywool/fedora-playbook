@@ -31,15 +31,21 @@ desktop_packages:
   - noto-fonts-emoji
 
 flatpak_packages:
-  # Core
+  # Web browser
+  - org.mozilla.firefox
+
+  # Documents
   - org.gnome.eog
   - org.gnome.Evince
-  - org.gnome.Calculator
-  - org.gnome.Music
-  - org.gnome.Characters
+  - org.gnome.TextEditor
+  - org.libreoffice.LibreOffice
+
+  # Multimedia
+  - org.videolan.VLC
 
   # Tools
+  - org.gnome.Calculator
+  - org.gnome.Characters
   - ca.desrt.dconf-editor
   - org.gnome.FileRoller
   - org.gnome.seahorse.Application
-  - org.videolan.VLC
