@@ -8,7 +8,7 @@ system_packages:
   - fwupd
 
   # Power
-  - tlp
+  - power-profiles-daemon
 
   # Networking
   - networkmanager

@@ -28,6 +28,9 @@ tools_packages:
   - neovim
   - npm
 
+  # Libraries
+  - python-psutil
+
   # Other
   - realtime-privileges
 

@@ -1,6 +1,8 @@
 ---
 locale:
-  lang: en_US.UTF-8
+  lang:
+    - en_US.UTF-8 # The first one is the default one
+    - fr_FR.UTF-8
   keymap: fr
 
 timezone: Europe/Paris
@@ -19,7 +21,5 @@ user:
   password: kani # Change the password here
   groups: wheel,adbusers,realtime # Wheel group give the user privileges
   shell: /bin/zsh
-
-dotfiles: https://github.com/kaniville/linux-dotfiles.git
 
 # vim: ft=yaml

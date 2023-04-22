@@ -1,6 +1,6 @@
 ---
-- name: Enable tlp service
+- name: Enable power-profile-daemon service
   ansible.builtin.systemd:
-    name: tlp.service
+    name: power-profiles-daemon.service
     state: started
     enabled: true
