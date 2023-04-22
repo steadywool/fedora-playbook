@@ -1,22 +1,33 @@
 flatpak_packages:
-  # Browser
-  - org.chromium.Chromium
+  # Desktop
+  - org.gnome.eog
+  - org.gnome.FileRoller
+  - org.gnome.seahorse.Application
+  - org.gnome.Evince
+  - org.gnome.Calculator
+  - org.gnome.Characters
+  - org.videolan.VLC
 
   # Tools
+  - org.libreoffice.LibreOffice
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
-  - com.github.tchx84.Flatseal
-  - com.usebottles.bottles
   - org.filezillaproject.Filezilla
+  - com.usebottles.bottles
+
+  # Settings
+  - com.github.tchx84.Flatseal
+  - ca.desrt.dconf-editor
 
   # Music
-  - com.spotify.Client
   - org.guitarix.Guitarix
+  - com.spotify.Client
 
   # Games
   - com.valvesoftware.Steam
-  - sh.ppy.osu
   - com.mojang.Minecraft
+  - sh.ppy.osu
 
-  # Chat
-  - com.discordapp.Discord
+  # Web browser
+  - org.mozilla.firefox
+  - org.chromium.Chromium

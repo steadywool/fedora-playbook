@@ -4,11 +4,6 @@
     file: packages.yml
   tags: packages
 
-- name: Import flatpak
-  ansible.builtin.import_tasks:
-    file: flatpak.yml
-  tags: flatpak
-
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml
