@@ -4,9 +4,9 @@ desktop_packages:
   - gnome-shell
   - gnome-control-center
   - gnome-keyring
+
+  # File manager
   - nautilus
-  - gnome-software
-  - gnome-software-packagekit-plugin
 
   # Terminal
   - alacritty
