@@ -4,7 +4,14 @@ vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep)
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers)
 vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags)
 vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics)
+vim.keymap.set('n', '<leader>fo', require('telescope.builtin').oldfiles)
 vim.keymap.set('n', '<leader>fe', require('telescope').extensions.file_browser.file_browser)
+
+-- Persistence
+-- restore the session for the current directory
+--vim.keymap.set('n', '<leader>qs', require('persistence').load())
+--vim.keymap.set('n', '<leader>ql', require('persistence').load({ last = true }))
+--vim.keymap.set('n', '<leader>qs', require('persistence').stop())
 
 -- Go to next/previous buffer in buffer list
 vim.keymap.set('n', '<TAB>', '<cmd>bnext<CR>')
