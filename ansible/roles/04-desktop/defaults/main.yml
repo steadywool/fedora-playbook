@@ -1,3 +1,31 @@
+---
+terminal_packages:
+  # Terminal
+  - htop
+  - tmux
+  - ranger
+  - zsh
+  - atool
+  - rclone
+  - calcurse
+  - fzf
+  - ripgrep
+
+  # Development
+  - neovim
+  - npm
+  - jq
+  - android-tools
+  - scrcpy
+
+  # Libraries
+  - python-i3ipc
+  - python-psutil
+
+  # Extra
+  - realtime-privileges
+  - neofetch
+
 desktop_packages:
   # Desktop
   - sway
@@ -7,6 +35,7 @@ desktop_packages:
 
   # Essential
   - dunst
+  - libnotify
   - fuzzel
   - alacritty
   - gammastep
@@ -14,7 +43,6 @@ desktop_packages:
   # Extra
   - wl-clipboard
   - brightnessctl
-  - power-profiles-daemon
   - grim
   - slurp
   - gnome-keyring
@@ -38,3 +66,15 @@ font_packages:
   - ttf-dejavu
   - noto-fonts
   - noto-fonts-emoji
+
+systemd_services:
+  - systemd-timesyncd.service
+  - systemd-resolved.service
+  - bluetooth.service
+  - firewalld.service
+  - NetworkManager.service
+  - cups.service
+  - auditd.service
+  - apparmor.service
+  - usbguard.service
+  - power-profiles-daemon.service

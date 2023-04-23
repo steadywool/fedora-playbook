@@ -1,6 +1,7 @@
 ---
-- name: Enable power-profile-daemon service
+- name: Enable systemd services
   ansible.builtin.systemd:
-    name: power-profiles-daemon.service
+    name: "{{ item }}"
     state: started
     enabled: true
+  loop: "{{ systemd_services }}"

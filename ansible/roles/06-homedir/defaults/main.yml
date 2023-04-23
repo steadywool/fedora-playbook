@@ -1,3 +1,4 @@
+---
 flatpak_packages:
   # Desktop
   - org.gnome.eog
@@ -27,3 +28,7 @@ flatpak_packages:
   # Extra
   - com.spotify.Client
   - com.discordapp.Discord
+
+systemd_services:
+  - podman.service
+  - battery-notifier.timer

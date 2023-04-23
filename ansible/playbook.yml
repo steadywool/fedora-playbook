@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   connection: local
-  become: yes
+  become: true
 
   tasks:
     - name: (LIVE) Core configuration & packages
@@ -9,39 +9,39 @@
         name: 01-core
       tags:
         - LIVE
-        - core
+        - 01-core
 
     - name: (LIVE) Install system packages & configure the system
       ansible.builtin.import_role:
         name: 02-system
       tags:
         - LIVE
-        - system
+        - 02-system
 
     - name: (ROOT) Configure tools
       ansible.builtin.import_role:
         name: 03-config
       tags:
         - ROOT
-        - config
+        - 03-config
 
     - name: (ROOT) Installation & configuration of the desktop
       ansible.builtin.import_role:
         name: 04-desktop
       tags:
         - ROOT
-        - desktop
+        - 04-desktop
 
     - name: (ROOT) User creation & configuration
       ansible.builtin.import_role:
         name: 05-users
       tags:
         - ROOT
-        - users
+        - 05-users
 
     - name: (USER) Installation of dotfiles
       ansible.builtin.import_role:
         name: 06-homedir
       tags:
         - USER
-        - homedir
+        - 06-homedir

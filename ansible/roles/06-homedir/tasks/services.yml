@@ -1,8 +1,9 @@
 ---
-- name: Enable podman
+- name: Enable services
   ansible.builtin.systemd:
-    name: podman.service
+    name: "{{ item }}"
     state: started
     enabled: true
     scope: user
+  loop: "{{ systemd_services }}"
   become_user: "{{ user.name }}"

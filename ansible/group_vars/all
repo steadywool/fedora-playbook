@@ -21,5 +21,8 @@ user:
   password: kani # Change the password here
   groups: wheel,adbusers,realtime # Wheel group give the user privileges
   shell: /bin/zsh
+  storage: luks
+  language: "{{ locale.lang[1] }}"
+  timezone: "{{ timezone }}"
 
 # vim: ft=yaml

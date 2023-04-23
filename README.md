@@ -73,25 +73,26 @@ Available tags are:
 - LIVE
 - ROOT
 - USER
-- core
-- system
-- config
-- desktop
-- users
-- homedir
+- 01-core
+- 02-system
+- 03-config
+- 04-desktop
+- 05-users
+- 06-homedir
 - boot
 - kernel
 - hostname
 - timezone
 - locale
 - packages
+- services
 - aur
+- usbguard
 - snapshot
+- systemd
+- sudo
 - user
 - flatpak
-- sudo
-- services
-- usbguard
 - dotfiles
 
 After the installation, you can run this playbook without tag to change some settings and install additional packages.

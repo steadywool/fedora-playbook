@@ -1,7 +1,4 @@
 ---
-- name: Generate USBGuard rules
-  ansible.builtin.command: "usbguard generate-policy > /etc/usbguard/rules.conf"
-
 - name: Add wheel group to usbguard
   ansible.builtin.lineinfile:
     path: /etc/usbguard/usbguard-daemon.conf
