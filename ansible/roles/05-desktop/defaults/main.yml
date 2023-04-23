@@ -1,36 +1,38 @@
 desktop_packages:
-  # Gnome
-  - gdm
-  - gnome-shell
-  - gnome-control-center
-  - gnome-keyring
+  # Desktop
+  - sway
+  - swaybg
+  - swayidle
+  - swaylock
 
-  # File manager
-  - nautilus
-  - gnome-user-share
-  - gvfs-mtp
-  - gvfs-smb
-
-  # Terminal
+  # Essential
+  - dunst
+  - fuzzel
   - alacritty
+  - gammastep
+
+  # Extra
+  - wl-clipboard
+  - brightnessctl
+  - power-profiles-daemon
+  - grim
+  - slurp
+  - gnome-keyring
+  - polkit-gnome
+
+  # X11
+  - xsettingsd
+  - xorg-xwayland
 
   # XDG
   - xdg-utils
   - xdg-user-dirs
-  - xdg-user-dirs-gtk
-  - xdg-desktop-portal-gnome
+  - xdg-desktop-portal-wlr
 
   # Appearance
   - papirus-icon-theme
 
-  # Gstreamer
-  - gst-plugin-pipewire # Needed for video capture
-  - gst-plugins-good # Needed for video capture
-
-  # Power management
-  - power-profiles-daemon
-
-  # Fonts
+font_packages:
   - ttf-jetbrains-mono-nerd
   - ttf-liberation
   - ttf-dejavu

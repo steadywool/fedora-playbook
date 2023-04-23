@@ -1,3 +1,0 @@
----
-- name: Generate USBGuard rules
-  ansible.builtin.command: "usbguard generate-policy > /etc/usbguard/rules.conf"

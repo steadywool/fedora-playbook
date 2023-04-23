@@ -85,7 +85,7 @@ Available tags are:
 - hostname
 - timezone
 - locale
-- logind
+- systemd
 - packages
 - aur
 - snapshot
@@ -95,7 +95,6 @@ Available tags are:
 - services
 - usbguard
 - dotfiles
-- gsettings
 
 After the installation, you can run this playbook without tag to change some settings and install additional packages.
 

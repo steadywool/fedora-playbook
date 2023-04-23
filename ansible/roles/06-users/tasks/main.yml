@@ -4,15 +4,15 @@
     file: user.yml
   tags: user
 
-- name: Import subuid/subgid
-  ansible.builtin.import_tasks:
-    file: uid-gid.yml
-  tags: user
-
 - name: Import sudoers
   ansible.builtin.import_tasks:
     file: sudoers.yml
   tags: sudo
+
+- name: Import subuid/subgid
+  ansible.builtin.import_tasks:
+    file: uid-gid.yml
+  tags: user
 
 - name: Import usbguard
   ansible.builtin.import_tasks:

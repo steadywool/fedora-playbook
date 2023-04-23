@@ -1,0 +1,6 @@
+---
+- name: Copy logind
+  ansible.builtin.copy:
+    src: logind.conf.d/
+    dest: /etc/systemd/logind.conf.d/
+    force: yes

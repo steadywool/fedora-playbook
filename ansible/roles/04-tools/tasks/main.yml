@@ -14,7 +14,7 @@
     file: snapshot.yml
   tags: snapshot
 
-- name: Import usbguard
+- name: Import systemd settings
   ansible.builtin.import_tasks:
-    file: usbguard.yml
-  tags: usbguard
+    file: systemd.yml
+  tags: systemd

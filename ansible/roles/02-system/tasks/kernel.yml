@@ -16,5 +16,5 @@
 
 - name: Configure kernel parameters at boot
   ansible.builtin.copy:
-    src: files/sysctl.d/
+    src: sysctl.d/
     dest: /etc/sysctl.d

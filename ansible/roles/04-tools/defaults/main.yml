@@ -12,8 +12,7 @@ tools_packages:
   - android-tools
   - scrcpy
 
-  # CLI
-  - wl-clipboard
+  # Terminal
   - htop
   - tmux
   - ranger
@@ -27,8 +26,10 @@ tools_packages:
   # Development
   - neovim
   - npm
+  - jq
 
   # Libraries
+  - python-i3ipc
   - python-psutil
 
   # Other

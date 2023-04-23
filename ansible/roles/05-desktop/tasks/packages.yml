@@ -3,3 +3,9 @@
   community.general.pacman:
     name: "{{ desktop_packages }}"
     state: present
+
+
+- name: Install fonts
+  community.general.pacman:
+    name: "{{ font_packages }}"
+    state: present
