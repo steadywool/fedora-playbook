@@ -36,7 +36,7 @@ The installation will be done in 3 steps, for each step we will use a different 
 Let's use first the **LIVE** tag to install the necessary configuration to start the system:
 ```
 # cd /mnt/ansible-configuration
-# ansible-playbook ansible/playbook.yml -t LIVE
+# ansible-playbook playbook.yml -t LIVE
 ```
 
 After that, let's create a password for the root account:
@@ -54,7 +54,7 @@ Start the `NetworkManager` service and configure your connection with `nmtui`:
 We will now use the **ROOT** tag:
 ```
 # cd /mnt/ansible-configuration
-# ansible-playbook ansible/playbook.yml -t ROOT
+# ansible-playbook playbook.yml -t ROOT
 ```
 
 ⚠️ **Don't forget to modify the variables in `group_vars`, especially the user password !**
@@ -62,7 +62,7 @@ We will now use the **ROOT** tag:
 Finally, start your user session and use the **USER** tag:
 ```
 # cd /mnt/ansible-configuration
-# ansible-playbook ansible/playbook.yml -t USER
+# ansible-playbook playbook.yml -t USER
 ```
 
 ## Configuration
@@ -73,22 +73,21 @@ Available tags are:
 - LIVE
 - ROOT
 - USER
-- 01-core
-- 02-system
-- 03-config
-- 04-desktop
-- 05-users
-- 06-homedir
+- 00-core
+- 01-system
+- 02-desktop
+- 03-users
+- 04-homedir
 - boot
 - kernel
 - hostname
 - timezone
 - locale
 - packages
-- services
 - aur
 - usbguard
 - snapshot
+- services
 - systemd
 - sudo
 - user

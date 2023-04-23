@@ -4,17 +4,17 @@
     file: packages.yml
   tags: packages
 
-- name: Import hostname
+- name: Import AUR
   ansible.builtin.import_tasks:
-    file: hostname.yml
-  tags: hostname
+    file: aur.yml
+  tags: aur
 
-- name: Import locale
+- name: Import snapshot script
   ansible.builtin.import_tasks:
-    file: locale.yml
-  tags: locale
+    file: snapshot.yml
+  tags: snapshot
 
-- name: Import timezone
+- name: Import usbguard
   ansible.builtin.import_tasks:
-    file: timezone.yml
-  tags: timezone
+    file: usbguard.yml
+  tags: usbguard

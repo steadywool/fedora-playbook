@@ -5,14 +5,8 @@
     content: "HOOKS=({{ kernel.hooks }})"
     force: yes
 
-- name: Check if kernel image exist
-  ansible.builtin.stat:
-    path: "/boot/initramfs-{{ kernel.name }}.img"
-  register: kernel_image
-
 - name: Run mkinitcpio
   ansible.builtin.command: "mkinitcpio -p {{ kernel.name }}"
-  when: not kernel_image.stat.exists
 
 - name: Configure kernel parameters at boot
   ansible.builtin.copy:

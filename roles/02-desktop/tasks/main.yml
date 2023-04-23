@@ -4,12 +4,12 @@
     file: packages.yml
   tags: packages
 
-- name: Import kernel
+- name: Import services
   ansible.builtin.import_tasks:
-    file: kernel.yml
-  tags: kernel
+    file: services.yml
+  tags: services
 
-- name: Import bootloader
+- name: Import systemd config
   ansible.builtin.import_tasks:
-    file: boot.yml
-  tags: boot
+    file: systemd.yml
+  tags: systemd
