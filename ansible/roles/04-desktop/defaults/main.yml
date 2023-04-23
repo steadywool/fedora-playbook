@@ -1,0 +1,36 @@
+desktop_packages:
+  # Gnome
+  - gdm
+  - gnome-shell
+  - gnome-control-center
+  - gnome-keyring
+  - gnome-remote-desktop
+  - gnome-terminal
+
+  # Extra
+  - power-profiles-daemon
+  - fwupd
+
+  # File manager
+  - nautilus
+  - gnome-user-share
+  - gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
+
+  # XDG
+  - xdg-utils
+  - xdg-user-dirs
+  - xdg-user-dirs-gtk
+  - xdg-desktop-portal-gnome
+
+  # Gstreamer
+  - gst-plugin-{pipewire,good} # Needed for video capture
+
+  # Appearance
+  - papirus-icon-theme
+
+font_packages:
+  - ttf-jetbrains-mono-nerd
+  - ttf-liberation
+  - ttf-dejavu
+  - noto-fonts
+  - noto-fonts-emoji

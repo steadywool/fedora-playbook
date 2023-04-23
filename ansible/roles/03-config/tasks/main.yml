@@ -4,6 +4,11 @@
     file: packages.yml
   tags: packages
 
+- name: Import services
+  ansible.builtin.import_tasks:
+    file: services.yml
+  tags: services
+
 - name: Import AUR
   ansible.builtin.import_tasks:
     file: aur.yml
@@ -13,8 +18,3 @@
   ansible.builtin.import_tasks:
     file: snapshot.yml
   tags: snapshot
-
-- name: Import systemd settings
-  ansible.builtin.import_tasks:
-    file: systemd.yml
-  tags: systemd

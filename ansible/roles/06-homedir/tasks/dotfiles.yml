@@ -18,14 +18,6 @@
       - "--exclude=README.md"
   become_user: "{{ user.name }}"
 
-- name: Install ranger devicons
-  ansible.builtin.git:
-    repo: https://github.com/alexanderjeurissen/ranger_devicons.git
-    dest: "/home/{{ user.name }}/.config/ranger/plugins/ranger_devicons"
-    clone: yes
-    update: yes
-  become_user: "{{ user.name }}"
-
 - name: Install packer nvim
   ansible.builtin.git:
     repo: https://github.com/wbthomason/packer.nvim.git

@@ -31,6 +31,7 @@ tools_packages:
   # Libraries
   - python-i3ipc
   - python-psutil
+  - python-nautilus
 
   # Other
   - realtime-privileges

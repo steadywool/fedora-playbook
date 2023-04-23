@@ -1,0 +1,33 @@
+flatpak_packages:
+  # Desktop
+  - org.gnome.eog
+  - org.gnome.FileRoller
+  - org.gnome.Evince
+  - org.gnome.Calculator
+  - org.gnome.Characters
+  - org.videolan.VLC
+
+  # Tools
+  - org.libreoffice.LibreOffice
+  - org.gimp.GIMP
+  - org.filezillaproject.Filezilla
+  - org.guitarix.Guitarix
+
+  # Settings
+  - org.gnome.seahorse.Application
+  - org.gnome.World.Secrets
+  - com.github.tchx84.Flatseal
+  - ca.desrt.dconf-editor
+
+  # Games
+  - com.valvesoftware.Steam
+  - com.mojang.Minecraft
+  - sh.ppy.osu
+
+  # Web browser
+  - org.mozilla.firefox
+  - org.chromium.Chromium
+
+  # Extra
+  - com.spotify.Client
+  - com.discordapp.Discord

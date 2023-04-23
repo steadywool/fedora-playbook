@@ -9,46 +9,39 @@
         name: 01-core
       tags:
         - LIVE
-        - 01-core
+        - core
 
     - name: (LIVE) Install system packages & configure the system
       ansible.builtin.import_role:
         name: 02-system
       tags:
         - LIVE
-        - 02-system
+        - system
 
-    - name: (ROOT) Starting Services
+    - name: (ROOT) Configure tools
       ansible.builtin.import_role:
-        name: 03-services
+        name: 03-config
       tags:
         - ROOT
-        - 03-services
-
-    - name: (ROOT) Install & configure tools
-      ansible.builtin.import_role:
-        name: 04-tools
-      tags:
-        - ROOT
-        - 04-tools
+        - config
 
     - name: (ROOT) Installation & configuration of the desktop
       ansible.builtin.import_role:
-        name: 05-desktop
+        name: 04-desktop
       tags:
         - ROOT
-        - 05-desktop
+        - desktop
 
     - name: (ROOT) User creation & configuration
       ansible.builtin.import_role:
-        name: 06-users
+        name: 05-users
       tags:
         - ROOT
-        - 06-users
+        - users
 
     - name: (USER) Installation of dotfiles
       ansible.builtin.import_role:
-        name: 07-homedir
+        name: 06-homedir
       tags:
         - USER
-        - 07-homedir
+        - homedir
