@@ -20,6 +20,7 @@ terminal_packages:
   # Libraries
   - python-i3ipc
   - python-psutil
+  - python-pillow
 
   # Extra
   - realtime-privileges
