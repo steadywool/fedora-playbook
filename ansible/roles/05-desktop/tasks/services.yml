@@ -4,3 +4,9 @@
     name: gdm.service
     state: started
     enabled: true
+
+- name: Enable power-profile-daemon service
+  ansible.builtin.systemd:
+    name: power-profiles-daemon.service
+    state: started
+    enabled: true

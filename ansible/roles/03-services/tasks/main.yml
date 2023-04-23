@@ -19,11 +19,6 @@
     file: bluetooth.yml
   tags: bluetooth-services
 
-- name: Import power services
-  ansible.builtin.import_tasks:
-    file: power.yml
-  tags: power-services
-
 - name: Import printer services
   ansible.builtin.import_tasks:
     file: printer.yml

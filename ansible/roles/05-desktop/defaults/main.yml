@@ -7,6 +7,9 @@ desktop_packages:
 
   # File manager
   - nautilus
+  - gnome-user-share
+  - gvfs-mtp
+  - gvfs-smb
 
   # Terminal
   - alacritty
@@ -20,13 +23,12 @@ desktop_packages:
   # Appearance
   - papirus-icon-theme
 
-  # GVFS
-  - gvfs-mtp
-  - gvfs-smb
-
   # Gstreamer
   - gst-plugin-pipewire # Needed for video capture
   - gst-plugins-good # Needed for video capture
+
+  # Power management
+  - power-profiles-daemon
 
   # Fonts
   - ttf-jetbrains-mono-nerd

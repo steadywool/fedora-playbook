@@ -7,9 +7,6 @@ system_packages:
   - arch-audit
   - fwupd
 
-  # Power
-  - power-profiles-daemon
-
   # Networking
   - networkmanager
 
