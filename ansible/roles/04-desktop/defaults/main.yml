@@ -5,7 +5,7 @@ desktop_packages:
   - gnome-control-center
   - gnome-keyring
   - gnome-remote-desktop
-  - gnome-terminal
+  - gnome-console
 
   # Extra
   - power-profiles-daemon
@@ -14,7 +14,8 @@ desktop_packages:
   # File manager
   - nautilus
   - gnome-user-share
-  - gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
+  - gvfs-mtp
+  - gvfs-smb
 
   # XDG
   - xdg-utils
@@ -23,7 +24,8 @@ desktop_packages:
   - xdg-desktop-portal-gnome
 
   # Gstreamer
-  - gst-plugin-{pipewire,good} # Needed for video capture
+  - gst-plugin-pipewire # Needed for video capture
+  - gst-plugins-good # Needed for video capture
 
   # Appearance
   - papirus-icon-theme
