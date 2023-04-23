@@ -8,7 +8,7 @@
   become_user: "{{ user.name }}"
 
 - name: Install user dotfiles
-  ansible.posix.synchronize: 
+  ansible.posix.synchronize:
     src: /tmp/dotfiles/
     dest: "/home/{{ user.name }}"
     rsync_opts:
@@ -16,6 +16,14 @@
       - "--exclude=src"
       - "--exclude=LICENSE"
       - "--exclude=README.md"
+  become_user: "{{ user.name }}"
+
+- name: Install ranger devicons
+  ansible.builtin.git:
+    repo: https://github.com/alexanderjeurissen/ranger_devicons.git
+    dest: "/home/{{ user.name }}/.config/ranger/plugins/ranger_devicons"
+    clone: yes
+    update: yes
   become_user: "{{ user.name }}"
 
 - name: Install packer nvim

@@ -1,23 +1,19 @@
 flatpak_packages:
   # Desktop
   - org.gnome.eog
-  - org.gnome.FileRoller
-  - org.gnome.Evince
+  - org.kde.okular
   - org.gnome.Calculator
-  - org.gnome.Characters
-  - org.videolan.VLC
+  - io.mpv.Mpv
+  - org.pulseaudio.pavucontrol
+  - org.gnome.seahorse.Application
 
   # Tools
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
   - org.filezillaproject.Filezilla
   - org.guitarix.Guitarix
-
-  # Settings
-  - org.gnome.seahorse.Application
-  - org.gnome.World.Secrets
+  - org.keepassxc.KeePassXC
   - com.github.tchx84.Flatseal
-  - ca.desrt.dconf-editor
 
   # Games
   - com.valvesoftware.Steam

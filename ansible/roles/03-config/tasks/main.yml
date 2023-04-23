@@ -18,3 +18,8 @@
   ansible.builtin.import_tasks:
     file: snapshot.yml
   tags: snapshot
+
+- name: Import systemd config
+  ansible.builtin.import_tasks:
+    file: systemd.yml
+  tags: systemd
