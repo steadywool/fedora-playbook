@@ -28,6 +28,7 @@ desktop_packages:
   - gst-plugins-good # Needed for video capture
 
   # Appearance
+  - gnome-themes-extra
   - papirus-icon-theme
 
 font_packages:
