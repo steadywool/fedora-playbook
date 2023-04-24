@@ -2,8 +2,8 @@
 terminal_packages:
   # Terminal
   - htop
-  - tmux
   - ranger
+  - atool
   - zsh
   - rclone
   - calcurse
@@ -30,7 +30,7 @@ desktop_packages:
   - dunst
   - libnotify
   - fuzzel
-  - alacritty
+  - kitty
   - gammastep
 
   # Extra
@@ -40,6 +40,11 @@ desktop_packages:
   - slurp
   - gnome-keyring
   - polkit-gnome
+
+  # Files
+  - thunar
+  - gvfs-mtp
+  - gvfs-smb
 
   # X11
   - xsettingsd
