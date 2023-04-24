@@ -1,0 +1,4 @@
+- name: Install python libraries
+  ansible.builtin.command: "pip install {{ item }} --user"
+  loop: "{{ libraries.python }}"
+  become_user: "{{ user.name }}"

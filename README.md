@@ -11,21 +11,22 @@ Here is the partitioning I use:
 | Partition                 | Mount Options                                                  | Filesystem | Mount Point   |
 |---------------------------|----------------------------------------------------------------|------------|---------------|
 | `/dev/sda1`               |`nodev,noexec,nosuid`                                           | vfat       | `/boot`       |
-| `/dev/sda2`               |                                                                | luks2      |               |
+| `/dev/sda2`               |                                                                | swap       | none          |
+| `/dev/sda3`               |                                                                | luks2      |               |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                               | btrfs      | `/`           |
 | `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.snapshots` | btrfs      | `/.snapshots` |
-| `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.swap`      | btrfs      | `/.swap`      |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@opt`               | btrfs      | `/opt`        |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@srv`               | btrfs      | `/srv`        |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@var_log`                        | btrfs      | `/var/log`    |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/cache`  |
 | `/dev/mapper/luks_root/@` |                                                                | btrfs      | `/var/tmp`    |
-| `/dev/sda3`               | `nodev,nosuid`                                                 | ext4       | `/home`       |
-| `/.swap/swapfile`         |                                                                | swap       | none          |
+| `/dev/sda4`               | `nodev,nosuid`                                                 | ext4       | `/home`       |
 
 ## Installation
 
 First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/title/Installation_guide) and chroot into your system.
+
+*You can also encrypt your swap memory by following [these instructions](https://wiki.archlinux.org/title/Dm-crypt/Swap_encryption).*
 
 Then, let's clone the repository into a directory (for example, `/mnt`):
 ```
@@ -93,6 +94,7 @@ Available tags are:
 - user
 - flatpak
 - dotfiles
+- libraries
 
 After the installation, you can run this playbook without tag to change some settings and install additional packages.
 

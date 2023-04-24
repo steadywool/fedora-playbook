@@ -1,7 +1,7 @@
 ---
 - name: Clone user dotfiles
   ansible.builtin.git:
-    repo: https://github.com/kaniville/linux-dotfiles
+    repo: 'https://github.com/kaniville/linux-dotfiles.git'
     dest: /tmp/dotfiles
     clone: yes
     update: yes
@@ -20,7 +20,7 @@
 
 - name: Install ranger devicons
   ansible.builtin.git:
-    repo: https://github.com/alexanderjeurissen/ranger_devicons.git
+    repo: 'https://github.com/alexanderjeurissen/ranger_devicons.git'
     dest: "/home/{{ user.name }}/.config/ranger/plugins/ranger_devicons"
     clone: yes
     update: yes
@@ -28,7 +28,7 @@
 
 - name: Install packer nvim
   ansible.builtin.git:
-    repo: https://github.com/wbthomason/packer.nvim.git
+    repo: 'https://github.com/wbthomason/packer.nvim.git'
     dest: "/home/{{ user.name }}/.local/share/nvim/site/pack/packer/start/packer.nvim"
     clone: yes
     update: yes

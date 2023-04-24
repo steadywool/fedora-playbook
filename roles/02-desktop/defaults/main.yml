@@ -5,22 +5,15 @@ terminal_packages:
   - tmux
   - ranger
   - zsh
-  - atool
   - rclone
   - calcurse
 
   # Development
   - neovim
   - npm
-  - jq
-  - ripgrep
+  - python-pip
   - android-tools
-  - scrcpy
-
-  # Libraries
-  - python-i3ipc
-  - python-psutil
-  - python-pillow
+  - jq
 
   # Extra
   - realtime-privileges
