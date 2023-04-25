@@ -1,10 +1,10 @@
 ---
 terminal_packages:
   # Terminal
+  - fish
   - htop
   - ranger
   - atool
-  - zsh
   - rclone
   - calcurse
 
@@ -17,7 +17,6 @@ terminal_packages:
 
   # Extra
   - realtime-privileges
-  - neofetch
 
 desktop_packages:
   # Desktop
@@ -39,7 +38,7 @@ desktop_packages:
   - grim
   - slurp
   - gnome-keyring
-  - polkit-gnome
+  - polkit-kde-agent
 
   # Files
   - thunar

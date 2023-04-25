@@ -18,7 +18,7 @@ user:
   name: kani
   password: kani # Change the password here
   groups: wheel,adbusers,realtime # Wheel group give the user privileges
-  shell: /bin/zsh
+  shell: /bin/fish
   storage: luks
   language: "{{ locale.lang[1] }}"
   timezone: "{{ timezone }}"
