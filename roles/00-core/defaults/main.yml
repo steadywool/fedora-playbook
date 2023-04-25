@@ -4,9 +4,11 @@ core_packages:
   - base
   - base-devel
   - "{{ kernel.name }}"
+  - "{{ kernel.name }}-headers"
   - linux-firmware
+  - dkms
   - pacman-contrib
-  - "{{ kernel.microcode }}"
+  - intel-ucode
 
   # Filesystem
   - btrfs-progs

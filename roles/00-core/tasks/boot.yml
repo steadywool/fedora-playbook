@@ -25,7 +25,7 @@
     content: |
       title Arch Linux
       linux vmlinuz-{{ kernel.name }}
-      initrd {{ kernel.microcode}}.img
+      initrd intel-ucode.img
       initrd initramfs-{{ kernel.name }}.img
       options {{ kernel.options }}
     force: yes
