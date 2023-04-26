@@ -13,7 +13,6 @@ terminal_packages:
   - npm
   - python-pip
   - android-tools
-  - jq
 
   # Extra
   - realtime-privileges
@@ -38,7 +37,7 @@ desktop_packages:
   - grim
   - slurp
   - gnome-keyring
-  - polkit-kde-agent
+  - polkit-gnome
 
   # Files
   - thunar

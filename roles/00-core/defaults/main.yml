@@ -30,3 +30,4 @@ core_packages:
   - tree
   - ansible
   - rsync
+  - jq
