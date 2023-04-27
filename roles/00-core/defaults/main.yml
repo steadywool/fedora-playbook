@@ -27,7 +27,6 @@ core_packages:
   - git
   - wget
   - man-db
-  - tree
   - ansible
   - rsync
   - jq

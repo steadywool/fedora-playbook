@@ -12,7 +12,6 @@ terminal_packages:
   - neovim
   - npm
   - python-pip
-  - android-tools
 
   # Extra
   - realtime-privileges
