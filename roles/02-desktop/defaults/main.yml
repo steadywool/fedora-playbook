@@ -39,7 +39,7 @@ desktop_packages:
   - polkit-gnome
 
   # Files
-  - thunar
+  - caja
   - gvfs-mtp
   - gvfs-smb
 
