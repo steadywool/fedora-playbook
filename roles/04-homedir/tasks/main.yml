@@ -13,8 +13,3 @@
   ansible.builtin.import_tasks:
     file: flatpak.yml
   tags: flatpak
-
-- name: Import libraries
-  ansible.builtin.import_tasks:
-    file: libraries.yml
-  tags: libraries

@@ -32,9 +32,3 @@ flatpak_packages:
 systemd_services:
   - podman.service
   - battery-notifier.timer
-
-libraries:
-  python:
-    - psutil
-    - i3ipc
-    - pillow
