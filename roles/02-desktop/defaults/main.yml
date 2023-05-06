@@ -12,6 +12,7 @@ terminal_packages:
   - neovim
   - npm
   - python-pip
+  - android-tools
 
   # Libraries
   - python-i3ipc
