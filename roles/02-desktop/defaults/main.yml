@@ -30,21 +30,21 @@ desktop_packages:
 
   # Essential
   - dunst
-  - libnotify
   - fuzzel
   - kitty
   - gammastep
-
-  # Extra
-  - wl-clipboard
   - brightnessctl
   - grim
   - slurp
+
+  # Extra
+  - wl-clipboard
   - gnome-keyring
-  - polkit-gnome
+  - polkit-kde-agent
+  - libnotify
 
   # Files
-  - caja
+  - nautilus
   - gvfs-mtp
   - gvfs-smb
 
