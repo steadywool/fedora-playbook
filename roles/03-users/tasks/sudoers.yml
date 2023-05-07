@@ -3,4 +3,4 @@
   ansible.builtin.copy:
     dest: "/etc/sudoers.d/wheel"
     content: "%wheel ALL=(ALL:ALL) ALL"
-    force: yes
+    force: true

@@ -2,10 +2,10 @@
   ansible.builtin.copy:
     dest: /etc/subuid
     content: "{{ user.name }}:600000:65536"
-    force: yes
+    force: true
 
 - name: Set subgid
   ansible.builtin.copy:
     dest: /etc/subgid
     content: "{{ user.name }}:600000:65536"
-    force: yes
+    force: true

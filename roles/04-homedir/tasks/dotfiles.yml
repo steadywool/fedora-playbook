@@ -3,8 +3,8 @@
   ansible.builtin.git:
     repo: 'https://github.com/kaniville/linux-dotfiles.git'
     dest: /tmp/dotfiles
-    clone: yes
-    update: yes
+    clone: true
+    update: true
   become_user: "{{ user.name }}"
 
 - name: Install user dotfiles
@@ -27,14 +27,16 @@
   ansible.builtin.git:
     repo: 'https://github.com/folke/lazy.nvim.git'
     dest: "/home/{{ user.name }}/.local/share/nvim/lazy/lazy.nvim"
-    clone: yes
-    update: yes
+    clone: true
+    update: true
+    force: true
   become_user: "{{ user.name }}"
 
 - name: Install ranger devicons
   ansible.builtin.git:
     repo: 'https://github.com/alexanderjeurissen/ranger_devicons.git'
     dest: "/home/{{ user.name }}/.config/ranger/plugins/ranger_devicons"
-    clone: yes
-    update: yes
+    clone: true
+    update: true
+    force: true
   become_user: "{{ user.name }}"

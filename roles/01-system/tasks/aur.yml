@@ -7,22 +7,22 @@
   ansible.builtin.user:
     name: builder
     state: present
-    create_home: yes
+    create_home: true
   when: not aur_helper in ansible_facts.packages
 
 - name: Set builder permission
   ansible.builtin.copy:
     dest: /etc/sudoers.d/builder
     content: "builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
-    force: yes
+    force: true
   when: not aur_helper in ansible_facts.packages
 
 - name: Clone helper
   ansible.builtin.git:
     repo: "https://aur.archlinux.org/{{ aur_helper }}.git"
     dest: "/home/builder/{{ aur_helper}}"
-    clone: yes
-    update: yes
+    clone: true
+    update: true
   become_user: builder
   when: not aur_helper in ansible_facts.packages
 
@@ -35,7 +35,7 @@
   ansible.builtin.user:
     name: builder
     state: absent
-    remove: yes
+    remove: true
 
 - name: Remove builder permission
   ansible.builtin.file:

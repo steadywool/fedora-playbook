@@ -17,7 +17,7 @@
       timeout 3
       console-mode keep
       editor no
-    force: yes
+    force: true
 
 - name: Create bootloader entries
   ansible.builtin.copy:
@@ -28,4 +28,4 @@
       initrd intel-ucode.img
       initrd initramfs-{{ kernel.name }}.img
       options {{ kernel.options }}
-    force: yes
+    force: true

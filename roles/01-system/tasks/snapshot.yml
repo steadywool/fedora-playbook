@@ -3,24 +3,24 @@
   ansible.builtin.git:
     repo: https://github.com/kaniville/btrfs-autosnap
     dest: /tmp/btrfs-autosnap
-    clone: yes
-    update: yes
+    clone: true
+    update: true
 
 - name: Copy hooks files
   ansible.builtin.copy:
     src: /tmp/btrfs-autosnap/snapshot.hook
     dest: /etc/pacman.d/hooks/
-    force: yes
+    force: true
 
 - name: Copy script
   ansible.builtin.copy:
     src: /tmp/btrfs-autosnap/snapshot.py
     dest: /usr/local/bin/snapshot
-    force: yes
+    force: true
     mode: '0755'
 
 - name: Copy script config
   ansible.builtin.copy:
     src: /tmp/btrfs-autosnap/snapshot.conf
     dest: /etc/snapshot/
-    force: yes
+    force: true

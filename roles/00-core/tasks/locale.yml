@@ -9,10 +9,10 @@
   ansible.builtin.copy:
     dest: /etc/locale.conf
     content: "LANG={{ locale.lang[0] }}"
-    force: yes
+    force: true
 
 - name: Set keymap
   ansible.builtin.copy:
     dest: /etc/vconsole.conf
     content: "KEYMAP={{ locale.keymap }}"
-    force: yes
+    force: true
