@@ -28,6 +28,5 @@ core_packages:
   - wget
   - man-db
   - ansible
-  - tldr
   - rsync
   - jq

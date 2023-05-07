@@ -13,8 +13,8 @@ Here is the partitioning I use:
 | `/dev/sda1`               | `nodev,noexec,nosuid`                                          | vfat       | `/boot`       |
 | `/dev/sda2`               |                                                                | luks2      |               |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                               | btrfs      | `/`           |
+| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@.snapshots`                     | btrfs      | `/.snapshots` |
 | `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.swap`      | btrfs      | `/.swap`      |
-| `/dev/mapper/luks_root`   | `nodev,noexec,nosuid,noatime,compress=zstd,subvol=@.snapshots` | btrfs      | `/.snapshots` |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@opt`               | btrfs      | `/opt`        |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@srv`               | btrfs      | `/srv`        |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@var_log`                        | btrfs      | `/var/log`    |
