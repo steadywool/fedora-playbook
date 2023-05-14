@@ -95,7 +95,6 @@ Available tags are:
 - user
 - flatpak
 - dotfiles
-- libraries
 
 After the installation, you can run this playbook without tag to change some settings and install additional packages.
 

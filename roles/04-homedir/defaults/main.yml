@@ -3,7 +3,6 @@ flatpak_packages:
   # Desktop
   - org.gnome.eog
   - org.kde.okular
-  - org.gnome.Calculator
   - io.mpv.Mpv
   - org.pulseaudio.pavucontrol
   - org.gnome.seahorse.Application
@@ -11,8 +10,6 @@ flatpak_packages:
   # Tools
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
-  - org.filezillaproject.Filezilla
-  - org.guitarix.Guitarix
   - org.keepassxc.KeePassXC
   - com.github.tchx84.Flatseal
 
