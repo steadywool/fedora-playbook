@@ -18,9 +18,6 @@ terminal_packages:
   - python-i3ipc
   - python-psutil
 
-  # Extra
-  - realtime-privileges
-
 desktop_packages:
   # Desktop
   - sway
@@ -28,25 +25,26 @@ desktop_packages:
   - swayidle
   - swaylock
 
-  # Essential
+  # Notification
   - dunst
-  - fuzzel
-  - kitty
+  - libnotify
+
+  # Output
   - gammastep
   - brightnessctl
+
+  # Screenshot
   - grim
   - slurp
+
+  # Menu & Terminal
+  - fuzzel
+  - kitty
 
   # Extra
   - wl-clipboard
   - gnome-keyring
   - polkit-kde-agent
-  - libnotify
-
-  # Files
-  - thunar
-  - gvfs-mtp
-  - gvfs-smb
 
   # X11
   - xsettingsd
@@ -56,6 +54,14 @@ desktop_packages:
   - xdg-utils
   - xdg-user-dirs
   - xdg-desktop-portal-wlr
+
+applications_packages:
+  - wireshark-qt
+
+  # Files
+  - thunar
+  - gvfs-mtp
+  - gvfs-smb
 
   # Appearance
   - papirus-icon-theme

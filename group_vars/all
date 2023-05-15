@@ -16,7 +16,7 @@ kernel:
 user:
   name: kani
   password: kani # Change the password here
-  groups: wheel,adbusers,realtime # Wheel group give the user privileges
+  groups: wheel,adbusers,wireshark # Wheel group give the user privileges
   shell: /bin/fish
   storage: luks
   language: "{{ locale.lang[1] }}"
