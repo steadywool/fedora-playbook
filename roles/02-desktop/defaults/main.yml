@@ -41,6 +41,9 @@ desktop_packages:
   - fuzzel
   - kitty
 
+  # MPRIS
+  - playerctl
+
   # Extra
   - wl-clipboard
   - gnome-keyring
