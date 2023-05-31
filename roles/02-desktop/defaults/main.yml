@@ -36,10 +36,6 @@ desktop_packages:
   - gvfs-mtp
   - gvfs-smb
 
-  # Other
-  - kitty
-  - nautilus
-
   # XDG
   - xdg-utils
   - xdg-user-dirs
@@ -47,6 +43,8 @@ desktop_packages:
   - xdg-desktop-portal-gnome
 
 applications_packages:
+  - kitty
+  - nautilus
   - wireshark-qt
   - papirus-icon-theme
 
