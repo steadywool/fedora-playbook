@@ -24,6 +24,9 @@ desktop_packages:
   - swayidle
   - swaylock
 
+  # Status bar
+  - waybar
+
   # Notification
   - dunst
   - libnotify
@@ -39,9 +42,6 @@ desktop_packages:
   # Menu & Terminal
   - fuzzel
   - kitty
-
-  # MPRIS
-  - playerctl
 
   # Extra
   - wl-clipboard
