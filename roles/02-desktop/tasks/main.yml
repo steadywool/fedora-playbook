@@ -8,8 +8,3 @@
   ansible.builtin.import_tasks:
     file: services.yml
   tags: services
-
-- name: Import systemd config
-  ansible.builtin.import_tasks:
-    file: systemd.yml
-  tags: systemd

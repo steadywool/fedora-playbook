@@ -4,8 +4,8 @@ terminal_packages:
   - fish
   - htop
   - ranger
-  - atool
   - calcurse
+  - wl-clipboard
 
   # Development
   - neovim
@@ -13,59 +13,41 @@ terminal_packages:
   - python-pip
   - android-tools
 
-  # Libraries
-  - python-i3ipc
-  - python-psutil
-
 desktop_packages:
-  # Desktop
-  - sway
-  - swaybg
-  - swayidle
-  - swaylock
+  # Gnome
+  - gdm
+  - gnome-shell
+  - gnome-control-center
+  - gnome-keyring
 
-  # Status bar
-  - waybar
-
-  # Notification
-  - dunst
-  - libnotify
-
-  # Output
-  - gammastep
-  - brightnessctl
-
-  # Screenshot
-  - grim
-  - slurp
-
-  # Menu & Terminal
-  - fuzzel
-  - kitty
+  # Share
+  - gnome-user-share
+  - gnome-remote-desktop
+  - rygel
 
   # Extra
-  - wl-clipboard
-  - gnome-keyring
-  - polkit-kde-agent
+  - malcontent
+  - gnome-backgrounds
+  - tracker3-miners
 
-  # X11
-  - xsettingsd
-  - xorg-xwayland
+  # Libraries
+  - gst-plugin-pipewire
+  - gst-plugins-good
+  - gvfs-mtp
+  - gvfs-smb
+
+  # Other
+  - kitty
+  - nautilus
 
   # XDG
   - xdg-utils
   - xdg-user-dirs
-  - xdg-desktop-portal-wlr
+  - xdg-user-dirs-gtk
+  - xdg-desktop-portal-gnome
 
 applications_packages:
   - wireshark-qt
-
-  # Files
-  - thunar
-  - gvfs-mtp
-  - gvfs-smb
-
-  # Appearance
   - papirus-icon-theme
 
 font_packages:
@@ -86,3 +68,4 @@ systemd_services:
   - apparmor.service
   - usbguard.service
   - power-profiles-daemon.service
+  - gdm.service

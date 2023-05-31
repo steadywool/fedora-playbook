@@ -29,4 +29,3 @@ core_packages:
   - man-db
   - ansible
   - rsync
-  - jq

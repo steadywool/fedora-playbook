@@ -9,12 +9,9 @@ system_packages:
   - arch-audit
   - fwupd
 
-  # Networking
+  # Networking & Bluetooth
   - networkmanager
-
-  # Bluetooth
   - bluez
-  - bluez-utils
 
   # Multimedia
   - pipewire-alsa
@@ -35,9 +32,6 @@ system_packages:
   # Printing
   - cups
   - ghostscript
-
-  # Disk
-  - udisks2
 
   # Flatpak
   - flatpak
