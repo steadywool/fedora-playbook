@@ -1,11 +1,11 @@
 ---
 flatpak_packages:
   # Desktop
-  - org.gnome.eog
-  - org.kde.okular
-  - io.mpv.Mpv
-  - org.pulseaudio.pavucontrol
   - org.gnome.seahorse.Application
+  - org.gnome.eog
+  - org.gnome.Evince
+  - org.gnome.FileRoller
+  - org.videolan.VLC
 
   # Tools
   - org.libreoffice.LibreOffice
@@ -28,4 +28,3 @@ flatpak_packages:
 
 systemd_services:
   - podman.service
-  - battery-notifier.timer

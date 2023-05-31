@@ -43,7 +43,7 @@ desktop_packages:
   - xdg-desktop-portal-gnome
 
 applications_packages:
-  - kitty
+  - gnome-console
   - nautilus
   - wireshark-qt
   - papirus-icon-theme
