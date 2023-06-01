@@ -1,10 +1,14 @@
 ---
 flatpak_packages:
-  # Desktop
+  # Gnome
   - org.gnome.seahorse.Application
   - org.gnome.eog
   - org.gnome.Evince
   - org.gnome.FileRoller
+  - org.gnome.clocks
+  - org.gnome.Calculator
+
+  # Media
   - org.videolan.VLC
 
   # Tools
