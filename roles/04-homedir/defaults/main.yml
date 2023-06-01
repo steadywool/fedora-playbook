@@ -1,17 +1,13 @@
 ---
 flatpak_packages:
-  # Gnome
-  - org.gnome.seahorse.Application
+  # Desktop
   - org.gnome.eog
   - org.gnome.Evince
   - org.gnome.FileRoller
-  - org.gnome.clocks
-  - org.gnome.Calculator
-
-  # Media
   - io.mpv.Mpv
 
   # Tools
+  - org.gnome.seahorse.Application
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC

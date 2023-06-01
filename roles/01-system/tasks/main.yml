@@ -4,11 +4,6 @@
     file: packages.yml
   tags: packages
 
-- name: Import AUR
-  ansible.builtin.import_tasks:
-    file: aur.yml
-  tags: aur
-
 - name: Import snapshot script
   ansible.builtin.import_tasks:
     file: snapshot.yml

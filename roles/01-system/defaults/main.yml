@@ -1,6 +1,4 @@
 ---
-aur_helper: yay-bin # yay
-
 system_packages:
   # Administration
   - apparmor

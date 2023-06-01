@@ -35,6 +35,8 @@ desktop_packages:
   - gst-plugins-good
   - gvfs-mtp
   - gvfs-smb
+  - gvfs-afc
+  - gvfs-gphoto2
 
   # XDG
   - xdg-utils

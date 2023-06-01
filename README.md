@@ -86,7 +86,6 @@ Available tags are:
 - timezone
 - locale
 - packages
-- aur
 - usbguard
 - snapshot
 - services
