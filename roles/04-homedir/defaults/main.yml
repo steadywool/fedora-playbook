@@ -9,7 +9,7 @@ flatpak_packages:
   - org.gnome.Calculator
 
   # Media
-  - org.videolan.VLC
+  - io.mpv.Mpv
 
   # Tools
   - org.libreoffice.LibreOffice
