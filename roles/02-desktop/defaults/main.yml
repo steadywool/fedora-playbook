@@ -29,6 +29,7 @@ desktop_packages:
   - malcontent
   - gnome-backgrounds
   - tracker3-miners
+  - papirus-icon-theme
 
   # Libraries
   - gst-plugin-pipewire
@@ -48,7 +49,6 @@ applications_packages:
   - gnome-console
   - nautilus
   - wireshark-qt
-  - papirus-icon-theme
 
 font_packages:
   - ttf-jetbrains-mono-nerd

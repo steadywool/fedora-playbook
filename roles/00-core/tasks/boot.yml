@@ -1,13 +1,7 @@
 ---
-- name: Check if BOOTX64 exist
-  ansible.builtin.stat:
-    path: /boot/EFI/BOOT/BOOTX64.EFI
-  register: boot_efi
-
 - name: Install systemd-boot
   ansible.builtin.command: bootctl install
   ignore_errors: true
-  when: not boot_efi.stat.exists
 
 - name: Create bootloader configuration
   ansible.builtin.copy:
@@ -24,8 +18,8 @@
     dest: /boot/loader/entries/archlinux.conf
     content: |
       title Arch Linux
-      linux vmlinuz-{{ kernel.name }}
+      linux vmlinuz-linux-hardened
       initrd intel-ucode.img
-      initrd initramfs-{{ kernel.name }}.img
+      initrd initramfs-linux-hardened.img
       options {{ kernel.options }}
     force: true

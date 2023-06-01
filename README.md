@@ -97,4 +97,9 @@ Available tags are:
 
 After the installation, you can run this playbook without tag to change some settings and install additional packages.
 
+Recommended tags to maintain the system up-to-date:
+```
+# ansible-playbook playbook.yml -t packages,dotfiles,flatpak,services
+```
+
 ⚠️ **This playbook does not update the system.**

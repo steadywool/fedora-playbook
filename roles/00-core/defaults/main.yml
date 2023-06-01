@@ -3,8 +3,8 @@ core_packages:
   # Base
   - base
   - base-devel
-  - "{{ kernel.name }}"
-  - "{{ kernel.name }}-headers"
+  - linux-hardened
+  - linx-hardened-headers
   - linux-firmware
   - dkms
   - pacman-contrib
