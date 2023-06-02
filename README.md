@@ -102,7 +102,7 @@ Run the entire playbook:
 $ ansible-playbook playbook.yml -K
 ```
 
-✅ **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
+📌 **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
 
 Install every packages & enable/start Systemd services:
 ```
@@ -113,4 +113,4 @@ Executes tasks requiring no privileges:
 ```
 $ ansible-playbook playbook.yml -t USER
 ```
-✅ **The `04-homedir`, `dotfiles` & `flatpak` tags don't require privileges either.**
+📌 **The `04-homedir`, `dotfiles` & `flatpak` tags don't require privileges either.**
