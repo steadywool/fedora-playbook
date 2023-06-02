@@ -27,3 +27,4 @@ flatpak_packages:
 
 systemd_services:
   - podman.service
+  - wallpaper-changer.timer

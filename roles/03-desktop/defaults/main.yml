@@ -47,7 +47,7 @@ desktop_packages:
   - xdg-desktop-portal-gnome
 
 applications_packages:
-  - gnome-console
+  - alacritty
   - nautilus
   - wireshark-qt
 
