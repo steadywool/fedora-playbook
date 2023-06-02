@@ -77,8 +77,8 @@ Available tags are:
 - USER
 - 00-core
 - 01-system
-- 02-desktop
-- 03-users
+- 02-users
+- 03-desktop
 - 04-homedir
 - boot
 - kernel

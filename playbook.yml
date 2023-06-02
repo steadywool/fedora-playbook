@@ -13,8 +13,7 @@
         - LIVE
         - 00-core
 
-    # This role will install and configure the necessary packages for a standard desktop computer
-    # (audio server, network manager, containers, etc).
+    # This role will install and configure the necessary packages for a standard desktop computer.
     - name: (LIVE) System configuration & system installation
       ansible.builtin.import_role:
         name: 01-system
@@ -22,22 +21,21 @@
         - LIVE
         - 01-system
 
-    # This role will install a desktop environment, as well as CLI or GUI applications (zsh, neovim, etc).
-    # It will also start the systemd services.
-    - name: (ROOT) Desktop configuration & start of services
-      ansible.builtin.import_role:
-        name: 02-desktop
-      tags:
-        - ROOT
-        - 02-desktop
-
-    # This role will create and configure a user.
+    # This role will create and configure an user.
     - name: (ROOT) User configuration
       ansible.builtin.import_role:
-        name: 03-users
+        name: 02-users
       tags:
         - ROOT
-        - 03-users
+        - 02-users
+
+    # This role will install a desktop environment for the user and start systemd services.
+    - name: (ROOT) Desktop configuration & start of services
+      ansible.builtin.import_role:
+        name: 03-desktop
+      tags:
+        - ROOT
+        - 03-desktop
 
     # This role will install the software at the user level (flatpak) and install its configuration files.
     - name: (USER) Dotfiles installation
