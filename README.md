@@ -67,13 +67,6 @@ $ ansible-playbook playbook.yml -t USER
 
 ## Configuration
 
-You can run the entire playbook as a single user like this:
-```
-$ ansible-playbook playbook.yml -K
-```
-
-✅ **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
-
 You can perform partially run of playbook using tags.
 
 Available tags are:
@@ -100,9 +93,24 @@ Available tags are:
 - flatpak
 - dotfiles
 
-Recommended tags to maintain the system:
+⚠️ **This playbook does not update the system.**
+
+## Exemples
+
+Run the entire playbook:
 ```
-$ ansible-playbook playbook.yml -K -t packages,dotfiles,flatpak,services
+$ ansible-playbook playbook.yml -K
 ```
 
-⚠️ **This playbook does not update the system.**
+✅ **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
+
+Install every packages & enable/start Systemd services:
+```
+$ ansible-playbook playbook.yml -K -t packages,services
+```
+
+Executes tasks requiring no privileges:
+```
+$ ansible-playbook playbook.yml -t USER
+```
+✅ **The `04-homedir`, `dotfiles` & `flatpak` tags don't require privileges either.**
