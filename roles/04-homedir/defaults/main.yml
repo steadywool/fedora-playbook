@@ -3,7 +3,6 @@ flatpak_packages:
   # Desktop
   - org.gnome.eog
   - org.gnome.Evince
-  - org.gnome.FileRoller
   - io.mpv.Mpv
 
   # Tools
