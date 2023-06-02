@@ -49,6 +49,7 @@ desktop_packages:
 applications_packages:
   - alacritty
   - nautilus
+  - scrcpy
   - wireshark-qt
 
 font_packages:
