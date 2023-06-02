@@ -4,7 +4,7 @@ core_packages:
   - base
   - base-devel
   - linux-hardened
-  - linx-hardened-headers
+  - linux-hardened-headers
   - linux-firmware
   - dkms
   - pacman-contrib

@@ -3,5 +3,4 @@
   ansible.builtin.systemd:
     name: "{{ item }}"
     state: started
-    enabled: true
   loop: "{{ systemd_services }}"

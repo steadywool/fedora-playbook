@@ -1,7 +1,6 @@
 ---
 - hosts: localhost
   connection: local
-  become: true
 
   tasks:
     # This role will install the packages needed for the system to work properly as well as configure local and other files.
@@ -9,6 +8,8 @@
     - name: (LIVE) Core configuration & core installation
       ansible.builtin.import_role:
         name: 00-core
+      become: true
+      become_user: root
       tags:
         - LIVE
         - 00-core
@@ -17,6 +18,8 @@
     - name: (LIVE) System configuration & system installation
       ansible.builtin.import_role:
         name: 01-system
+      become: true
+      become_user: root
       tags:
         - LIVE
         - 01-system
@@ -25,6 +28,8 @@
     - name: (ROOT) User configuration
       ansible.builtin.import_role:
         name: 02-users
+      become: true
+      become_user: root
       tags:
         - ROOT
         - 02-users
@@ -33,6 +38,8 @@
     - name: (ROOT) Desktop configuration & start of services
       ansible.builtin.import_role:
         name: 03-desktop
+      become: true
+      become_user: root
       tags:
         - ROOT
         - 03-desktop
@@ -41,6 +48,8 @@
     - name: (USER) Dotfiles installation
       ansible.builtin.import_role:
         name: 04-homedir
+      become: true
+      become_user: "{{ user.name }}"
       tags:
         - USER
         - 04-homedir

@@ -5,7 +5,6 @@
     dest: /tmp/dotfiles
     clone: true
     update: true
-  become_user: "{{ user.name }}"
 
 - name: Install user dotfiles
   ansible.posix.synchronize:
@@ -16,7 +15,6 @@
       - "--exclude=src"
       - "--exclude=LICENSE"
       - "--exclude=README.md"
-  become_user: "{{ user.name }}"
 
 - name: Install Fisher
   ansible.builtin.get_url:
@@ -30,7 +28,6 @@
     clone: true
     update: true
     force: true
-  become_user: "{{ user.name }}"
 
 - name: Install ranger devicons
   ansible.builtin.git:
@@ -39,4 +36,3 @@
     clone: true
     update: true
     force: true
-  become_user: "{{ user.name }}"

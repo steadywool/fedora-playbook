@@ -6,4 +6,3 @@
     enabled: true
     scope: user
   loop: "{{ systemd_services }}"
-  become_user: "{{ user.name }}"

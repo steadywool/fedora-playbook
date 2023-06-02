@@ -32,12 +32,12 @@ First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/titl
 Then, let's clone the repository into a directory (for example, `/mnt`):
 ```
 # git clone https://github.com/kaniville/ansible-configuration.git /mnt/ansible-configuration
+# cd /mnt/ansible-configuration
 ```
 
 The installation will be done in 3 steps, for each step we will use a different tag.
 Let's use first the **LIVE** tag to install the necessary configuration to start the system:
 ```
-# cd /mnt/ansible-configuration
 # ansible-playbook playbook.yml -t LIVE
 ```
 
@@ -55,7 +55,6 @@ Start the `NetworkManager` service and configure your connection with `nmtui`:
 
 We will now use the **ROOT** tag:
 ```
-# cd /mnt/ansible-configuration
 # ansible-playbook playbook.yml -t ROOT
 ```
 
@@ -63,11 +62,17 @@ We will now use the **ROOT** tag:
 
 Finally, start your user session and use the **USER** tag:
 ```
-# cd /mnt/ansible-configuration
-# ansible-playbook playbook.yml -t USER
+$ ansible-playbook playbook.yml -t USER
 ```
 
 ## Configuration
+
+You can run the entire playbook as a single user like this:
+```
+$ ansible-playbook playbook.yml -K
+```
+
+✅ **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
 
 You can perform partially run of playbook using tags.
 
@@ -95,11 +100,9 @@ Available tags are:
 - flatpak
 - dotfiles
 
-After the installation, you can run this playbook without tag to change some settings and install additional packages.
-
-Recommended tags to maintain the system up-to-date:
+Recommended tags to maintain the system:
 ```
-# ansible-playbook playbook.yml -t packages,dotfiles,flatpak,services
+$ ansible-playbook playbook.yml -K -t packages,dotfiles,flatpak,services
 ```
 
 ⚠️ **This playbook does not update the system.**
