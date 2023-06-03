@@ -34,7 +34,7 @@ Then, let's clone the repository into a directory (for example, `/mnt`):
 # cd /mnt/ansible-configuration
 ```
 
-The installation will be done in 3 steps, for each step we will use a different tag.
+The installation will be done in 2 steps, for each step we will use a different tag.
 Let's use first the **LIVE** tag to install the necessary configuration to start the system:
 ```
 # ansible-playbook playbook.yml -t LIVE
@@ -52,17 +52,14 @@ Start the `NetworkManager` service and configure your connection with `nmtui`:
 # nmtui
 ```
 
-We will now use the **ROOT** tag:
-```
-# ansible-playbook playbook.yml -t ROOT
-```
-
 ⚠️ **Don't forget to modify the variables in `group_vars`, especially the user password !**
 
-Finally, GDM should start. Install dotfiles & Flatpak packages with the **USER** tag:
+We will now use the **BOOT** tag:
 ```
-$ ansible-playbook playbook.yml -t USER
+# ansible-playbook playbook.yml -t BOOT
 ```
+
+After that, your Gnome session should start automatically.
 
 ## Configuration
 
@@ -70,13 +67,13 @@ You can perform partially run of playbook using tags.
 
 Available tags are:
 - LIVE
-- ROOT
-- USER
+- BOOT
 - 00-core
 - 01-system
-- 02-users
-- 03-desktop
+- 02-desktop
+- 03-users
 - 04-homedir
+- 05-services
 - boot
 - kernel
 - hostname
@@ -110,6 +107,6 @@ $ ansible-playbook playbook.yml -K -t packages,services
 
 Executes tasks requiring no privileges:
 ```
-$ ansible-playbook playbook.yml -t USER
+$ ansible-playbook playbook.yml -t 04-homedir
 ```
-📌 **The `04-homedir`, `dotfiles` & `flatpak` tags don't require privileges either.**
+📌 **The `dconf`, `dotfiles` & `flatpak` tags don't require privileges either.**

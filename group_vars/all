@@ -14,8 +14,8 @@ kernel:
 
 user:
   name: kani
-  description: Kaniville
-  password: Amino-Active-Corsage20 # Change the password here
+  comment: Kaniville
+  password: kani # Change the password here
   groups: wheel,adbusers,wireshark # Wheel group give the user privileges (needed to execute this playbook)
   shell: /bin/fish
 

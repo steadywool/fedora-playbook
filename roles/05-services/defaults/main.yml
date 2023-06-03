@@ -1,0 +1,16 @@
+---
+user_services:
+  - podman.service
+  - wallpaper-changer.timer
+
+system_services:
+  - systemd-timesyncd.service
+  - systemd-resolved.service
+  - bluetooth.service
+  - firewalld.service
+  - NetworkManager.service
+  - cups.service
+  - auditd.service
+  - apparmor.service
+  - usbguard.service
+  - power-profiles-daemon.service

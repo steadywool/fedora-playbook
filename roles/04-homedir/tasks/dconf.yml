@@ -1,0 +1,24 @@
+---
+- name: Set font size
+  ansible.builtin.command: gsettings set org.gnome.desktop.interface font-name 'Cantarell 10'
+
+- name: Set document font size
+  ansible.builtin.command: gsettings set org.gnome.desktop.interface document-font-name 'Cantarell 10'
+
+- name: Set icon theme
+  ansible.builtin.command: gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
+
+- name: Show battery percentage
+  ansible.builtin.command: gsettings set org.gnome.desktop.interface show-battery-percentage true
+
+- name: Set titlebar button layout
+  ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+
+- name: Set windows focus mode
+  ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+
+- name: Set touchpad click method
+  ansible.builtin.command: gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
+
+- name: Set input source
+  ansible.builtin.command: gsettings set org.gnome.desktop.input-sources sources "[('xkb', '{{ locale.keymap }}')]"

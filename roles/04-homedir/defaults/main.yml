@@ -6,6 +6,7 @@ flatpak_packages:
   - io.mpv.Mpv
 
   # Tools
+  - ca.desrt.dconf-editor
   - org.gnome.seahorse.Application
   - org.gnome.Characters
   - org.libreoffice.LibreOffice
@@ -25,7 +26,3 @@ flatpak_packages:
   # Extra
   - com.spotify.Client
   - com.discordapp.Discord
-
-systemd_services:
-  - podman.service
-  - wallpaper-changer.timer

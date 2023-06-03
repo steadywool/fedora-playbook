@@ -5,51 +5,49 @@
   tasks:
     # This role will install the packages needed for the system to work properly as well as configure local and other files.
     # It will also generate the kernel and the bootloader.
-    - name: (LIVE) Core configuration & core installation
+    - name: Core configuration & core installation
       ansible.builtin.import_role:
         name: 00-core
-      become: true
-      become_user: root
       tags:
         - LIVE
         - 00-core
 
     # This role will install and configure the necessary packages for a standard desktop computer.
-    - name: (LIVE) System configuration & system installation
+    - name: System configuration & system installation
       ansible.builtin.import_role:
         name: 01-system
-      become: true
-      become_user: root
       tags:
         - LIVE
         - 01-system
 
-    # This role will create and configure an user.
-    - name: (ROOT) User configuration
+    # This role will install a desktop environment for the user
+    - name: Desktop configuration & start of services
       ansible.builtin.import_role:
-        name: 02-users
-      become: true
-      become_user: root
+        name: 02-desktop
       tags:
-        - ROOT
-        - 02-users
+        - BOOT
+        - 02-desktop
 
-    # This role will install a desktop environment for the user and start systemd services.
-    - name: (ROOT) Desktop configuration & start of services
+    # This role will create and configure an user.
+    - name: User configuration
       ansible.builtin.import_role:
-        name: 03-desktop
-      become: true
-      become_user: root
+        name: 03-users
       tags:
-        - ROOT
-        - 03-desktop
+        - BOOT
+        - 03-users
 
     # This role will install the software at the user level (flatpak) and install dotfiles.
-    - name: (USER) Dotfiles installation
+    - name: Dotfiles installation
       ansible.builtin.import_role:
         name: 04-homedir
-      become: true
-      become_user: "{{ user.name }}"
       tags:
-        - USER
+        - BOOT
         - 04-homedir
+
+    # This role will start every Systemd services
+    - name: Systemd services installation
+      ansible.builtin.import_role:
+        name: 05-services
+      tags:
+        - BOOT
+        - 05-services

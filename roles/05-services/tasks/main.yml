@@ -1,0 +1,7 @@
+---
+- name: Import services
+  ansible.builtin.import_tasks:
+    file: user.yml
+  become: true
+  become_user: "{{ user.name }}"
+  tags: services

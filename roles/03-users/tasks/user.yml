@@ -2,8 +2,8 @@
 - name: Add user
   ansible.builtin.user:
     name: "{{ user.name }}"
-    description: " {{ user.description }}"
+    comment: "{{ user.comment }}"
     password: "{{ user.password }}"
-    groups: " {{ user.groups }}"
-    shell: " {{ user.shell }}"
+    groups: "{{ user.groups }}"
+    shell: "{{ user.shell }}"
     state: present

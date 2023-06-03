@@ -2,14 +2,17 @@
 - name: Import packages
   ansible.builtin.import_tasks:
     file: packages.yml
+  become: true
   tags: packages
 
 - name: Import snapshot script
   ansible.builtin.import_tasks:
     file: snapshot.yml
+  become: true
   tags: snapshot
 
 - name: Import usbguard
   ansible.builtin.import_tasks:
     file: usbguard.yml
+  become: true
   tags: usbguard
