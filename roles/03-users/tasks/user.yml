@@ -3,7 +3,7 @@
   ansible.builtin.user:
     name: "{{ user.name }}"
     comment: "{{ user.comment }}"
-    password: "{{ user.password }}"
+    password: "{{ user.password | password_hash }}"
     groups: "{{ user.groups }}"
     shell: "{{ user.shell }}"
     state: present
