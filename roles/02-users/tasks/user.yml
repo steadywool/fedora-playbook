@@ -1,10 +1,9 @@
 ---
-- name: Add user with systemd-homed
-  community.general.homectl:
+- name: Add user
+  ansible.builtin.user:
     name: "{{ user.name }}"
+    description: " {{ user.description }}"
     password: "{{ user.password }}"
-    memberof: "{{ user.groups }}"
-    shell: "{{ user.shell }}"
-    storage: "{{ user.storage }}"
-    language: "{{ user.language }}"
-    timezone: "{{ user.timezone }}"
+    groups: " {{ user.groups }}"
+    shell: " {{ user.shell }}"
+    state: present

@@ -44,7 +44,7 @@
         - ROOT
         - 03-desktop
 
-    # This role will install the software at the user level (flatpak) and install its configuration files.
+    # This role will install the software at the user level (flatpak) and install dotfiles.
     - name: (USER) Dotfiles installation
       ansible.builtin.import_role:
         name: 04-homedir

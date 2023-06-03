@@ -4,6 +4,12 @@
     file: packages.yml
   tags: packages
 
+
+- name: Import locale
+  ansible.builtin.import_tasks:
+    file: locale.yml
+  tags: locale
+
 - name: Import services
   ansible.builtin.import_tasks:
     file: services.yml

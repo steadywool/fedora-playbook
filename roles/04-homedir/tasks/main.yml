@@ -13,8 +13,3 @@
   ansible.builtin.import_tasks:
     file: flatpak.yml
   tags: flatpak
-
-- name: Import locale
-  ansible.builtin.import_tasks:
-    file: locale.yml
-  tags: locale

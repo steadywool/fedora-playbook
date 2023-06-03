@@ -62,7 +62,6 @@ font_packages:
 systemd_services:
   - systemd-timesyncd.service
   - systemd-resolved.service
-  - systemd-homed.service
   - bluetooth.service
   - firewalld.service
   - NetworkManager.service
