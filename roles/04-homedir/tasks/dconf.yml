@@ -17,6 +17,9 @@
 - name: Set windows focus mode
   ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 
+- name: Resize windows with right click
+  ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+
 - name: Set touchpad click method
   ansible.builtin.command: gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
 
