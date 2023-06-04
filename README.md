@@ -19,8 +19,6 @@ Here is the partitioning I use:
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@home` | btrfs      | `/home`       |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@opt`  | btrfs      | `/opt`        |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@srv`  | btrfs      | `/srv`        |
-| `/dev/mapper/luks_root/@` |                                                   | btrfs      | `/var/cache`  |
-| `/dev/mapper/luks_root/@` |                                                   | btrfs      | `/var/tmp`    |
 
 ## Installation
 
