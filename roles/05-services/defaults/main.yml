@@ -14,3 +14,4 @@ system_services:
   - apparmor.service
   - usbguard.service
   - power-profiles-daemon.service
+  - gdm.service
