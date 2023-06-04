@@ -1,7 +1,13 @@
 ---
-- name: Import services
+- name: Import user services
   ansible.builtin.import_tasks:
-    file: services.yml
+    file: user.yml
   become: true
   become_user: "{{ user.name }}"
+  tags: services
+
+- name: Import system services
+  ansible.builtin.import_tasks:
+    file: system.yml
+  become: true
   tags: services
