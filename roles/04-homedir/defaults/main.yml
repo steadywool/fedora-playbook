@@ -6,6 +6,7 @@ flatpak_packages:
   - io.mpv.Mpv
 
   # Tools
+  - com.mattjakeman.ExtensionManager
   - ca.desrt.dconf-editor
   - org.gnome.seahorse.Application
   - org.gnome.Characters
