@@ -17,6 +17,7 @@ flatpak_packages:
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
+  - com.vixalien.sticky
 
   # Games
   - com.valvesoftware.Steam
