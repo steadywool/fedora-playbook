@@ -31,6 +31,6 @@
 
 - name: Import bootloader
   ansible.builtin.import_tasks:
-    file: boot.yml
+    file: bootloader.yml
   become: true
-  tags: boot
+  tags: bootloader

@@ -20,11 +20,11 @@ Here is the partitioning I use:
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@opt`  | btrfs      | `/opt`        |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@srv`  | btrfs      | `/srv`        |
 
+*You can also encrypt your swap memory by following [these instructions](https://wiki.archlinux.org/title/Dm-crypt/Swap_encryption).*
+
 ## Installation
 
 First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/title/Installation_guide) and chroot into your system.
-
-*You can also encrypt your swap memory by following [these instructions](https://wiki.archlinux.org/title/Dm-crypt/Swap_encryption).*
 
 Then, let's clone the repository into a directory (for example, `/mnt`):
 ```
@@ -72,7 +72,7 @@ Available tags are:
 - 03-users
 - 04-homedir
 - 05-services
-- boot
+- bootloader
 - kernel
 - hostname
 - timezone
