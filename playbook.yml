@@ -12,7 +12,7 @@
         - LIVE
         - 00-core
 
-    # This role will install and configure the necessary packages for a standard desktop computer.
+    # This role will install important packages and configure the system
     - name: System configuration & system installation
       ansible.builtin.import_role:
         name: 01-system
@@ -20,7 +20,7 @@
         - LIVE
         - 01-system
 
-    # This role will install a desktop environment for the user
+    # This role will install a desktop environment for the user and configure some apps
     - name: Desktop configuration & start of services
       ansible.builtin.import_role:
         name: 02-desktop

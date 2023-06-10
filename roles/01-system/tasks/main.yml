@@ -11,8 +11,8 @@
   become: true
   tags: snapshot
 
-- name: Import usbguard
+- name: Import Udev rules
   ansible.builtin.import_tasks:
-    file: usbguard.yml
+    file: udev.yml
   become: true
-  tags: usbguard
+  tags: udev

@@ -78,14 +78,15 @@ Available tags are:
 - timezone
 - locale
 - packages
-- usbguard
 - snapshot
-- services
+- udev
+- usbguard
 - systemd
 - sudo
 - user
 - flatpak
 - dotfiles
+- services
 
 ⚠️ **This playbook does not update the system.**
 
