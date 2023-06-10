@@ -13,6 +13,7 @@ flatpak_packages:
   - com.github.tchx84.Flatseal
 
   # Tools
+  - org.gnome.Boxes
   - org.gnome.Characters
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
