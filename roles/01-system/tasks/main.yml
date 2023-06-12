@@ -16,3 +16,9 @@
     file: udev.yml
   become: true
   tags: udev
+
+- name: Import Kernel modules
+  ansible.builtin.import_tasks:
+    file: sysctl.yml
+  become: true
+  tags: sysctl

@@ -1,0 +1,6 @@
+---
+- name: Generate Firejail symbolic links
+  ansible.builtin.command: firecfg
+
+- name: Apparmor integration with firejail
+  ansible.builtin.command: apparmor_parser -r /etc/apparmor.d/firejail-default

@@ -5,11 +5,11 @@
   become: true
   tags: packages
 
-- name: Import locale
+- name: Import firejail
   ansible.builtin.import_tasks:
-    file: locale.yml
+    file: firejail.yml
   become: true
-  tags: locale
+  tags: firejail
 
 - name: Import usbguard
   ansible.builtin.import_tasks:

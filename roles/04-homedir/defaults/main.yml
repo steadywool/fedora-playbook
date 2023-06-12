@@ -32,3 +32,4 @@ flatpak_packages:
   # Extra
   - com.spotify.Client
   - com.discordapp.Discord
+  - ar.com.tuxguitar.TuxGuitar

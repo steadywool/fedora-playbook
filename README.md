@@ -71,7 +71,7 @@ Available tags are:
 - 02-desktop
 - 03-users
 - 04-homedir
-- 05-services
+- 05-systemd
 - bootloader
 - kernel
 - hostname
@@ -79,9 +79,10 @@ Available tags are:
 - locale
 - packages
 - snapshot
+- sysctl
 - udev
+- firejail
 - usbguard
-- systemd
 - sudo
 - user
 - flatpak

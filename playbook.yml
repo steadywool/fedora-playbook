@@ -44,10 +44,10 @@
         - BOOT
         - 04-homedir
 
-    # This role will start every Systemd services
+    # This role will take care of Systemd settings and services
     - name: Systemd services installation
       ansible.builtin.import_role:
-        name: 05-services
+        name: 05-systemd
       tags:
         - BOOT
-        - 05-services
+        - 05-systemd
