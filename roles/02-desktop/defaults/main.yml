@@ -24,16 +24,19 @@ desktop_packages:
   - gnome-control-center
   - gnome-keyring
 
+  # Settings
+  - malcontent
+  - tracker3-miners
+
   # Share
   - gnome-user-share
   - gnome-remote-desktop
   - rygel
 
-  # Extra
-  - malcontent
+  # Appearance
   - gnome-backgrounds
-  - tracker3-miners
   - papirus-icon-theme
+  - gnome-themes-extra
 
   # Gstreamer
   - gst-plugin-pipewire
