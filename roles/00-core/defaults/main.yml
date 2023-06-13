@@ -13,6 +13,7 @@ core_packages:
   # Filesystem
   - btrfs-progs
   - ntfs-3g
+  - dosfstools
 
   # Compression
   - zip
