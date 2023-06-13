@@ -5,6 +5,7 @@ flatpak_packages:
   - org.gnome.Evince
   - io.mpv.Mpv
   - io.bassi.Amberol
+  - org.gnome.Calendar
 
   # System
   - com.mattjakeman.ExtensionManager
