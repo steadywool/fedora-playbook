@@ -5,6 +5,7 @@ flatpak_packages:
   - org.gnome.Evince
   - io.mpv.Mpv
   - io.bassi.Amberol
+  - org.gnome.Calendar
 
   # System
   - com.mattjakeman.ExtensionManager
@@ -18,7 +19,6 @@ flatpak_packages:
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
-  - com.vixalien.sticky
 
   # Games
   - com.valvesoftware.Steam
