@@ -19,6 +19,7 @@ flatpak_packages:
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
+  - md.obsidian.Obsidian
 
   # Games
   - com.valvesoftware.Steam
@@ -32,4 +33,3 @@ flatpak_packages:
   # Extra
   - com.spotify.Client
   - com.discordapp.Discord
-  - ar.com.tuxguitar.TuxGuitar
