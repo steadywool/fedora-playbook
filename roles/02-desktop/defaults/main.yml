@@ -4,6 +4,7 @@ terminal_packages:
   - fish
   - htop
   - ranger
+  - calcurse
   - atool
   - wl-clipboard
 
@@ -26,7 +27,6 @@ desktop_packages:
   # Settings
   - malcontent
   - tracker3-miners
-  - evolution-data-server
 
   # Share
   - gnome-user-share
