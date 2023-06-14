@@ -45,6 +45,7 @@ font_packages:
   - ttf-dejavu
   - noto-fonts
   - noto-fonts-emoji
+  - otf-ipafont
 
 system_services:
   - systemd-timesyncd.service
