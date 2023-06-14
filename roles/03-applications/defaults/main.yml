@@ -7,6 +7,9 @@ terminal_packages:
   - atool
   - wl-clipboard
 
+  # Sync
+  - syncthing
+
   # Development
   - neovim
   - npm
