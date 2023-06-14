@@ -57,6 +57,4 @@ system_services:
   - auditd.service
   - apparmor.service
   - usbguard.service
-
-  desktop_services:
   - power-profiles-daemon.service

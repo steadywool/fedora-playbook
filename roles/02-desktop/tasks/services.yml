@@ -5,10 +5,3 @@
     state: started
     enabled: true
   loop: "{{ system_services }}"
-
-- name: Enable desktop services
-  ansible.builtin.systemd:
-    name: "{{ item }}"
-    state: started
-    enabled: true
-  loop: "{{ system_services }}"
