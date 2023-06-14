@@ -18,7 +18,6 @@ desktop_packages:
 
   # Appearance
   - gnome-backgrounds
-  - papirus-icon-theme
   - gnome-themes-extra
 
   # Gstreamer
