@@ -1,0 +1,23 @@
+---
+terminal_packages:
+  # Terminal
+  - fish
+  - htop
+  - ranger
+  - atool
+  - wl-clipboard
+
+  # Development
+  - neovim
+  - npm
+  - python-pip
+  - android-tools
+
+  # Extra
+  - neofetch
+
+applications_packages:
+  - alacritty
+  - nautilus
+  - scrcpy
+  - wireshark-qt

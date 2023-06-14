@@ -1,18 +1,18 @@
 ---
+- name: Import locale
+  ansible.builtin.import_tasks:
+    file: locale.yml
+  become: true
+  tags: locale
+
 - name: Import packages
   ansible.builtin.import_tasks:
     file: packages.yml
   become: true
   tags: packages
 
-- name: Import firejail
+- name: Import system services
   ansible.builtin.import_tasks:
-    file: firejail.yml
+    file: services.yml
   become: true
-  tags: firejail
-
-- name: Import usbguard
-  ansible.builtin.import_tasks:
-    file: usbguard.yml
-  become: true
-  tags: usbguard
+  tags: services

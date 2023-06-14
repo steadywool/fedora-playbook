@@ -33,3 +33,7 @@ flatpak_packages:
   # Extra
   - com.spotify.Client
   - com.discordapp.Discord
+
+user_services:
+  - podman.service
+  - wallpaper-changer.timer

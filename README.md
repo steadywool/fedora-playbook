@@ -44,9 +44,9 @@ After that, let's create a password for the root account:
 ```
 
 Quit the chroot and start your new system.
-Start the `NetworkManager` service and configure your connection with `nmtui`:
+Start the `NetworkManager.service` service and configure your connection with `nmtui`:
 ```
-# systemctl start NetworkManager
+# systemctl start NetworkManager.service
 # nmtui
 ```
 
@@ -57,7 +57,11 @@ We will now use the **BOOT** tag:
 # ansible-playbook playbook.yml -t BOOT
 ```
 
-After that, your Gnome session should start automatically.
+Finally, enable/start `gdm.service`:
+```
+# systemctl enable gdm.service
+# systemctl start gdm.service
+```
 
 ## Configuration
 
@@ -69,9 +73,9 @@ Available tags are:
 - 00-core
 - 01-system
 - 02-desktop
-- 03-users
-- 04-homedir
-- 05-systemd
+- 03-applications
+- 04-users
+- 05-homedir
 - bootloader
 - kernel
 - hostname
@@ -81,13 +85,14 @@ Available tags are:
 - snapshot
 - sysctl
 - udev
+- services
+- firewalld
 - firejail
-- usbguard
 - sudo
+- usbguard
 - user
 - flatpak
 - dotfiles
-- services
 
 ⚠️ **This playbook does not update the system.**
 
@@ -107,6 +112,6 @@ $ ansible-playbook playbook.yml -K -t packages,services
 
 Executes tasks requiring no privileges:
 ```
-$ ansible-playbook playbook.yml -t 04-homedir
+$ ansible-playbook playbook.yml -t 05-homedir
 ```
 📌 **The `dconf`, `dotfiles` & `flatpak` tags don't require privileges either.**

@@ -19,3 +19,10 @@
   become: true
   become_user: "{{ user.name }}"
   tags: dconf
+
+- name: Import user services
+  ansible.builtin.import_tasks:
+    file: services.yml
+  become: true
+  become_user: "{{ user.name }}"
+  tags: services

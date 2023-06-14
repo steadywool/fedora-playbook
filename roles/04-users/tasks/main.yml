@@ -1,0 +1,12 @@
+---
+- name: Import user
+  ansible.builtin.import_tasks:
+    file: user.yml
+  become: true
+  tags: user
+
+- name: Import subuid/subgid
+  ansible.builtin.import_tasks:
+    file: uid-gid.yml
+  become: true
+  tags: user

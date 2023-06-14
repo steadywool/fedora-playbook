@@ -1,21 +1,3 @@
----
-terminal_packages:
-  # Terminal
-  - fish
-  - htop
-  - ranger
-  - atool
-  - wl-clipboard
-
-  # Development
-  - neovim
-  - npm
-  - python-pip
-  - android-tools
-
-  # Extra
-  - neofetch
-
 desktop_packages:
   # Gnome
   - gdm
@@ -27,6 +9,7 @@ desktop_packages:
   - malcontent
   - tracker3-miners
   - evolution-data-server
+  - power-profiles-daemon
 
   # Share
   - gnome-user-share
@@ -57,15 +40,23 @@ desktop_packages:
   - xdg-user-dirs-gtk
   - xdg-desktop-portal-gnome
 
-applications_packages:
-  - alacritty
-  - nautilus
-  - scrcpy
-  - wireshark-qt
-
 font_packages:
   - ttf-jetbrains-mono-nerd
   - ttf-liberation
   - ttf-dejavu
   - noto-fonts
   - noto-fonts-emoji
+
+system_services:
+  - systemd-timesyncd.service
+  - systemd-resolved.service
+  - bluetooth.service
+  - firewalld.service
+  - NetworkManager.service
+  - cups.service
+  - auditd.service
+  - apparmor.service
+  - usbguard.service
+
+  desktop_services:
+  - power-profiles-daemon.service

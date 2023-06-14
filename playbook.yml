@@ -3,8 +3,7 @@
   connection: local
 
   tasks:
-    # This role will install the packages needed for the system to work properly as well as configure local and other files.
-    # It will also generate the kernel and the bootloader.
+    # This role will install the packages needed for the system to work properly
     - name: Core configuration & core installation
       ansible.builtin.import_role:
         name: 00-core
@@ -20,7 +19,7 @@
         - LIVE
         - 01-system
 
-    # This role will install a desktop environment for the user and configure some apps
+    # This role will install a desktop environment for the user and start services
     - name: Desktop configuration & start of services
       ansible.builtin.import_role:
         name: 02-desktop
@@ -28,26 +27,26 @@
         - BOOT
         - 02-desktop
 
-    # This role will create and configure an user.
+    # This role will install and configure applications
     - name: User configuration
       ansible.builtin.import_role:
-        name: 03-users
+        name: 03-applications
       tags:
         - BOOT
-        - 03-users
+        - 03-applications
 
-    # This role will install the software at the user level (flatpak) and install dotfiles.
+    # This role will create and configure an user
+    - name: User configuration
+      ansible.builtin.import_role:
+        name: 04-users
+      tags:
+        - BOOT
+        - 04-users
+
+    # This role will install the software at the user level (flatpak) and install dotfiles
     - name: Dotfiles installation
       ansible.builtin.import_role:
-        name: 04-homedir
+        name: 05-homedir
       tags:
         - BOOT
-        - 04-homedir
-
-    # This role will take care of Systemd settings and services
-    - name: Systemd services installation
-      ansible.builtin.import_role:
-        name: 05-systemd
-      tags:
-        - BOOT
-        - 05-systemd
+        - 05-homedir

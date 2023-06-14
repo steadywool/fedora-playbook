@@ -25,9 +25,6 @@ system_packages:
   - aardvark-dns
   - distrobox
 
-  # Power management
-  - power-profiles-daemon
-
   # Printing
   - cups
   - ghostscript
