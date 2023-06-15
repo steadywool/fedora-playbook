@@ -5,6 +5,9 @@
 - name: Set document font size
   ansible.builtin.command: gsettings set org.gnome.desktop.interface document-font-name 'Cantarell 10'
 
+- name: Set icon theme
+  ansible.builtin.command: gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
+
 - name: Show battery percentage
   ansible.builtin.command: gsettings set org.gnome.desktop.interface show-battery-percentage true
 

@@ -19,6 +19,7 @@ desktop_packages:
   # Appearance
   - gnome-backgrounds
   - gnome-themes-extra
+  - papirus-icon-themes
 
   # Gstreamer
   - gst-plugin-pipewire
