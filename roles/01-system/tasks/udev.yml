@@ -1,3 +1,4 @@
+---
 - name: Configure Udev rules
   ansible.builtin.copy:
     src: rules.d/

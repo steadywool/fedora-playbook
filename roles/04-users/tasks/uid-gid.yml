@@ -1,3 +1,4 @@
+---
 - name: Set subuid
   ansible.builtin.copy:
     dest: /etc/subuid
