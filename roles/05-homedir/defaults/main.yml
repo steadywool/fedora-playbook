@@ -14,7 +14,6 @@ flatpak_packages:
 
   # Tools
   - org.gnome.Boxes
-  - org.gnome.Characters
   - org.libreoffice.LibreOffice
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
