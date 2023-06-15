@@ -1,17 +1,6 @@
-<h3 align="center">🌸 Ansible configuration</h3>
+# 🌸 Ansible configuration
 
-<p align="center">ArchLinux configuration managed with Ansible.</p>
-<p align="center">
-	<a href="https://github.com/kaniville/ansible-configuration/stargazers">
-		<img src="https://img.shields.io/github/stars/kaniville/ansible-configuration?color=red&style=for-the-badge"/>
-  </a>
-	<a href="https://github.com/kaniville/ansible-configuration/commits/main">
-		<img src="https://img.shields.io/github/commit-activity/m/kaniville/ansible-configuration?color=green&style=for-the-badge"/>
-  </a>
-	<a href="https://github.com/kaniville/ansible-configuration/forks">
-		<img src="https://img.shields.io/github/forks/kaniville/ansible-configuration?color=yellow&style=for-the-badge"/>
-  </a>
-</p>
+ArchLinux configuration managed with Ansible.
 
 ## 🛁 Why
 
