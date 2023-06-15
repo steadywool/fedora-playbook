@@ -6,10 +6,6 @@ flatpak_packages:
   - io.mpv.Mpv
   - io.bassi.Amberol
 
-  # Calendar
-  - org.gnome.Calendar
-  - org.gnome.Contacts
-
   # System
   - com.mattjakeman.ExtensionManager
   - ca.desrt.dconf-editor
@@ -34,7 +30,6 @@ flatpak_packages:
   - org.chromium.Chromium
 
   # Extra
-  - com.spotify.Client
   - com.discordapp.Discord
 
 user_services:

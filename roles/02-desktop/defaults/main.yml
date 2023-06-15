@@ -8,7 +8,6 @@ desktop_packages:
   # Settings
   - malcontent
   - tracker3-miners
-  - evolution-data-server
   - power-profiles-daemon
 
   # Share
