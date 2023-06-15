@@ -1,31 +1,28 @@
-# Configuration 🌸
+<h3 align="center">🌸 Ansible configuration</h3>
 
-<details>
-<summary>ArchLinux configuration managed with Ansible.</summary>
+<p align="center">ArchLinux configuration managed with Ansible.</p>
+<p align="center">
+	<a href="https://github.com/kaniville/ansible-configuration/stargazers">
+		<img src="https://img.shields.io/github/stars/kaniville/ansible-configuration?color=red&style=for-the-badge"/>
+  </a>
+	<a href="https://github.com/kaniville/ansible-configuration/commits/main">
+		<img src="https://img.shields.io/github/commit-activity/m/kaniville/ansible-configuration?color=green&style=for-the-badge"/>
+  </a>
+	<a href="https://github.com/kaniville/ansible-configuration/forks">
+		<img src="https://img.shields.io/github/forks/kaniville/ansible-configuration?color=yellow&style=for-the-badge"/>
+  </a>
+</p>
 
-![](src/screenshot.png)
+## 🛁 Why
 
-</details>
+- Provides a quick and easy method of installing an operating system.
+- Allow us to easily modify installed packages and applied settings.
+- Focus on package installation via Flatpak and Distrobox to keep the system clean and simple.
+- Thanks to the simplicity of the YAML language, it is very easy to understand & create additional tasks.
 
-## Préambule
+## 🔥 Installation
 
-⚠️ **Important variables are present in the `ansible/group_vars` directory. You need to edit them to customize your installation.**
-
-Here is the partitioning I use:
-
-| Partition                 | Mount Options                                     | Filesystem | Mount Point   |
-|---------------------------|---------------------------------------------------|------------|---------------|
-| `/dev/sda1`               | `nodev,noexec,nosuid`                             | vfat       | `/boot`       |
-| `/dev/sda2`               |                                                   | swap       | none          |
-| `/dev/sda3`               |                                                   | luks2      |               |
-| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                  | btrfs      | `/`           |
-| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@.snapshots`        | btrfs      | `/.snapshots` |
-| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@var_log`           | btrfs      | `/var/log`    |
-| `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@home` | btrfs      | `/home`       |
-
-*You can also encrypt your swap memory by following [these instructions](https://wiki.archlinux.org/title/Dm-crypt/Swap_encryption).*
-
-## Installation
+> ⚠️ **Important variables are present in the `ansible/group_vars` directory. You need to edit them to customize your installation.**
 
 First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/title/Installation_guide) and chroot into your system.
 
@@ -52,8 +49,7 @@ Start the `NetworkManager.service` service and configure your connection with `n
 # systemctl start NetworkManager.service
 # nmtui
 ```
-
-⚠️ **Don't forget to modify the variables in `group_vars`, especially the user password !**
+> ⚠️ **Don't forget to modify the variables in `group_vars`, especially the user password !**
 
 We will now use the **BOOT** tag:
 ```
@@ -66,7 +62,7 @@ Finally, enable/start `gdm.service`:
 # systemctl start gdm.service
 ```
 
-## Configuration
+## 🏕️ Configuration
 
 You can perform partially run of playbook using tags.
 
@@ -97,16 +93,16 @@ Available tags are:
 - flatpak
 - dotfiles
 
-⚠️ **This playbook does not update the system.**
+> ⚠️ **This playbook does not update the system.**
 
-## Exemples
+## 📕 Exemples
 
 Run the entire playbook:
 ```
 $ ansible-playbook playbook.yml -K
 ```
 
-📌 **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
+> 📌 **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
 
 Install every packages & enable/start Systemd services:
 ```
@@ -117,4 +113,4 @@ Executes tasks requiring no privileges:
 ```
 $ ansible-playbook playbook.yml -t 05-homedir
 ```
-📌 **The `dconf`, `dotfiles` & `flatpak` tags don't require privileges either.**
+> 📌 **The `dconf`, `dotfiles` & `flatpak` tags don't require privileges either.**
