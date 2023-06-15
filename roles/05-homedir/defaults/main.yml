@@ -27,7 +27,7 @@ flatpak_packages:
 
   # Web browser
   - org.mozilla.firefox
-  - org.chromium.Chromium
+  - com.brave.Browser
 
   # Extra
   - com.discordapp.Discord
