@@ -2,6 +2,19 @@
 
 ArchLinux configuration managed with Ansible.
 
+## Features
+
+- [x] Install the bootloader and the hardened kernel.
+- [x] Setup locales and keyboard layout.
+- [x] Install and configure a minimal Gnome environment.
+- [x] Allow you to install apps/services with Podman, Distrobox & Flatpak.
+- [x] Install custom udev rules & kernel modules.
+- [x] Create a simple user.
+- [x] Install dotfiles from [here](https://github.com/kaniville/dotfiles).
+- [x] Keep your computer safe with Apparmor, Usbguard, Firejail & Firewalld.
+- [ ] setup Secure boot.
+- [ ] Work with Nvidia GPU.
+
 ## Preambule
 
 ⚠️ **Important variables are present in the `ansible/group_vars` directory. You need to edit them to customize your installation.**
