@@ -14,7 +14,7 @@ flatpak_packages:
 
   # Tools
   - org.gnome.Boxes
-  - org.libreoffice.LibreOffice
+  - org.onlyoffice.desktopeditors
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
   - md.obsidian.Obsidian
