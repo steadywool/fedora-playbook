@@ -9,7 +9,7 @@ ArchLinux configuration managed with Ansible.
 - Focus on package installation via Flatpak and Distrobox to keep the system clean and simple.
 - Thanks to the simplicity of the YAML language, it is very easy to understand & create additional tasks.
 
-## 🔥 Installation
+## 🚀 Installation
 
 > ⚠️ **Important variables are present in the `ansible/group_vars` directory. You need to edit them to customize your installation.**
 
@@ -51,7 +51,7 @@ Finally, enable/start `gdm.service`:
 # systemctl start gdm.service
 ```
 
-## 🏕️ Configuration
+## 🔧 Configuration
 
 You can perform partially run of playbook using tags.
 
