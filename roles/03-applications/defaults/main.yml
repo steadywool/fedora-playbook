@@ -4,11 +4,11 @@ terminal_packages:
   - fish
   - htop
   - ranger
-  - atool
   - wl-clipboard
 
-  # Sync
-  - syncthing
+  # Informations
+  - man-db
+  - neofetch
 
   # Development
   - neovim
@@ -16,11 +16,16 @@ terminal_packages:
   - python-pip
   - android-tools
 
-  # Extra
-  - neofetch
-
 applications_packages:
+  # Terminal/File manager
   - alacritty
   - nautilus
+
+  # android
   - scrcpy
+
+  # Sync
+  - syncthing
+
+  #TCP/IP
   - wireshark-qt

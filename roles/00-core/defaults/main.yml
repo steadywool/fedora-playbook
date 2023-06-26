@@ -24,12 +24,9 @@ core_packages:
   # Editor
   - nano
 
-  # Utils
-  - git
-  - wget
-  - man-db
-
   # Ansible
   - ansible
   - python-passlib
   - rsync
+  - git
+  - wget

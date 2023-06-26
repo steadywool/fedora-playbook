@@ -23,6 +23,12 @@
   become: true
   tags: firewalld
 
+- name: Import Flatpak
+  ansible.builtin.import_tasks:
+    file: flatpak.yml
+  become: true
+  tags: flatpak
+
 - name: Import sudoers
   ansible.builtin.import_tasks:
     file: sudoers.yml

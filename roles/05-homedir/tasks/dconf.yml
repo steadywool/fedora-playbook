@@ -15,7 +15,7 @@
   ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 
 - name: Set windows focus mode
-  ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+  ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences focus-mode 'mouse'
 
 - name: Resize windows with right click
   ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
