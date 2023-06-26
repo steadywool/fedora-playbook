@@ -102,4 +102,4 @@ Executes tasks requiring no privileges:
 ```
 $ ansible-playbook playbook.yml -t 05-homedir
 ```
-> 📌 **The `dconf`, `dotfiles` & `flatpak` tags don't require privileges either.**
+> 📌 **The `dconf` & `dotfiles` tags don't require privileges either.**
