@@ -12,6 +12,7 @@ terminal_packages:
 
   # Development
   - neovim
+  - ripgrep
   - npm
   - python-pip
   - android-tools
