@@ -18,8 +18,7 @@ terminal_packages:
   - android-tools
 
 applications_packages:
-  # Terminal/File manager
-  - alacritty
+  # File manager
   - nautilus
 
   # android

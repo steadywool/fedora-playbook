@@ -3,11 +3,13 @@ core_packages:
   # Base
   - base
   - base-devel
+  - pacman-contrib
+
+  # Kernel
   - linux-hardened
   - linux-hardened-headers
   - linux-firmware
   - dkms
-  - pacman-contrib
   - intel-ucode
 
   # Filesystem
