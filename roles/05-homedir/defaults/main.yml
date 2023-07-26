@@ -1,20 +1,22 @@
 ---
 flatpak_packages:
-  # Desktop
+  # Gnome Apps
   - org.gnome.Loupe
   - org.gnome.Evince
+  - org.gnome.TextEditor
+  - org.gnome.seahorse.Application
+  - org.gnome.Boxes
+
+  # Multimedia
   - io.mpv.Mpv
   - io.bassi.Amberol
 
   # System
   - com.mattjakeman.ExtensionManager
   - ca.desrt.dconf-editor
-  - org.gnome.seahorse.Application
   - com.github.tchx84.Flatseal
-  - com.raggesilver.BlackBox
 
   # Tools
-  - org.gnome.Boxes
   - org.onlyoffice.desktopeditors
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC

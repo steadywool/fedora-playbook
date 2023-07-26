@@ -21,6 +21,9 @@ applications_packages:
   # File manager
   - nautilus
 
+  # Terminal
+  - alacritty
+
   # android
   - scrcpy
 
