@@ -3,7 +3,6 @@ flatpak_packages:
   # Gnome Apps
   - org.gnome.Loupe
   - org.gnome.Evince
-  - org.gnome.TextEditor
   - org.gnome.seahorse.Application
   - org.gnome.Boxes
 
