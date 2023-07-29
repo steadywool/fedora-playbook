@@ -24,11 +24,9 @@ applications_packages:
   # Terminal
   - alacritty
 
-  # android
-  - scrcpy
-
-  # Sync
+  # Devices
   - syncthing
+  - scrcpy
 
   #TCP/IP
   - wireshark-qt
