@@ -15,6 +15,7 @@ gnome_packages:
   - malcontent
   - tracker3-miners
   - power-profiles-daemon
+  - orca
 
   # Share
   - gnome-user-share
@@ -33,7 +34,7 @@ gnome_packages:
 
   # Help
   - gnome-tour
-  - yelp
+  - gnome-user-docs
 
 libraries_packages:
   # Gstreamer
