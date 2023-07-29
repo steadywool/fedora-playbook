@@ -11,6 +11,9 @@ additional_packages:
   - npm
   - python-pip
 
+  # Share
+  - syncthing
+
   # GUI
   - wireshark-qt
   - scrcpy
