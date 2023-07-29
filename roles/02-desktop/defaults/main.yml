@@ -1,10 +1,15 @@
 ---
-desktop_packages:
-  # Gnome
+gnome_packages:
+  # Core
   - gdm
   - gnome-shell
   - gnome-control-center
   - gnome-keyring
+  - gnome-software
+
+  # Applications
+  - nautilus
+  - alacritty
 
   # Settings
   - malcontent
@@ -21,6 +26,16 @@ desktop_packages:
   - gnome-themes-extra
   - papirus-icon-theme
 
+  # XDG
+  - xdg-utils
+  - xdg-user-dirs-gtk
+  - xdg-desktop-portal-gnome
+
+  # Help
+  - gnome-tour
+  - yelp
+
+libraries_packages:
   # Gstreamer
   - gst-plugin-pipewire
   - gst-plugins-base
@@ -30,15 +45,11 @@ desktop_packages:
   # GVFS
   - gvfs-afc
   - gvfs-goa
+  - gvfs-google
   - gvfs-gphoto2
   - gvfs-mtp
+  - gvfs-nfs
   - gvfs-smb
-
-  # XDG
-  - xdg-utils
-  - xdg-user-dirs
-  - xdg-user-dirs-gtk
-  - xdg-desktop-portal-gnome
 
 font_packages:
   - ttf-jetbrains-mono-nerd
@@ -58,4 +69,3 @@ system_services:
   - auditd.service
   - apparmor.service
   - usbguard.service
-  - power-profiles-daemon.service

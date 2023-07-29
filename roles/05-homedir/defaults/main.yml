@@ -1,13 +1,7 @@
 ---
 flatpak_packages:
-  # Gnome Apps
+  # Core
   - org.gnome.Loupe
-  - org.gnome.Evince
-  - org.gnome.seahorse.Application
-  - org.gnome.Boxes
-  - org.gnome.Calculator
-
-  # Multimedia
   - io.mpv.Mpv
   - io.bassi.Amberol
 
@@ -15,23 +9,23 @@ flatpak_packages:
   - com.mattjakeman.ExtensionManager
   - ca.desrt.dconf-editor
   - com.github.tchx84.Flatseal
+  - org.gnome.seahorse.Application
 
   # Tools
   - org.onlyoffice.desktopeditors
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
   - md.obsidian.Obsidian
+  - ar.com.tuxguitar.TuxGuitar
 
   # Games
   - com.valvesoftware.Steam
   - com.mojang.Minecraft
   - sh.ppy.osu
 
-  # Web browser
+  # Web browser/Electron
   - org.mozilla.firefox
   - com.brave.Browser
-
-  # Extra
   - com.discordapp.Discord
 
 user_services:

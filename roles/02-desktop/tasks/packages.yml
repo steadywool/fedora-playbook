@@ -1,7 +1,12 @@
 ---
-- name: Install desktop packages
+- name: Install Gnome
   community.general.pacman:
-    name: "{{ desktop_packages }}"
+    name: "{{ gnome_packages }}"
+    state: present
+
+- name: Install libraries
+  community.general.pacman:
+    name: "{{ libraries_packages }}"
     state: present
 
 - name: Install fonts

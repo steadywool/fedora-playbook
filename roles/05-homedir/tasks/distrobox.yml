@@ -1,0 +1,3 @@
+---
+- name: Create development container
+  ansible.builtin.command: distrobox create --yes --image fedora --name development-box

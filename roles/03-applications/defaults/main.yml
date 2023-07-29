@@ -1,32 +1,16 @@
 ---
-terminal_packages:
+additional_packages:
   # Terminal
   - fish
-  - htop
   - ranger
+  - android-tools
   - wl-clipboard
-
-  # Informations
-  - man-db
-  - neofetch
 
   # Development
   - neovim
-  - ripgrep
   - npm
   - python-pip
-  - android-tools
 
-applications_packages:
-  # File manager
-  - nautilus
-
-  # Terminal
-  - alacritty
-
-  # Devices
-  - syncthing
-  - scrcpy
-
-  #TCP/IP
+  # GUI
   - wireshark-qt
+  - scrcpy

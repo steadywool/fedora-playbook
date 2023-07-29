@@ -1,4 +1,11 @@
 ---
+- name: Import user services
+  ansible.builtin.import_tasks:
+    file: services.yml
+  become: true
+  become_user: "{{ user.name }}"
+  tags: services
+
 - name: Import dotfiles
   ansible.builtin.import_tasks:
     file: dotfiles.yml
@@ -13,16 +20,16 @@
   become_user: "{{ user.name }}"
   tags: flatpak
 
+- name: Import distrobox
+  ansible.builtin.import_tasks:
+    file: distrobox.yml
+  become: true
+  become_user: "{{ user.name }}"
+  tags: distrobox
+
 - name: Import Dconf
   ansible.builtin.import_tasks:
     file: dconf.yml
   become: true
   become_user: "{{ user.name }}"
   tags: dconf
-
-- name: Import user services
-  ansible.builtin.import_tasks:
-    file: services.yml
-  become: true
-  become_user: "{{ user.name }}"
-  tags: services
