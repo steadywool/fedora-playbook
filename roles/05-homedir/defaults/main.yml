@@ -1,8 +1,8 @@
 ---
 flatpak_packages:
-  # Core
+  # Media
   - org.gnome.Loupe
-  - io.mpv.Mpv
+  - org.videolan.VLC
   - io.bassi.Amberol
 
   # System
@@ -26,6 +26,8 @@ flatpak_packages:
   # Web browser/Electron
   - org.mozilla.firefox
   - com.brave.Browser
+
+  # Chat
   - com.discordapp.Discord
 
 user_services:

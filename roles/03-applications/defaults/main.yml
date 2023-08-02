@@ -13,7 +13,3 @@ additional_packages:
 
   # Share
   - syncthing
-
-  # GUI
-  - wireshark-qt
-  - scrcpy

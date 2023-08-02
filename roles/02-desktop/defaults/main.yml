@@ -9,7 +9,6 @@ gnome_packages:
 
   # Applications
   - nautilus
-  - gnome-text-editor
   - alacritty
 
   # Settings

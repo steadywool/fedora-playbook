@@ -31,3 +31,8 @@ system_packages:
 
   # Flatpak
   - flatpak
+
+  # Share
+  - rsync
+  - git
+  - wget

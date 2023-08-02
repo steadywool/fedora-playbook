@@ -29,6 +29,3 @@ core_packages:
   # Ansible
   - ansible
   - python-passlib
-  - rsync
-  - git
-  - wget
