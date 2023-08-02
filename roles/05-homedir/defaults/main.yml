@@ -16,16 +16,14 @@ flatpak_packages:
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
   - md.obsidian.Obsidian
-  - ar.com.tuxguitar.TuxGuitar
 
   # Games
   - com.valvesoftware.Steam
   - com.mojang.Minecraft
   - sh.ppy.osu
 
-  # Web browser/Electron
+  # Web browser
   - org.mozilla.firefox
-  - com.brave.Browser
 
   # Chat
   - com.discordapp.Discord
