@@ -7,10 +7,6 @@ gnome_packages:
   - gnome-keyring
   - gnome-software
 
-  # Applications
-  - nautilus
-  - alacritty
-
   # Settings
   - malcontent
   - tracker3-miners
@@ -33,7 +29,6 @@ gnome_packages:
   - xdg-desktop-portal-gnome
 
   # Help
-  - gnome-tour
   - gnome-user-docs
 
 libraries_packages:
