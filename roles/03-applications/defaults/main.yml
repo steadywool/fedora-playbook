@@ -2,7 +2,7 @@
 additional_packages:
   # Applications
   - nautilus
-  - alacritty
+  - gnome-console
 
   # Terminal
   - fish
@@ -12,6 +12,7 @@ additional_packages:
   - neovim
   - ranger
   - wl-clipboard
+  - ripgrep
   - npm
   - python-pip
 

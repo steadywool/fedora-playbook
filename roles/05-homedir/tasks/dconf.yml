@@ -1,9 +1,12 @@
 ---
-- name: Set font size
+- name: Set general font
   ansible.builtin.command: gsettings set org.gnome.desktop.interface font-name 'Cantarell 10'
 
-- name: Set document font size
+- name: Set document font
   ansible.builtin.command: gsettings set org.gnome.desktop.interface document-font-name 'Cantarell 10'
+
+- name: Set monospace font
+  ansible.builtin.command: gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font 10'
 
 - name: Set icon theme
   ansible.builtin.command: gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
