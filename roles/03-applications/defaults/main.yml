@@ -6,12 +6,12 @@ additional_packages:
 
   # Terminal
   - fish
-  - ranger
   - android-tools
-  - wl-clipboard
 
   # Development
   - neovim
+  - ranger
+  - wl-clipboard
   - npm
   - python-pip
 
