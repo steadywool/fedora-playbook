@@ -5,7 +5,6 @@ gnome_packages:
   - gnome-shell
   - gnome-control-center
   - gnome-keyring
-  - gnome-software
 
   # Settings
   - malcontent

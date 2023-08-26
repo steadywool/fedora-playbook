@@ -2,6 +2,7 @@
 additional_packages:
   # Applications
   - nautilus
+  - gnome-software
   - gnome-console
 
   # Terminal
