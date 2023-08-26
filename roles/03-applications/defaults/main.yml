@@ -6,7 +6,7 @@ additional_packages:
 
   # Terminal
   - fish
-  - android-tools
+  - ranger
 
   # Development
   - neovim
@@ -15,5 +15,6 @@ additional_packages:
   - npm
   - python-pip
 
-  # Share
+  # Tools
   - syncthing
+  - android-tools
