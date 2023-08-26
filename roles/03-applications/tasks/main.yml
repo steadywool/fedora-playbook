@@ -11,12 +11,6 @@
   become: true
   tags: flatpak
 
-- name: Import firejail
-  ansible.builtin.import_tasks:
-    file: firejail.yml
-  become: true
-  tags: firejail
-
 - name: Import usbguard
   ansible.builtin.import_tasks:
     file: usbguard.yml

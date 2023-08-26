@@ -75,7 +75,6 @@ Available tags are:
 - udev
 - services
 - firewalld
-- firejail
 - sudo
 - usbguard
 - user
