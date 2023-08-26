@@ -10,7 +10,6 @@ additional_packages:
 
   # Development
   - neovim
-  - ranger
   - wl-clipboard
   - ripgrep
   - npm

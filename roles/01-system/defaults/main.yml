@@ -6,7 +6,6 @@ system_packages:
   - firewalld
   - arch-audit
   - fwupd
-  - firejail
 
   # Networking & Bluetooth
   - networkmanager
