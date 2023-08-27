@@ -31,5 +31,6 @@ core_packages:
   - python-passlib
 
   # Download
+  - rsync
   - git
   - wget
