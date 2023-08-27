@@ -8,9 +8,4 @@
     "editor.fontLigatures": true,
     "telemetry.telemetryLevel": "off",
     "extensions.ignoreRecommendations": true
-    "git.showActionButton": {
-        "publish": false,
-        "sync": false
-    },
-    "git.terminalAuthentication": false
 }
