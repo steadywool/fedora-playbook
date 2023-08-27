@@ -1,8 +1,10 @@
 {
     "dev.containers.dockerPath": "podman-remote",
+    "workbench.colorTheme": "Gruvbox Material Dark",
     "window.menuBarVisibility": "toggle",
     "editor.minimap.enabled": false,
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontSize": 14,
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "telemetry.telemetryLevel": "off",
 }
