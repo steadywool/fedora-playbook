@@ -1,0 +1,10 @@
+---
+- name: Create development container
+  ansible.builtin.command: distrobox create --yes --image fedora --name dev-container
+
+- name: Install packages
+  ansible.builtin.command: "distrobox enter dev-container -- sudo dnf install -y {{ item }}"
+  loop: "{{ dev-container_packages }}"
+
+- name: Export Neovim
+  ansible.builtin.command: "distrobox enter dev-container -- distrobox-export --app nvim"

@@ -23,8 +23,8 @@ core_packages:
   - unrar
   - p7zip
 
-  # Default editor
-  - neovim
+  # Editor
+  - nano
 
   # Ansible
   - ansible

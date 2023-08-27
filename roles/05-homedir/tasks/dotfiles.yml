@@ -20,3 +20,19 @@
   ansible.builtin.get_url:
     url: https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
     dest: "/home/{{ user.name }}/.config/fish/functions/fisher.fish"
+
+- name: Install Lazy.nvim
+  ansible.builtin.git:
+    repo: 'https://github.com/folke/lazy.nvim.git'
+    dest: "/home/{{ user.name }}/.local/share/nvim/lazy/lazy.nvim"
+    clone: true
+    update: true
+    force: true
+
+- name: Install ranger devicons
+  ansible.builtin.git:
+    repo: 'https://github.com/alexanderjeurissen/ranger_devicons.git'
+    dest: "/home/{{ user.name }}/.config/ranger/plugins/ranger_devicons"
+    clone: true
+    update: true
+    force: true

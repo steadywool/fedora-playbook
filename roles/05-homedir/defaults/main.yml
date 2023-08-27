@@ -3,7 +3,6 @@ flatpak_packages:
   # Media
   - org.gnome.Loupe
   - org.videolan.VLC
-  - io.bassi.Amberol
 
   # System
   - com.mattjakeman.ExtensionManager
@@ -26,9 +25,14 @@ flatpak_packages:
   - org.mozilla.firefox
   - com.discordapp.Discord
 
-  # Development
-  - com.visualstudio.code
-  - com.visualstudio.code.tool.podman
+dev-container_packages:
+  - neovim
+  - wl-clipboard
+  - ripgrep
+  - git
+  - npm
+  - gcc
+  - g++
 
 user_services:
   - podman.service

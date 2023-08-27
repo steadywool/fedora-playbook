@@ -8,7 +8,6 @@ additional_packages:
   # Terminal
   - fish
   - ranger
-  - wl-clipboard
   - neofetch
 
   # Tools
@@ -17,7 +16,7 @@ additional_packages:
   - arch-audit
 
 font_packages:
-  - ttf-jetbrains-mono
+  - ttf-jetbrains-mono-nerd
   - noto-fonts
   - noto-fonts-emoji
   - otf-ipafont
