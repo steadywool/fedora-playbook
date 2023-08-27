@@ -6,5 +6,6 @@
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
-    "telemetry.telemetryLevel": "off"
+    "telemetry.telemetryLevel": "off",
+    "extensions.ignoreRecommendations": true
 }
