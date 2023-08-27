@@ -9,6 +9,7 @@ additional_packages:
   - fish
   - ranger
   - neofetch
+  - htop
 
   # Tools
   - syncthing
