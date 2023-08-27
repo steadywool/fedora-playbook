@@ -45,14 +45,6 @@ libraries_packages:
   - gvfs-nfs
   - gvfs-smb
 
-font_packages:
-  - ttf-jetbrains-mono-nerd
-  - ttf-liberation
-  - ttf-dejavu
-  - noto-fonts
-  - noto-fonts-emoji
-  - otf-ipafont
-
 system_services:
   - systemd-timesyncd.service
   - systemd-resolved.service

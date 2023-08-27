@@ -5,12 +5,6 @@
   become: true
   tags: packages
 
-- name: Import Flatpak
-  ansible.builtin.import_tasks:
-    file: flatpak.yml
-  become: true
-  tags: flatpak
-
 - name: Import usbguard
   ansible.builtin.import_tasks:
     file: usbguard.yml

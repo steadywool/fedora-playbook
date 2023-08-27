@@ -31,7 +31,7 @@ system_packages:
   # Flatpak
   - flatpak
 
-  # Share
+  # Data
   - rsync
   - git
   - wget

@@ -3,3 +3,8 @@
   community.general.pacman:
     name: "{{ additional_packages }}"
     state: present
+
+- name: Install fonts
+  community.general.pacman:
+    name: "{{ font_packages }}"
+    state: present

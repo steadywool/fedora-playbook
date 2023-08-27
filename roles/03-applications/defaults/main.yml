@@ -19,3 +19,11 @@ additional_packages:
   # Tools
   - syncthing
   - android-tools
+
+font_packages:
+  - ttf-jetbrains-mono-nerd
+  - ttf-liberation
+  - ttf-dejavu
+  - noto-fonts
+  - noto-fonts-emoji
+  - otf-ipafont
