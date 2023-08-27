@@ -80,6 +80,7 @@ Available tags are:
 - user
 - flatpak
 - dotfiles
+- distrobox
 
 > ⚠️ **This playbook does not update the system.**
 
@@ -101,4 +102,4 @@ Executes tasks requiring no privileges:
 ```
 $ ansible-playbook playbook.yml -t 05-homedir
 ```
-> 📌 **The `dconf` & `dotfiles` tags don't require privileges either.**
+> 📌 **The `dconf`, `distrobox` & `dotfiles` tags don't require privileges either.**
