@@ -9,6 +9,7 @@ additional_packages:
   - fish
   - ranger
   - wl-clipboard
+  - neofetch
 
   # Tools
   - syncthing
