@@ -23,9 +23,13 @@ core_packages:
   - unrar
   - p7zip
 
-  # Editor
-  - nano
+  # Default editor
+  - neovim
 
   # Ansible
   - ansible
   - python-passlib
+
+  # Download
+  - git
+  - wget

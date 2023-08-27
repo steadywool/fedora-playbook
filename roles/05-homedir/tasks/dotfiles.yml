@@ -1,38 +1,29 @@
 ---
-- name: Clone user dotfiles
-  ansible.builtin.git:
-    repo: 'https://github.com/kaniville/linux-dotfiles.git'
-    dest: /tmp/dotfiles
-    clone: true
-    update: true
+- name: Install Fish configuration
+  ansible.builtin.copy:
+    src: fish/
+    dest: "/home/{{ user.name }}/.config/fish"
+    force: true
 
-- name: Install user dotfiles
-  ansible.posix.synchronize:
-    src: /tmp/dotfiles/
-    dest: "/home/{{ user.name }}"
-    rsync_opts:
-      - "--exclude=.git"
-      - "--exclude=src"
-      - "--exclude=LICENSE"
-      - "--exclude=README.md"
+- name: Install Neovim configuration
+  ansible.builtin.copy:
+    src: neovim/
+    dest: "/home/{{ user.name }}/.config/nvim"
+    force: true
+
+- name: Install Ranger configuration
+  ansible.builtin.copy:
+    src: ranger/
+    dest: "/home/{{ user.name }}/.config/ranger"
+    force: true
+
+- name: Install VSCode configuration
+  ansible.builtin.copy:
+    src: vscode/
+    dest: "/home/{{ user.name }}/.var/app/com.visualstudio.code/config/Code/User"
+    force: true
 
 - name: Install Fisher
   ansible.builtin.get_url:
     url: https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
     dest: "/home/{{ user.name }}/.config/fish/functions/fisher.fish"
-
-- name: Install Lazy.nvim
-  ansible.builtin.git:
-    repo: 'https://github.com/folke/lazy.nvim.git'
-    dest: "/home/{{ user.name }}/.local/share/nvim/lazy/lazy.nvim"
-    clone: true
-    update: true
-    force: true
-
-- name: Install ranger devicons
-  ansible.builtin.git:
-    repo: 'https://github.com/alexanderjeurissen/ranger_devicons.git'
-    dest: "/home/{{ user.name }}/.config/ranger/plugins/ranger_devicons"
-    clone: true
-    update: true
-    force: true

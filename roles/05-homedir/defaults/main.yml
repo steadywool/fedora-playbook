@@ -22,11 +22,13 @@ flatpak_packages:
   - com.mojang.Minecraft
   - sh.ppy.osu
 
-  # Web browser
+  # Internet
   - org.mozilla.firefox
-
-  # Chat
   - com.discordapp.Discord
+
+  # Development
+  - com.visualstudio.code
+  - com.visualstudio.code.tool.podman
 
 user_services:
   - podman.service

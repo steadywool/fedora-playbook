@@ -11,12 +11,6 @@
   become: true
   tags: snapshot
 
-- name: Import Udev rules
-  ansible.builtin.import_tasks:
-    file: udev.yml
-  become: true
-  tags: udev
-
 - name: Import Kernel modules
   ansible.builtin.import_tasks:
     file: sysctl.yml

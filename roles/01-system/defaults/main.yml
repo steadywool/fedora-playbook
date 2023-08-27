@@ -1,12 +1,5 @@
 ---
 system_packages:
-  # Administration
-  - apparmor
-  - usbguard
-  - firewalld
-  - arch-audit
-  - fwupd
-
   # Networking & Bluetooth
   - networkmanager
   - bluez
@@ -17,6 +10,12 @@ system_packages:
   - pipewire-pulse
   - wireplumber
 
+  # Security
+  - apparmor
+  - usbguard
+  - firewalld
+  - fwupd
+
   # Virtualization
   - podman
   - podman-compose
@@ -24,14 +23,9 @@ system_packages:
   - aardvark-dns
   - distrobox
 
-  # Printing
-  - cups
-  - ghostscript
-
   # Flatpak
   - flatpak
 
-  # Data
-  - rsync
-  - git
-  - wget
+  # Printing
+  - cups
+  - ghostscript

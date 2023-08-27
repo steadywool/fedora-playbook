@@ -1,6 +1,0 @@
----
-- name: Configure Udev rules
-  ansible.builtin.copy:
-    src: rules.d/
-    dest: /etc/udev/rules.d
-    force: true
