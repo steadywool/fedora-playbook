@@ -3,7 +3,7 @@ additional_packages:
   # Applications
   - nautilus
   - gnome-software
-  - gnome-console
+  - kitty
 
   # Terminal
   - fish

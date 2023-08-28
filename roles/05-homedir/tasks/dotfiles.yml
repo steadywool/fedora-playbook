@@ -16,6 +16,17 @@
       - "--exclude=LICENSE"
       - "--exclude=README.md"
 
+- name: Creates .local/bin directory
+  file:
+    path: "/home/{{ user.name }}/.local/bin"
+    state: directory
+
+- name: Create a symbolic link of Kitty
+  ansible.builtin.file:
+    src: /usr/bin/kitty
+    dest: "/home/{{ user.name }}/.local/bin/gnome-terminal"
+    state: link
+
 - name: Install Fisher
   ansible.builtin.get_url:
     url: https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
