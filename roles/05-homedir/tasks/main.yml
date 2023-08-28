@@ -26,10 +26,3 @@
   become: true
   become_user: "{{ user.name }}"
   tags: dconf
-
-- name: Import distrobox
-  ansible.builtin.import_tasks:
-    file: distrobox.yml
-  become: true
-  become_user: "{{ user.name }}"
-  tags: distrobox

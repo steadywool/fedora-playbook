@@ -25,15 +25,9 @@ flatpak_packages:
   - org.mozilla.firefox
   - com.discordapp.Discord
 
-dev-container_packages:
-  - neovim
-  - wl-clipboard
-  - ripgrep
-  - git
-  - npm
-  - python-pip
-  - gcc
-  - g++
+  # Development
+  - com.visualstudio.code
+  - com.visualstudio.code.tool.podman
 
 user_services:
   - podman.service

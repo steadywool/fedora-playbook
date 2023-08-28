@@ -3,11 +3,11 @@ additional_packages:
   # Applications
   - nautilus
   - gnome-software
-  - kitty
+  - gnome-console
 
   # Terminal
-  - fish
   - ranger
+  - wl-clipboard
   - neofetch
   - htop
 
@@ -17,7 +17,7 @@ additional_packages:
   - arch-audit
 
 font_packages:
-  - ttf-jetbrains-mono-nerd
+  - ttf-jetbrains-mono
   - noto-fonts
   - noto-fonts-emoji
   - otf-ipafont
