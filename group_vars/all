@@ -17,6 +17,6 @@ user:
   comment: Kaniville
   password: kani # Change the password here
   groups: wheel,adbusers # Wheel group give the user privileges (needed to execute this playbook)
-  shell: /bin/bash
+  shell: /bin/fish
 
 # vim: ft=yaml

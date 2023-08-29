@@ -6,6 +6,7 @@ additional_packages:
   - gnome-console
 
   # Terminal
+  - fish
   - ranger
   - wl-clipboard
   - neofetch
@@ -17,7 +18,7 @@ additional_packages:
   - arch-audit
 
 font_packages:
-  - ttf-jetbrains-mono
+  - ttf-jetbrains-mono-nerd
   - noto-fonts
   - noto-fonts-emoji
   - otf-ipafont

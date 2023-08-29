@@ -5,20 +5,25 @@
     dest: "/home/{{ user.name }}/.config/ranger"
     force: true
 
-- name: Configure Bash
-  ansible.builtin.copy:
-    src: .bashrc
-    dest: "/home/{{ user.name }}.bashrc"
-    force: true
-
-- name: Configure Vim
-  ansible.builtin.copy:
-    src: .vimrc
-    dest: "/home/{{ user.name }}.vimrc"
-    force: true
-
 - name: Configure VisualStudio Code
   ansible.builtin.copy:
     src: settings.json
     dest: "/home/{{ user.name }}/.var/app/com.visualstudio.code/config/Code/User/settings.json"
     force: true
+
+- name: Configure Vim
+  ansible.builtin.copy:
+    src: .vimrc
+    dest: "/home/{{ user.name }}/.vimrc"
+    force: true
+
+- name: Configure Fish
+  ansible.builtin.copy:
+    src: fish/
+    dest: "/home/{{ user.name }}/.config/fish"
+    force: true
+
+- name: Install Fisher
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
+    dest: "/home/{{ user.name }}/.config/fish/functions/fisher.fish"
