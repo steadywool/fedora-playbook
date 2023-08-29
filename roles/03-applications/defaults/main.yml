@@ -1,22 +1,20 @@
 ---
-additional_packages:
-  # Applications
+applications_packages:
+  # Gnome apps
   - nautilus
   - gnome-software
   - gnome-console
 
-  # Terminal
+  # Terminal apps
   - fish
   - ranger
   - neovim
-  - wl-clipboard
-  - neofetch
   - htop
 
-  # Tools
+  # Additional tools
+  - arch-audit
   - syncthing
   - android-tools
-  - arch-audit
 
 font_packages:
   - ttf-jetbrains-mono

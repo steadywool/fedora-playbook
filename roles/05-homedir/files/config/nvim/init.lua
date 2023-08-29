@@ -5,10 +5,6 @@ vim.g.mapleader = ';'
 vim.cmd('colorscheme habamax')
 vim.opt.termguicolors = true
 
--- Clipboard/Mouse
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.mouse = 'a'
-
 -- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
