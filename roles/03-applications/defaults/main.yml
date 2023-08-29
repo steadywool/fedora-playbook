@@ -8,7 +8,6 @@ additional_packages:
   # Terminal
   - fish
   - ranger
-  - wl-clipboard
   - neofetch
   - htop
 
