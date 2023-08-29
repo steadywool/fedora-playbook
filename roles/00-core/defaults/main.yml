@@ -3,7 +3,6 @@ core_packages:
   # Base
   - base
   - base-devel
-  - pacman-contrib
 
   # Kernel
   - linux-hardened
@@ -31,6 +30,5 @@ core_packages:
   - python-passlib
 
   # Download
-  - rsync
   - git
   - wget
