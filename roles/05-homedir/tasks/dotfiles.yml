@@ -1,14 +1,14 @@
 ---
-- name: Configure Ranger
+- name: Copy .config
   ansible.builtin.copy:
-    src: ranger/
-    dest: "/home/{{ user.name }}/.config/ranger"
+    src: .config/
+    dest: "/home/{{ user.name }}/.config"
     force: true
 
-- name: Configure Fish
+- name: Copy .local
   ansible.builtin.copy:
-    src: fish/
-    dest: "/home/{{ user.name }}/.config/fish"
+    src: .local/
+    dest: "/home/{{ user.name }}/.local"
     force: true
 
 - name: Configure VisualStudio Code

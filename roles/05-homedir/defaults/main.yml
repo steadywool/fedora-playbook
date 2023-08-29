@@ -27,7 +27,6 @@ flatpak_packages:
 
   # Development
   - com.visualstudio.code
-  - com.visualstudio.code.tool.podman
 
 user_services:
   - podman.service

@@ -1,11 +1,11 @@
 {
-    "dev.containers.dockerPath": "podman-remote",
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "telemetry.telemetryLevel": "off",
     "extensions.ignoreRecommendations": true,
     "github.gitAuthentication": false,
-    "remote.containers.copyGitConfig": false,
-    "remote.containers.gitCredentialHelperConfigLocation": "none",
+    "dev.containers.dockerPath": "/home/kani/.local/bin/podman-host",
+    "dev.containers.copyGitConfig": false,
+    "dev.containers.gitCredentialHelperConfigLocation": "none"
 }
