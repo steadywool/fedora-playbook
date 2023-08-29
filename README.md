@@ -1,4 +1,4 @@
-# 🌸 Ansible configuration
+# 🌸 Ansible Dotfiles
 
 ArchLinux configuration managed with Ansible.
 
