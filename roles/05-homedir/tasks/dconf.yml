@@ -6,7 +6,7 @@
   ansible.builtin.command: gsettings set org.gnome.desktop.interface document-font-name 'Cantarell 10'
 
 - name: Set monospace font
-  ansible.builtin.command: gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font 10'
+  ansible.builtin.command: gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrains Mono 10'
 
 - name: Set icon theme
   ansible.builtin.command: gsettings set org.gnome.desktop.interface icon-theme 'Papirus'

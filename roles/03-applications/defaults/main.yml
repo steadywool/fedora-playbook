@@ -18,7 +18,7 @@ additional_packages:
   - arch-audit
 
 font_packages:
-  - ttf-jetbrains-mono-nerd
+  - ttf-jetbrains-mono
   - noto-fonts
   - noto-fonts-emoji
   - otf-ipafont

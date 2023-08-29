@@ -1,6 +1,6 @@
 {
     "dev.containers.dockerPath": "podman-remote",
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontFamily": "JetBrains Mono",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "telemetry.telemetryLevel": "off",
