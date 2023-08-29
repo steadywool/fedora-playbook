@@ -1,8 +1,9 @@
 ---
 flatpak_packages:
-  # Media
+  # Base
   - org.gnome.Loupe
   - org.videolan.VLC
+  - org.gnome.TextEditor
 
   # System
   - com.mattjakeman.ExtensionManager

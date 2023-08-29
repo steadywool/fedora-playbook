@@ -17,7 +17,7 @@
   become: true
   tags: usbguard
 
-- name: Import Firewalld
+- name: Import firewalld
   ansible.builtin.import_tasks:
     file: firewalld.yml
   become: true
