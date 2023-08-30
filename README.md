@@ -2,6 +2,8 @@
 
 ArchLinux configuration managed with Ansible.
 
+![](src/screenshot.png)
+
 ## 🛁 Why
 
 - Provides a quick and easy method of installing an operating system.
@@ -17,8 +19,8 @@ First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/titl
 
 Then, let's clone the repository into a directory (for example, `/mnt`):
 ```
-# git clone https://github.com/kaniville/ansible-configuration.git /mnt/ansible-configuration
-# cd /mnt/ansible-configuration
+# git clone https://github.com/kaniville/ansible-dotfiles.git /mnt/ansible-dotfiles
+# cd /mnt/ansible-dotfiles
 ```
 
 The installation will be done in 2 steps, for each step we will use a different tag.
@@ -101,4 +103,4 @@ Executes tasks requiring no privileges:
 ```
 $ ansible-playbook playbook.yml -t 05-homedir
 ```
-> 📌 **The `dconf` & `dotfiles` tags don't require privileges either.**
+> 📌 **The `dconf`, `flatpak` & `dotfiles` tags don't require privileges either.**
