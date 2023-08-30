@@ -32,7 +32,3 @@ system_packages:
 
   # Flatpak
   - flatpak
-
-  # Download
-  - git
-  - wget

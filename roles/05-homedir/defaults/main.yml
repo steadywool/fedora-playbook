@@ -4,6 +4,7 @@ flatpak_packages:
   - org.gnome.Loupe
   - org.videolan.VLC
   - org.gnome.TextEditor
+  - org.gnome.Evince
 
   # System
   - com.mattjakeman.ExtensionManager

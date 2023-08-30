@@ -10,6 +10,8 @@ applications_packages:
   - ranger
   - neovim
   - htop
+  - git
+  - wget
 
   # Additional tools
   - arch-audit
