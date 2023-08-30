@@ -28,7 +28,3 @@ core_packages:
   # Ansible
   - ansible
   - python-passlib
-
-  # Download
-  - git
-  - wget

@@ -10,9 +10,3 @@
     file: uid-gid.yml
   become: true
   tags: user
-
-- name: Import sudoers
-  ansible.builtin.import_tasks:
-    file: sudoers.yml
-  become: true
-  tags: sudo

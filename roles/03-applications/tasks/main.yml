@@ -5,20 +5,20 @@
   become: true
   tags: packages
 
-- name: Import GDM configuration
-  ansible.builtin.import_tasks:
-    file: gdm.yml
-  become: true
-  tags: locale
-
-- name: Import usbguard
+- name: import usbguard
   ansible.builtin.import_tasks:
     file: usbguard.yml
   become: true
   tags: usbguard
 
-- name: Import firewalld
+- name: import firewalld
   ansible.builtin.import_tasks:
     file: firewalld.yml
   become: true
   tags: firewalld
+
+- name: Import sudoers
+  ansible.builtin.import_tasks:
+    file: sudoers.yml
+  become: true
+  tags: sudo

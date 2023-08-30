@@ -10,3 +10,10 @@
     file: sysctl.yml
   become: true
   tags: sysctl
+
+- name: import gdm configuration
+  ansible.builtin.import_tasks:
+    file: locale.yml
+  become: true
+  tags: locale
+
