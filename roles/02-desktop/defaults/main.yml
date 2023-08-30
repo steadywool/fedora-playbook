@@ -38,3 +38,6 @@ system_services:
   - auditd.service
   - apparmor.service
   - usbguard.service
+  - snapper-timeline.timer
+  - snapper-cleanup.timer
+  - snapper-boot.timer

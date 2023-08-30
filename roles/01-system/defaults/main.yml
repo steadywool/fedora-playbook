@@ -16,6 +16,13 @@ system_packages:
   - firewalld
   - fwupd
 
+  # Printing
+  - cups
+  - ghostscript
+
+  # Snapshots
+  - snapper
+
   # Virtualization
   - podman
   - podman-compose
@@ -25,7 +32,3 @@ system_packages:
 
   # Flatpak
   - flatpak
-
-  # Printing
-  - cups
-  - ghostscript

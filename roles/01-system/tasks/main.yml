@@ -5,12 +5,6 @@
   become: true
   tags: packages
 
-- name: Import snapshot script
-  ansible.builtin.import_tasks:
-    file: snapshot.yml
-  become: true
-  tags: snapshot
-
 - name: Import Kernel modules
   ansible.builtin.import_tasks:
     file: sysctl.yml
