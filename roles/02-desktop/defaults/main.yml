@@ -21,7 +21,6 @@ gnome_packages:
   - papirus-icon-theme
 
   # XDG
-  - xdg-utils
   - xdg-user-dirs-gtk
   - xdg-desktop-portal-gnome
 
