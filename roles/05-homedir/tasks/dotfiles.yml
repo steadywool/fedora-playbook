@@ -1,13 +1,13 @@
 ---
 - name: Copy .config
   ansible.builtin.copy:
-    src: config/
+    src: .config/
     dest: "/home/{{ user.name }}/.config"
     force: true
 
 - name: Copy .local
   ansible.builtin.copy:
-    src: local/
+    src: .local/
     dest: "/home/{{ user.name }}/.local"
     force: true
 
