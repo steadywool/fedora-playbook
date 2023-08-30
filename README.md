@@ -72,11 +72,11 @@ Available tags are:
 - timezone
 - locale
 - packages
-- snapshot
 - sysctl
 - udev
 - services
 - firewalld
+- snapper
 - sudo
 - usbguard
 - user
