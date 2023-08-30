@@ -17,6 +17,12 @@
   become: true
   tags: firewalld
 
+- name: import snapper
+  ansible.builtin.import_tasks:
+    file: snapper.yml
+  become: true
+  tags: snapper
+
 - name: Import sudoers
   ansible.builtin.import_tasks:
     file: sudoers.yml

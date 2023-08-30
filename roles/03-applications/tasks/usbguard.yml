@@ -13,9 +13,11 @@
     path: /etc/usbguard/usbguard-daemon.conf
     state: present
     regexp: '^IPCAllowedGroups='
-    line: "IPCAllowedGroups=wheel"
+    line: 'IPCAllowedGroups=wheel'
+  when: file_info.stat.size != 0
 
 - name: Restart Usbguard service
   ansible.builtin.service:
     name: usbguard.service
     state: restarted
+  when: file_info.stat.size != 0
