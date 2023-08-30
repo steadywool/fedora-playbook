@@ -9,7 +9,6 @@ Here is the partitioning I use:
 | `/dev/mapper/swap`        |                                                   | swap       | none          |
 | `/dev/sda3`               |                                                   | luks2      |               |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@`                  | btrfs      | `/`           |
-| `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@.snapshots`        | btrfs      | `/.snapshots` |
 | `/dev/mapper/luks_root`   | `noatime,compress=zstd,subvol=@var_log`           | btrfs      | `/var/log`    |
 | `/dev/mapper/luks_root`   | `nodev,nosuid,noatime,compress=zstd,subvol=@home` | btrfs      | `/home`       |
 
