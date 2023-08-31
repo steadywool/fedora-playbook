@@ -9,6 +9,7 @@ gnome_packages:
   - malcontent
   - tracker3-miners
   - power-profiles-daemon
+  - evolution-data-server
 
   # Share
   - gnome-user-share
