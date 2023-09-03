@@ -7,15 +7,9 @@ applications_packages:
 
   # Terminal apps
   - fish
-  - ranger
-  - neovim
   - htop
   - git
-
-  # Additional tools
-  - arch-audit
   - syncthing
-  - android-tools
 
 font_packages:
   - ttf-jetbrains-mono
