@@ -11,6 +11,9 @@ applications_packages:
   - git
   - syncthing
 
+  # System "addons"
+  - android-udev
+
 font_packages:
   - ttf-jetbrains-mono
   - noto-fonts
