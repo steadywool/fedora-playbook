@@ -1,19 +1,22 @@
 ---
 flatpak_packages:
-  # Base
-  - org.videolan.VLC
+  # Gnome
+  - org.gnome.Loupe
+  - org.gnome.TextEditor
+  - org.gnome.Evince
+  - org.gnome.seahorse.Application
 
   # System
   - com.mattjakeman.ExtensionManager
   - ca.desrt.dconf-editor
   - com.github.tchx84.Flatseal
-  - org.gnome.seahorse.Application
 
   # Tools
   - org.onlyoffice.desktopeditors
   - org.gimp.GIMP
   - org.keepassxc.KeePassXC
   - md.obsidian.Obsidian
+  - org.videolan.VLC
 
   # Games
   - com.valvesoftware.Steam
