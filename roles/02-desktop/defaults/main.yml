@@ -5,6 +5,11 @@ gnome_packages:
   - gnome-control-center
   - gnome-keyring
 
+  # Application
+  - nautilus
+  - gnome-software
+  - gnome-console
+
   # Settings
   - malcontent
   - tracker3-miners
@@ -27,22 +32,7 @@ gnome_packages:
 
   # Help
   - gnome-user-docs
-
-libraries_packages:
-  # Gstreamer
-  - gst-plugin-pipewire
-  - gst-plugins-base
-  - gst-plugins-good
-  - gst-libav
-
-  # GVFS
-  - gvfs-afc
-  - gvfs-goa
-  - gvfs-gphoto2
-  - gvfs-mtp
-  - gvfs-smb
-  - gvfs-google
-  - gvfs-nfs
+  - yelp
 
 system_services:
   - systemd-timesyncd.service

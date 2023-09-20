@@ -1,7 +1,12 @@
 ---
 - name: Install applications
   community.general.pacman:
-    name: "{{ applications_packages }}"
+    name: "{{ additional_packages }}"
+    state: present
+
+- name: Install libraries
+  community.general.pacman:
+    name: "{{ libraries_packages }}"
     state: present
 
 - name: Install fonts

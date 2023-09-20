@@ -1,18 +1,24 @@
 ---
-applications_packages:
-  # Gnome apps
-  - nautilus
-  - gnome-software
-  - gnome-console
-
-  # Terminal apps
+additional_packages:
   - fish
-  - htop
-  - git
   - syncthing
+  - android-tools
 
-  # System "addons"
-  - android-udev
+libraries_packages:
+  # Gstreamer
+  - gst-plugin-pipewire
+  - gst-plugins-base
+  - gst-plugins-good
+  - gst-libav
+
+  # GVFS
+  - gvfs-afc
+  - gvfs-goa
+  - gvfs-gphoto2
+  - gvfs-mtp
+  - gvfs-smb
+  - gvfs-google
+  - gvfs-nfs
 
 font_packages:
   - ttf-jetbrains-mono

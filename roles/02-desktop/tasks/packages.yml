@@ -3,8 +3,3 @@
   community.general.pacman:
     name: "{{ gnome_packages }}"
     state: present
-
-- name: Install libraries
-  community.general.pacman:
-    name: "{{ libraries_packages }}"
-    state: present
