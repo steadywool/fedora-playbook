@@ -6,4 +6,5 @@
     password: "{{ user.password | password_hash }}"
     groups: "{{ user.groups }}"
     shell: "{{ user.shell }}"
+    home: "/home/{{ user.name }}"
     state: present
