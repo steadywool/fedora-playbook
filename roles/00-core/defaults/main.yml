@@ -23,7 +23,7 @@ core_packages:
   - p7zip
 
   # Editor
-  - nano
+  - vim
 
   # Ansible
   - ansible

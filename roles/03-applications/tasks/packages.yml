@@ -4,11 +4,6 @@
     name: "{{ additional_packages }}"
     state: present
 
-- name: Install libraries
-  community.general.pacman:
-    name: "{{ libraries_packages }}"
-    state: present
-
 - name: Install fonts
   community.general.pacman:
     name: "{{ font_packages }}"

@@ -1,38 +1,17 @@
 gnome_packages:
   # Core
-  - gdm
-  - gnome-shell
-  - gnome-control-center
-  - gnome-keyring
-
-  # Application
-  - nautilus
-  - gnome-software
-  - gnome-console
-
-  # Settings
-  - malcontent
-  - tracker3-miners
-  - power-profiles-daemon
-  - evolution-data-server
-
-  # Share
-  - gnome-user-share
-  - gnome-remote-desktop
-  - rygel
+  - gnome
 
   # Appearance
-  - gnome-backgrounds
   - gnome-themes-extra
   - papirus-icon-theme
 
-  # XDG
-  - xdg-user-dirs-gtk
-  - xdg-desktop-portal-gnome
+  # Power
+  - power-profiles-daemon
 
-  # Help
-  - gnome-user-docs
-  - yelp
+  # Gstreamer
+  - gst-plugin-pipewire
+  - gst-libav
 
 system_services:
   - systemd-timesyncd.service

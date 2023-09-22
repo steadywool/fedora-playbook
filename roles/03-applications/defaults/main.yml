@@ -4,22 +4,6 @@ additional_packages:
   - syncthing
   - android-tools
 
-libraries_packages:
-  # Gstreamer
-  - gst-plugin-pipewire
-  - gst-plugins-base
-  - gst-plugins-good
-  - gst-libav
-
-  # GVFS
-  - gvfs-afc
-  - gvfs-goa
-  - gvfs-gphoto2
-  - gvfs-mtp
-  - gvfs-smb
-  - gvfs-google
-  - gvfs-nfs
-
 font_packages:
   - ttf-jetbrains-mono
   - noto-fonts

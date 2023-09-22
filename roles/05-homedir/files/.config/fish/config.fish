@@ -8,8 +8,8 @@ set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx XDG_DATA_HOME $HOME/.local/share
 
 ## Editor variables
-set -gx EDITOR nano
-set -gx VISUAL nano
+set -gx EDITOR vim
+set -gx VISUAL vim
 set -gx PAGER less
 
 ## Wayland variables
