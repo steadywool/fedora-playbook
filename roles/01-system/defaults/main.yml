@@ -15,6 +15,7 @@ system_packages:
   - usbguard
   - firewalld
   - fwupd
+  - sbctl
     
   # Web
   - git

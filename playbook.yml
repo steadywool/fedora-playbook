@@ -33,10 +33,10 @@
 
     - name: User configuration
       ansible.builtin.import_role:
-        name: 04-users
+        name: 04-access
       tags:
         - BOOT
-        - 04-users
+        - 04-access
 
     - name: Dotfiles installation
       ansible.builtin.import_role:

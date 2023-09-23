@@ -29,11 +29,6 @@ Let's use first the **LIVE** tag to install the necessary configuration to start
 # ansible-playbook playbook.yml -t LIVE
 ```
 
-After that, let's create a password for the root account:
-```
-# passwd root
-```
-
 Quit the chroot and start your new system.
 Start the `NetworkManager.service` service and configure your connection with `nmtui`:
 ```
@@ -64,7 +59,7 @@ Available tags are:
 - 01-system
 - 02-desktop
 - 03-applications
-- 04-users
+- 04-access
 - 05-homedir
 - bootloader
 - kernel
@@ -79,7 +74,9 @@ Available tags are:
 - snapper
 - sudo
 - usbguard
-- user
+- users
+- subuid
+- subgid
 - flatpak
 - dotfiles
 

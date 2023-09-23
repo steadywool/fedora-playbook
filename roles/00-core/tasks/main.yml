@@ -34,3 +34,9 @@
     file: bootloader.yml
   become: true
   tags: bootloader
+
+- name: Import root user
+  ansible.builtin.import_tasks:
+    file: root.yml
+  become: true
+  tags: root

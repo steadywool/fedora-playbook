@@ -1,8 +1,10 @@
 ---
 additional_packages:
   - fish
+  - ranger
   - syncthing
   - android-tools
+  - scrcpy
 
 font_packages:
   - ttf-jetbrains-mono

@@ -1,0 +1,21 @@
+---
+- name: Create subuid/subgid
+  ansible.builtin.copy:
+    dest: "/etc/{{ item }}"
+    content: ""
+    force: true
+  loop:
+    - subuid
+    - subgid
+
+- name: Set subuid
+  ansible.builtin.lineinfile:
+    path: /etc/subuid
+    line: "{{ item }}:100000:65536"
+  loop: "{{ users.keys() | list }}"
+
+- name: Set subgid
+  ansible.builtin.lineinfile:
+    path: /etc/subgid
+    line: "{{ item }}:100000:65536"
+  loop: "{{ users.keys() | list }}"
