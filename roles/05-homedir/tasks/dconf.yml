@@ -8,9 +8,6 @@
 - name: Set monospace font
   ansible.builtin.command: gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrains Mono 10'
 
-- name: Set icon theme
-  ansible.builtin.command: gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
-
 - name: Set titlebar button layout
   ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 

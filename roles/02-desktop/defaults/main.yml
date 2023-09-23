@@ -32,7 +32,6 @@ gnome_packages:
   # Appearance
   - gnome-backgrounds
   - gnome-themes-extra
-  - papirus-icon-theme
 
   # GVFS
   - gvfs
