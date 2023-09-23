@@ -42,5 +42,5 @@
       ansible.builtin.import_role:
         name: 05-homedir
       tags:
-        - BOOT
+        - HOME
         - 05-homedir

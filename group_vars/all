@@ -12,13 +12,14 @@ kernel:
   options: cryptdevice=/dev/sda3:luks-root root=/dev/mapper/luks-root rootflags=subvol=@ lsm=landlock,lockdown,yama,apparmor,bpf lockdown=integrity quiet rw
   hooks: base udev autodetect modconf kms keyboard keymap consolefont block encrypt filesystems fsck
 
-root:
+root_user:
   password: root
+  lock: false # Set this to true to disable the root login
 
 users:
   # Change "steadywool" to your username
   steadywool:
-    comment: Steadywool # This is what will be shown by Gnome when you login
+    comment: Porcelaine # This is what will be shown by Gnome when you login
     password: password # Change the password here
     groups: wheel, adbusers # Wheel group give the user privileges
     shell: /bin/fish

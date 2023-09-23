@@ -2,4 +2,5 @@
 - name: Set root password
   ansible.builtin.user:
     name: root
-    password: "{{ root.password | password_hash }}"
+    password: "{{ root_user.password | password_hash }}"
+    password_lock: "{{ root_user.lock }}"
