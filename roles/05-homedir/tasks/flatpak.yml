@@ -1,13 +1,21 @@
 ---
-- name: add flathub remote (user)
+- name: Add Flathub remote (user)
   community.general.flatpak_remote:
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
     state: present
     method: user
 
-- name: Install flatpak packages (user)
+- name: Add Gnome-nightly remote (user)
+  community.general.flatpak_remote:
+    name: gnome-nightly
+    flatpakrepo_url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
+    state: present
+    method: user
+
+- name: Install Flathub packages (user)
   community.general.flatpak:
-    name: "{{ flatpak_packages }}"
+    name: "{{ flathub_packages }}"
+    remote: flathub
     state: present
     method: user

@@ -12,7 +12,7 @@
   tags: sysctl
 
 - name: Import Udev rules
-  ansible.builtin.import.tasks:
+  ansible.builtin.import_tasks:
     file: udev.yml
   become: true
   tags: udev

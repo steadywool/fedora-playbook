@@ -1,5 +1,5 @@
 ---
-- name: Install Gnome
+- name: Install minimal Gnome
   community.general.pacman:
     name: "{{ gnome_packages }}"
     state: present

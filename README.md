@@ -19,7 +19,7 @@ First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/titl
 
 Then, let's clone the repository into a directory (for example, `/mnt`):
 ```
-# git clone https://github.com/kaniville/ansible-dotfiles.git /mnt/ansible-dotfiles
+# git clone https://github.com/steadywool/ansible-dotfiles.git /mnt/ansible-dotfiles
 # cd /mnt/ansible-dotfiles
 ```
 
