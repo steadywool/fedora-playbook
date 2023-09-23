@@ -18,7 +18,7 @@ root:
 users:
   # Change "steadywool" to your username
   steadywool:
-    comment: Steadywool
+    comment: Steadywool # This is what will be shown by Gnome when you login
     password: password # Change the password here
     groups: wheel, adbusers # Wheel group give the user privileges
     shell: /bin/fish
