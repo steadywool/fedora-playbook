@@ -2,7 +2,7 @@
 - name: Set GDM keyboard
   ansible.builtin.command: "localectl set-x11-keymap {{ locale.keymap }}"
 
-- name: Enable GDM
+- name: Enable GDM service
   ansible.builtin.systemd:
     name: gdm.service
     state: started

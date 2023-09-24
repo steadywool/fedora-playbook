@@ -16,8 +16,9 @@
     line: 'IPCAllowedGroups=wheel'
   when: file_info.stat.size != 0
 
-- name: Restart Usbguard service
+- name: Enable Usbguard service
   ansible.builtin.service:
     name: usbguard.service
-    state: restarted
+    state: started
+    enabled: true
   when: file_info.stat.size != 0
