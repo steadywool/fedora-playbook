@@ -1,6 +1,6 @@
 ---
-- name: Set wheel group permissions
+- name: Set sudo permissions
   ansible.builtin.copy:
-    dest: "/etc/sudoers.d/wheel"
-    content: "%wheel ALL=(ALL:ALL) ALL"
+    src: sudoers.d/
+    dest: /etc/sudoers.d
     force: true
