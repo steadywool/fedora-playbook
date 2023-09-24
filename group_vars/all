@@ -17,8 +17,7 @@ root_user:
   lock: false # Set this to true to disable the root login
 
 users:
-  # Change "steadywool" to your username
-  # By default, dotfiles will be installed to the first user
+  # Change "steadywool" to your username, then edit 05-homedir
   steadywool:
     comment: Porcelaine # This is what will be shown by Gnome when you login
     password: password # Change the password here

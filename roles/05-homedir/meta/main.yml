@@ -1,0 +1,5 @@
+---
+dependencies:
+  - role: 05-homedir/steadywool
+    vars:
+      dotfiles_user: steadywool

@@ -36,7 +36,7 @@ Start the `NetworkManager.service` service and configure your connection with `n
 # nmtui
 ```
 
-> ⚠️  **Don't forget to modify the variables in `group_vars`, especially the user password !**
+> ⚠️ **Don't forget to modify the variables in `group_vars`, especially the user password !**
 
 We will now use the **BOOT** tag:
 ```
@@ -55,7 +55,7 @@ To install your user configuration, edit the `05-homedir` role and use the **HOM
 $ ansible-playbook playbook.yml -t HOME
 ```
 
-> ⚠️  **By default, dotfiles will only be installed for the first user in the "users" variable.**
+> ⛔ **Don't forget to edit the `05-homedir` files !**
 
 ## 🔧 Configuration
 
@@ -90,7 +90,7 @@ Available tags are:
 - flatpak
 - dotfiles
 
-> ⚠️  **This playbook does not update the system.**
+> ⚠️ **This playbook does not update the system.**
 
 ## 📕 Exemples
 

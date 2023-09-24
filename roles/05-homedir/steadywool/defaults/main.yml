@@ -1,6 +1,4 @@
 ---
-dotfiles_user: "{{ users.keys() | list | first }}" # Dotfiles will be installed for this user
-
 flathub_packages:
   # Multimedia
   - org.videolan.VLC 
