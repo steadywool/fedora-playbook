@@ -43,19 +43,18 @@ We will now use the **BOOT** tag:
 # ansible-playbook playbook.yml -t BOOT
 ```
 
-Then, enable/start `gdm.service`:
+To install your user configurations, edit the `05-homedir` role and use the **HOME** tag:
+```
+# ansible-playbook playbook.yml -t HOME
+```
+
+> ⛔ **Don't forget to edit the `05-homedir` role !**
+
+Finally, enable/start `gdm.service`:
 ```
 # systemctl enable gdm.service
 # systemctl start gdm.service
 ```
-
-You can now log in with your new user account.
-To install your user configuration, edit the `05-homedir` role and use the **HOME** tag:
-```
-$ ansible-playbook playbook.yml -t HOME
-```
-
-> ⛔ **Don't forget to edit the `05-homedir` files !**
 
 ## 🔧 Configuration
 
@@ -82,11 +81,11 @@ Available tags are:
 - services
 - firewalld
 - snapper
-- sudo
 - usbguard
 - users
 - subuid
 - subgid
+- sudo
 - flatpak
 - dotfiles
 
