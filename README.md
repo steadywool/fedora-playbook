@@ -46,9 +46,9 @@ Your Gnome session will start. Log in with a user and use the **HOME** tag:
 $ ansible-playbook playbook.yml -t HOME
 ```
 
-> ⚠️ **Tasks in the "user" playbook must be executed with the currently logged-in user, not with the root account.
+> ⚠️ **Tasks in the "user" playbook must be executed with the currently logged-in user, not with the root account.**
 
-> ⛔ If you run the entire playbook, or the "user" part with the `root` user, your configuration will be installed under the root account.**
+> ⛔ **If you run the entire playbook, or the "user" part with the `root` user, your configuration will be installed under the root account.**
 
 ## 🔧 Configuration
 
