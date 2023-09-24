@@ -1,3 +1,0 @@
----
-- name: Set GDM keyboard
-  ansible.builtin.command: "localectl set-x11-keymap {{ locale.keymap }}"

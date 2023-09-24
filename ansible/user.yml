@@ -1,0 +1,33 @@
+---
+- hosts: localhost
+  become: false
+  tags: USER
+
+  tasks:
+    - name: Start services
+      ansible.builtin.import_role:
+        name: user/00-services
+      tags:
+        - HOME
+        - services
+  
+    - name: Install Flatpak
+      ansible.builtin.import_role:
+        name: user/01-flatpak
+      tags:
+        - HOME
+        - flatpak
+  
+    - name: Install dotfiles
+      ansible.builtin.import_role:
+        name: user/02-dotfiles
+      tags:
+        - HOME
+        - dotfiles
+  
+    - name: Configure Gnome
+      ansible.builtin.import_role:
+        name: user/03-gnome
+      tags:
+        - HOME
+        - gnome

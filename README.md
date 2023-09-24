@@ -13,14 +13,14 @@ ArchLinux configuration managed with Ansible.
 
 ## 🚀 Installation
 
-> ⛔ **Important variables are present in the `ansible/group_vars` directory. You need to edit them to customize your installation.**
+> ⛔ **Important variables are present in the `ansible/host_vars` directory. You need to edit them to customize your installation.**
 
 First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/title/Installation_guide) and chroot into your system.
 
 Then, let's clone the repository into a directory (for example, `/mnt`):
 ```
 # git clone https://github.com/steadywool/ansible-dotfiles.git /mnt/ansible-dotfiles
-# cd /mnt/ansible-dotfiles
+# cd /mnt/ansible-dotfiles/ansible
 ```
 
 The installation will be done in 3 steps, for each step we will use a different tag.
@@ -36,25 +36,19 @@ Start the `NetworkManager.service` service and configure your connection with `n
 # nmtui
 ```
 
-> ⚠️ **Don't forget to modify the variables in `group_vars`, especially the user password !**
-
 We will now use the **BOOT** tag:
 ```
 # ansible-playbook playbook.yml -t BOOT
 ```
 
-To install your user configurations, edit the `05-homedir` role and use the **HOME** tag:
+Your Gnome session will start. Log in with a user and use the **HOME** tag:
 ```
-# ansible-playbook playbook.yml -t HOME
+$ ansible-playbook playbook.yml -t HOME
 ```
 
-> ⛔ **Don't forget to edit the `05-homedir` role !**
+> ⚠️ **Tasks in the "user" playbook must be executed with the currently logged-in user, not with the root account.
 
-Finally, enable/start `gdm.service`:
-```
-# systemctl enable gdm.service
-# systemctl start gdm.service
-```
+> ⛔ If you run the entire playbook, or the "user" part with the `root` user, your configuration will be installed under the root account.**
 
 ## 🔧 Configuration
 
@@ -64,28 +58,16 @@ Available tags are:
 - LIVE
 - BOOT
 - HOME
-- 00-core
-- 01-system
-- 02-desktop
-- 03-applications
-- 04-access
-- 05-homedir
-- bootloader
-- kernel
-- hostname
-- timezone
-- locale
+- SYSTEM
+- USER
 - packages
-- sysctl
-- udev
-- services
-- firewalld
-- snapper
-- usbguard
+- locale
+- boot
 - users
-- subuid
-- subgid
-- sudo
+- configuration
+- services
+- security
+- gnome
 - flatpak
 - dotfiles
 
@@ -98,7 +80,7 @@ Run the entire playbook:
 $ ansible-playbook playbook.yml -K
 ```
 
-> 📌 **The `-K` option is used to request the "sudo" password without being recognized by Ansible as root. We need it for tasks requiring privileges.**
+> 📌 **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
 
 Install every packages & enable/start Systemd services:
 ```
@@ -107,7 +89,7 @@ $ ansible-playbook playbook.yml -K -t packages,services
 
 Executes tasks requiring no privileges:
 ```
-$ ansible-playbook playbook.yml -t 05-homedir
+$ ansible-playbook playbook.yml -t USER
 ```
 
-> 📌 **The `HOME`, `dconf`, `flatpak` & `dotfiles` tags don't require privileges either.**
+> 📌 **The `HOME` tag don't require privileges either.**

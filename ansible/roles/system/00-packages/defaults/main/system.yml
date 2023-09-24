@@ -1,0 +1,39 @@
+---
+system_packages:
+  # Networking & Bluetooth
+  - networkmanager
+  - bluez
+
+  # Multimedia
+  - pipewire-alsa
+  - pipewire-jack
+  - pipewire-pulse
+  - wireplumber
+
+  # Security
+  - apparmor
+  - usbguard
+  - firewalld
+  - fwupd
+  - sbctl
+    
+  # Web
+  - git
+  - wget
+
+  # Printing
+  - cups
+  - ghostscript
+
+  # Snapshots
+  - snapper
+
+  # Virtualization
+  - podman
+  - podman-compose
+  - fuse-overlayfs
+  - aardvark-dns
+  - distrobox
+
+  # Flatpak
+  - flatpak

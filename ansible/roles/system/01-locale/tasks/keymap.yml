@@ -1,0 +1,6 @@
+---
+- name: Set keymap
+  ansible.builtin.copy:
+    dest: /etc/vconsole.conf
+    content: "KEYMAP={{ locale.keymap }}"
+    force: true

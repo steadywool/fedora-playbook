@@ -1,0 +1,3 @@
+---
+- ansible.builtin.include_tasks: kernel.yml
+- ansible.builtin.include_tasks: bootloader.yml

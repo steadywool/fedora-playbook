@@ -1,0 +1,4 @@
+---
+- ansible.builtin.include_tasks: language.yml
+- ansible.builtin.include_tasks: keymap.yml
+- ansible.builtin.include_tasks: timezone.yml

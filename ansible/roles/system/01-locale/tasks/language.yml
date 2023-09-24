@@ -1,0 +1,12 @@
+---
+- name: Ensure locales exists
+  community.general.locale_gen:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ locale.lang }}"
+
+- name: Set default locale
+  ansible.builtin.copy:
+    dest: /etc/locale.conf
+    content: "LANG={{ locale.lang[0] }}"
+    force: true

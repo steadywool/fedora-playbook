@@ -1,0 +1,5 @@
+---
+- ansible.builtin.include_tasks: sudoers.yml
+- ansible.builtin.include_tasks: snapper.yml
+- ansible.builtin.include_tasks: firewalld.yml
+- ansible.builtin.include_tasks: usbguard.yml

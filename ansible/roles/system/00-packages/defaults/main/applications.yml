@@ -1,0 +1,7 @@
+---
+applications_packages:
+  - fish
+  - ranger
+  - syncthing
+  - android-tools
+  - scrcpy

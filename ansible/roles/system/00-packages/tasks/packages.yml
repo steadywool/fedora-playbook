@@ -1,0 +1,25 @@
+---
+- name: Install core
+  community.general.pacman:
+    name: "{{ core_packages }}"
+    state: present
+
+- name: Install system
+  community.general.pacman:
+    name: "{{ system_packages }}"
+    state: present
+
+- name: Install desktop
+  community.general.pacman:
+    name: "{{ desktop_packages }}"
+    state: present
+
+- name: Install applications
+  community.general.pacman:
+    name: "{{ applications_packages }}"
+    state: present
+  
+- name: Install font
+  community.general.pacman:
+    name: "{{ font_packages }}"
+    state: present

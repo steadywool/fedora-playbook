@@ -1,0 +1,14 @@
+---
+system_services:
+  - systemd-timesyncd.service
+  - systemd-resolved.service
+  - bluetooth.service
+  - firewalld.service
+  - NetworkManager.service
+  - cups.service
+  - auditd.service
+  - apparmor.service
+  - usbguard.service
+  - snapper-timeline.timer
+  - snapper-cleanup.timer
+  - snapper-boot.timer
