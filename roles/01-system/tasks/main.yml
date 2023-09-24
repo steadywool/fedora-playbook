@@ -11,15 +11,8 @@
   become: true
   tags: sysctl
 
-- name: Import Udev rules
-  ansible.builtin.import_tasks:
-    file: udev.yml
-  become: true
-  tags: udev
-
 - name: import gdm configuration
   ansible.builtin.import_tasks:
     file: locale.yml
   become: true
   tags: locale
-

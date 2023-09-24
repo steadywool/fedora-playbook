@@ -22,9 +22,3 @@
     file: snapper.yml
   become: true
   tags: snapper
-
-- name: Import sudoers
-  ansible.builtin.import_tasks:
-    file: sudoers.yml
-  become: true
-  tags: sudo

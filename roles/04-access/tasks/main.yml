@@ -12,3 +12,9 @@
   tags: 
     - subuid
     - subgid
+
+- name: Import sudoers
+  ansible.builtin.import_tasks:
+    file: sudoers.yml
+  become: true
+  tags: sudo
