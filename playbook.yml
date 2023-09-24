@@ -3,16 +3,9 @@
   connection: local
 
   tasks:
-    - name: Asks if the user is the right one
-      ansible.builtin.pause:
-        prompt: "This playbook will be run as \"{{ ansible_user_id }}\". Do you want to continue (yes/no)"
-      register: ask_continue
-      tags: always
-
     - name: Core configuration & core installation
       ansible.builtin.import_role:
         name: 00-core
-      when: ask_continue.user_input|lower == 'yes'
       tags:
         - LIVE
         - 00-core
@@ -20,7 +13,6 @@
     - name: System configuration & system installation
       ansible.builtin.import_role:
         name: 01-system
-      when: ask_continue.user_input|lower == 'yes'
       tags:
         - LIVE
         - 01-system
@@ -28,15 +20,13 @@
     - name: Desktop configuration & start of services
       ansible.builtin.import_role:
         name: 02-desktop
-      when: ask_continue.user_input|lower == 'yes'
       tags:
         - BOOT
         - 02-desktop
 
-    - name: User configuration
+    - name: Applications configuration
       ansible.builtin.import_role:
         name: 03-applications
-      when: ask_continue.user_input|lower == 'yes'
       tags:
         - BOOT
         - 03-applications
@@ -44,7 +34,6 @@
     - name: User configuration
       ansible.builtin.import_role:
         name: 04-access
-      when: ask_continue.user_input|lower == 'yes'
       tags:
         - BOOT
         - 04-access
@@ -52,7 +41,6 @@
     - name: Dotfiles installation
       ansible.builtin.import_role:
         name: 05-homedir
-      when: ask_continue.user_input|lower == 'yes'
       tags:
         - HOME
         - 05-homedir

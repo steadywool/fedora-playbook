@@ -5,7 +5,7 @@
     "telemetry.telemetryLevel": "off",
     "extensions.ignoreRecommendations": true,
     "github.gitAuthentication": false,
-    "dev.containers.dockerPath": "/home/kani/.local/bin/podman-host",
+    "dev.containers.dockerPath": "/home/steadywool/.local/bin/podman-host",
     "dev.containers.copyGitConfig": false,
     "dev.containers.gitCredentialHelperConfigLocation": "none"
 }

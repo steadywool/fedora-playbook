@@ -18,6 +18,7 @@ root_user:
 
 users:
   # Change "steadywool" to your username
+  # By default, dotfiles will be installed to the first user
   steadywool:
     comment: Porcelaine # This is what will be shown by Gnome when you login
     password: password # Change the password here

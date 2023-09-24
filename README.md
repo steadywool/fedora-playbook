@@ -55,7 +55,7 @@ To install your user configuration, edit the `05-homedir` role and use the **HOM
 $ ansible-playbook playbook.yml -t HOME
 ```
 
-> ⚠️  **If you execute this role as root, your configuration will be installed to the root user !**
+> ⚠️  **By default, dotfiles will only be installed for the first user in the "users" variable.**
 
 ## 🔧 Configuration
 

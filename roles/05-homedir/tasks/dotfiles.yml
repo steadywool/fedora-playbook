@@ -2,17 +2,17 @@
 - name: Copy .config
   ansible.builtin.copy:
     src: .config/
-    dest: "/home/{{ ansible_user_id }}/.config"
+    dest: "/home/{{ dotfiles_user }}/.config"
     force: true
 
 - name: Copy .local
   ansible.builtin.copy:
     src: .local/
-    dest: "/home/{{ ansible_user_id }}/.local"
+    dest: "/home/{{ dotfiles_user }}/.local"
     force: true
 
 - name: Configure VisualStudio Code
   ansible.builtin.copy:
     src: settings.json
-    dest: "/home/{{ ansible_user_id }}/.var/app/com.visualstudio.code/config/Code/User/settings.json"
+    dest: "/home/{{ dotfiles_user }}/.var/app/com.visualstudio.code/config/Code/User/settings.json"
     force: true

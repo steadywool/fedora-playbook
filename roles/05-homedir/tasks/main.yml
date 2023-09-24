@@ -2,23 +2,27 @@
 - name: Import user services
   ansible.builtin.import_tasks:
     file: services.yml
-  become: false
+  become: true
+  become_user: "{{ dotfiles_user }}"
   tags: services
 
 - name: Import dotfiles
   ansible.builtin.import_tasks:
     file: dotfiles.yml
-  become: false
+  become: true
+  become_user: "{{ dotfiles_user }}"
   tags: dotfiles
 
 - name: Import flatpak
   ansible.builtin.import_tasks:
     file: flatpak.yml
-  become: false
+  become: true
+  become_user: "{{ dotfiles_user }}"
   tags: flatpak
 
 - name: Import dconf
   ansible.builtin.import_tasks:
     file: dconf.yml
-  become: false
+  become: true
+  become_user: "{{ dotfiles_user }}"
   tags: dconf
