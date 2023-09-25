@@ -54,12 +54,20 @@ $ ansible-playbook playbook.yml -t HOME
 
 You can perform partially run of playbook using tags.
 
-Available tags are:
-- LIVE
-- BOOT
-- HOME
+<details>
+    <summary><h3> Installation tags</h3></summary>
+    <ul>
+        <li>LIVE</li>
+        <li>BOOT</li>
+        <li>HOME</li>
+    </ul>
+</details>
+
+### Playbooks tags
 - SYSTEM
 - USER
+
+### Roles tags
 - packages
 - locale
 - boot
@@ -70,6 +78,19 @@ Available tags are:
 - gnome
 - flatpak
 - dotfiles
+
+### Tasks tags
+- keymap
+- language
+- timezone
+- bootloader
+- kernel
+- hostname
+- sysctl
+- firewalld
+- snapper
+- sudo
+- usbguard
 
 > ⚠️ **This playbook does not update the system.**
 

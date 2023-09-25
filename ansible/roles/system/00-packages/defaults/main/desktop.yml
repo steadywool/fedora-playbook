@@ -1,5 +1,5 @@
 ---
-gnome_packages:
+desktop_packages:
   # Core
   - gdm
   - gnome-shell

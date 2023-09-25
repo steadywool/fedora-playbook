@@ -1,2 +1,2 @@
 ---
-- ansible.builtin.include_tasks: dotfiles.yml
+- ansible.builtin.import_tasks: dotfiles.yml

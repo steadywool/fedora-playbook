@@ -37,3 +37,6 @@ system_packages:
 
   # Flatpak
   - flatpak
+
+  # Help
+  - man-db

@@ -1,4 +1,4 @@
 ---
-- ansible.builtin.include_tasks: root.yml
-- ansible.builtin.include_tasks: users.yml
-- ansible.builtin.include_tasks: uid-gid.yml
+- ansible.builtin.import_tasks: root.yml
+- ansible.builtin.import_tasks: users.yml
+- ansible.builtin.import_tasks: uid-gid.yml

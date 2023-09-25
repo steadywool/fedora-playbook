@@ -1,0 +1,24 @@
+---
+- name: Get installed packages
+  ansible.builtin.command: pacman -Qeq
+  register: installed_packages
+  tags: remove
+
+- name: Convert output to list
+  ansible.builtin.set_fact:
+    installed_packages: "{{ installed_packages.stdout_lines }}"
+
+- name: Compare installed packages
+  ansible.builtin.set_fact:
+    installed_packages: "{{ installed_packages | difference(vars[item]) }}"
+  loop:
+    - core_packages
+    - system_packages
+    - desktop_packages
+    - applications_packages
+    - font_packages
+
+- name: Remove packages
+  community.general.pacman:
+    name: "{{ installed_packages }}"
+    state: absent

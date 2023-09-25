@@ -1,2 +1,2 @@
 ---
-- ansible.builtin.include_tasks: flatpak.yml
+- ansible.builtin.import_tasks: flatpak.yml

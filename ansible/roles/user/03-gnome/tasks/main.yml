@@ -1,2 +1,2 @@
 ---
-- ansible.builtin.include_tasks: dconf.yml
+- ansible.builtin.import_tasks: dconf.yml

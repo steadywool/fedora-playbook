@@ -1,2 +1,2 @@
 ---
-- ansible.builtin.include_tasks: gdm.yml
+- ansible.builtin.import_tasks: gdm.yml

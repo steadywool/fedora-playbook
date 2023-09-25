@@ -1,0 +1,11 @@
+---
+- name: Install packages
+  community.general.pacman:
+    name: "{{ vars[item] }}"
+    state: present
+  loop:
+    - core_packages
+    - system_packages
+    - desktop_packages
+    - applications_packages
+    - font_packages
