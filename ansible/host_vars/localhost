@@ -24,4 +24,6 @@ users:
     groups: wheel, adbusers # Wheel group give the user privileges
     shell: /bin/fish
 
+test:
+
 # vim: ft=yaml

@@ -1,16 +1,15 @@
 ---
-- name: Get installed packages
+- name: Get explicitely installed packages
   ansible.builtin.command: pacman -Qeq
-  register: installed_packages
-  tags: remove
+  register: explicit_packages
 
 - name: Convert output to list
   ansible.builtin.set_fact:
-    installed_packages: "{{ installed_packages.stdout_lines }}"
+    explicit_packages: "{{ explicit_packages.stdout_lines }}"
 
 - name: Compare installed packages
   ansible.builtin.set_fact:
-    installed_packages: "{{ installed_packages | difference(vars[item]) }}"
+    explicit_packages: "{{ explicit_packages | difference(vars[item]) }}"
   loop:
     - core_packages
     - system_packages
@@ -20,5 +19,6 @@
 
 - name: Remove packages
   community.general.pacman:
-    name: "{{ installed_packages }}"
+    name: "{{ explicit_packages }}"
     state: absent
+  when: explicit_packages | length > 0
