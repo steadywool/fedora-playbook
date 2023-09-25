@@ -1,3 +1,5 @@
 ---
 - ansible.builtin.import_tasks: install.yml
+  tags: install-packages
 - ansible.builtin.import_tasks: remove.yml
+  tags: remove-packages

@@ -90,6 +90,8 @@ You can perform partially run of playbook using tags.
 <details>
     <summary><h3>Tasks tags</h3></summary>
     <ul>
+        <li>install-packages</li>
+        <li>remove-packages</li>
         <li>keymap</li>
         <li>language</li>
         <li>timezone</li>
