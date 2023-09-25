@@ -55,7 +55,7 @@ $ ansible-playbook playbook.yml -t HOME
 You can perform partially run of playbook using tags.
 
 <details>
-    <summary><h3> Installation tags</h3></summary>
+    <summary><h3>Installation tags</h3></summary>
     <ul>
         <li>LIVE</li>
         <li>BOOT</li>
@@ -63,34 +63,46 @@ You can perform partially run of playbook using tags.
     </ul>
 </details>
 
-### Playbooks tags
-- SYSTEM
-- USER
+<details>
+    <summary><h3>Playbooks tags</h3></summary>
+    <ul>
+        <li>SYSTEM</li>
+        <li>USER</li>
+    </ul>
+</details>
 
-### Roles tags
-- packages
-- locale
-- boot
-- users
-- configuration
-- services
-- security
-- gnome
-- flatpak
-- dotfiles
+<details>
+    <summary><h3>Roles tags</h3></summary>
+    <ul>
+        <li>packages</li>
+        <li>locale</li>
+        <li>boot</li>
+        <li>users</li>
+        <li>configuration</li>
+        <li>services</li>
+        <li>security</li>
+        <li>gnome</li>
+        <li>flatpak</li>
+        <li>dotfiles</li>
+    </ul>
+</details>
 
-### Tasks tags
-- keymap
-- language
-- timezone
-- bootloader
-- kernel
-- hostname
-- sysctl
-- firewalld
-- snapper
-- sudo
-- usbguard
+<details>
+    <summary><h3>Tasks tags</h3></summary>
+    <ul>
+        <li>keymap</li>
+        <li>language</li>
+        <li>timezone</li>
+        <li>bootloader</li>
+        <li>kernel</li>
+        <li>hostname</li>
+        <li>sysctl</li>
+        <li>firewalld</li>
+        <li>snapper</li>
+        <li>sudo</li>
+        <li>usbguard</li>
+    </ul>
+</details>
 
 > ⚠️ **This playbook does not update the system.**
 
