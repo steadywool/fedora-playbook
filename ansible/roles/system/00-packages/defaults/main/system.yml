@@ -27,7 +27,6 @@ system_packages:
 
   # Snapshots
   - snapper
-  - snap-pac
 
   # Virtualization
   - podman

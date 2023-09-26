@@ -1,3 +1,4 @@
 function update
-    sudo pacman -Syu && flatpak update
+    snapper -c root create --command 'sudo pacman -Syu' --desc 'update'
+    flatpak update
 end
