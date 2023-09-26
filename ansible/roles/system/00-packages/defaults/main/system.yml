@@ -25,8 +25,9 @@ system_packages:
   - cups
   - ghostscript
 
-  # Snapshots
+  # Maintenance
   - snapper
+  - pacman-contrib
 
   # Virtualization
   - podman
