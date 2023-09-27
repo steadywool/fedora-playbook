@@ -3,3 +3,4 @@ applications_packages:
   - fish
   - syncthing
   - android-tools
+  - ranger
