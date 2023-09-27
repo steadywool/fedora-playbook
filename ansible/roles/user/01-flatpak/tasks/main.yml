@@ -1,2 +1,14 @@
 ---
-- ansible.builtin.import_tasks: flatpak.yml
+- name: Add Flathub remote (user)
+  community.general.flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    state: present
+    method: user
+
+- name: Install Flathub packages (user)
+  community.general.flatpak:
+    name: "{{ flathub_packages }}"
+    remote: flathub
+    state: present
+    method: user

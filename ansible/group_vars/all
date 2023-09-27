@@ -14,6 +14,7 @@ kernel:
 
 root_user:
   password: root
+  shell: /bin/bash
   lock: false # Set this to true to disable the root login
 
 users:
@@ -22,8 +23,6 @@ users:
     comment: Porcelaine # This is what will be shown by Gnome when you login
     password: password # Change the password here
     groups: wheel, adbusers # Wheel group give the user privileges
-    shell: /bin/fish
-
-test:
+    shell: /bin/bash
 
 # vim: ft=yaml

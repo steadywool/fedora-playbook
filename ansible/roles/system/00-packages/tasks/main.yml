@@ -1,6 +1,10 @@
 ---
-- ansible.builtin.import_tasks: install.yml
-  tags: install-packages
-
-- ansible.builtin.import_tasks: remove.yml
-  tags: remove-packages
+- name: Install packages
+  community.general.pacman:
+    name: "{{ vars[item] }}"
+    state: present
+  loop:
+    - core_packages
+    - system_packages
+    - font_packages
+    - desktop_packages

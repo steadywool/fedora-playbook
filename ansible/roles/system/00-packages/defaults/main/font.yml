@@ -1,6 +1,5 @@
 ---
 font_packages:
-  - ttf-jetbrains-mono
   - noto-fonts
   - noto-fonts-emoji
   - otf-ipafont

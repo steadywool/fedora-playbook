@@ -22,8 +22,9 @@ core_packages:
   - unrar
   - p7zip
 
-  # Editor
+  # Editor/Shell
   - vim
+  - bash-completion
 
   # Ansible
   - ansible

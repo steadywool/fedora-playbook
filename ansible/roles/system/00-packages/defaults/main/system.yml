@@ -1,8 +1,7 @@
 ---
 system_packages:
-  # Networking & Bluetooth
+  # Network
   - networkmanager
-  - bluez
 
   # Multimedia
   - pipewire-alsa
@@ -15,7 +14,6 @@ system_packages:
   - usbguard
   - firewalld
   - fwupd
-  - sbctl
     
   # Web
   - git

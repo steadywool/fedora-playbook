@@ -1,15 +1,6 @@
 ---
 flathub_packages:
-  # Multimedia
-  - org.videolan.VLC 
-  - org.gnome.Loupe
-  - org.gnome.TextEditor
-  - org.gnome.Evince
-
-  # Desktop
-  - org.gnome.Contacts
-  - org.gnome.Calendar
-  - org.gnome.clocks
+  # E-mail
   - com.tutanota.Tutanota
 
   # System

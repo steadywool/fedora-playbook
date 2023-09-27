@@ -1,50 +1,12 @@
 ---
 desktop_packages:
-  # Core
-  - gdm
-  - gnome-shell
-  - gnome-control-center
-  - gnome-keyring
+  # Desktop environment
+  - gnome
 
-  # Settings
-  - malcontent
-  - tracker3-miners
+  # Optional
   - power-profiles-daemon
-  - evolution-data-server
-
-  # Applications
-  - gnome-software
-  - gnome-console
-  - nautilus
-
-  # Share
-  - rygel
-  - gnome-remote-desktop
-  - gnome-user-share
-
-  # XDG
-  - xdg-desktop-portal-gnome
-  - xdg-user-dirs-gtk
-
-  # Help
-  - gnome-user-docs
-  - yelp
-
-  # Appearance
-  - gnome-backgrounds
   - gnome-themes-extra
 
-  # GVFS
-  - gvfs
-  - gvfs-goa
-  - gvfs-google
-  - gvfs-gphoto2
-  - gvfs-mtp
-  - gvfs-nfs
-  - gvfs-smb
-
-  # Gstreamer
+  # Libraries
   - gst-plugin-pipewire
-  - gst-plugins-base
-  - gst-plugins-good
   - gst-libav
