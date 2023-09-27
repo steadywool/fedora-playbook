@@ -13,12 +13,6 @@
 
 - name: Configure VisualStudio Code
   ansible.builtin.copy:
-    src: .bashrc.json
-    dest: "/home/{{ ansible_user_id }}/.bashrc"
-    force: true
-
-- name: Configure VisualStudio Code
-  ansible.builtin.copy:
     src: settings.json
     dest: "/home/{{ ansible_user_id }}/.var/app/com.visualstudio.code/config/Code/User/settings.json"
     force: true
