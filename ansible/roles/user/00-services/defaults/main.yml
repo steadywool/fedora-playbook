@@ -1,3 +1,4 @@
 ---
 user_services:
   - podman.service
+  - syncthing.service

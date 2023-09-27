@@ -23,6 +23,6 @@ users:
     comment: Porcelaine # This is what will be shown by Gnome when you login
     password: password # Change the password here
     groups: wheel, adbusers # Wheel group give the user privileges
-    shell: /bin/bash
+    shell: /bin/fish
 
 # vim: ft=yaml
