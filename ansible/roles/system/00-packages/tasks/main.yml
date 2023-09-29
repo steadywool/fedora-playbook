@@ -4,8 +4,11 @@
     name: "{{ vars[item] }}"
     state: present
   loop:
+    - ansible_packages
     - core_packages
     - system_packages
+    - sound_packages
+    - printing_packages
     - font_packages
     - desktop_packages
     - applications_packages

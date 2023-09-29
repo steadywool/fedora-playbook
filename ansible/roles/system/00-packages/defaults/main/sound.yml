@@ -1,0 +1,6 @@
+---
+sound_packages:
+  - pipewire-alsa
+  - pipewire-jack
+  - pipewire-pulse
+  - wireplumber

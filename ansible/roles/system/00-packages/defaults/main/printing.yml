@@ -1,0 +1,4 @@
+---
+printing_packages: 
+  - cups
+  - ghostscript

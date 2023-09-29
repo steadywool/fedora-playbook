@@ -2,13 +2,7 @@
 system_packages:
   # Network
   - networkmanager
-
-  # Multimedia
-  - pipewire-alsa
-  - pipewire-jack
-  - pipewire-pulse
-  - wireplumber
-
+  
   # Security
   - apparmor
   - usbguard
@@ -18,10 +12,6 @@ system_packages:
   # Web
   - git
   - wget
-
-  # Printing
-  - cups
-  - ghostscript
 
   # Maintenance
   - snapper

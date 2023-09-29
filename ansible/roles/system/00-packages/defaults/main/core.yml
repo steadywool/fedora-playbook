@@ -24,7 +24,3 @@ core_packages:
 
   # Editor/Shell
   - nano
-
-  # Ansible
-  - ansible
-  - python-passlib

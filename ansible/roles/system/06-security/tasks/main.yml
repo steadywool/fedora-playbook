@@ -2,9 +2,6 @@
 - ansible.builtin.import_tasks: sudoers.yml
   tags: sudo
 
-- ansible.builtin.import_tasks: snapper.yml
-  tags: snapper
-
 - ansible.builtin.import_tasks: firewalld.yml
   tags: firewalld
 

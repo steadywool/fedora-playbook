@@ -1,7 +1,6 @@
 ---
 system_services:
   - systemd-timesyncd.service
-  - systemd-resolved.service
   - bluetooth.service
   - firewalld.service
   - NetworkManager.service
