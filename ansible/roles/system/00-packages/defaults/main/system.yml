@@ -19,7 +19,6 @@ system_packages:
 
   # Virtualization
   - podman
-  - podman-compose
   - fuse-overlayfs
   - aardvark-dns
   - distrobox
