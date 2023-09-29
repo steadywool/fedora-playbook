@@ -8,10 +8,6 @@ system_packages:
   - usbguard
   - firewalld
   - fwupd
-    
-  # Web
-  - git
-  - wget
 
   # Maintenance
   - snapper
