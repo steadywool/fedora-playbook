@@ -1,6 +1,5 @@
 ---
-applications_packages:
-
+additionnal_packages:
   # Connection
   - syncthing
   - android-tools
@@ -14,3 +13,7 @@ applications_packages:
   # Web
   - git
   - wget
+
+  # Appearance
+  - gnome-themes-extra
+  - papirus-icon-theme

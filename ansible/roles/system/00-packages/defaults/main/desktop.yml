@@ -5,8 +5,5 @@ desktop_packages:
 
   # Optional
   - power-profiles-daemon
-  - gnome-themes-extra
-
-  # Libraries
   - gst-plugin-pipewire
   - gst-libav

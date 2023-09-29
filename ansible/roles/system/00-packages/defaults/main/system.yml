@@ -9,6 +9,16 @@ system_packages:
   - firewalld
   - fwupd
 
+  # Sound
+  - pipewire-alsa
+  - pipewire-jack
+  - pipewire-pulse
+  - wireplumber
+
+  # Printer
+  - cups
+  - ghostscript
+
   # Maintenance
   - snapper
   - pacman-contrib
