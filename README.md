@@ -101,13 +101,12 @@ You can perform partially run of playbook using tags.
         <li>sysctl</li>
         <li>firewalld</li>
         <li>sudo</li>
+        <li>snapper</li>
         <li>usbguard</li>
     </ul>
 </details>
 
 > ⚠️ **This playbook does not update the system.**
-
-> ⚠️ **By default, Snapper (for BTRFS snapshot) is not configured.**
 
 ## 📕 Exemples
 
