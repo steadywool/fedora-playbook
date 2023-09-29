@@ -1,4 +1,14 @@
 ---
+- name: ensure dir exists
+  ansible.builtin.file:
+    path: "{{ item }}"
+    recurse: true
+    state: directory
+  loop:
+    - "/home/{{ ansible_user_id }}/.config"
+    - "/home/{{ ansible_user_id }}/.local"
+    - "/home/{{ ansible_user_id }}/.var/app/com.visualstudio.code/config/Code/User"
+    
 - name: Copy .config
   ansible.builtin.copy:
     src: .config/
