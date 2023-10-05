@@ -4,6 +4,9 @@ additionnal_packages:
   - syncthing
   - android-tools
 
+  # Git
+  - git-credential-libsecret
+
   # Ansible
   - ansible
 
