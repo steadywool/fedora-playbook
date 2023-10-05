@@ -1,9 +1,0 @@
----
-- name: Create mkinitcpio config
-  ansible.builtin.copy:
-    dest: /etc/mkinitcpio.conf
-    content: "HOOKS=({{ kernel.hooks }})"
-    force: true
-
-- name: Run mkinitcpio
-  ansible.builtin.command: mkinitcpio -P linux-hardened

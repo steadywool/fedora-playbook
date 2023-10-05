@@ -1,0 +1,18 @@
+---
+- name: Set titlebar button layout
+  ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences icon-theme 'Papirus'
+
+- name: Set titlebar button layout
+  ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+
+- name: Set windows focus mode
+  ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+
+- name: Resize windows with right click
+  ansible.builtin.command: gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+
+- name: Set touchpad click method
+  ansible.builtin.command: gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
+
+- name: Set touchpad tap to click
+  ansible.builtin.command: gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true

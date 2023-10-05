@@ -1,6 +1,0 @@
----
-- name: Set sudo permissions
-  ansible.builtin.copy:
-    src: sudoers.d/
-    dest: /etc/sudoers.d
-    force: true

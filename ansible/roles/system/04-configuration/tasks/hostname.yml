@@ -1,6 +1,0 @@
----
-- name: Set hostname
-  ansible.builtin.copy:
-    dest: /etc/hostname
-    content: "{{ hostname }}"
-    force: true

@@ -1,0 +1,18 @@
+---
+- name: ensure VSCode dir exists
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user_id }}/.var/app/com.visualstudio.code/config/Code/User"
+    recurse: true
+    state: directory
+
+- name: Configure VisualStudio Code
+  ansible.builtin.copy:
+    src: vscode/settings.json
+    dest: "/home/{{ ansible_user_id }}/.var/app/com.visualstudio.code/config/Code/User/settings.json"
+    force: true
+
+- name: Copy bin/podman-host
+  ansible.builtin.copy:
+    src: vscode/bin
+    dest: "/home/{{ ansible_user_id }}/.local"
+    force: true

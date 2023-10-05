@@ -1,0 +1,12 @@
+---
+- name: ensure Autostart dir exists
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user_id }}/.config/autostart"
+    recurse: true
+    state: directory
+
+- name: Copy autostart
+  ansible.builtin.copy:
+    src: desktop/autostart
+    dest: "/home/{{ ansible_user_id }}/.config"
+    force: true

@@ -1,0 +1,9 @@
+---
+- name: Install additionnal packages
+  ansible.builtin.dnf:
+    name: "{{ additionnal_packages }}"
+    state: present
+
+- name: Autoremove unneeded packages installed as dependencies
+  ansible.builtin.dnf:
+    autoremove: yes

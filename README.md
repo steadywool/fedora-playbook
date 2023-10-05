@@ -1,6 +1,6 @@
 # 🌸 Ansible Dotfiles
 
-ArchLinux configuration managed with Ansible.
+Fedora Linux configuration managed with Ansible.
 
 ![](src/screenshot.png)
 
@@ -15,35 +15,16 @@ ArchLinux configuration managed with Ansible.
 
 > ⛔ **Important variables are present in the `ansible/host_vars` directory. You need to edit them to customize your installation.**
 
-First, follow the [ArchLinux installation guide](https://wiki.archlinux.org/title/Installation_guide) and chroot into your system.
-
-Then, let's clone the repository into a directory (for example, `/mnt`):
+Firstly, install Ansible and clone this repository:
 ```
-# git clone https://github.com/steadywool/ansible-dotfiles.git /mnt/ansible-dotfiles
-# cd /mnt/ansible-dotfiles/ansible
-```
-
-The installation will be done in 3 steps, for each step we will use a different tag.
-Let's use first the **LIVE** tag to install the necessary configuration to start the system:
-```
-# ansible-playbook playbook.yml -t LIVE
+# dnf install ansible
+$ git clone https://github.com/steadywool/ansible-dotfiles
+$ cd ansible-dotfiles
 ```
 
-Quit the chroot and start your new system.
-Start the `NetworkManager.service` service and configure your connection with `nmtui`:
+You can now start the playbook and configure your system with this command:
 ```
-# systemctl start NetworkManager.service
-# nmtui
-```
-
-We will now use the **BOOT** tag:
-```
-# ansible-playbook playbook.yml -t BOOT
-```
-
-Your Gnome session will start. Log in with a user and use the **HOME** tag:
-```
-$ ansible-playbook playbook.yml -t HOME
+$ ansible-playbook ansible/playbook.yml -K
 ```
 
 > ⚠️ **Tasks in the "user" playbook must be executed with the currently logged-in user, not with the root account.**
@@ -52,59 +33,18 @@ $ ansible-playbook playbook.yml -t HOME
 
 ## 🔧 Configuration
 
-You can perform partially run of playbook using tags.
+You can perform partially run of playbook using tags:
 
-<details>
-    <summary><h3>Installation tags</h3></summary>
-    <ul>
-        <li>LIVE</li>
-        <li>BOOT</li>
-        <li>HOME</li>
-    </ul>
-</details>
-
-<details>
-    <summary><h3>Playbooks tags</h3></summary>
-    <ul>
-        <li>SYSTEM</li>
-        <li>USER</li>
-    </ul>
-</details>
-
-<details>
-    <summary><h3>Roles tags</h3></summary>
-    <ul>
-        <li>packages</li>
-        <li>locale</li>
-        <li>boot</li>
-        <li>users</li>
-        <li>configuration</li>
-        <li>services</li>
-        <li>security</li>
-        <li>gnome</li>
-        <li>flatpak</li>
-        <li>dotfiles</li>
-    </ul>
-</details>
-
-<details>
-    <summary><h3>Tasks tags</h3></summary>
-    <ul>
-        <li>install-packages</li>
-        <li>remove-packages</li>
-        <li>keymap</li>
-        <li>language</li>
-        <li>timezone</li>
-        <li>bootloader</li>
-        <li>kernel</li>
-        <li>hostname</li>
-        <li>sysctl</li>
-        <li>firewalld</li>
-        <li>sudo</li>
-        <li>snapper</li>
-        <li>usbguard</li>
-    </ul>
-</details>
+- packages
+- configuration
+- users
+- flatpak
+- dotfiles
+- gnome
+- services
+- hostname
+- firewalld
+- snapper
 
 > ⚠️ **This playbook does not update the system.**
 
@@ -124,7 +64,5 @@ $ ansible-playbook playbook.yml -K -t packages,services
 
 Executes tasks requiring no privileges:
 ```
-$ ansible-playbook playbook.yml -t USER
+$ ansible-playbook playbook.yml -t dotfiles
 ```
-
-> 📌 **The `HOME` tag don't require privileges either.**

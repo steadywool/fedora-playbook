@@ -1,9 +1,0 @@
----
-desktop_packages:
-  # Desktop environment
-  - gnome
-
-  # Optional
-  - power-profiles-daemon
-  - gst-plugin-pipewire
-  - gst-libav

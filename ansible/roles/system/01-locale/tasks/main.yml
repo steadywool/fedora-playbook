@@ -1,9 +1,0 @@
----
-- ansible.builtin.import_tasks: language.yml
-  tags: language
-
-- ansible.builtin.import_tasks: keymap.yml
-  tags: keymap
-
-- ansible.builtin.import_tasks: timezone.yml
-  tags: timezone

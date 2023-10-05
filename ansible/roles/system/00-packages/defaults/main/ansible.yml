@@ -1,4 +1,0 @@
----
-ansible_packages:
-  - ansible
-  - python-passlib

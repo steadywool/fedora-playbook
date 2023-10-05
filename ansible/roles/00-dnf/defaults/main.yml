@@ -1,0 +1,14 @@
+---
+additionnal_packages:
+  # Connection
+  - syncthing
+  - android-tools
+
+  # Ansible
+  - ansible
+
+  # Shell
+  - fish
+
+  # Appearance
+  - papirus-icon-theme

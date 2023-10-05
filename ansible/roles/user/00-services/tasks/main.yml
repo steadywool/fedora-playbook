@@ -1,8 +1,0 @@
----
-- name: Enable user services
-  ansible.builtin.systemd:
-    name: "{{ item }}"
-    state: started
-    enabled: true
-    scope: user
-  loop: "{{ user_services }}"

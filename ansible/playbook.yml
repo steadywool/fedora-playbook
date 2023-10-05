@@ -2,5 +2,45 @@
 - hosts: localhost
   gather_facts: yes
 
-- ansible.builtin.import_playbook: system.yml
-- ansible.builtin.import_playbook: user.yml
+  tasks:
+    - name: Install dnf packages
+      ansible.builtin.import_role:
+        name: 00-dnf
+      become: true
+      tags: packages
+
+    - name: Install flatpak packages
+      ansible.builtin.import_role:
+        name: 01-flatpak
+      become: true
+      tags: flatpak
+
+    - name: Configure the system
+      ansible.builtin.import_role:
+        name: 02-configuration
+      become: true
+      tags: configuration
+
+    - name: Configure users
+      ansible.builtin.import_role:
+        name: 03-users
+      become: true
+      tags: users
+
+    - name: Install dotfiles
+      ansible.builtin.import_role:
+        name: 04-dotfiles
+      become: false
+      tags: dotfiles
+  
+    - name: Configure Gnome
+      ansible.builtin.import_role:
+        name: 05-gnome
+      become: false
+      tags: gnome
+
+    - name: Enable services
+      ansible.builtin.import_role:
+        name: 06-services
+      become: false
+      tags: services

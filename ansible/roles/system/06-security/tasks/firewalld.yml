@@ -1,8 +1,0 @@
----
-- name: permit traffic in home zone for syncthing service
-  ansible.posix.firewalld:
-    service: syncthing
-    zone: home
-    permanent: true
-    immediate: true
-    state: enabled

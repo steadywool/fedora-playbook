@@ -1,28 +1,8 @@
 ---
-locale:
-  lang:
-    - en_US.UTF-8 # The first one is the default one
-    - fr_FR.UTF-8
-  keymap: fr
-
-timezone: Europe/Paris
 hostname: blue-swan
 
-kernel:
-  options: cryptdevice=/dev/sda3:luks-root root=/dev/mapper/luks-root rootflags=subvol=@ lsm=landlock,lockdown,yama,apparmor,bpf lockdown=integrity quiet rw
-  hooks: base udev autodetect modconf kms keyboard keymap consolefont block encrypt filesystems fsck
-
-root_user:
-  password: root
-  shell: /bin/bash
-  lock: false # Set this to true to disable the root login
-
 users:
-  # Change "steadywool" to your username
   steadywool:
-    comment: Porcelaine # This is what will be shown by Gnome when you login
-    password: password # Change the password here
-    groups: wheel, adbusers # Wheel group give the user privileges
     shell: /bin/fish
 
 # vim: ft=yaml
