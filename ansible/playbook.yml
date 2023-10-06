@@ -3,9 +3,9 @@
   gather_facts: yes
 
   tasks:
-    - name: Install dnf packages
+    - name: Install packages
       ansible.builtin.import_role:
-        name: 00-dnf
+        name: 00-packages
       become: true
       tags: packages
 
