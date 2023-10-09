@@ -15,14 +15,18 @@ Fedora Linux configuration managed with Ansible.
 
 > ⛔ **Important variables are present in the `ansible/host_vars` directory. You need to edit them to customize your installation.**
 
-Firstly, install Ansible and clone this repository:
+Firstly, install Ansible:
 ```
 # dnf install ansible
+```
+
+You can then clone this repository and enter it:
+```
 $ git clone https://github.com/steadywool/ansible-dotfiles
 $ cd ansible-dotfiles
 ```
 
-You can now start the playbook and configure your system with this command:
+Start the playbook and configure your system with this command:
 ```
 $ ansible-playbook ansible/playbook.yml -K
 ```
