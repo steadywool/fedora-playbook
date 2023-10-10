@@ -1,7 +1,7 @@
 ---
 - name: ensure Fish dir exists
   ansible.builtin.file:
-    path: "/home/{{ ansible_user_id }}/.config/fish/functions"
+    path: "/home/{{ ansible_user_id }}/.config/fish"
     recurse: true
     state: directory
 
@@ -10,8 +10,3 @@
     src: fish
     dest: "/home/{{ ansible_user_id }}/.config"
     force: true
-
-- name: Install Fisher
-  ansible.builtin.get_url:
-    url: https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
-    dest: "/home/{{ ansible_user_id }}/.config/fish/functions/fisher.fish"
