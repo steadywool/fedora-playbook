@@ -1,0 +1,24 @@
+[Desktop Entry]
+# Application, Link or Directory
+Type=Application
+
+# Categories of the Application
+# Network,System,Games,Office,...
+Categories=
+
+# Executable
+Exec=
+
+# Appearance
+Name=
+Comment=
+Icon=
+
+# Execute in the terminal
+# Terminal=true
+
+# Don't show this .destkop
+# NoDisplay=true
+
+# Set this to "false" if you want to disable the automatic startup of the app
+# X-GNOME-Autostart-enabled=true
