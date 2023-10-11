@@ -1,0 +1,5 @@
+{
+	"workspaceMount": "",
+	"runArgs": ["--userns=keep-id","--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"],
+	"containerUser": "vscode"
+}

@@ -4,6 +4,9 @@ additionnal_packages:
   - syncthing
   - android-tools
 
+  # Podman
+  - docker-compose
+
   # Git
   - git-credential-libsecret
 
