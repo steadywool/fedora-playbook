@@ -1,5 +1,11 @@
+// https://containers.dev/implementors/json_reference
 {
-	"workspaceMount": "",
-	"runArgs": ["--userns=keep-id","--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"],
+	// We need to pass the "z" argument to allow Podman to work with SELinux
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,z",
+
+	// The --userns=keep-id argument is required so that the user account is associated with the same UID in the container
+	"runArgs": ["--userns=keep-id"],
+
+	// To prevent the use of the root user
 	"containerUser": "vscode"
 }
