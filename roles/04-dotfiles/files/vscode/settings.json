@@ -1,8 +1,8 @@
 {
     "telemetry.telemetryLevel": "off",
-    "extensions.ignoreRecommendations": true,
     "github.gitAuthentication": false,
     "dev.containers.dockerPath": "podman-remote",
+    "dev.containers.dockerComposePath": "podman-remote compose",
     "dev.containers.copyGitConfig": false,
     "dev.containers.gitCredentialHelperConfigLocation": "none",
     "workbench.colorTheme": "Gruvbox Material Dark",
