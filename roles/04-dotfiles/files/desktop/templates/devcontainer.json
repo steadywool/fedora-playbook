@@ -6,6 +6,7 @@
 	// The --userns=keep-id argument is required so that the user account is associated with the same UID in the container
 	"runArgs": ["--userns=keep-id"],
 
-	// To prevent the use of the root user
-	"containerUser": "vscode"
+	// Select the user and his home folder
+	"remoteUser": "vscode",
+	"containerEnv": { "HOME": "/home/vscode" }
 }
