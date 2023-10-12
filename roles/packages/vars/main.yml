@@ -4,3 +4,4 @@ traditional_packages:
   - android-tools
   - docker-compose
   - git-credential-libsecret
+  - fish

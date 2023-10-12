@@ -1,9 +1,9 @@
 ---
 hostname: red-taurus
 
-user:
+users:
   steadywool:
     comment: Porcelaine
-    shell: /bin/bash
+    shell: /bin/fish
     
 # vim: ft=yaml

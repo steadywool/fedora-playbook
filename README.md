@@ -48,7 +48,7 @@ You can perform partially run of playbook using tags:
 - services
 - hostname
 - firewalld
-- bash
+- fish
 - vscode
 
 > ⚠️ **This playbook does not update the system.**
