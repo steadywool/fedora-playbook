@@ -5,42 +5,42 @@
   tasks:
     - name: Install packages
       ansible.builtin.import_role:
-        name: 00-packages
+        name: packages
       become: true
       tags: packages
 
     - name: Install flatpak packages
       ansible.builtin.import_role:
-        name: 01-flatpak
+        name: flatpak
       become: true
       tags: flatpak
 
     - name: Configure the system
       ansible.builtin.import_role:
-        name: 02-configuration
+        name: configuration
       become: true
       tags: configuration
 
     - name: Configure users
       ansible.builtin.import_role:
-        name: 03-users
+        name: users
       become: true
       tags: users
 
     - name: Install dotfiles
       ansible.builtin.import_role:
-        name: 04-dotfiles
+        name: dotfiles
       become: false
       tags: dotfiles
   
     - name: Configure Gnome
       ansible.builtin.import_role:
-        name: 05-gnome
+        name: gnome
       become: false
       tags: gnome
 
     - name: Enable services
       ansible.builtin.import_role:
-        name: 06-services
+        name: services
       become: false
       tags: services

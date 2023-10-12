@@ -13,7 +13,7 @@ Fedora Linux configuration managed with Ansible.
 
 ## 🚀 Installation
 
-> ⛔ **Important variables are present in the `ansible/host_vars` directory. You need to edit them to customize your installation.**
+> ⛔ **Important variables are present in the `ansible/group_vars` directory. You need to edit them to customize your installation.**
 
 Firstly, install Ansible:
 ```
@@ -48,7 +48,8 @@ You can perform partially run of playbook using tags:
 - services
 - hostname
 - firewalld
-- snapper
+- bash
+- vscode
 
 > ⚠️ **This playbook does not update the system.**
 

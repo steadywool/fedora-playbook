@@ -1,0 +1,4 @@
+---
+systemd_services:
+  - podman.service
+  - syncthing.service

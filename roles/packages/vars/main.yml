@@ -1,0 +1,6 @@
+---
+traditional_packages:
+  - syncthing
+  - android-tools
+  - docker-compose
+  - git-credential-libsecret

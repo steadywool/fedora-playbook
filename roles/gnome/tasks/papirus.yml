@@ -1,0 +1,6 @@
+---
+- name: Install Papirus Icon Theme
+  ansible.builtin.git:
+    repo: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
+    dest: "/home/{{ ansible_user_id }}/.local/share/icons/"
+    force: true

@@ -1,0 +1,8 @@
+---
+- name: Configure users
+  ansible.builtin.user:
+    name: "{{ item }}"
+    comment: "{{ users[item].comment }}"
+    shell: "{{ users[item].shell }}"
+    state: present
+  loop: "{{ users.keys() | list }}"

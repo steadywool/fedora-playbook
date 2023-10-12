@@ -1,0 +1,6 @@
+---
+- ansible.builtin.import_tasks: hostname.yml
+  tags: hostname
+  
+- ansible.builtin.import_tasks: firewalld.yml
+  tags: firewalld

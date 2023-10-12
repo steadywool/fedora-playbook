@@ -1,8 +1,9 @@
 ---
-hostname: blue-swan
+hostname: red-taurus
 
-users:
+user:
   steadywool:
-    shell: /bin/fish
-
+    comment: Porcelaine
+    shell: /bin/bash
+    
 # vim: ft=yaml

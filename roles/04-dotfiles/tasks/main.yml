@@ -1,4 +1,0 @@
----
-- ansible.builtin.import_tasks: fish.yml
-- ansible.builtin.import_tasks: vscode.yml
-- ansible.builtin.import_tasks: desktop.yml

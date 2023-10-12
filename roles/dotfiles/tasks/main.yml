@@ -1,0 +1,8 @@
+---
+- ansible.builtin.import_tasks: bash.yml
+  tags: bash
+  
+- ansible.builtin.import_tasks: vscode.yml
+  tags: vscode
+
+- ansible.builtin.import_tasks: desktop.yml
