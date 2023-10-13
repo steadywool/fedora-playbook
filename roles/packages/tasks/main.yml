@@ -1,11 +1,6 @@
 ---
-- name: Install packages
-  ansible.builtin.dnf:
-    name: "{{ traditional_packages }}"
-    state: present
-  when: ansible_distribution == 'Fedora'
-
-- name: Autoremove unneeded packages installed as dependencies
-  ansible.builtin.dnf:
-    autoremove: yes
-  when: ansible_distribution == 'Fedora'
+- ansible.builtin.import_tasks: repo.yml
+  tags: repo
+  
+- ansible.builtin.import_tasks: dnf.yml
+  tags: dnf

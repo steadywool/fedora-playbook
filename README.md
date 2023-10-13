@@ -50,6 +50,8 @@ You can perform partially run of playbook using tags:
 - firewalld
 - fish
 - vscode
+- dnf
+- repo
 
 > ⚠️ **This playbook does not update the system.**
 
