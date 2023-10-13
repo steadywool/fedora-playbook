@@ -1,8 +1,9 @@
 ---
-- name: Install packages
+- name: Install packages & resolve dependencies
   ansible.builtin.dnf:
     name: "{{ traditional_packages }}"
     state: present
+    allowerasing: true
   when: ansible_distribution == 'Fedora'
 
 - name: Autoremove unneeded packages installed as dependencies

@@ -11,3 +11,4 @@ traditional_packages:
   - docker-compose
   - git-credential-libsecret
   - fish
+  - ffmpeg
