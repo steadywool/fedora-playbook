@@ -12,3 +12,4 @@ traditional_packages:
   - git-credential-libsecret
   - fish
   - ffmpeg
+  - openssl

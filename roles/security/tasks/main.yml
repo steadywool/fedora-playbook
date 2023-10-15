@@ -4,31 +4,24 @@
 
 - name: Enable services in home zone
   ansible.posix.firewalld:
-    service: "{{ item }}"
+    service: syncthing
     zone: home
     permanent: true
     immediate: true
     state: enabled
-  loop:
-    - syncthing
-    - kdeconnect
 
 - name: Enable services in work zone
   ansible.posix.firewalld:
-    service: "{{ item }}"
+    service: syncthing
     zone: work
     permanent: true
     immediate: true
     state: enabled
-  loop:
-    - syncthing
 
 - name: Disable services in public zone
   ansible.posix.firewalld:
-    service: "{{ item }}"
+    service: ssh
     zone: public
     permanent: true
     immediate: true
     state: disabled
-  loop:
-    - ssh
