@@ -2,13 +2,17 @@
 - name: Set default zone to public
   ansible.builtin.command: firewall-cmd --set-default-zone=public
 
+# ------------------------------------------------------------------------
 - name: Enable services in home zone
   ansible.posix.firewalld:
-    service: syncthing
+    service: "{{ item }}"
     zone: home
     permanent: true
     immediate: true
     state: enabled
+  loop: 
+    - syncthing
+    - rdp
 
 - name: Enable services in work zone
   ansible.posix.firewalld:
@@ -18,10 +22,16 @@
     immediate: true
     state: enabled
 
-- name: Disable services in public zone
+# ------------------------------------------------------------------------
+- name: Get enabled public services
+  ansible.builtin.command: firewall-cmd --zone public --list-services
+  register: public_services
+
+- name: Disable all public zone services
   ansible.posix.firewalld:
-    service: ssh
-    zone: public
+    service: "{{ item }}"
+    zone: "public"
     permanent: true
     immediate: true
     state: disabled
+  loop: "{{ public_services.stdout.split() }}"

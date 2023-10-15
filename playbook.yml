@@ -17,7 +17,7 @@
 
     - name: Configure the system
       ansible.builtin.import_role:
-        name: configuration
+        name: system
       become: true
       tags: system
     
