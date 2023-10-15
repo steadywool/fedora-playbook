@@ -40,14 +40,13 @@ $ ansible-playbook ansible/playbook.yml -K
 You can perform partially run of playbook using tags:
 
 - packages
-- configuration
+- system
+- security
 - users
 - flatpak
 - dotfiles
 - gnome
 - services
-- hostname
-- firewalld
 - fish
 - vscode
 - dnf

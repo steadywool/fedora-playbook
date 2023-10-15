@@ -19,7 +19,13 @@
       ansible.builtin.import_role:
         name: configuration
       become: true
-      tags: configuration
+      tags: system
+    
+    - name: Hardened the system
+      ansible.builtin.import_role:
+        name: security
+      become: true
+      tags: security
 
     - name: Configure users
       ansible.builtin.import_role:
