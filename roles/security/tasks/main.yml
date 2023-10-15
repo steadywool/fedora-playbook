@@ -23,15 +23,10 @@
     state: enabled
 
 # ------------------------------------------------------------------------
-- name: Get enabled public services
-  ansible.builtin.command: firewall-cmd --zone public --list-services
-  register: public_services
-
-- name: Disable all public zone services
+- name: Disable services in public zone
   ansible.posix.firewalld:
-    service: "{{ item }}"
-    zone: "public"
+    service: ssh
+    zone: public
     permanent: true
     immediate: true
     state: disabled
-  loop: "{{ public_services.stdout.split() }}"
