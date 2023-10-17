@@ -13,6 +13,7 @@
     "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.iconTheme": "gruvbox-material-icon-theme",
     "workbench.tree.indent": 15,
+    "window.titleBarStyle": "custom",
 
     // Change default font
     "editor.fontFamily": "FiraCode Nerd Font",
@@ -26,5 +27,5 @@
           "overrideName": true
         }
       },
-    "terminal.integrated.defaultProfile.linux": "toolbox"
+    "terminal.integrated.defaultProfile.linux": "toolbox",
 }
