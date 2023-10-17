@@ -1,31 +1,34 @@
 {
-    // Vscode
-    "telemetry.telemetryLevel": "off",
-    "github.gitAuthentication": false,
+  // Vscode
+  "telemetry.telemetryLevel": "off",
+  "github.gitAuthentication": false,
 
-    // Devcontainer configuration
-    "dev.containers.dockerPath": "podman-remote",
-    "dev.containers.dockerComposePath": "podman-remote compose",
-    "dev.containers.copyGitConfig": false,
-    "dev.containers.gitCredentialHelperConfigLocation": "none",
+  // Devcontainer configuration
+  "dev.containers.dockerPath": "podman-remote",
+  "dev.containers.dockerComposePath": "podman-remote compose",
+  "dev.containers.copyGitConfig": false,
+  "dev.containers.gitCredentialHelperConfigLocation": "none",
 
-    // Appearance
-    "workbench.colorTheme": "Gruvbox Material Dark",
-    "workbench.iconTheme": "gruvbox-material-icon-theme",
-    "workbench.tree.indent": 15,
-    "window.titleBarStyle": "custom",
+  // Appearance
+  "workbench.tree.indent": 15,
+  "window.titleBarStyle": "custom",
 
-    // Change default font
-    "editor.fontFamily": "FiraCode Nerd Font",
-    "editor.fontLigatures": true,
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
+  "gruvboxMaterial.darkContrast": "hard",
+  "gruvboxMaterial.darkSelection": "orange",
 
-    // Change default profile
-    "terminal.integrated.profiles.linux": {
-        "toolbox": {
-          "path": "/usr/bin/flatpak-spawn",
-          "args": ["--host", "--env=TERM=xterm-256color", "toolbox", "enter"],
-          "overrideName": true
-        }
-      },
-    "terminal.integrated.defaultProfile.linux": "toolbox",
+  // Change default font
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontLigatures": true,
+
+  // Change default profile
+  "terminal.integrated.profiles.linux": {
+      "toolbox": {
+        "path": "/usr/bin/flatpak-spawn",
+        "args": ["--host", "--env=TERM=xterm-256color", "toolbox", "enter"],
+        "overrideName": true
+      }
+    },
+  "terminal.integrated.defaultProfile.linux": "toolbox",
 }
