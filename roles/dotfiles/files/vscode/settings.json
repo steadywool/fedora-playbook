@@ -15,7 +15,6 @@
 
   "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
-  "gruvboxMaterial.darkContrast": "hard",
   "gruvboxMaterial.darkSelection": "orange",
 
   // Change default font
@@ -30,5 +29,5 @@
         "overrideName": true
       }
     },
-  "terminal.integrated.defaultProfile.linux": "toolbox",
+  "terminal.integrated.defaultProfile.linux": "toolbox"
 }
