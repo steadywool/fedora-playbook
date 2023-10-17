@@ -2,6 +2,16 @@
 # PATH variable
 set -gx PATH $HOME/.local/bin $PATH
 
+## XDG variables
+set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx XDG_CACHE_HOME $HOME/.cache
+set -gx XDG_DATA_HOME $HOME/.local/share
+
+## Editor variables
+set -gx EDITOR nano
+set -gx VISUAL nano
+set -gx PAGER less
+
 # Interactive
 if status is-interactive
     # Remove fish greeting
