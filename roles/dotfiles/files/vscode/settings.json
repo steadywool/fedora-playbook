@@ -2,6 +2,7 @@
   // Vscode
   "telemetry.telemetryLevel": "off",
   "github.gitAuthentication": false,
+  "update.mode": "none",
 
   // Devcontainer configuration
   "dev.containers.dockerPath": "podman-remote",
