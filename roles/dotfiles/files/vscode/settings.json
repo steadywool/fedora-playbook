@@ -13,10 +13,7 @@
   // Appearance
   "workbench.tree.indent": 15,
   "window.titleBarStyle": "custom",
-
-  "workbench.colorTheme": "Gruvbox Material Dark",
-  "workbench.iconTheme": "gruvbox-material-icon-theme",
-  "gruvboxMaterial.darkSelection": "orange",
+  "workbench.colorTheme": "Everforest Dark",
 
   // Change default font
   "editor.fontFamily": "FiraCode Nerd Font",
