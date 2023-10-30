@@ -46,6 +46,7 @@ You can perform partially run of playbook using tags:
 - flatpak
 - dotfiles
 - gnome
+- firewall
 - services
 - fish
 - vscode
