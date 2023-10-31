@@ -1,20 +1,16 @@
 ---
-- name: Import RPM Fusion free key
+- name: Import RPM keys
   ansible.builtin.rpm_key:
     state: present
-    key: "{{ rpmfusion_free_key }}"
+    key: "{{ item }}"
+  loop:
+    - "{{ rpmfusion_free_key }}"
+    - "{{ rpmfusion_nonfree_key }}"
 
-- name: Import RPM Fusion free key
-  ansible.builtin.rpm_key:
-    state: present
-    key: "{{ rpmfusion_nonfree_key }}"
-
-- name: Install free repositories
+- name: Add additional repositories
   ansible.builtin.dnf:
-    name: "{{ rpmfusion_free_repository }}"
+    name: "{{ item }}"
     state: present
-
-- name: Install nonfree repositories
-  ansible.builtin.dnf:
-    name: "{{ rpmfusion_nonfree_repository }}"
-    state: present
+  loop:
+    - "{{ rpmfusion_free_repository }}"
+    - "{{ rpmfusion_nonfree_repository }}"

@@ -1,6 +1,8 @@
 ---
 - ansible.builtin.import_tasks: repo.yml
+  when: ansible_distribution == 'Fedora'
   tags: repo
   
 - ansible.builtin.import_tasks: dnf.yml
+  when: ansible_distribution == 'Fedora'
   tags: dnf

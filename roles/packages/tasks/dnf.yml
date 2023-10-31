@@ -1,12 +1,17 @@
 ---
-- name: Install packages & resolve dependencies
+- name: Install traditional packages & resolve dependencies
   ansible.builtin.dnf:
     name: "{{ traditional_packages }}"
+    allowerasing: false
     state: present
+
+
+- name: Install RPM Fusion packages & resolve dependencies
+  ansible.builtin.dnf:
+    name: "{{ fusion_packages }}"
     allowerasing: true
-  when: ansible_distribution == 'Fedora'
+    state: present
 
 - name: Autoremove unneeded packages installed as dependencies
   ansible.builtin.dnf:
     autoremove: yes
-  when: ansible_distribution == 'Fedora'
