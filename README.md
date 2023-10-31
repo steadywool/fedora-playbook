@@ -6,9 +6,9 @@ Fedora Linux configuration managed with Ansible.
 
 ## 🛁 Why
 
-- Provides a quick and easy method of installing an operating system.
+- Provides a quick and easy method of configuring an operating system.
 - Allow us to easily modify installed packages and applied settings.
-- Focus on package installation via Flatpak and Distrobox to keep the system clean and simple.
+- Focus on package installation via Flatpak and Toolbox to keep the system clean and simple.
 - Thanks to the simplicity of the YAML language, it is very easy to understand & create additional tasks.
 
 ## 🚀 Installation
