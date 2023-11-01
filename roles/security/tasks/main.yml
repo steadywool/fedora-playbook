@@ -1,3 +1,6 @@
 ---
-- ansible.builtin.import_tasks: firewall.yml
-  tags: firewall
+- ansible.builtin.import_tasks: firewalld.yml
+  tags: firewalld
+
+- ansible.builtin.import_tasks: usbguard.yml
+  tags: usbguard

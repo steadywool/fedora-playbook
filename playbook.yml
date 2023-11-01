@@ -9,7 +9,7 @@
       become: true
       tags: packages
 
-    - name: Install flatpak packages
+    - name: Install flatpak
       ansible.builtin.import_role:
         name: flatpak
       become: true
@@ -33,6 +33,12 @@
       become: true
       tags: users
 
+    - name: Enable services
+      ansible.builtin.import_role:
+        name: services
+      become: false
+      tags: services
+
     - name: Install dotfiles
       ansible.builtin.import_role:
         name: dotfiles
@@ -44,9 +50,3 @@
         name: gnome
       become: false
       tags: gnome
-
-    - name: Enable services
-      ansible.builtin.import_role:
-        name: services
-      become: false
-      tags: services

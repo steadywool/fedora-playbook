@@ -1,16 +1,9 @@
 ---
-- name: Install traditional packages & resolve dependencies
+- name: Install traditional packages
   ansible.builtin.dnf:
     name: "{{ traditional_packages }}"
+    state: present
     allowerasing: false
-    state: present
-
-
-- name: Install RPM Fusion packages & resolve dependencies
-  ansible.builtin.dnf:
-    name: "{{ fusion_packages }}"
-    allowerasing: true
-    state: present
 
 - name: Autoremove unneeded packages installed as dependencies
   ansible.builtin.dnf:

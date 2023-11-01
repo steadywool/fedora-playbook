@@ -46,12 +46,14 @@ You can perform partially run of playbook using tags:
 - flatpak
 - dotfiles
 - gnome
-- firewall
+- firewalld
+- usbguard
 - services
 - fish
 - vscode
 - dnf
-- repo
+- fusion
+- copr
 
 > ⚠️ **This playbook does not update the system.**
 
