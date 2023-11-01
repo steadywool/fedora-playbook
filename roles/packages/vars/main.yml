@@ -6,6 +6,7 @@ traditional_packages:
   - git-credential-libsecret
   - fish
   - usbguard
+  - snapper
 
 fusion_keys:
   - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"

@@ -52,6 +52,7 @@ You can perform partially run of playbook using tags:
 - copr
 - firewalld
 - usbguard
+- snapper
 - hostname
 - adb
 - fish

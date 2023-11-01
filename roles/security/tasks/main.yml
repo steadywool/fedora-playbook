@@ -4,3 +4,6 @@
 
 - ansible.builtin.import_tasks: usbguard.yml
   tags: usbguard
+
+- ansible.builtin.import_tasks: snapper.yml
+  tags: snapper
