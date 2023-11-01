@@ -4,6 +4,7 @@ hostname: red-taurus
 users:
   steadywool:
     comment: Porcelaine
+    groups: wheel,adbusers
     shell: /bin/fish
     
 # vim: ft=yaml

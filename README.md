@@ -42,18 +42,20 @@ You can perform partially run of playbook using tags:
 - packages
 - system
 - security
+- services
 - users
 - flatpak
 - dotfiles
 - gnome
-- firewalld
-- usbguard
-- services
-- fish
-- vscode
 - dnf
 - fusion
 - copr
+- firewalld
+- usbguard
+- hostname
+- adb
+- fish
+- vscode
 
 > ⚠️ **This playbook does not update the system.**
 
