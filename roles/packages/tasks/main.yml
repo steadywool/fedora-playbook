@@ -6,7 +6,3 @@
 - ansible.builtin.import_tasks: fusion.yml
   when: ansible_distribution == 'Fedora'
   tags: fusion
-
-- ansible.builtin.import_tasks: copr.yml
-  when: ansible_distribution == 'Fedora'
-  tags: copr

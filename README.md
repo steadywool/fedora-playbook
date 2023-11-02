@@ -49,7 +49,6 @@ You can perform partially run of playbook using tags:
 - gnome
 - dnf
 - fusion
-- copr
 - firewalld
 - usbguard
 - snapper
