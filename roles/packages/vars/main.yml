@@ -7,7 +7,6 @@ traditional_packages:
   - fish
   - usbguard
   - snapper
-  - amd-ucode-firmware
 
 fusion_keys:
   - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
