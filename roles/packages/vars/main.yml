@@ -20,3 +20,4 @@ fusion_packages:
   - ffmpeg
   - mesa-va-drivers-freeworld
   - mesa-vdpau-drivers-freeworld
+  - '@Multimedia'

@@ -15,3 +15,7 @@
     name: "{{ fusion_packages }}"
     state: present
     allowerasing: true
+
+- name: Autoremove unneeded packages installed as dependencies
+  ansible.builtin.dnf:
+    autoremove: yes

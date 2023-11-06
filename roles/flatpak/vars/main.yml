@@ -6,6 +6,10 @@ flathub_packages:
   - com.github.tchx84.Flatseal
   - org.gnome.seahorse.Application
 
+  # Internet
+  - org.mozilla.firefox
+  - com.discordapp.Discord
+
   # Personal
   - org.keepassxc.KeePassXC
   - md.obsidian.Obsidian
@@ -15,9 +19,6 @@ flathub_packages:
   - com.mojang.Minecraft
   - sh.ppy.osu
   - net.lutris.Lutris
-
-  # Communication
-  - com.discordapp.Discord
 
   # Development
   - com.visualstudio.code
