@@ -4,12 +4,12 @@ Fedora Linux configuration managed with Ansible.
 
 ![](src/screenshot.png)
 
-## 📜 Preambule
+## 📜 Preamble
 
 ### 🟢 What this playbook does ?
 
 - Installs essential programs (for me).
-- hardened your operating system.
+- hardens your operating system.
 - Configure your system & programs very easily.
 - Customize the Gnome environment.
 
