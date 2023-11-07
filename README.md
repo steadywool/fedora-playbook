@@ -57,7 +57,7 @@ You can perform partially run of playbook using tags:
 - dotfiles
 - gnome
 - dnf
-- repo
+- fusion
 - firewalld
 - usbguard
 - snapper

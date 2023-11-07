@@ -1,0 +1,21 @@
+---
+- name: Import RPM fusion keys
+  ansible.builtin.rpm_key:
+    state: present
+    key: "{{ item }}"
+  loop: "{{ fusion_keys }}"
+
+- name: Add RPM fusion repositories
+  ansible.builtin.dnf:
+    name: "{{ fusion_repositories }}"
+    state: present
+
+- name: Install fusion packages
+  ansible.builtin.dnf:
+    name: "{{ fusion_packages }}"
+    state: present
+    allowerasing: true
+
+- name: Autoremove unneeded packages installed as dependencies
+  ansible.builtin.dnf:
+    autoremove: yes
