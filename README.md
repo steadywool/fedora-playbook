@@ -4,12 +4,21 @@ Fedora Linux configuration managed with Ansible.
 
 ![](src/screenshot.png)
 
-## 🛁 Why
+## 📜 Preambule
 
-- Provides a quick and easy method of configuring an operating system.
-- Allow us to easily modify installed packages and applied settings.
-- Focus on package installation via Flatpak and Toolbox to keep the system clean and simple.
-- Thanks to the simplicity of the YAML language, it is very easy to understand & create additional tasks.
+### 🟢 What this playbook does ?
+
+- Installs essential programs (for me).
+- hardened your operating system.
+- Configure your system & programs very easily.
+- Customize the Gnome environment.
+
+### 🔴 What this playbook doesn't do ?
+
+- Update your operating system.
+- Configure any other distribution than Fedora Linux.
+- Install hardware-specific drivers.
+- Uninstall programs.
 
 ## 🚀 Installation
 
@@ -48,7 +57,7 @@ You can perform partially run of playbook using tags:
 - dotfiles
 - gnome
 - dnf
-- fusion
+- repo
 - firewalld
 - usbguard
 - snapper
@@ -56,8 +65,6 @@ You can perform partially run of playbook using tags:
 - adb
 - fish
 - vscode
-
-> ⚠️ **This playbook does not update the system.**
 
 ## 📕 Exemples
 

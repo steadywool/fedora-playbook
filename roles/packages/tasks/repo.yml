@@ -1,0 +1,11 @@
+---
+- name: Import RPM keys
+  ansible.builtin.rpm_key:
+    state: present
+    key: "{{ item }}"
+  loop: "{{ fusion_keys }}"
+
+- name: Add RPM Fusion repositories
+  ansible.builtin.dnf:
+    name: "{{ fusion_repositories }}"
+    state: present

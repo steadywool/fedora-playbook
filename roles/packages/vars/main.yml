@@ -1,23 +1,20 @@
 ---
-traditional_packages:
-  - syncthing
-  - android-tools
-  - docker-compose
-  - git-credential-libsecret
-  - fish
-  - usbguard
-  - snapper
-
-fusion_keys:
+rpm_keys:
   - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
   - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
 
-fusion_repositories:
+rpm_repositories:
   - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
   - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
 
-fusion_packages:
-  - ffmpeg
-  - mesa-va-drivers-freeworld
-  - mesa-vdpau-drivers-freeworld
-  - '@Multimedia'
+rpm_packages:
+  # Additional
+  - syncthing
+  - android-tools
+  - docker-compose
+  - fish
+  - git-credential-libsecret
+
+  # Security
+  - usbguard
+  - snapper

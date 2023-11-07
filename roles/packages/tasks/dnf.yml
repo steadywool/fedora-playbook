@@ -1,9 +1,9 @@
 ---
 - name: Install traditional packages
   ansible.builtin.dnf:
-    name: "{{ traditional_packages }}"
+    name: "{{ rpm_packages }}"
     state: present
-    allowerasing: false
+    allowerasing: true
 
 - name: Autoremove unneeded packages installed as dependencies
   ansible.builtin.dnf:

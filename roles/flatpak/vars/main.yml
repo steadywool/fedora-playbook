@@ -6,6 +6,9 @@ flathub_packages:
   - com.github.tchx84.Flatseal
   - org.gnome.seahorse.Application
 
+  # Multimedia
+  - org.videolan.VLC 
+
   # Internet
   - org.mozilla.firefox
   - com.discordapp.Discord

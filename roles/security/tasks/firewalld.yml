@@ -10,14 +10,6 @@
     immediate: true
     state: enabled
 
-- name: Enable services in work zone
-  ansible.posix.firewalld:
-    service: syncthing
-    zone: work
-    permanent: true
-    immediate: true
-    state: enabled
-
 - name: Disable services in public zone
   ansible.posix.firewalld:
     service: ssh
