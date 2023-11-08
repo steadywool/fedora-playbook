@@ -1,5 +1,10 @@
 // https://containers.dev/implementors/json_reference
 {
+	"name": "Debian",
+	
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+
 	// We need to pass the "z" argument to allow Podman to work with SELinux
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,z",
 
@@ -7,6 +12,5 @@
 	"runArgs": ["--userns=keep-id"],
 
 	// Select the user and his home folder
-	"remoteUser": "vscode",
-	"containerEnv": { "HOME": "/home/vscode" }
+	"containerUser": "vscode"
 }

@@ -26,6 +26,5 @@
         "args": ["--host", "--env=TERM=xterm-256color", "toolbox", "enter"],
         "overrideName": true
       }
-    },
-  "terminal.integrated.defaultProfile.linux": "toolbox"
+    }
 }
