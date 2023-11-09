@@ -9,15 +9,10 @@ fusion_repositories:
 
 
 traditional_packages:
-  # Basic
   - syncthing
   - android-tools
-  - fish
   - git-credential-libsecret
-
-  # Containers
+  - fish
   - docker-compose
-
-  # Security
   - usbguard
   - snapper

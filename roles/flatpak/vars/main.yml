@@ -25,4 +25,3 @@ flathub_packages:
 
   # Development
   - com.visualstudio.code
-  - runtime/com.visualstudio.code.tool.podman/x86_64/22.08

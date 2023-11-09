@@ -10,6 +10,3 @@
     src: vscode/settings.json
     dest: "/home/{{ ansible_user_id }}/.var/app/com.visualstudio.code/config/Code/User/settings.json"
     force: true
-
-- name: Allow VSCode to use Podman
-  ansible.builtin.command: flatpak override --user --filesystem=xdg-run/podman com.visualstudio.code
