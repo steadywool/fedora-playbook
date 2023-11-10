@@ -1,6 +1,6 @@
 # 🌸 Ansible Dotfiles
 
-Fedora Linux configuration managed with Ansible.
+Fedora Workstation configuration managed with Ansible.
 
 ![](src/screenshot.png)
 
@@ -9,7 +9,7 @@ Fedora Linux configuration managed with Ansible.
 ### 🟢 What this playbook does ?
 
 - Installs essential programs (for me).
-- hardens your operating system.
+- hardens your Fedora Linux.
 - Configure your system & programs very easily.
 - Customize the Gnome environment.
 
@@ -17,12 +17,12 @@ Fedora Linux configuration managed with Ansible.
 
 - Update your operating system.
 - Configure any other distribution than Fedora Linux.
-- Install hardware-specific drivers.
-- Uninstall programs.
+- Install hardware-specific programs.
+- Manage your partitions or your disks.
 
 ## 🚀 Installation
 
-> ⛔ **Important variables are present in the `ansible/group_vars` directory. You need to edit them to customize your installation.**
+> ⛔ **Important variables are present in the `ansible/host_vars` directory. You need to edit them to customize your installation.**
 
 Firstly, install Ansible:
 ```
@@ -57,7 +57,7 @@ You can perform partially run of playbook using tags:
 - dotfiles
 - gnome
 - dnf
-- fusion
+- repo
 - firewalld
 - usbguard
 - snapper

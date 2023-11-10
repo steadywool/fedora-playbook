@@ -1,10 +1,16 @@
 ---
-- name: Install traditional packages
+- name: Remove unwanted packages
   ansible.builtin.dnf:
-    name: "{{ traditional_packages }}"
+    name: "{{ unwanted_packages }}"
+    state: absent
+    allowerasing: false
+
+- name: Install packages
+  ansible.builtin.dnf:
+    name: "{{ wanted_packages }}"
     state: present
     allowerasing: false
 
-- name: Autoremove unneeded packages installed as dependencies
+- name: Autoremove unneeded packages
   ansible.builtin.dnf:
     autoremove: yes
