@@ -5,48 +5,48 @@
   tasks:
     - name: Install packages
       ansible.builtin.import_role:
-        name: packages
+        name: system/packages
       become: true
-      tags: packages
+      tags: system,packages
 
     - name: Install flatpak
       ansible.builtin.import_role:
-        name: flatpak
+        name: system/flatpak
       become: true
-      tags: flatpak
+      tags: system,flatpak
 
     - name: Configure the system
       ansible.builtin.import_role:
-        name: system
+        name: system/configuration
       become: true
-      tags: system
+      tags: system,configuration
     
     - name: Hardened the system
       ansible.builtin.import_role:
-        name: security
+        name: system/security
       become: true
-      tags: security
+      tags: system,security
 
     - name: Configure users
       ansible.builtin.import_role:
-        name: users
+        name: system/accounts
       become: true
-      tags: users
+      tags: system,accounts
 
     - name: Enable services
       ansible.builtin.import_role:
-        name: services
+        name: user/services
       become: false
-      tags: services
+      tags: user,services
 
     - name: Install dotfiles
       ansible.builtin.import_role:
-        name: dotfiles
+        name: user/dotfiles
       become: false
-      tags: dotfiles
+      tags: user,dotfiles
   
     - name: Configure Gnome
       ansible.builtin.import_role:
-        name: gnome
+        name: user/gnome
       become: false
-      tags: gnome
+      tags: user,gnome

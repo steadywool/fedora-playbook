@@ -40,19 +40,19 @@ Start the playbook and configure your system with this command:
 $ ansible-playbook ansible/playbook.yml -K
 ```
 
-> ⚠️ **Tasks in the "user" playbook must be executed with the currently logged-in user, not with the root account.**
-
-> ⛔ **If you run the entire playbook, or the "user" part with the `root` user, your configuration will be installed under the root account.**
+> ⛔ **If you run the entire playbook, or the "user" part with the `root` user, your user configuration will be installed under the root account.**
 
 ## 🔧 Configuration
 
 You can perform partially run of playbook using tags:
 
-- packages
 - system
+- user
+- packages
+- configuration
 - security
 - services
-- users
+- accounts
 - flatpak
 - dotfiles
 - gnome
