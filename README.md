@@ -46,13 +46,13 @@ $ ansible-playbook ansible/playbook.yml -K
 
 You can perform partially run of playbook using tags:
 
-- system
-- user
+- SYSTEM
+- USER
 - packages
-- configuration
+- config
 - security
 - services
-- accounts
+- users
 - flatpak
 - dotfiles
 - gnome
@@ -65,6 +65,7 @@ You can perform partially run of playbook using tags:
 - adb
 - fish
 - vscode
+- xdg
 
 ## 📕 Exemples
 
@@ -82,5 +83,5 @@ $ ansible-playbook playbook.yml -K -t packages,services
 
 Executes tasks requiring no privileges:
 ```
-$ ansible-playbook playbook.yml -t dotfiles
+$ ansible-playbook playbook.yml -t USER
 ```

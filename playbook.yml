@@ -7,46 +7,46 @@
       ansible.builtin.import_role:
         name: system/packages
       become: true
-      tags: system,packages
+      tags: SYSTEM,packages
 
     - name: Install flatpak
       ansible.builtin.import_role:
         name: system/flatpak
       become: true
-      tags: system,flatpak
+      tags: SYSTEM,flatpak
 
     - name: Configure the system
       ansible.builtin.import_role:
-        name: system/configuration
+        name: system/config
       become: true
-      tags: system,configuration
+      tags: SYSTEM,config
     
     - name: Hardened the system
       ansible.builtin.import_role:
         name: system/security
       become: true
-      tags: system,security
+      tags: SYSTEM,security
 
     - name: Configure users
       ansible.builtin.import_role:
-        name: system/accounts
+        name: system/users
       become: true
-      tags: system,accounts
+      tags: SYSTEM,users
 
     - name: Enable services
       ansible.builtin.import_role:
         name: user/services
       become: false
-      tags: user,services
+      tags: USER,services
 
     - name: Install dotfiles
       ansible.builtin.import_role:
         name: user/dotfiles
       become: false
-      tags: user,dotfiles
+      tags: USER,dotfiles
   
     - name: Configure Gnome
       ansible.builtin.import_role:
         name: user/gnome
       become: false
-      tags: user,gnome
+      tags: USER,gnome

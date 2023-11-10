@@ -5,4 +5,6 @@
 - ansible.builtin.import_tasks: vscode.yml
   tags: vscode
 
-- ansible.builtin.import_tasks: desktop.yml
+- ansible.builtin.import_tasks: xdg.yml
+  tags: xdg
+
