@@ -1,9 +1,4 @@
 ---
-- name: Check if user exists
-  command: "getent passwd {{ item }}"
-  register: user_exists
-  loop: "{{ users.keys() | list }}"
-
 - name: Configure users
   ansible.builtin.user:
     name: "{{ item }}"
@@ -11,5 +6,4 @@
     groups: "{{ users[item].groups }}"
     shell: "{{ users[item].shell }}"
     state: present
-  when: user_exists.stat.exists
   loop: "{{ users.keys() | list }}"
