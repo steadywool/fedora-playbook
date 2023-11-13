@@ -16,6 +16,7 @@ install_packages:
   - syncthing
   - android-tools
   - git-credential-libsecret
+  - podman-docker
   - docker-compose
   - usbguard
   - snapper
