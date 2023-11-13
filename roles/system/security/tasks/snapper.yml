@@ -4,14 +4,10 @@
     path: /etc/snapper/configs/root
   register: file_info
 
-- name: Get filesystem type of /
-  ansible.builtin.shell: df / --output=fstype | tail -n 1
-  register: filesystem_type
-
 - name: Create default configuration
   ansible.builtin.command: snapper -c root create-config /
   ignore_errors: true
-  when: file_info.stat.size == 0 and filesystem_type.stdout == 'btrfs'
+  when: not file_info.stat.exists
 
 - name: Add wheel group to usbguard
   ansible.builtin.lineinfile:
@@ -19,7 +15,6 @@
     state: present
     regexp: '^ALLOW_GROUPS='
     line: 'ALLOW_GROUPS="wheel"'
-  when: file_info.stat.size != 0 and filesystem_type.stdout == 'btrfs'
 
 - name: Change Snapshots periods
   ansible.builtin.lineinfile:
@@ -33,7 +28,6 @@
     - { regexp: '^TIMELINE_LIMIT_WEEKLY=', line: 'TIMELINE_LIMIT_WEEKLY="0"' }
     - { regexp: '^TIMELINE_LIMIT_MONTHLY=', line: 'TIMELINE_LIMIT_MONTHLY="0"' }
     - { regexp: '^TIMELINE_LIMIT_YEARLY=', line: 'TIMELINE_LIMIT_YEARLY="0"' }
-  when: file_info.stat.size != 0 and filesystem_type.stdout == 'btrfs'
 
 - name: Enable Snapper services
   ansible.builtin.service:
@@ -44,4 +38,3 @@
     - snapper-timeline.timer
     - snapper-cleanup.timer
     - snapper-boot.timer
-  when: file_info.stat.size != 0 and filesystem_type.stdout == 'btrfs'

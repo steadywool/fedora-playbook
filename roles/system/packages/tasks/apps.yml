@@ -1,15 +1,15 @@
 ---
 - name: Remove unwanted packages
   ansible.builtin.dnf:
-    name: "{{ unwanted_packages }}"
+    name: "{{ remove_packages }}"
     state: absent
     allowerasing: false
 
 - name: Install packages
   ansible.builtin.dnf:
-    name: "{{ wanted_packages }}"
+    name: "{{ install_packages }}"
     state: present
-    allowerasing: false
+    allowerasing: true
 
 - name: Autoremove unneeded packages
   ansible.builtin.dnf:

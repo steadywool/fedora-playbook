@@ -7,6 +7,7 @@
       ansible.builtin.import_role:
         name: system/packages
       become: true
+      when: ansible_distribution == 'Fedora'
       tags: SYSTEM,packages
 
     - name: Install flatpak

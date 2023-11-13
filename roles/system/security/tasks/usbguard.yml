@@ -5,8 +5,8 @@
   register: file_info
 
 - name: Generate USBGuard rules
-  ansible.builtin.command: bash -c "usbguard generate-policy > /etc/usbguard/rules.conf"
-  when: file_info.stat.size == 0
+  ansible.builtin.shell: "usbguard generate-policy > /etc/usbguard/rules.conf"
+  when: not file_info.stat.exists
 
 - name: Add wheel group to usbguard
   ansible.builtin.lineinfile:
@@ -20,4 +20,3 @@
     name: usbguard.service
     state: started
     enabled: true
-  when: file_info.stat.size != 0
