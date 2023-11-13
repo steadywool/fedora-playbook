@@ -40,7 +40,7 @@ Start the playbook and configure your system with this command:
 $ ansible-playbook ansible/playbook.yml -K
 ```
 
-> ⛔ **If you run the playbook, with the `root` user, your user configuration will be installed under the root account.**
+> ⛔ **If you run the playbook with the `root` user, your user configuration will be installed under the root account.**
 
 ## 🔧 Configuration
 
@@ -70,19 +70,21 @@ You can perform partially run of playbook using tags:
 
 ## 📕 Exemples
 
-Run the entire playbook:
-```
-$ ansible-playbook playbook.yml -K
-```
-
-> 📌 **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
-
 Install every packages & enable/start Systemd services:
 ```
 $ ansible-playbook playbook.yml -K -t packages,services
 ```
 
+> 📌 **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
+
 Executes tasks requiring no privileges:
 ```
 $ ansible-playbook playbook.yml -t USER
 ```
+
+Execute the entire playbook but skip the "dotfiles" role:
+```
+$ ansible-playbook playbook.yml -K --skip-tags dotfiles
+```
+
+For more arguments, check the man page with the command `man ansible-playbook`.
