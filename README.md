@@ -46,7 +46,7 @@ $ ansible-playbook ansible/playbook.yml -K
 
 You can perform partially run of playbook using tags:
 
-| MAIN TAGS | ROLE TAGS  | TASK TAGS  |
+| Main tags | Role tags  | Task tags  |
 |-----------|------------|------------|
 | SYSTEM    | packages   | repo       |
 | USER      | config     | apps       |
