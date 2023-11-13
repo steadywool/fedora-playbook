@@ -46,32 +46,22 @@ $ ansible-playbook ansible/playbook.yml -K
 
 You can perform partially run of playbook using tags:
 
-- SYSTEM
-- USER
----
-- packages
-- config
-- security
-- services
-- users
-- flatpak
-- dotfiles
-- gnome
----
-- repo
-- apps
-- hostname
-- sysctl
-- adb
-- firewalld
-- usbguard
-- snapper
-- remote
-- bash
-- vscode
-- xdg
-- papirus
-- dconf
+| MAIN TAGS | ROLE TAGS  | TASK TAGS  |
+|-----------|------------|------------|
+| SYSTEM    | packages   | repo       |
+| USER      | config     | apps       |
+|           | security   | hostname   |
+|           | services   | sysctl     |
+|           | users      | adb        |
+|           | flatpak    | firewalld  |
+|           | dotfiles   | usbguard   |
+|           | gnome      | snapper    |
+|           |            | remote     |
+|           |            | bash       |
+|           |            | vscode     |
+|           |            | xdg        |
+|           |            | papirus    |
+|           |            | dconf      |
 
 ## 📕 Exemples
 
