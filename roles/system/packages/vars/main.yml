@@ -10,6 +10,7 @@ rpm_repositories:
 remove_packages:
   - totem
   - rhythmbox
+  - cheese
 
 install_packages:
   - '@multimedia'
