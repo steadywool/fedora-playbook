@@ -16,6 +16,7 @@ install_packages:
   - '@multimedia'
   - syncthing
   - android-tools
+  - fish
   - git-credential-libsecret
   - podman-docker
   - docker-compose

@@ -1,0 +1,11 @@
+---
+- name: ensure Fish dir exists
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user_id }}/.config/fish"
+    recurse: true
+    state: directory
+
+- name: Copy Fish configuration
+  ansible.builtin.copy:
+    src: fish/
+    dest: "/home/{{ ansible_user_id }}/.config/fish/"

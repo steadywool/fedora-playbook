@@ -66,7 +66,7 @@ $ ansible-playbook ansible/playbook.yml -K
         <li>firewalld</li>
         <li>usbguard</li>
         <li>snapper</li>
-        <li>bash</li>
+        <li>fish</li>
         <li>vscode</li>
         <li>xdg</li>
         <li>papirus</li>
