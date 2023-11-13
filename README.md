@@ -54,32 +54,39 @@ You can perform partially run of playbook using tags:
     </ul>
 </details>
 
-- packages
-- config
-- security
-- services
-- users
-- flatpak
-- remote
-- dotfiles
-- gnome
-- apps
-- repo
-- apps
-- hostname
-- sysctl
-- adb
-- firewalld
-- usbguard
-- snapper
-- hostname
-- adb
-- remote
-- bash
-- vscode
-- xdg
-- papirus
-- dconf
+<details>
+    <summary><h3>🏷️ Role tags</h3></summary>
+    <ul>
+        <li>packages</li>
+        <li>config</li>
+        <li>security</li>
+        <li>services</li>
+        <li>users</li>
+        <li>flatpak</li>
+        <li>dotfiles</li>
+        <li>gnome</li>
+    </ul>
+</details>
+
+<details>
+    <summary><h3>🏷️ Task tags</h3></summary>
+    <ul>
+        <li>remote</li>
+        <li>apps</li>
+        <li>repo</li>
+        <li>hostname</li>
+        <li>sysctl</li>
+        <li>adb</li>
+        <li>firewalld</li>
+        <li>usbguard</li>
+        <li>snapper</li>
+        <li>bash</li>
+        <li>vscode</li>
+        <li>xdg</li>
+        <li>papirus</li>
+        <li>dconf</li>
+    </ul>
+</details>
 
 ## 📕 Exemples
 
