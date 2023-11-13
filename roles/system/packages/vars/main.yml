@@ -7,17 +7,15 @@ rpm_repositories:
   - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
   - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
 
-unwanted_packages:
+remove_packages:
   - totem
-  - gnome-photos
   - rhythmbox
-  - firefox
 
-wanted_packages:
+install_packages:
+  - '@multimedia'
   - syncthing
   - android-tools
   - git-credential-libsecret
-  - fish
   - docker-compose
   - usbguard
   - snapper

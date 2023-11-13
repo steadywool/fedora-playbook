@@ -1,6 +1,6 @@
 ---
-- ansible.builtin.import_tasks: fish.yml
-  tags: fish
+- ansible.builtin.import_tasks: bash.yml
+  tags: bash
   
 - ansible.builtin.import_tasks: vscode.yml
   tags: vscode

@@ -1,0 +1,12 @@
+---
+- name: ensure Bash dir exists
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user_id }}/.bashrc.d"
+    recurse: true
+    state: directory
+
+- name: Copy Bash configuration
+  ansible.builtin.copy:
+    src: bash/
+    dest: "/home/{{ ansible_user_id }}/.bashrc.d/"
+    force: true

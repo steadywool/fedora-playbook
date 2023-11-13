@@ -7,6 +7,6 @@
 
 - name: Copy autostart
   ansible.builtin.copy:
-    src: autostart
-    dest: "/home/{{ ansible_user_id }}/.config"
+    src: autostart/
+    dest: "/home/{{ ansible_user_id }}/.config/autostart/"
     force: true

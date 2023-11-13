@@ -5,6 +5,4 @@ users:
   steadywool:
     comment: Porcelaine
     groups: wheel,adbusers
-    shell: /bin/fish
-    
-# vim: ft=yaml
+    shell: /bin/bash

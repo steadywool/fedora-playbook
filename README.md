@@ -63,7 +63,7 @@ You can perform partially run of playbook using tags:
 - snapper
 - hostname
 - adb
-- fish
+- bash
 - vscode
 - xdg
 
