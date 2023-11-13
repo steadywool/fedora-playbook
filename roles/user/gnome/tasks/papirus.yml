@@ -1,6 +1,14 @@
 ---
-- name: Install Papirus Icon Theme
+- name: Clone Papirus repository
   ansible.builtin.git:
     repo: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
-    dest: "/home/{{ ansible_user_id }}/.local/share/icons/"
-    force: true
+    dest: /tmp/papirus-icon-theme
+
+- name: Copy Papirus icon theme
+  ansible.builtin.copy:
+    src: "/tmp/papirus-icon-theme/{{ item }}"
+    dest: "/home/{{ ansible_user_id }}/.local/share/icons"
+  loop:
+    - Papirus
+    - Papirus-Dark
+    - Papirus-Light

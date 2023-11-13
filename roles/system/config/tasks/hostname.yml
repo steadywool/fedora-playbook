@@ -3,4 +3,3 @@
   ansible.builtin.copy:
     dest: /etc/hostname
     content: "{{ hostname }}"
-    force: true

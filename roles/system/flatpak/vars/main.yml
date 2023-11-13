@@ -9,8 +9,7 @@ flathub_packages:
   # Multimedia
   - org.videolan.VLC 
 
-  # Internet
-  - org.mozilla.firefox
+  # Chat
   - com.discordapp.Discord
 
   # Personal
@@ -25,3 +24,4 @@ flathub_packages:
 
   # Development
   - com.visualstudio.code
+  - runtime/com.visualstudio.code.tool.podman/x86_64/22.08

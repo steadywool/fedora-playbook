@@ -44,19 +44,11 @@ $ ansible-playbook ansible/playbook.yml -K
 
 ## 🔧 Configuration
 
-You can perform partially run of playbook using tags:
-
-<details>
-    <summary><h3>🏷️ Main tags</h3></summary>
+<details open>
+    <summary>✨ You can perform partially run of playbook using tags:</summary>
     <ul>
         <li>SYSTEM</li>
         <li>USER</li>
-    </ul>
-</details>
-
-<details>
-    <summary><h3>🏷️ Role tags</h3></summary>
-    <ul>
         <li>packages</li>
         <li>config</li>
         <li>security</li>
@@ -65,12 +57,6 @@ You can perform partially run of playbook using tags:
         <li>flatpak</li>
         <li>dotfiles</li>
         <li>gnome</li>
-    </ul>
-</details>
-
-<details>
-    <summary><h3>🏷️ Task tags</h3></summary>
-    <ul>
         <li>remote</li>
         <li>apps</li>
         <li>repo</li>

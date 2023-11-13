@@ -9,4 +9,3 @@
   ansible.builtin.copy:
     src: bash/
     dest: "/home/{{ ansible_user_id }}/.bashrc.d/"
-    force: true
