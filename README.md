@@ -48,25 +48,30 @@ You can perform partially run of playbook using tags:
 
 - SYSTEM
 - USER
+---
 - packages
 - config
 - security
 - services
 - users
 - flatpak
-- remote
 - dotfiles
 - gnome
-- apps
+---
 - repo
+- apps
+- hostname
+- sysctl
+- adb
 - firewalld
 - usbguard
 - snapper
-- hostname
-- adb
+- remote
 - bash
 - vscode
 - xdg
+- papirus
+- dconf
 
 ## 📕 Exemples
 
