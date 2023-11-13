@@ -46,8 +46,14 @@ $ ansible-playbook ansible/playbook.yml -K
 
 You can perform partially run of playbook using tags:
 
-- SYSTEM
-- USER
+<details>
+    <summary><h3>🏷️ Main tags</h3></summary>
+    <ul>
+        <li>SYSTEM</li>
+        <li>USER</li>
+    </ul>
+</details>
+
 - packages
 - config
 - security
