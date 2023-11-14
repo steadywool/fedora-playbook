@@ -5,4 +5,5 @@
     state: started
     enabled: true
     scope: user
+  ignore_errors: yes
   loop: "{{ user_services }}"

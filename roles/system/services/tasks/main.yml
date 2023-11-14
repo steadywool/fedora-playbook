@@ -5,4 +5,5 @@
     state: started
     enabled: true
     scope: system
+  ignore_errors: yes
   loop: "{{ system_services }}"

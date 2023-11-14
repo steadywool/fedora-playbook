@@ -7,4 +7,3 @@
 
 - ansible.builtin.import_tasks: xdg.yml
   tags: xdg
-

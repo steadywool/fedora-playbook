@@ -1,12 +1,7 @@
 ---
-- name: Get file information
-  ansible.builtin.stat:
-    path: /etc/usbguard/rules.conf
-  register: file_info
-
 - name: Generate USBGuard rules
   ansible.builtin.shell: "usbguard generate-policy > /etc/usbguard/rules.conf"
-  when: not file_info.stat.exists
+  when: "'/etc/usbguard/rules.conf' is not file"
 
 - name: Add wheel group to usbguard
   ansible.builtin.lineinfile:
@@ -14,3 +9,4 @@
     state: present
     regexp: '^IPCAllowedGroups='
     line: 'IPCAllowedGroups=wheel'
+  when: "'/etc/usbguard/rules.conf' is file"

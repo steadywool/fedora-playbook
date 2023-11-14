@@ -89,9 +89,9 @@ Executes tasks requiring no privileges:
 $ ansible-playbook playbook.yml -t USER
 ```
 
-Execute the entire playbook but skip the "dotfiles" role:
+Execute the entire playbook but skip the configuration of Usbguard & Snapper:
 ```
-$ ansible-playbook playbook.yml -K --skip-tags dotfiles
+$ ansible-playbook playbook.yml -K --skip-tags usbguard,snapper
 ```
 
 For more arguments, check the man page with the command `man ansible-playbook`.
