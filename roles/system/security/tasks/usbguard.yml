@@ -1,8 +1,4 @@
 ---
-- name: Gather the package facts
-  ansible.builtin.package_facts:
-    manager: auto
-
 - name: Get file information
   ansible.builtin.stat:
     path: /etc/usbguard/rules.conf
@@ -10,7 +6,7 @@
 
 - name: Generate USBGuard rules
   ansible.builtin.shell: "usbguard generate-policy > /etc/usbguard/rules.conf"
-  when: "'usbguard' in ansible_facts.packages and not file_info.stat.exists"
+  when: not file_info.stat.exists
 
 - name: Add wheel group to usbguard
   ansible.builtin.lineinfile:
@@ -18,4 +14,3 @@
     state: present
     regexp: '^IPCAllowedGroups='
     line: 'IPCAllowedGroups=wheel'
-  when: "'usbguard' in ansible_facts.packages"

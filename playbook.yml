@@ -17,21 +17,15 @@
 
     - name: Configure the system
       ansible.builtin.import_role:
-        name: system/config
+        name: system/configuration
       become: true
-      tags: SYSTEM,config
+      tags: SYSTEM,configuration
     
     - name: Hardened the system
       ansible.builtin.import_role:
         name: system/security
       become: true
       tags: SYSTEM,security
-
-    - name: Configure users
-      ansible.builtin.import_role:
-        name: system/users
-      become: true
-      tags: SYSTEM,users
 
     - name: Enable system services
       ansible.builtin.import_role:

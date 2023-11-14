@@ -1,8 +1,4 @@
 ---
-- name: Gather the package facts
-  ansible.builtin.package_facts:
-    manager: auto
-
 - name: Get file information
   ansible.builtin.stat:
     path: /etc/snapper/configs/root
@@ -10,16 +6,14 @@
 
 - name: Create default configuration
   ansible.builtin.command: snapper -c root create-config /
-  ignore_errors: true
-  when: "'snapper' in ansible_facts.packages and not file_info.stat.exists"
+  when: not file_info.stat.exists
 
-- name: Add wheel group to usbguard
+- name: Add wheel group to snapper
   ansible.builtin.lineinfile:
     path: /etc/snapper/configs/root
     state: present
     regexp: '^ALLOW_GROUPS='
     line: 'ALLOW_GROUPS="wheel"'
-  when: "'snapper' in ansible_facts.packages"
 
 - name: Change Snapshots periods
   ansible.builtin.lineinfile:
@@ -33,4 +27,3 @@
     - { regexp: '^TIMELINE_LIMIT_WEEKLY=', line: 'TIMELINE_LIMIT_WEEKLY="0"' }
     - { regexp: '^TIMELINE_LIMIT_MONTHLY=', line: 'TIMELINE_LIMIT_MONTHLY="0"' }
     - { regexp: '^TIMELINE_LIMIT_YEARLY=', line: 'TIMELINE_LIMIT_YEARLY="0"' }
-  when: "'snapper' in ansible_facts.packages"

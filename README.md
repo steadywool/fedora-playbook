@@ -50,10 +50,9 @@ $ ansible-playbook ansible/playbook.yml -K
         <li>SYSTEM</li>
         <li>USER</li>
         <li>packages</li>
-        <li>config</li>
+        <li>configuration</li>
         <li>security</li>
         <li>services</li>
-        <li>users</li>
         <li>flatpak</li>
         <li>dotfiles</li>
         <li>desktop</li>
@@ -61,6 +60,7 @@ $ ansible-playbook ansible/playbook.yml -K
         <li>apps</li>
         <li>repo</li>
         <li>hostname</li>
+        <li>users</li>
         <li>sysctl</li>
         <li>adb</li>
         <li>firewalld</li>
