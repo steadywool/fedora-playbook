@@ -12,3 +12,8 @@
     - Papirus
     - Papirus-Dark
     - Papirus-Light
+
+- name: Clean /tmp from Papirus
+  ansible.builtin.file:
+    path: /tmp/papirus-icon-theme
+    state: absent

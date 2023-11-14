@@ -1,0 +1,6 @@
+---
+system_services:
+  - snapper-timeline.timer
+  - snapper-cleanup.timer
+  - snapper-boot.timer
+  - usbguard.service

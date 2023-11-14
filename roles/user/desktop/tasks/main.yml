@@ -4,3 +4,6 @@
   
 - ansible.builtin.import_tasks: dconf.yml
   tags: dconf
+
+- ansible.builtin.import_tasks: font.yml
+  tags: font

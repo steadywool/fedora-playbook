@@ -33,7 +33,13 @@
       become: true
       tags: SYSTEM,users
 
-    - name: Enable services
+    - name: Enable system services
+      ansible.builtin.import_role:
+        name: system/services
+      become: true
+      tags: SYSTEM,services
+
+    - name: Enable user services
       ansible.builtin.import_role:
         name: user/services
       become: false
@@ -45,8 +51,8 @@
       become: false
       tags: USER,dotfiles
   
-    - name: Configure Gnome
+    - name: Configure desktop
       ansible.builtin.import_role:
-        name: user/gnome
+        name: user/desktop
       become: false
-      tags: USER,gnome
+      tags: USER,desktop

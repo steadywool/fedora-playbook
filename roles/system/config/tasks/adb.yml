@@ -14,3 +14,8 @@
   ansible.builtin.group:
     name: adbusers
     state: present
+
+- name: Clean /tmp from android-udev-rules
+  ansible.builtin.file:
+    path: /tmp/android-udev-rules
+    state: absent

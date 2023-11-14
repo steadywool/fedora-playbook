@@ -56,7 +56,7 @@ $ ansible-playbook ansible/playbook.yml -K
         <li>users</li>
         <li>flatpak</li>
         <li>dotfiles</li>
-        <li>gnome</li>
+        <li>desktop</li>
         <li>remote</li>
         <li>apps</li>
         <li>repo</li>
@@ -71,6 +71,7 @@ $ ansible-playbook ansible/playbook.yml -K
         <li>xdg</li>
         <li>papirus</li>
         <li>dconf</li>
+        <li>font</li>
     </ul>
 </details>
 
