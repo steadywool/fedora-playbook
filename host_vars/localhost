@@ -6,3 +6,6 @@ users:
     comment: Porcelaine
     groups: wheel,adbusers
     shell: /bin/fish
+
+btrfs:
+  root: /
