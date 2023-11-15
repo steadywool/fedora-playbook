@@ -21,12 +21,6 @@
       become: true
       tags: system
 
-    - name: Configure users
-      ansible.builtin.import_role:
-        name: users
-      become: true
-      tags: users
-    
     - name: Hardened the system
       ansible.builtin.import_role:
         name: security

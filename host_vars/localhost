@@ -1,11 +1,6 @@
 ---
 hostname: red-taurus
 
-users:
-  steadywool:
-    comment: Porcelaine
-    groups: wheel,adbusers
-    shell: /bin/fish
-
-btrfs:
-  root: /
+user:
+  shell: /bin/fish
+  groups: wheel,adbusers

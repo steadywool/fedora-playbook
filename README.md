@@ -58,7 +58,7 @@ $ ansible-playbook ansible/playbook.yml -K
         <li>apps</li>
         <li>repo</li>
         <li>hostname</li>
-        <li>users</li>
+        <li>user</li>
         <li>sysctl</li>
         <li>adb</li>
         <li>firewalld</li>

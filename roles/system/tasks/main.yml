@@ -7,3 +7,6 @@
 
 - ansible.builtin.import_tasks: hostname.yml
   tags: hostname
+
+- ansible.builtin.import_tasks: user.yml
+  tags: user

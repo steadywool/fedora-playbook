@@ -1,6 +1,0 @@
----
-- name: Configure Snapper
-  include_tasks: configure_snapper.yml  
-  loop: "{{ btrfs.keys() | list }}"
-  loop_control:
-    loop_var: partition

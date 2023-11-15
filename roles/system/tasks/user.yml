@@ -1,0 +1,8 @@
+---
+- name: Configure current user
+  ansible.builtin.user:
+    name: "{{ ansible_user_id }}"
+    groups: "{{ user.groups }}"
+    shell: "{{ user.shell }}"
+    state: present
+    append: true
