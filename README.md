@@ -47,8 +47,6 @@ $ ansible-playbook ansible/playbook.yml -K
 <details open>
     <summary>✨ You can perform partially run of playbook using tags:</summary>
     <ul>
-        <li>SYSTEM</li>
-        <li>USER</li>
         <li>packages</li>
         <li>configuration</li>
         <li>security</li>
@@ -86,7 +84,7 @@ $ ansible-playbook playbook.yml -K -t packages,services
 
 Executes tasks requiring no privileges:
 ```
-$ ansible-playbook playbook.yml -t USER
+$ ansible-playbook playbook.yml -t dotfiles,desktop
 ```
 
 Execute the entire playbook but skip the configuration of Usbguard & Snapper:

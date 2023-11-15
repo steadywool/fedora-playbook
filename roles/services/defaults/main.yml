@@ -4,3 +4,7 @@ system_services:
   - snapper-cleanup.timer
   - snapper-boot.timer
   - usbguard.service
+
+user_services:
+  - podman.service
+  - syncthing.service

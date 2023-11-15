@@ -1,0 +1,20 @@
+---
+- name: Enable system services
+  ansible.builtin.systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+    scope: system
+  loop: "{{ system_services }}"
+  ignore_errors: yes
+  become: true
+
+- name: Enable user services
+  ansible.builtin.systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+    scope: user
+  loop: "{{ user_services }}"
+  ignore_errors: yes
+  become: false

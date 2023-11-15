@@ -5,48 +5,48 @@
   tasks:
     - name: Install packages
       ansible.builtin.import_role:
-        name: system/packages
+        name: packages
       become: true
-      tags: SYSTEM,packages
+      tags: packages
 
     - name: Install flatpak
       ansible.builtin.import_role:
-        name: system/flatpak
+        name: flatpak
       become: true
-      tags: SYSTEM,flatpak
+      tags: flatpak
 
     - name: Configure the system
       ansible.builtin.import_role:
-        name: system/configuration
+        name: system
       become: true
-      tags: SYSTEM,configuration
+      tags: system
+
+    - name: Configure users
+      ansible.builtin.import_role:
+        name: users
+      become: true
+      tags: users
     
     - name: Hardened the system
       ansible.builtin.import_role:
-        name: system/security
+        name: security
       become: true
-      tags: SYSTEM,security
+      tags: security
 
-    - name: Enable system services
+    - name: Enable services
       ansible.builtin.import_role:
-        name: system/services
-      become: true
-      tags: SYSTEM,services
-
-    - name: Enable user services
-      ansible.builtin.import_role:
-        name: user/services
-      become: false
-      tags: USER,services
+        name: services
+      # Become is set at the task level
+      tags: services
 
     - name: Install dotfiles
       ansible.builtin.import_role:
-        name: user/dotfiles
+        name: dotfiles
       become: false
-      tags: USER,dotfiles
+      tags: dotfiles
   
     - name: Configure desktop
       ansible.builtin.import_role:
-        name: user/desktop
+        name: desktop
       become: false
-      tags: USER,desktop
+      tags: desktop
