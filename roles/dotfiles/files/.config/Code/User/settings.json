@@ -7,13 +7,12 @@
   // Appearance
   "workbench.tree.indent": 15,
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "Material Theme",
 
   // Change default font
   "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
 
   // Containers
-  "dev.containers.dockerPath": "podman-remote",
-  "dev.containers.dockerComposePath": "podman-remote compose"
+  "dev.containers.dockerPath": "podman",
+  "dev.containers.dockerComposePath": "podman compose"
 }

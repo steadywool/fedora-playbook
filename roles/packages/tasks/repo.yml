@@ -1,11 +1,17 @@
 ---
-- name: Import RPM keys
-  ansible.builtin.rpm_key:
-    state: present
-    key: "{{ item }}"
-  loop: "{{ rpm_keys }}"
-
-- name: Add RPM repositories
+- name: Add Fusion repositories
   ansible.builtin.dnf:
-    name: "{{ rpm_repositories }}"
+    name: "{{ fusion_repositories }}"
     state: present
+
+- name: Add VSCode repository
+  ansible.builtin.copy:
+    dest: /etc/yum.repos.d/vscode.repo
+    content: |
+      [code]
+      name=Visual Studio Code
+      baseurl={{ vscode_url }}
+      enabled=1
+      gpgcheck=1
+      gpgkey={{ rpm_keys[0] }}
+    force: true

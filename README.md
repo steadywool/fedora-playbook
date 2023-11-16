@@ -58,6 +58,7 @@ $ ansible-playbook playbook.yml -K
         <li>desktop</li>
         <li>remote</li>
         <li>apps</li>
+        <li>keys</li>
         <li>repo</li>
         <li>hostname</li>
         <li>user</li>

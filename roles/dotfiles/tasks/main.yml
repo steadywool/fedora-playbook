@@ -3,6 +3,3 @@
   ansible.builtin.copy:
     src: ./
     dest: "/home/{{ ansible_user_id }}/"
-
-name: Allow VSCode to use Podman
-  ansible.builtin.command: flatpak override --user --filesystem=xdg-run/podman com.visualstudio.code
