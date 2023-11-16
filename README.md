@@ -22,7 +22,9 @@ Fedora Workstation configuration managed with Ansible.
 
 ## 🚀 Installation
 
-> ⚠️ **Important variables are present in the `ansible/host_vars` directory. You need to edit them to customize your installation.**
+> ⚠️ **Important variables are present in the `host_vars` directory. You need to edit them to customize your installation.**
+>
+> **Additional variables are also present in the `defaults`directories under each roles.**
 
 > ⛔ **Never run this playbook with `sudo` or as root. If you need permissions, use the `-K` argument.**
 
@@ -39,7 +41,7 @@ $ cd ansible-dotfiles
 
 Start the playbook and configure your system with this command:
 ```
-$ ansible-playbook ansible/playbook.yml -K
+$ ansible-playbook playbook.yml -K
 ```
 
 ## 🔧 Configuration
@@ -64,9 +66,6 @@ $ ansible-playbook ansible/playbook.yml -K
         <li>firewalld</li>
         <li>usbguard</li>
         <li>snapper</li>
-        <li>fish</li>
-        <li>vscode</li>
-        <li>xdg</li>
         <li>papirus</li>
         <li>dconf</li>
         <li>font</li>

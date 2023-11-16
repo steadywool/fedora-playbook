@@ -1,9 +1,8 @@
 ---
-- ansible.builtin.import_tasks: fish.yml
-  tags: fish
-  
-- ansible.builtin.import_tasks: vscode.yml
-  tags: vscode
+- name: Copy dotfiles
+  ansible.builtin.copy:
+    src: ./
+    dest: "/home/{{ ansible_user_id }}/"
 
-- ansible.builtin.import_tasks: xdg.yml
-  tags: xdg
+name: Allow VSCode to use Podman
+  ansible.builtin.command: flatpak override --user --filesystem=xdg-run/podman com.visualstudio.code
