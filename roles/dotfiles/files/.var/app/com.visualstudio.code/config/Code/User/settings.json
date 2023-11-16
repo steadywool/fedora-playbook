@@ -7,7 +7,7 @@
   // Appearance
   "workbench.tree.indent": 15,
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "Material Theme",
 
   // Change default font
   "editor.fontFamily": "FiraCode Nerd Font",
