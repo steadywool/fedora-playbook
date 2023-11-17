@@ -1,0 +1,21 @@
+---
+- name: Download Adw-GTK3 theme
+  ansible.builtin.get_url:
+    url: https://github.com/lassekongo83/adw-gtk3/releases/download/v5.1/adw-gtk3v5-1.tar.xz
+    dest: /tmp/adw-gtk3.tar.xz
+
+- name: ensure theme dir exists
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user_id }}/.local/share/themes"
+    recurse: true
+    state: directory
+
+- name: Extract Adw-GTK3 theme
+  ansible.builtin.unarchive:
+    src: /tmp/adw-gtk3.tar.xz
+    dest: "/home/{{ ansible_user_id }}/.local/share/themes"
+
+- name: Clean /tmp from Adw-GTK3
+  ansible.builtin.file:
+    path: /tmp/adw-gtk3.tar.xz
+    state: absent
