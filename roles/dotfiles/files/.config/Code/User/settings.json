@@ -7,6 +7,7 @@
   // Appearance
   "workbench.tree.indent": 15,
   "window.titleBarStyle": "custom",
+  "editor.minimap.enabled": false,
 
   // Change default font
   "editor.fontFamily": "FiraCode Nerd Font",
