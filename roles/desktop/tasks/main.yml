@@ -5,8 +5,5 @@
 - ansible.builtin.import_tasks: font.yml
   tags: font
 
-- ansible.builtin.import_tasks: adwaita.yml
-  tags: adwaita
-  
 - ansible.builtin.import_tasks: papirus.yml
   tags: papirus
