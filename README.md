@@ -26,7 +26,7 @@ Fedora Workstation configuration managed with Ansible.
 >
 > **Additional variables are also present in the `vars` directories under each roles.**
 
-> ⛔ **Never run this playbook with `sudo` or as root. If you need permissions, use the `-K` argument.**
+> ⛔ **Never run this playbook with `sudo` or as root. If you need privileges, use the `-K` argument.**
 
 Firstly, install Ansible:
 ```
@@ -79,8 +79,6 @@ Install every packages & enable/start Systemd services:
 ```
 $ ansible-playbook playbook.yml -K -t packages,services
 ```
-
-> 📌 **The `-K` option is used to request the "sudo" password. We need it for tasks requiring privileges.**
 
 Executes tasks requiring no privileges:
 ```
