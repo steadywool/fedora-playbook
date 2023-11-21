@@ -5,4 +5,4 @@ user:
   shell: /bin/fish
   groups: wheel,adbusers
 
-dotfiles: https://github.com/steadywool/dotfiles.git
+dotfiles: https://github.com/steadywool/linux-dotfiles.git
