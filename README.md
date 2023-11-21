@@ -35,8 +35,8 @@ Firstly, install Ansible:
 
 You can then clone this repository and enter it:
 ```
-$ git clone https://github.com/steadywool/fedora-ansible
-$ cd fedora-ansible
+$ git clone https://github.com/steadywool/ansible-dotfiles
+$ cd ansible-dotfiles
 ```
 
 Start the playbook and configure your system with this command:
