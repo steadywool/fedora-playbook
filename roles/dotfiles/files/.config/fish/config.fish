@@ -1,4 +1,3 @@
-
 # PATH variable
 set -gx PATH $HOME/.local/bin $PATH
 

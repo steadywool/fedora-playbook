@@ -21,6 +21,7 @@ install_packages:
   - syncthing
   - android-tools
   - fish
+  - ranger
   - git-credential-libsecret
   - podman-docker
   - docker-compose
