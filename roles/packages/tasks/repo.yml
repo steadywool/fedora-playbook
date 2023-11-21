@@ -1,8 +1,11 @@
 ---
 - name: Add Fusion repositories
   ansible.builtin.dnf:
-    name: "{{ fusion_repositories }}"
+    name: "{{ item }}"
     state: present
+  loop:
+    - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+    - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
 
 - name: Add VSCode repository
   ansible.builtin.copy:
@@ -10,7 +13,7 @@
     content: |
       [code]
       name=Visual Studio Code
-      baseurl={{ vscode_url }}
+      baseurl=https://packages.microsoft.com/yumrepos/vscode
       enabled=1
       gpgcheck=1
       gpgkey={{ rpm_keys[0] }}
