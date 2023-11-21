@@ -1,4 +1,4 @@
-# 🌸 Fedora Ansible
+# 🌸 Ansible Dotfiles
 
 Fedora Workstation managed with Ansible.
 
