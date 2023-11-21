@@ -1,6 +1,6 @@
-# 🌸 Ansible Dotfiles
+# 🌸 Fedora Ansible
 
-Fedora Workstation configuration managed with Ansible.
+Fedora Workstation managed with Ansible.
 
 ![](src/screenshot.png)
 
@@ -35,8 +35,8 @@ Firstly, install Ansible:
 
 You can then clone this repository and enter it:
 ```
-$ git clone https://github.com/steadywool/ansible-dotfiles
-$ cd ansible-dotfiles
+$ git clone https://github.com/steadywool/fedora-ansible
+$ cd fedora-ansible
 ```
 
 Start the playbook and configure your system with this command:
