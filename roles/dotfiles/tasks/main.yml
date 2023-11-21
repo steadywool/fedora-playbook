@@ -1,20 +1,5 @@
 ---
-- name: Clone dotfiles
-  ansible.builtin.git:
-    repo: "{{ dotfiles }}"
-    dest: /tmp/dotfiles
-
-- name: Install dotfiles
-  ansible.posix.synchronize:
-    src: /tmp/dotfiles/
-    dest: "/home/{{ ansible_user_id }}"
-    rsync_opts:
-      - "--exclude=.git"
-      - "--exclude=src"
-      - "--exclude=LICENSE"
-      - "--exclude=README.md"
-
-- name: Clean /tmp from dotfiles
-  ansible.builtin.file:
-    path: /tmp/dotfiles
-    state: absent
+- name: Copy dotfiles
+  ansible.builtin.copy:
+    src: ./
+    dest: "/home/{{ ansible_user_id }}/"
