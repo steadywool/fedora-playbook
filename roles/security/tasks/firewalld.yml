@@ -9,11 +9,3 @@
     permanent: true
     immediate: true
     state: enabled
-
-- name: Disable services in public zone
-  ansible.posix.firewalld:
-    service: ssh
-    zone: public
-    permanent: true
-    immediate: true
-    state: disabled
