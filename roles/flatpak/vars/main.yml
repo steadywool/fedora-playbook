@@ -8,7 +8,6 @@ flathub_packages:
 
   # Multimedia
   - org.videolan.VLC
-  - io.bassi.Amberol
 
   # Chat
   - com.discordapp.Discord

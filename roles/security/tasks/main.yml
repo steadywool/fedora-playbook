@@ -2,6 +2,9 @@
 - ansible.builtin.import_tasks: firewalld.yml
   tags: firewalld
 
+- ansible.builtin.import_tasks: selinux.yml
+  tags: selinux
+
 - ansible.builtin.import_tasks: usbguard.yml
   tags: usbguard
 

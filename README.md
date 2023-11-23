@@ -65,6 +65,7 @@ $ ansible-playbook playbook.yml -K
         <li>sysctl</li>
         <li>adb</li>
         <li>firewalld</li>
+        <li>selinux</li>
         <li>usbguard</li>
         <li>snapper</li>
         <li>papirus</li>
