@@ -11,11 +11,13 @@ remove_packages:
   - totem
   - rhythmbox
   - cheese
+  - gnome-boxes
 
 install_packages:
   - '@multimedia' # Installed with fusion repo
   - code # Installed with vscode repo
   - scrcpy # Installed with copr repo
+  - '@virtualization'
   - syncthing
   - android-tools
   - fish
