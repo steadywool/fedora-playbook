@@ -3,12 +3,14 @@
   ansible.builtin.dnf:
     name: "{{ remove_packages }}"
     state: absent
+    skip_broken: true
     allowerasing: false
 
 - name: Install packages
   ansible.builtin.dnf:
     name: "{{ install_packages }}"
     state: present
+    skip_broken: true
     allowerasing: true
 
 - name: Autoremove unneeded packages

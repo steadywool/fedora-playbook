@@ -23,7 +23,6 @@ install_packages:
   - fish
   - ranger
   - git-credential-libsecret
-  - podman-docker
   - docker-compose
   - usbguard
   - snapper

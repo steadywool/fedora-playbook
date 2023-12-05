@@ -1,9 +1,9 @@
 ---
 - ansible.builtin.import_tasks: dconf.yml
-  tags: dconf
+  tags: desktop.dconf
 
 - ansible.builtin.import_tasks: font.yml
-  tags: font
+  tags: desktop.font
 
 - ansible.builtin.import_tasks: papirus.yml
-  tags: papirus
+  tags: desktop.papirus

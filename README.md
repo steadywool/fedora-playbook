@@ -50,27 +50,30 @@ $ ansible-playbook playbook.yml -K
     <summary>✨ You can perform partially run of playbook using tags:</summary>
     <ul>
         <li>packages</li>
-        <li>configuration</li>
-        <li>security</li>
-        <li>services</li>
+        <li>packages.apps</li>
+        <li>packages.copr</li>
+        <li>packages.repo</li>
         <li>flatpak</li>
+        <li>flatpak.remote</li>
+        <li>flatpak.apps</li>
+        <li>system</li>
+        <li>system.hostname</li>
+        <li>system.user</li>
+        <li>system.sysctl</li>
+        <li>system.adb</li>
+        <li>security</li>
+        <li>security.firewalld</li>
+        <li>security.selinux</li>
+        <li>security.usbguard</li>
+        <li>security.snapper</li>
+        <li>services</li>
+        <li>services.system</li>
+        <li>services.user</li>
         <li>dotfiles</li>
         <li>desktop</li>
-        <li>remote</li>
-        <li>apps</li>
-        <li>copr</li>
-        <li>repo</li>
-        <li>hostname</li>
-        <li>user</li>
-        <li>sysctl</li>
-        <li>adb</li>
-        <li>firewalld</li>
-        <li>selinux</li>
-        <li>usbguard</li>
-        <li>snapper</li>
-        <li>papirus</li>
-        <li>dconf</li>
-        <li>font</li>
+        <li>desktop.papirus</li>
+        <li>desktop.dconf</li>
+        <li>desktop.font</li>
     </ul>
 </details>
 

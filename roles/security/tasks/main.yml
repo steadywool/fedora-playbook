@@ -1,12 +1,12 @@
 ---
 - ansible.builtin.import_tasks: firewalld.yml
-  tags: firewalld
+  tags: security.firewalld
 
 - ansible.builtin.import_tasks: selinux.yml
-  tags: selinux
+  tags: security.selinux
 
 - ansible.builtin.import_tasks: usbguard.yml
-  tags: usbguard
+  tags: security.usbguard
 
 - ansible.builtin.import_tasks: snapper.yml
-  tags: snapper
+  tags: security.snapper

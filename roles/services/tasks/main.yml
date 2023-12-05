@@ -6,8 +6,8 @@
     enabled: true
     scope: system
   loop: "{{ system_services }}"
-  ignore_errors: yes
   become: true
+  tags: services.system
 
 - name: Enable user services
   ansible.builtin.systemd:
@@ -16,5 +16,5 @@
     enabled: true
     scope: user
   loop: "{{ user_services }}"
-  ignore_errors: yes
   become: false
+  tags: services.user

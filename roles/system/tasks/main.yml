@@ -1,12 +1,12 @@
 ---
 - ansible.builtin.import_tasks: adb.yml
-  tags: adb
+  tags: system.adb
 
 - ansible.builtin.import_tasks: sysctl.yml
-  tags: sysctl
+  tags: system.sysctl
 
 - ansible.builtin.import_tasks: hostname.yml
-  tags: hostname
+  tags: system.hostname
 
 - ansible.builtin.import_tasks: user.yml
-  tags: user
+  tags: system.user
