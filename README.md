@@ -71,7 +71,6 @@ $ ansible-playbook playbook.yml -K
         <li>services.user</li>
         <li>dotfiles</li>
         <li>desktop</li>
-        <li>desktop.papirus</li>
         <li>desktop.dconf</li>
         <li>desktop.font</li>
     </ul>

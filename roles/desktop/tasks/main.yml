@@ -4,6 +4,3 @@
 
 - ansible.builtin.import_tasks: font.yml
   tags: desktop.font
-
-- ansible.builtin.import_tasks: papirus.yml
-  tags: desktop.papirus
