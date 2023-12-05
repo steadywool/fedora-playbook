@@ -3,3 +3,9 @@
   ansible.builtin.copy:
     src: ./
     dest: "/home/{{ ansible_user_id }}/"
+
+- name: Give permissions to scripts
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user_id }}/.local/bin"
+    mode: '0755'
+    recurse: true
