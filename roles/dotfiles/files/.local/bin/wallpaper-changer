@@ -7,27 +7,15 @@ from os import listdir, path
 from random import choice
 from subprocess import run
 from argparse import ArgumentParser
+from bs4 import BeautifulSoup
 
 # -------------------------------------------------------------------
 # Argument parser setup
 argument_parser = ArgumentParser()
-argument_parser.add_argument('-p', '--picsum', action='store_true', help='Change the wallpaper to a Picsum picture')
-argument_parser.add_argument('-b', '--bing', action='store_true', help='Change the wallpaper to the current Bing wallpaper')
+argument_parser.add_argument('-p', '--picsum', action='store_true', help='Change the wallpaper to a random Picsum image')
+argument_parser.add_argument('-b', '--bing', action='store_true', help='Change the wallpaper to the daily Bing image')
+argument_parser.add_argument('-n', '--nasa', action='store_true', help='Change the wallpaper to the daily Nasa image')
 option = argument_parser.parse_args()
-
-# -------------------------------------------------------------------
-# Download the current Bing Wallpaper and set it
-def bing_wallpaper():
-    bing_url = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=fr-FR'
-    bing_json = loads(urlopen(bing_url).read().decode("utf-8"))
-
-    # Select the wallpaper from the Json
-    wallpaper_url = "https://bing.com" + bing_json['images'][0]['url']
-    wallpaper_file = path.abspath(path.expanduser('~/.cache')) + '/bing_background.jpg'
-
-    # Download an set
-    urlretrieve(wallpaper_url, wallpaper_file)
-    set_wallpaper(wallpaper_url,wallpaper_file)    
 
 # -------------------------------------------------------------------
 # Get random Picsum wallpaper, download it and set it
@@ -37,11 +25,40 @@ def picsum_wallpaper():
 
     # Download an set
     urlretrieve(wallpaper_url, wallpaper_file)
-    set_wallpaper(wallpaper_url,wallpaper_file)
+    set_wallpaper(wallpaper_file)
 
- # -------------------------------------------------------------------  
+# -------------------------------------------------------------------
+# Get the daily Bing Wallpaper and set it
+def bing_wallpaper():
+    bing_url = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=fr-FR'
+    bing_json = loads(urlopen(bing_url).read().decode("utf-8"))
+    bing_image = bing_json['images'][0]['url']
+
+    # Select the wallpaper from the Json
+    wallpaper_url = "https://bing.com" + bing_image
+    wallpaper_file = path.abspath(path.expanduser('~/.cache')) + '/bing_background.jpg'
+
+    # Download an set
+    urlretrieve(wallpaper_url, wallpaper_file)
+    set_wallpaper(wallpaper_file)    
+
+# -------------------------------------------------------------------  
+# Get the daily nasa wallpaper, download it and set it
+def nasa_wallpaper():
+    nasa_url = 'https://apod.nasa.gov/apod'
+    nasa_site = urlopen(nasa_url).read().decode("utf-8")
+    nasa_image = BeautifulSoup(nasa_site, "html.parser").find("img")['src']
+
+    wallpaper_url = nasa_url + '/' + nasa_image
+    wallpaper_file = path.abspath(path.expanduser('~/.cache')) + '/nasa_background.jpg'
+
+    # Download an set
+    urlretrieve(wallpaper_url, wallpaper_file)
+    set_wallpaper(wallpaper_file)
+
+# -------------------------------------------------------------------  
 # Set wallpaper
-def set_wallpaper(wallpaper_url, wallpaper_file):
+def set_wallpaper(wallpaper_file):
     run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', f'file://{wallpaper_file}'], check=True)
     run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri-dark', f'file://{wallpaper_file}'], check=True)
 
@@ -51,3 +68,5 @@ if option.picsum:
     picsum_wallpaper()
 if option.bing:
     bing_wallpaper()
+if option.nasa:
+    nasa_wallpaper()
