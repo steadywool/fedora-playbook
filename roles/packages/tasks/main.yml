@@ -1,12 +1,9 @@
 ---
 - ansible.builtin.import_tasks: repo.yml
-  when: ansible_distribution == 'Fedora'
   tags: packages.repo
 
 - ansible.builtin.import_tasks: copr.yml
-  when: ansible_distribution == 'Fedora'
   tags: packages.copr
 
 - ansible.builtin.import_tasks: apps.yml
-  when: ansible_distribution == 'Fedora'
   tags: packages.apps
