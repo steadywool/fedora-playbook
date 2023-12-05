@@ -12,20 +12,10 @@ from bs4 import BeautifulSoup
 # -------------------------------------------------------------------
 # Argument parser setup
 argument_parser = ArgumentParser()
-argument_parser.add_argument('-p', '--picsum', action='store_true', help='Change the wallpaper to a random Picsum image')
-argument_parser.add_argument('-b', '--bing', action='store_true', help='Change the wallpaper to the daily Bing image')
-argument_parser.add_argument('-n', '--nasa', action='store_true', help='Change the wallpaper to the daily Nasa image')
+argument_parser.add_argument('-p', '--picsum', action='store_true', help='Change the wallpaper to a Picsum picture')
+argument_parser.add_argument('-b', '--bing', action='store_true', help='Change the wallpaper to the current Bing wallpaper')
+argument_parser.add_argument('-n', '--nasa', action='store_true', help='Change the wallpaper to the current Nasa wallpaper')
 option = argument_parser.parse_args()
-
-# -------------------------------------------------------------------
-# Get random Picsum wallpaper, download it and set it
-def picsum_wallpaper():
-    wallpaper_url = 'https://picsum.photos/1920/1080'
-    wallpaper_file = path.abspath(path.expanduser('~/.cache')) + '/bing_background.jpg'
-
-    # Download an set
-    urlretrieve(wallpaper_url, wallpaper_file)
-    set_wallpaper(wallpaper_file)
 
 # -------------------------------------------------------------------
 # Get the daily Bing Wallpaper and set it
@@ -41,6 +31,16 @@ def bing_wallpaper():
     # Download an set
     urlretrieve(wallpaper_url, wallpaper_file)
     set_wallpaper(wallpaper_file)    
+
+# -------------------------------------------------------------------
+# Get random Picsum wallpaper, download it and set it
+def picsum_wallpaper():
+    wallpaper_url = 'https://picsum.photos/2560/1600'
+    wallpaper_file = path.abspath(path.expanduser('~/.cache')) + '/bing_background.jpg'
+
+    # Download an set
+    urlretrieve(wallpaper_url, wallpaper_file)
+    set_wallpaper(wallpaper_file)
 
 # -------------------------------------------------------------------  
 # Get the daily nasa wallpaper, download it and set it
