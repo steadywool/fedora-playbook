@@ -6,5 +6,5 @@ system_services:
   - usbguard.service
 
 user_services:
-  - podman.service
+  - podman.socket
   - syncthing.service
