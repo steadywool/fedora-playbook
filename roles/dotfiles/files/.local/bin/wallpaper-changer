@@ -36,7 +36,7 @@ def bing_wallpaper():
 # Get random Picsum wallpaper, download it and set it
 def picsum_wallpaper():
     wallpaper_url = 'https://picsum.photos/2560/1600'
-    wallpaper_file = path.abspath(path.expanduser('~/.cache')) + '/bing_background.jpg'
+    wallpaper_file = path.abspath(path.expanduser('~/.cache')) + '/picsum_background.jpg'
 
     # Download an set
     urlretrieve(wallpaper_url, wallpaper_file)
