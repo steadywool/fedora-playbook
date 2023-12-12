@@ -1,9 +1,5 @@
 ---
-- name: Generate snapper configuration
-  ansible.builtin.command: snapper -c root create-config /
-  when: "'/etc/snapper/configs/root' is not file"
-
-- name: Edit snapper configuration
+- name: Edit snapper configuration if exist
   ansible.builtin.lineinfile:
     path: /etc/snapper/configs/root
     state: present
