@@ -17,9 +17,7 @@ install_packages:
   - syncthing
   - android-tools
   - fish
-  - ranger
   - git-credential-libsecret
   - docker-compose
   - usbguard
   - snapper
-  - waydroid
