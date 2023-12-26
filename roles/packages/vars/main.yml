@@ -5,10 +5,9 @@ rpm_keys:
   - "https://packages.microsoft.com/keys/microsoft.asc"
 
 remove_packages:
-  - totem
-  - rhythmbox
-  - cheese
-  - gnome-boxes
+  - totem # Replaced by VLC
+  - rhythmbox # Replaced by VLC
+  - gnome-boxes # Replaced by VirtManager
 
 install_packages:
   - '@multimedia' # Installed with fusion repo
