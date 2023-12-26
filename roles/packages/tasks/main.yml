@@ -2,8 +2,5 @@
 - ansible.builtin.import_tasks: repo.yml
   tags: packages.repo
 
-- ansible.builtin.import_tasks: copr.yml
-  tags: packages.copr
-
 - ansible.builtin.import_tasks: apps.yml
   tags: packages.apps

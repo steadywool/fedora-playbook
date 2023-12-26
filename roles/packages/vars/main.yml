@@ -4,9 +4,6 @@ rpm_keys:
   - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
   - "https://packages.microsoft.com/keys/microsoft.asc"
 
-copr_repositories:
-  - zeno/scrcpy
-
 remove_packages:
   - totem
   - rhythmbox
@@ -16,7 +13,6 @@ remove_packages:
 install_packages:
   - '@multimedia' # Installed with fusion repo
   - code # Installed with vscode repo
-  - scrcpy # Installed with copr repo
   - '@virtualization'
   - syncthing
   - android-tools

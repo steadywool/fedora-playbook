@@ -1,7 +1,0 @@
----
-- name: Enable copr repositories
-  community.general.copr:
-    host: copr.fedorainfracloud.org
-    name: "{{ item }}"
-    state: enabled
-  loop: "{{ copr_repositories }}"

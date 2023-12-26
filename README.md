@@ -51,7 +51,6 @@ $ ansible-playbook playbook.yml -K
     <ul>
         <li>packages</li>
         <li>packages.apps</li>
-        <li>packages.copr</li>
         <li>packages.repo</li>
         <li>flatpak</li>
         <li>flatpak.remote</li>
