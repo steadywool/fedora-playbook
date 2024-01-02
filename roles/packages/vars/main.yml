@@ -7,12 +7,10 @@ rpm_keys:
 remove_packages:
   - totem # Replaced by VLC
   - rhythmbox # Replaced by VLC
-  - gnome-boxes # Replaced by VirtManager
 
 install_packages:
   - '@multimedia' # Installed with fusion repo
   - code # Installed with vscode repo
-  - '@virtualization'
   - syncthing
   - android-tools
   - fish
