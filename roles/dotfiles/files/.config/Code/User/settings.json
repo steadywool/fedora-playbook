@@ -13,7 +13,10 @@
   "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
 
-  // Containers
+  // Dev Containers
   "dev.containers.dockerPath": "podman",
-  "dev.containers.dockerComposePath": "podman compose"
+  "dev.containers.dockerComposePath": "podman compose",
+
+  // Vim Extension
+  "vim.useSystemClipboard": true,
 }
