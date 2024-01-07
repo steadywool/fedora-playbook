@@ -21,6 +21,12 @@
       become: true
       tags: system
 
+    - name: Configure apps
+      ansible.builtin.import_role:
+        name: applications
+      become: true
+      tags: applications
+
     - name: Hardened the system
       ansible.builtin.import_role:
         name: security
