@@ -60,8 +60,6 @@ $ ansible-playbook playbook.yml -K
         <li>system.user</li>
         <li>system.sysctl</li>
         <li>applications</li>
-        <li>applications.antimicrox</li>
-        <li>applications.adb</li>
         <li>security</li>
         <li>security.firewalld</li>
         <li>security.selinux</li>
