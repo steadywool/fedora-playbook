@@ -2,17 +2,15 @@
 rpm_keys:
   - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
   - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
-  - "https://repository.mullvad.net/rpm/mullvad-keyring.asc"
   - "https://packages.microsoft.com/keys/microsoft.asc"
 
 remove_packages:
-  - totem # Replaced by VLC
-  - rhythmbox # Replaced by VLC
+  - totem
+  - rhythmbox
 
 install_packages:
-  - '@multimedia' # Installed with fusion repo
-  - code # Installed with vscode repo
-  - mullvad-vpn # Installed with mullvad repo
+  - '@multimedia'
+  - code
   - syncthing
   - android-tools
   - fish
