@@ -14,3 +14,4 @@
     state: present
     regexp: '^IPCAllowedGroups='
     line: 'IPCAllowedGroups=wheel'
+  when: "'/etc/usbguard/usbguard-daemon.conf' is file"
