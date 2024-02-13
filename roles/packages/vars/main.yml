@@ -19,3 +19,4 @@ install_packages:
   - docker-compose
   - usbguard
   - snapper
+  - antimicrox
