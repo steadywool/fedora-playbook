@@ -7,9 +7,6 @@ flathub_packages:
   - org.gnome.seahorse.Application
   - com.usebottles.bottles
 
-  # Multimedia
-  - org.videolan.VLC
-
   # Chat
   - com.discordapp.Discord
 

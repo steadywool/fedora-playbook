@@ -1,11 +1,4 @@
 ---
-- name: Remove unwanted packages
-  ansible.builtin.dnf:
-    name: "{{ remove_packages }}"
-    state: absent
-    skip_broken: true
-    allowerasing: false
-
 - name: Install packages
   ansible.builtin.dnf:
     name: "{{ install_packages }}"

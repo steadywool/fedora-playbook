@@ -50,11 +50,12 @@ $ ansible-playbook playbook.yml -K
     <summary>✨ You can perform partially run of playbook using tags:</summary>
     <ul>
         <li>packages</li>
-        <li>packages.apps</li>
-        <li>packages.repo</li>
+        <li>packages.installation</li>
+        <li>packages.fusion</li>
+        <li>packages.vscode</li>
         <li>flatpak</li>
         <li>flatpak.remote</li>
-        <li>flatpak.apps</li>
+        <li>flatpak.installation</li>
         <li>system</li>
         <li>system.hostname</li>
         <li>system.user</li>
