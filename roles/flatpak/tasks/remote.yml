@@ -1,0 +1,7 @@
+---
+- name: Add Flathub remote
+  community.general.flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    state: present
+    method: system

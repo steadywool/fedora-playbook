@@ -1,9 +1,6 @@
 ---
-- ansible.builtin.import_tasks: fusion.yml
-  tags: packages.fusion
+- ansible.builtin.import_tasks: repositories.yml
+  tags: packages.repositories
 
-- ansible.builtin.import_tasks: vscode.yml
-  tags: packages.vscode
-
-- ansible.builtin.import_tasks: installation.yml
-  tags: packages.installation
+- ansible.builtin.import_tasks: apps.yml
+  tags: packages.apps

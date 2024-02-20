@@ -1,7 +1,7 @@
 ---
 - name: Install packages
   ansible.builtin.dnf:
-    name: "{{ install_packages }}"
+    name: "{{ rpm_packages }}"
     state: present
     skip_broken: true
     allowerasing: true
