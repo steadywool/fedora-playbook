@@ -18,8 +18,5 @@
 
   // Dev Containers
   "dev.containers.dockerPath": "podman",
-  "dev.containers.dockerComposePath": "podman compose",
-
-  // Vim Extension
-  "vim.useSystemClipboard": true
+  "dev.containers.dockerComposePath": "podman compose"
 }

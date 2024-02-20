@@ -1,8 +1,8 @@
 ---
-- name: Download Fira Code Nerd Font
+- name: Download Fira Code
   ansible.builtin.get_url:
-    url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
-    dest: /tmp/FiraCode.zip
+    url: https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip
+    dest: /tmp/Fira_Code.zip
 
 - name: ensure font dir exists
   ansible.builtin.file:
@@ -12,10 +12,10 @@
 
 - name: Extract Fira Code Nerd Font
   ansible.builtin.unarchive:
-    src: /tmp/FiraCode.zip
+    src: /tmp/Fira_Code.zip
     dest: "/home/{{ ansible_user_id }}/.local/share/fonts/fira-code"
 
 - name: Clean /tmp from Fira Code
   ansible.builtin.file:
-    path: /tmp/FiraCode.zip
+    path: /tmp/Fira_Code.zip
     state: absent
