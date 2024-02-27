@@ -2,7 +2,7 @@
 - name: Set default zone to public
   ansible.builtin.command: firewall-cmd --set-default-zone=public
 
-- name: Disable services in public zone
+- name: Disable SSH in public zone
   ansible.posix.firewalld:
     service: ssh
     zone: public

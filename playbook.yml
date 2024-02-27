@@ -15,17 +15,23 @@
       become: true
       tags: flatpak
 
-    - name: Configure the system
+    - name: Configure applications
       ansible.builtin.import_role:
-        name: system
+        name: applications
       become: true
-      tags: system
+      tags: applications
 
     - name: Hardened the system
       ansible.builtin.import_role:
         name: security
       become: true
       tags: security
+
+    - name: Configure the system
+      ansible.builtin.import_role:
+        name: system
+      become: true
+      tags: system
 
     - name: Enable services
       ansible.builtin.import_role:

@@ -55,16 +55,18 @@ $ ansible-playbook playbook.yml -K
         <li>flatpak</li>
         <li>flatpak.remote</li>
         <li>flatpak.apps</li>
-        <li>system</li>
-        <li>system.hostname</li>
-        <li>system.user</li>
-        <li>system.sysctl</li>
-        <li>system.adb</li>
+        <li>applications</li>
+        <li>applications.adb</li>
+        <li>applications.antimicrox</li>
         <li>security</li>
         <li>security.firewalld</li>
         <li>security.selinux</li>
         <li>security.usbguard</li>
         <li>security.snapper</li>
+        <li>system</li>
+        <li>system.hostname</li>
+        <li>system.user</li>
+        <li>system.sysctl</li>
         <li>services</li>
         <li>services.system</li>
         <li>services.user</li>
@@ -84,12 +86,12 @@ $ ansible-playbook playbook.yml -K -t packages,services
 
 Executes tasks requiring no privileges:
 ```
-$ ansible-playbook playbook.yml -t dotfiles,desktop
+$ ansible-playbook playbook.yml -t dotfiles,desktop,services.user
 ```
 
-Execute the entire playbook but skip the configuration of Usbguard & Snapper:
+Execute the entire playbook but skip the configuration of Usbguard & ADB:
 ```
-$ ansible-playbook playbook.yml -K --skip-tags usbguard,snapper
+$ ansible-playbook playbook.yml -K --skip-tags security.usbguard,applications.adb
 ```
 
 For more arguments, check the man page with the command `man ansible-playbook`.

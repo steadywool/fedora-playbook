@@ -1,7 +1,4 @@
 ---
-- ansible.builtin.import_tasks: adb.yml
-  tags: system.adb
-
 - ansible.builtin.import_tasks: sysctl.yml
   tags: system.sysctl
 

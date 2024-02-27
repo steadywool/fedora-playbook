@@ -1,5 +1,5 @@
 ---
-rpm_packages:
+install_packages:
   - '@multimedia'
   - code
   - syncthing
@@ -9,4 +9,3 @@ rpm_packages:
   - docker-compose
   - usbguard
   - snapper
-  - antimicrox
