@@ -1,5 +1,5 @@
 ---
-install_packages:
+rpm_packages:
   - '@multimedia'
   - code
   - syncthing
