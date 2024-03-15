@@ -52,9 +52,6 @@ $ ansible-playbook playbook.yml -K
         <li>packages</li>
         <li>packages.repositories</li>
         <li>packages.apps</li>
-        <li>flatpak</li>
-        <li>flatpak.remote</li>
-        <li>flatpak.apps</li>
         <li>applications</li>
         <li>applications.adb</li>
         <li>applications.antimicrox</li>
@@ -67,6 +64,9 @@ $ ansible-playbook playbook.yml -K
         <li>system.hostname</li>
         <li>system.user</li>
         <li>system.sysctl</li>
+        <li>flatpak</li>
+        <li>flatpak.remote</li>
+        <li>flatpak.apps</li>
         <li>services</li>
         <li>services.system</li>
         <li>services.user</li>

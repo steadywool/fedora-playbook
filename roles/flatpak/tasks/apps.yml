@@ -1,7 +1,16 @@
 ---
-- name: Install Flathub packages
+- name: Install Flathub packages (system)
   community.general.flatpak:
-    name: "{{ flathub_packages }}"
+    name: "{{ flathub.system_packages }}"
     remote: flathub
     state: present
     method: system
+  become: true
+
+- name: Install Flathub packages (user)
+  community.general.flatpak:
+    name: "{{ flathub.user_packages }}"
+    remote: flathub
+    state: present
+    method: user
+  become: false
