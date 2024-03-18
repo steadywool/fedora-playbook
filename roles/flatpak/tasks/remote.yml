@@ -1,16 +1,7 @@
 ---
-- name: Add Flathub remote (system)
+- name: Add Flathub remote
   community.general.flatpak_remote:
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
     state: present
     method: system
-  become: true
-
-- name: Add Flathub remote (user)
-  community.general.flatpak_remote:
-    name: flathub
-    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
-    state: present
-    method: user
-  become: false

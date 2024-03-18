@@ -9,6 +9,12 @@
       become: true
       tags: packages
 
+    - name: Install flatpak
+      ansible.builtin.import_role:
+        name: flatpak
+      become: true
+      tags: flatpak
+
     - name: Configure applications
       ansible.builtin.import_role:
         name: applications
@@ -26,12 +32,6 @@
         name: system
       become: true
       tags: system
-
-    - name: Install flatpak
-      ansible.builtin.import_role:
-        name: flatpak
-      # Become is set at the task level
-      tags: flatpak
 
     - name: Enable services
       ansible.builtin.import_role:
