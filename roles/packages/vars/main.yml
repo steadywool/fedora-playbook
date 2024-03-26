@@ -5,6 +5,8 @@ rpm_packages:
   - syncthing
   - android-tools
   - fish
+  - nmap
+  - ranger
   - git-credential-libsecret
   - docker-compose
   - usbguard
