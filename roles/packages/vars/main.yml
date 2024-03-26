@@ -4,7 +4,6 @@ rpm_packages:
   - code
   - syncthing
   - android-tools
-  - fish
   - nmap
   - ranger
   - git-credential-libsecret
