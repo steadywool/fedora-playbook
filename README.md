@@ -1,4 +1,4 @@
-# 🌸 Ansible Dotfiles
+# 🎩 Fedora Playbook
 
 Fedora Workstation managed with Ansible.
 
@@ -8,7 +8,7 @@ Fedora Workstation managed with Ansible.
 
 ### 🟢 What this playbook does ?
 
-- Installs essential programs (for me).
+- Installs essential programs.
 - hardens your Fedora Linux.
 - Configure your system & programs very easily.
 - Customize the Gnome environment.
@@ -35,8 +35,8 @@ Firstly, install Ansible:
 
 You can then clone this repository and enter it:
 ```
-$ git clone https://github.com/steadywool/ansible-dotfiles
-$ cd ansible-dotfiles
+$ git clone https://github.com/steadywool/fedora-playbook.git
+$ cd fedora-playbook
 ```
 
 Start the playbook and configure your system with this command:
