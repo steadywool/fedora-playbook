@@ -22,11 +22,10 @@ Fedora Workstation managed with Ansible.
 
 ## 🚀 Installation
 
-> ⚠️ **Important variables are present in the `host_vars` directory. You need to edit them to customize your installation.**
-
-> ⚠️ **Additional variables are also present in the `vars` directories under each roles.**
-
-> ⛔ **Never run this playbook with `sudo` or as root. If you need privileges, use the `-K` argument.**
+> [!IMPORTANT]
+> Important variables are present in the `host_vars` directory. You need to edit them to customize your installation. </br>
+> Additional variables are also present in the `vars` directories under each roles. </br>
+> Never run this playbook with `sudo` or as root. If you need privileges, use the `-K` argument.
 
 Firstly, install Ansible:
 ```
