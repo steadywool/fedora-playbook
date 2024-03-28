@@ -23,7 +23,7 @@ Fedora Workstation managed with Ansible.
 ## 🚀 Installation
 
 > [!IMPORTANT]
-> Important variables are present in the `host_vars` directory. You need to edit them to customize your installation. </br>
+> Important variables are present in the `group_vars` directory. You need to edit them to customize your installation. </br></br>
 > Additional variables are also present in the `vars` directories under each roles. </br></br>
 > Never run this playbook with `sudo` or as root. If you need privileges, use the `-K` argument.
 
