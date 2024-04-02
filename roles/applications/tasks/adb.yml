@@ -1,11 +1,21 @@
 ---
-- name: Create a symbolic link
-  ansible.builtin.file:
-    src: /usr/share/doc/android-tools/51-android.rules
+- name: Clone android-udev-rules repository
+  ansible.builtin.git:
+    repo: https://github.com/M0Rf30/android-udev-rules.git
+    dest: /tmp/android-udev-rules
+
+- name: Copy the android rules to /etc/udev/rules.d
+  ansible.builtin.copy:
+    src: /tmp/android-udev-rules/51-android.rules
     dest: /etc/udev/rules.d/51-android.rules
-    state: link
+    mode: a+r
 
 - name: Ensure group "adbusers" exists
   ansible.builtin.group:
     name: adbusers
     state: present
+
+- name: Clean /tmp from android-udev-rules
+  ansible.builtin.file:
+    path: /tmp/android-udev-rules
+    state: absent

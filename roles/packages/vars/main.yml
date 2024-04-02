@@ -4,9 +4,6 @@ rpm_packages:
   - code
   - syncthing
   - android-tools
-  - nmap
-  - ranger
   - git-credential-libsecret
   - docker-compose
   - usbguard
-  - snapper

@@ -58,7 +58,6 @@ $ ansible-playbook playbook.yml -K
         <li>security.firewalld</li>
         <li>security.selinux</li>
         <li>security.usbguard</li>
-        <li>security.snapper</li>
         <li>system</li>
         <li>system.hostname</li>
         <li>system.user</li>
