@@ -15,5 +15,4 @@ flathub_packages:
 
   # Gaming
   - com.valvesoftware.Steam
-  - com.mojang.Minecraft
   - sh.ppy.osu
