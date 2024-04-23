@@ -9,11 +9,3 @@
     permanent: true
     immediate: true
     state: disabled
-
-- name: Enable services in home zone
-  ansible.posix.firewalld:
-    service: syncthing
-    zone: home
-    permanent: true
-    immediate: true
-    state: enabled
