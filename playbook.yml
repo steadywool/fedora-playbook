@@ -36,17 +36,14 @@
     - name: Enable services
       ansible.builtin.import_role:
         name: services
-      # Become is set at the task level
       tags: services
 
     - name: Install dotfiles
       ansible.builtin.import_role:
         name: dotfiles
-      become: false
       tags: dotfiles
   
     - name: Configure desktop
       ansible.builtin.import_role:
         name: desktop
-      become: false
       tags: desktop

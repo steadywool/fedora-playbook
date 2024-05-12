@@ -2,7 +2,7 @@
 hostname: red-taurus
 
 user:
-  shell: /bin/bash
+  shell: /bin/fish
   groups: wheel,adbusers
 
 dotfiles: https://github.com/steadywool/dotfiles

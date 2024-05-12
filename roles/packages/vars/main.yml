@@ -7,3 +7,4 @@ rpm_packages:
   - git-credential-libsecret
   - docker-compose
   - usbguard
+  - fish
