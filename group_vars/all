@@ -1,5 +1,5 @@
 ---
-hostname: red-taurus
+hostname: red-fedora
 
 user:
   shell: /bin/fish
