@@ -43,37 +43,16 @@ Start the playbook and configure your system with this command:
 $ ansible-playbook playbook.yml -K
 ```
 
-## 🔧 Configuration
+## ✨ Configuration
 
-<details open>
-    <summary>✨ You can perform partially run of playbook using tags:</summary>
-    <ul>
-        <li>packages</li>
-        <li>packages.repositories</li>
-        <li>packages.apps</li>
-        <li>applications</li>
-        <li>applications.adb</li>
-        <li>applications.antimicrox</li>
-        <li>security</li>
-        <li>security.firewalld</li>
-        <li>security.selinux</li>
-        <li>security.usbguard</li>
-        <li>system</li>
-        <li>system.hostname</li>
-        <li>system.user</li>
-        <li>system.sysctl</li>
-        <li>flatpak</li>
-        <li>flatpak.remote</li>
-        <li>flatpak.apps</li>
-        <li>services</li>
-        <li>services.system</li>
-        <li>services.user</li>
-        <li>dotfiles</li>
-        <li>desktop</li>
-        <li>desktop.dconf</li>
-        <li>desktop.font</li>
-    </ul>
-</details>
+You can perform partially run of playbook using tags.
+
+You can list them with this command:
+```
+$ ansible-playbook playbooks/production.yml --list-tags
+```
+
+Then use them with the `-t ROLE` parameter.
 
 ## 📕 Exemples
 
