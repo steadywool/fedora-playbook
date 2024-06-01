@@ -5,7 +5,7 @@
     state: started
     enabled: true
     scope: system
-  loop: "{{ system_services }}"
+  loop: "{{ services.system }}"
   become: true
   tags: services.system
 
@@ -15,5 +15,5 @@
     state: started
     enabled: true
     scope: user
-  loop: "{{ user_services }}"
+  loop: "{{ services.user }}"
   tags: services.user
