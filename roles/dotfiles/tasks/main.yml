@@ -3,6 +3,7 @@
   ansible.builtin.git:
     repo: "{{ dotfiles }}"
     dest: /tmp/dotfiles
+  tags: dotfiles
 
 - name: Install dotfiles
   ansible.posix.synchronize:
@@ -13,8 +14,10 @@
       - "--exclude=src"
       - "--exclude=LICENSE"
       - "--exclude=README.md"
+  tags: dotfiles
 
 - name: Clean /tmp from dotfiles
   ansible.builtin.file:
     path: /tmp/dotfiles
     state: absent
+  tags: dotfiles

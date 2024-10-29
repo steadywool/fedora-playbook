@@ -48,26 +48,7 @@ You can perform partially run of playbook using tags.
 
 You can list them with this command:
 ```
-$ ansible-playbook playbooks/production.yml --list-tags
+$ ansible-playbook playbook.yml --list-tags
 ```
 
 Then use them with the `-t ROLE` parameter.
-
-## 📕 Exemples
-
-Install every packages & enable/start Systemd services:
-```
-$ ansible-playbook playbook.yml -K -t packages,services
-```
-
-Executes tasks requiring no privileges:
-```
-$ ansible-playbook playbook.yml -t dotfiles,desktop,services.user
-```
-
-Execute the entire playbook but skip the configuration of Usbguard & ADB:
-```
-$ ansible-playbook playbook.yml -K --skip-tags security.usbguard,applications.adb
-```
-
-For more arguments, check the man page with the command `man ansible-playbook`.

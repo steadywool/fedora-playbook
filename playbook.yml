@@ -1,49 +1,10 @@
 ---
 - hosts: localhost
   gather_facts: true
-
-  tasks:
-    - name: Install packages
-      ansible.builtin.import_role:
-        name: packages
-      become: true
-      tags: packages
-
-    - name: Install flatpak
-      ansible.builtin.import_role:
-        name: flatpak
-      become: true
-      tags: flatpak
-
-    - name: Configure applications
-      ansible.builtin.import_role:
-        name: applications
-      become: true
-      tags: applications
-
-    - name: Hardened the system
-      ansible.builtin.import_role:
-        name: security
-      become: true
-      tags: security
-
-    - name: Configure the system
-      ansible.builtin.import_role:
-        name: system
-      become: true
-      tags: system
-
-    - name: Enable services
-      ansible.builtin.import_role:
-        name: services
-      tags: services
-
-    - name: Install dotfiles
-      ansible.builtin.import_role:
-        name: dotfiles
-      tags: dotfiles
-  
-    - name: Configure desktop
-      ansible.builtin.import_role:
-        name: desktop
-      tags: desktop
+  roles:
+    - packages
+    - flatpak
+    - system
+    - services
+    - desktop
+    - dotfiles

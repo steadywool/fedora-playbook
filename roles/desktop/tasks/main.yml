@@ -1,6 +1,9 @@
 ---
 - ansible.builtin.import_tasks: dconf.yml
-  tags: desktop.dconf
+  tags: dconf
 
 - ansible.builtin.import_tasks: font.yml
-  tags: desktop.font
+  tags: font
+
+- ansible.builtin.import_tasks: antimicrox.yml
+  tags: antimicrox

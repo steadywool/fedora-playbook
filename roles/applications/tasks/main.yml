@@ -1,6 +1,0 @@
----
-- ansible.builtin.import_tasks: adb.yml
-  tags: applications.adb
-
-- ansible.builtin.import_tasks: antimicrox.yml
-  tags: applications.antimicrox

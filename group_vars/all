@@ -12,9 +12,7 @@ packages:
     - '@multimedia'
     - code
     - syncthing
-    - android-tools
     - git-credential-libsecret
-    - usbguard
     - fish
   flathub:
     - com.mattjakeman.ExtensionManager
@@ -29,8 +27,6 @@ packages:
     - org.prismlauncher.PrismLauncher
 
 services:
-  system:
-    - usbguard.service
   user:
     - podman.socket
     - syncthing.service
