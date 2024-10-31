@@ -3,6 +3,7 @@
   ansible.builtin.git:
     repo: "{{ dotfiles }}"
     dest: /tmp/dotfiles
+  when: dotfiles is defined
   tags: dotfiles
 
 - name: Install dotfiles
@@ -14,10 +15,12 @@
       - "--exclude=src"
       - "--exclude=LICENSE"
       - "--exclude=README.md"
+  when: dotfiles is defined
   tags: dotfiles
 
 - name: Clean /tmp from dotfiles
   ansible.builtin.file:
     path: /tmp/dotfiles
     state: absent
+  when: dotfiles is defined
   tags: dotfiles

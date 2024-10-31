@@ -5,6 +5,7 @@
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
     state: present
     method: system
+  become: true
   tags: flatpak,repositories
 
 - name: Install Flathub packages
@@ -13,4 +14,6 @@
     remote: flathub
     state: present
     method: system
+  when: packages.flathub is defined
+  become: true
   tags: flatpak,packages

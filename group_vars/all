@@ -1,10 +1,6 @@
 ---
 hostname: red-fedora
 
-user:
-  shell: /bin/fish
-  groups: wheel,adbusers
-
 dotfiles: https://github.com/steadywool/dotfiles
 
 packages:
@@ -13,7 +9,7 @@ packages:
     - code
     - syncthing
     - git-credential-libsecret
-    - fish
+    - gnome-themes-extra
   flathub:
     - com.mattjakeman.ExtensionManager
     - ca.desrt.dconf-editor

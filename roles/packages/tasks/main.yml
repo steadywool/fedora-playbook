@@ -1,5 +1,6 @@
 ---
 - ansible.builtin.import_tasks: repositories.yml
+  become: true
   tags: rpm,repositories
 
 - name: Install packages
@@ -8,9 +9,12 @@
     state: present
     skip_broken: true
     allowerasing: true
+  when: packages.rpm is defined
+  become: true
   tags: rpm,packages
 
 - name: Autoremove unneeded packages
   ansible.builtin.dnf:
     autoremove: yes
+  become: true
   tags: rpm,packages

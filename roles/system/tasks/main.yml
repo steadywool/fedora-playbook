@@ -1,15 +1,17 @@
 ---
 - ansible.builtin.import_tasks: sysctl.yml
-  tags: sysctl
+  tags: system,sysctl
+  become: true
 
 - ansible.builtin.import_tasks: hostname.yml
-  tags: hostname
-
-- ansible.builtin.import_tasks: user.yml
-  tags: user
+  tags: system,hostname
+  when: hostname is defined
+  become: true
 
 - ansible.builtin.import_tasks: firewalld.yml
-  tags: firewalld
+  tags: system,firewalld
+  become: true
 
 - ansible.builtin.import_tasks: selinux.yml
-  tags: selinux
+  tags: system,selinux
+  become: true
