@@ -1,5 +1,5 @@
 ---
-hostname: red-fedora
+hostname: laptop-fedora-01
 
 dotfiles: https://github.com/steadywool/dotfiles
 
@@ -24,5 +24,4 @@ packages:
 
 services:
   user:
-    - podman.socket
     - syncthing.service

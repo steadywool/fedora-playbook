@@ -1,12 +1,11 @@
 ---
-- name: Import RPM keys
+- name: Import RPM Fusion keys
   ansible.builtin.rpm_key:
     state: present
     key: "{{ item }}"
   loop:
     - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
     - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
-    - "https://packages.microsoft.com/keys/microsoft.asc"
 
 - name: Add RPM Fusion repositories
   ansible.builtin.dnf:
@@ -15,11 +14,3 @@
   loop:
     - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
     - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
-
-- name: Add VSCode repository
-  ansible.builtin.yum_repository:
-    name: code
-    description: Visual Studio Code
-    baseurl: https://packages.microsoft.com/yumrepos/vscode
-    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-    gpgcheck: true

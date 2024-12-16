@@ -22,7 +22,7 @@ Fedora Workstation managed with Ansible.
 
 ## 🚀 Installation
 
-> [!IMPORTANT]
+> [!WARNING]
 > Variables are present in the `group_vars` directory. You need to edit them to customize your installation. </br></br>
 > If you need a "sudo" password, use the `-K` (upper-case) argument. </br></br>
 
