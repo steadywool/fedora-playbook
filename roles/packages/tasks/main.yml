@@ -1,11 +1,11 @@
 ---
 - name: Install RPM Fusion repository
-- ansible.builtin.import_tasks: set_rpmfusion_repo.yml
+  ansible.builtin.import_tasks: set_rpmfusion_repo.yml
   become: true
   tags: rpm,rpmfusion,repositories
 
 - name: Install VSCode repository
-- ansible.builtin.import_tasks: set_vscode_repo.yml
+  ansible.builtin.import_tasks: set_vscode_repo.yml
   become: true
   tags: rpm,vscode,repositories
 
