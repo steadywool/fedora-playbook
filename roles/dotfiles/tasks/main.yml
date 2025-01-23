@@ -1,7 +1,7 @@
 ---
 - name: Clone dotfiles
   ansible.builtin.git:
-    repo: "{{ dotfiles }}"
+    repo: "{{ dotfiles_url }}"
     dest: /tmp/dotfiles
   when: dotfiles is defined
   tags: dotfiles

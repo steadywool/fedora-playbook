@@ -1,7 +1,7 @@
 ---
 hostname: laptop-fedora-01
 
-dotfiles: https://github.com/steadywool/dotfiles
+dotfiles_url: https://github.com/steadywool/dotfiles
 
 packages:
   rpm:
