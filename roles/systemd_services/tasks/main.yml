@@ -5,8 +5,8 @@
     state: started
     enabled: true
     scope: system
-  loop: "{{ services.system }}"
-  when: services.system is defined
+  loop: "{{ services['system'] }}"
+  when: services['system'] is defined
   become: true
   tags: systemd,services
 
@@ -16,6 +16,6 @@
     state: started
     enabled: true
     scope: user
-  loop: "{{ services.user }}"
-  when: services.user is defined
+  loop: "{{ services['user'] }}"
+  when: services['user'] is defined
   tags: systemd,services

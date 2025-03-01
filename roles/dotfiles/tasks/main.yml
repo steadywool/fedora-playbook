@@ -1,26 +1,12 @@
 ---
-- name: Clone dotfiles
-  ansible.builtin.git:
-    repo: "{{ dotfiles_url }}"
-    dest: /tmp/dotfiles
-  when: dotfiles is defined
+- name: Copy configuration files
+  ansible.builtin.copy:
+    src: .config
+    dest: "/home/{{ ansible_user_id }}/.config"
   tags: dotfiles
 
-- name: Install dotfiles
-  ansible.posix.synchronize:
-    src: /tmp/dotfiles/
+- name: Copy Bash settings
+  ansible.builtin.copy:
+    src: .bashrc.d
     dest: "/home/{{ ansible_user_id }}"
-    rsync_opts:
-      - "--exclude=.git"
-      - "--exclude=src"
-      - "--exclude=LICENSE"
-      - "--exclude=README.md"
-  when: dotfiles is defined
-  tags: dotfiles
-
-- name: Clean /tmp from dotfiles
-  ansible.builtin.file:
-    path: /tmp/dotfiles
-    state: absent
-  when: dotfiles is defined
   tags: dotfiles

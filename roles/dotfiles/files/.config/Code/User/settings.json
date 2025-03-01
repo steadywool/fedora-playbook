@@ -1,0 +1,17 @@
+{
+  // Vscode
+  "telemetry.telemetryLevel": "off",
+  "chat.commandCenter.enabled": false,
+  "update.mode": "none",
+
+  // Appearance
+  "window.titleBarStyle": "custom",
+
+  // Change default font
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+
+  // Git
+  "git.enableSmartCommit": true,
+  "github.gitAuthentication": false,
+}

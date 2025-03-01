@@ -1,19 +1,14 @@
 ---
 hostname: laptop-fedora-01
 
-dotfiles_url: https://github.com/steadywool/dotfiles
-
 packages:
   rpm:
     - '@multimedia'
     - code
     - syncthing
-    - git-credential-libsecret
     - gnome-themes-extra
   flathub:
     - com.mattjakeman.ExtensionManager
-    - ca.desrt.dconf-editor
-    - com.github.tchx84.Flatseal
     - app.drey.KeyRack
     - com.discordapp.Discord
     - org.keepassxc.KeePassXC

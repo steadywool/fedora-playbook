@@ -1,21 +1,16 @@
 ---
 - name: Configure Kernel
   ansible.builtin.import_tasks: configure_sysctl.yml
-  tags: system,sysctl
   become: true
+  tags: system,sysctl
 
 - name: Set hostname
   ansible.builtin.import_tasks: set_hostname.yml
   when: hostname is defined
+  become: true
   tags: system,hostname
-  become: true
-
-- name: Configure Firewalld
-  ansible.builtin.import_tasks: configure_firewalld.yml
-  tags: system,firewalld
-  become: true
 
 - name: Enforce SELinux mode
   ansible.builtin.import_tasks: enforce_selinux.yml
-  tags: system,selinux
   become: true
+  tags: system,selinux
