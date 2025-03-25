@@ -3,8 +3,8 @@
   gather_facts: true
   roles:
     - fedora_packages
-    - flatpak
-    - system_config
+    - flatpak_packages
+    - configure_system
     - systemd_services
-    - desktop_config
-    - dotfiles
+    - configure_desktop
+    - install_dotfiles
