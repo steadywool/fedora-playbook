@@ -1,14 +1,15 @@
 ---
-- name: Configure Kernel
-  ansible.builtin.import_tasks: configure_sysctl.yml
-  become: true
-  tags: system,sysctl
-
 - name: Set hostname
   ansible.builtin.import_tasks: set_hostname.yml
   when: hostname is defined
   become: true
   tags: system,hostname
+
+- name: Configure user
+  ansible.builtin.import_tasks: configure_user.yml
+  when: additional_groups is defined
+  become: true
+  tags: system,user
 
 - name: Enforce SELinux mode
   ansible.builtin.import_tasks: enforce_selinux.yml

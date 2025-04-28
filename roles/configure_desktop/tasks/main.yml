@@ -6,8 +6,3 @@
 - name: Install new font
   ansible.builtin.import_tasks: install_font.yml
   tags: desktop,font
-
-- name: Download Antimicrox rules
-  ansible.builtin.import_tasks: download_antimicrox_rules.yml
-  become: true
-  tags: desktop,antimicrox

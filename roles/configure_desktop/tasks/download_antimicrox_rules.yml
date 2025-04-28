@@ -1,5 +1,0 @@
----
-- name: Download Antimicrox rules
-  ansible.builtin.get_url:
-    url: https://raw.githubusercontent.com/AntiMicroX/antimicrox/master/other/60-antimicrox-uinput.rules
-    dest: /etc/udev/rules.d/60-antimicrox-uinput.rules

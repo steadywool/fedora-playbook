@@ -1,12 +1,16 @@
 ---
 hostname: laptop-fedora-01
 
+additional_groups:
+  - realtime
+
 packages:
   rpm:
     - '@multimedia'
     - code
     - syncthing
     - gnome-themes-extra
+    - realtime-setup
   flathub:
     - com.mattjakeman.ExtensionManager
     - app.drey.KeyRack
