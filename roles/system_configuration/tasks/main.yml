@@ -5,8 +5,8 @@
   become: true
   tags: system,hostname
 
-- name: Configure user
-  ansible.builtin.import_tasks: configure_user.yml
+- name: Configure user groups
+  ansible.builtin.import_tasks: configure_user_group.yml
   when: additional_groups is defined
   become: true
   tags: system,user
