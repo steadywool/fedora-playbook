@@ -6,7 +6,7 @@
     state: present
     method: system
   become: true
-  tags: flatpak,repositories
+  tags: flatpak,flathub,repositories
 
 - name: Install Flathub packages
   community.general.flatpak:
@@ -16,4 +16,4 @@
     method: system
   when: packages['flathub'] is defined
   become: true
-  tags: flatpak,packages
+  tags: flatpak,flathub,packages

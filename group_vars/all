@@ -11,6 +11,7 @@ packages:
     - syncthing
     - gnome-themes-extra
     - realtime-setup
+    - guitarix
   flathub:
     - com.mattjakeman.ExtensionManager
     - app.drey.KeyRack

@@ -1,0 +1,25 @@
+---
+- name: Ensure Pipewire configuration directory exists
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.config/pipewire/pipewire.conf.d"
+    state: directory
+    mode: '0755'
+
+- name: Configure Pipewire
+  ansible.builtin.copy:
+    dest: "{{ ansible_env.HOME }}/.config/pipewire/pipewire.conf.d/lowlatency.conf"
+    content: |
+      context.properties = {
+        default.clock.rate = 48000
+        default.clock.allowed-rates = [ 48000 ]
+        default.clock.quantum = 64
+        default.clock.min-quantum = 32
+        default.clock.max-quantum = 128
+      }
+    mode: '0644'
+
+- name: Restart pipewire service
+  ansible.builtin.systemd_service:
+    name: pipewire.service
+    state: restarted
+    scope: user

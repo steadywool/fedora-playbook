@@ -1,3 +1,4 @@
+---
 - name: Add additional groups
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"

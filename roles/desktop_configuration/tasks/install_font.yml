@@ -6,14 +6,14 @@
 
 - name: ensure font dir exists
   ansible.builtin.file:
-    path: "/home/{{ ansible_user_id }}/.local/share/fonts/fira-code"
+    path: "{{ ansible_env.HOME }}/.local/share/fonts/fira-code"
     recurse: true
     state: directory
 
 - name: Extract Fira Code Nerd Font
   ansible.builtin.unarchive:
     src: /tmp/Fira_Code.zip
-    dest: "/home/{{ ansible_user_id }}/.local/share/fonts/fira-code"
+    dest: "{{ ansible_env.HOME }}/.local/share/fonts/fira-code"
 
 - name: Clean /tmp from Fira Code
   ansible.builtin.file:

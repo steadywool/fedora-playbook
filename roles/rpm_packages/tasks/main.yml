@@ -18,9 +18,3 @@
   when: packages['rpm'] is defined
   become: true
   tags: rpm,packages
-
-- name: Autoremove unneeded packages
-  ansible.builtin.dnf:
-    autoremove: yes
-  become: true
-  tags: rpm,packages
