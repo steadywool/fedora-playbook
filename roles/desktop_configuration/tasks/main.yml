@@ -3,10 +3,10 @@
   ansible.builtin.import_tasks: configure_dconf.yml
   tags: desktop,dconf
 
-- name: Configure pipewire
-  ansible.builtin.import_tasks: configure_pipewire.yml
-  tags: desktop,pipewire
+- name: Copy dotfiles
+  ansible.builtin.import_tasks: copy_dotfiles.yml
+  tags: desktop,dotfiles
 
-- name: Install new font
-  ansible.builtin.import_tasks: install_font.yml
-  tags: desktop,font
+- name: Install Fira Code font
+  ansible.builtin.import_tasks: install_fira_font.yml
+  tags: desktop,font,fira

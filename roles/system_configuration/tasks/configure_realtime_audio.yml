@@ -1,6 +1,6 @@
 ---
-- name: Add additional groups
+- name: Add realtime group to current user
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
-    groups: "{{ additional_groups }}"
+    groups: realtime
     append: yes

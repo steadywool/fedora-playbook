@@ -1,9 +1,6 @@
 ---
 hostname: laptop-fedora-01
 
-additional_groups:
-  - realtime
-
 packages:
   rpm:
     - '@multimedia'

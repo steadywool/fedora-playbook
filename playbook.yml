@@ -2,9 +2,8 @@
 - hosts: localhost
   gather_facts: true
   roles:
-    - rpm_packages
-    - flatpak_packages
+    - packages
+    - flatpak
     - system_configuration
     - systemd_services
     - desktop_configuration
-    - dotfiles

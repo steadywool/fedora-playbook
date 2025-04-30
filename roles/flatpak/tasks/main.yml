@@ -6,7 +6,7 @@
     state: present
     method: system
   become: true
-  tags: flatpak,flathub,repositories
+  tags: flatpak,flathub,packages,repo
 
 - name: Install Flathub packages
   community.general.flatpak:

@@ -1,0 +1,11 @@
+---
+- name: Copy Bash configuration
+  ansible.builtin.copy:
+    src: .bashrc.d
+    dest: "{{ ansible_env.HOME }}"
+
+- name: Copy VSCode configuration files
+  ansible.builtin.copy:
+    src: .config/Code
+    dest: "{{ ansible_env.HOME }}/.config"
+  tags: dotfiles

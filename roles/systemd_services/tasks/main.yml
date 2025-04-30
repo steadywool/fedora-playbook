@@ -8,7 +8,7 @@
   loop: "{{ services['system'] }}"
   when: services['system'] is defined
   become: true
-  tags: systemd,services
+  tags: systemd,system
 
 - name: Enable user services
   ansible.builtin.systemd_service:
@@ -18,4 +18,4 @@
     scope: user
   loop: "{{ services['user'] }}"
   when: services['user'] is defined
-  tags: systemd,services
+  tags: systemd,user
