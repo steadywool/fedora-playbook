@@ -1,12 +1,12 @@
 ---
 - name: Configure Dconf settings
   ansible.builtin.import_tasks: configure_dconf.yml
-  tags: desktop,dconf
+  tags: user,dconf
 
 - name: Copy dotfiles
   ansible.builtin.import_tasks: copy_dotfiles.yml
-  tags: desktop,dotfiles
+  tags: user,dotfiles
 
 - name: Install Fira Code font
   ansible.builtin.import_tasks: install_fira_font.yml
-  tags: desktop,font,fira
+  tags: user,font,fira

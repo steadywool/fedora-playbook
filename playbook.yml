@@ -4,6 +4,6 @@
   roles:
     - packages
     - flatpak
-    - system_configuration
+    - system_tuning
     - systemd_services
-    - desktop_configuration
+    - user_environment
