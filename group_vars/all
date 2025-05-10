@@ -8,7 +8,6 @@ packages:
     - syncthing
     - gnome-themes-extra
     - realtime-setup
-    - guitarix
   flathub:
     - com.mattjakeman.ExtensionManager
     - app.drey.KeyRack
@@ -16,7 +15,6 @@ packages:
     - org.keepassxc.KeePassXC
     - md.obsidian.Obsidian
     - com.valvesoftware.Steam
-    - sh.ppy.osu
     - org.prismlauncher.PrismLauncher
 
 services:
