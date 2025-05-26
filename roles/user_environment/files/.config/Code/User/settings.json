@@ -1,11 +1,11 @@
 {
-  "telemetry.telemetryLevel": "off", // Disable VSCode telemetry
-  "telemetry.feedback.enabled": false, // Disable feedback mechanisms
-  "chat.agent.enabled": false, // Disable agent mode for Copilot Chat
-  "chat.commandCenter.enabled": false, // Hide Copilot menu
-  "update.mode": "none", // Disable VSCode updates
-  "window.titleBarStyle": "custom", // Use VSCode custom titlebar
-  "editor.fontFamily": "Fira Code", // Use Fira Code font
-  "editor.fontLigatures": true, // Enable font ligatures
-  "github.gitAuthentication": false, // Disable VSCode git authentification
+  "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
+  "chat.agent.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "update.mode": "none",
+  "window.titleBarStyle": "custom",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "github.gitAuthentication": false
 }
