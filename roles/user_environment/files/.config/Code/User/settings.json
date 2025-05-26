@@ -1,6 +1,8 @@
 {
   // Vscode
   "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
+  "chat.agent.enabled": false,
   "chat.commandCenter.enabled": false,
   "update.mode": "none",
 
