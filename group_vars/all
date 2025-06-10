@@ -7,10 +7,10 @@ packages:
     - code
     - syncthing
     - gnome-themes-extra
+    - ardour8
     - realtime-setup
   flathub:
     - com.mattjakeman.ExtensionManager
-    - app.drey.KeyRack
     - com.discordapp.Discord
     - org.keepassxc.KeePassXC
     - md.obsidian.Obsidian
