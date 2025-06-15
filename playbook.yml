@@ -2,8 +2,7 @@
 - hosts: localhost
   gather_facts: true
   roles:
-    - packages
-    - flatpak
-    - system
+    - applications
+    - fedora_system
     - systemd_services
     - user_environment
