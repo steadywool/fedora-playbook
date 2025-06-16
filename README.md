@@ -2,8 +2,6 @@
 
 Fedora Workstation managed with Ansible.
 
-![](src/screenshot.png)
-
 ## 📜 Preamble
 
 ### 🟢 What this playbook does ?
