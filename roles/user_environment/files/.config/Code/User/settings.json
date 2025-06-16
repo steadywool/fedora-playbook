@@ -5,7 +5,5 @@
   "chat.commandCenter.enabled": false,
   "update.mode": "none",
   "window.titleBarStyle": "custom",
-  "editor.fontFamily": "Fira Code",
-  "editor.fontLigatures": true,
   "github.gitAuthentication": false
 }

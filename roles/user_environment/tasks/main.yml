@@ -6,7 +6,3 @@
 - name: Copy dotfiles
   ansible.builtin.import_tasks: copy_dotfiles.yml
   tags: user,dotfiles
-
-- name: Install Fira Code font
-  ansible.builtin.import_tasks: install_fira_font.yml
-  tags: user,font

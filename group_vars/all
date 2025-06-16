@@ -1,7 +1,7 @@
 ---
 hostname: laptop-fedora-01
 
-packages:
+applications:
   rpm:
     - '@multimedia'
     - code

@@ -16,10 +16,10 @@
 
 - name: Install packages
   ansible.builtin.dnf:
-    name: "{{ packages['rpm'] }}"
+    name: "{{ applications['rpm'] }}"
     state: present
     skip_broken: true
     allowerasing: true
-  when: packages['rpm'] is defined
+  when: applications['rpm'] is defined
   become: true
   tags: applications,packages

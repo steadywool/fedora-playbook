@@ -9,9 +9,9 @@
 
 - name: Install Flathub packages
   community.general.flatpak:
-    name: "{{ packages['flathub'] }}"
+    name: "{{ applications['flathub'] }}"
     remote: flathub
     state: present
     method: system
-  when: packages['flathub'] is defined
+  when: applications['flathub'] is defined
   become: true
