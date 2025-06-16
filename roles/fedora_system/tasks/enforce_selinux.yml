@@ -1,5 +1,0 @@
----
-- name: Set SELinux in enforcing mode
-  ansible.posix.selinux:
-    policy: targeted
-    state: enforcing
