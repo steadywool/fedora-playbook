@@ -1,5 +1,5 @@
 ---
-hostname: laptop-fedora-01
+hostname: laptop-fedora
 
 applications:
   rpm:
