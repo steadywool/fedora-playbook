@@ -4,8 +4,3 @@
   when: hostname is defined
   become: true
   tags: system,hostname
-
-- name: Configure realtime audio
-  ansible.builtin.import_tasks: configure_realtime_audio.yml
-  become: true
-  tags: system,realtime

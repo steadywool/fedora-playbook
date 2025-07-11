@@ -1,6 +1,0 @@
----
-- name: Add realtime group to current user
-  ansible.builtin.user:
-    name: "{{ ansible_user_id }}"
-    groups: realtime
-    append: yes

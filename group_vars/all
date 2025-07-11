@@ -7,8 +7,6 @@ applications:
     - code
     - syncthing
     - gnome-themes-extra
-    - ardour8
-    - realtime-setup
   flathub:
     - com.mattjakeman.ExtensionManager
     - com.discordapp.Discord
