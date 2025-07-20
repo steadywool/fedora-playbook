@@ -5,6 +5,7 @@ applications:
   rpm:
     - '@multimedia'
     - code
+    - ardour8
     - syncthing
     - gnome-themes-extra
   flathub:
