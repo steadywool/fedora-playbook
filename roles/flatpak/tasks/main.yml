@@ -6,12 +6,14 @@
     state: present
     method: system
   become: true
+  tags: flatpak,flathub
 
 - name: Install Flathub packages
   community.general.flatpak:
-    name: "{{ applications['flathub'] }}"
+    name: "{{ flathub_applications }}"
     remote: flathub
     state: present
     method: system
-  when: applications['flathub'] is defined
+  when: flathub_applications is defined
   become: true
+  tags: flatpak,install

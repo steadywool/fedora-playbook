@@ -1,20 +1,18 @@
 ---
 hostname: laptop-fedora
 
-applications:
-  rpm:
-    - '@multimedia'
-    - code
-    - ardour8
-    - syncthing
-    - gnome-themes-extra
-  flathub:
-    - com.mattjakeman.ExtensionManager
-    - com.discordapp.Discord
-    - org.keepassxc.KeePassXC
-    - md.obsidian.Obsidian
-    - com.valvesoftware.Steam
-    - org.prismlauncher.PrismLauncher
+rpm_packages:
+  - '@multimedia'
+  - code
+  - syncthing
+  - gnome-themes-extra
+
+flathub_applications:
+  - com.discordapp.Discord
+  - org.keepassxc.KeePassXC
+  - md.obsidian.Obsidian
+  - com.valvesoftware.Steam
+  - org.prismlauncher.PrismLauncher
 
 services:
   user:

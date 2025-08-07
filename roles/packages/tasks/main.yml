@@ -2,24 +2,19 @@
 - name: Install RPM Fusion repository
   ansible.builtin.import_tasks: set_rpmfusion_repo.yml
   become: true
-  tags: applications,rpmfusion
+  tags: packages,rpmfusion
 
 - name: Install VSCode repository
   ansible.builtin.import_tasks: set_vscode_repo.yml
   become: true
-  tags: applications,vscode
-
-- name: Install Flatpak applications
-  ansible.builtin.import_tasks: install_flatpak.yml
-  become: true
-  tags: applications,flatpak
+  tags: packages,vscode
 
 - name: Install packages
   ansible.builtin.dnf:
-    name: "{{ applications['rpm'] }}"
+    name: "{{ rpm_packages }}"
     state: present
     skip_broken: true
     allowerasing: true
-  when: applications['rpm'] is defined
+  when: rpm_packages is defined
   become: true
-  tags: applications,packages
+  tags: packages,install
