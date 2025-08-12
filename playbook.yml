@@ -1,8 +1,10 @@
 ---
-- hosts: localhost
+- name: Configure Fedora Workstation
+  hosts: localhost
   gather_facts: true
   roles:
-    - applications
+    - packages
+    - flatpak
     - fedora_system
     - systemd_services
     - user_environment

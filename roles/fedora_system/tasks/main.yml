@@ -1,6 +1,7 @@
 ---
 - name: Set hostname
-  ansible.builtin.import_tasks: set_hostname.yml
-  when: hostname is defined
+  ansible.builtin.copy:
+    dest: /etc/hostname
+    content: "{{ hostname }}"
   become: true
   tags: system,hostname

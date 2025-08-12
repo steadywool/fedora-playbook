@@ -8,4 +8,3 @@
   ansible.builtin.copy:
     src: .config/Code
     dest: "{{ ansible_env.HOME }}/.config"
-  tags: dotfiles
