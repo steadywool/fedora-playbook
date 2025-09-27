@@ -7,7 +7,6 @@ Fedora Workstation managed with Ansible.
 ### 🟢 What this playbook does ?
 
 - Installs essential programs.
-- hardens your Fedora Linux.
 - Configure your system & programs very easily.
 - Customize the Gnome environment.
 

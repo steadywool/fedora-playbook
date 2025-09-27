@@ -5,6 +5,6 @@
   roles:
     - packages
     - flatpak
-    - fedora_system
+    - system
     - systemd_services
     - user_environment
