@@ -5,5 +5,6 @@
   "chat.commandCenter.enabled": false,
   "update.mode": "none",
   "window.titleBarStyle": "custom",
-  "github.gitAuthentication": false
+  "dev.containers.dockerSocketPath": "unix://run/user/1000/podman/podman.sock",
+  "dev.containers.dockerPath": "podman"
 }
