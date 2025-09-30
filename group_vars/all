@@ -17,3 +17,4 @@ flathub_applications:
 services:
   user:
     - syncthing.service
+    - podman.socket
