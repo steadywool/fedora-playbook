@@ -10,6 +10,7 @@ rpm_packages:
   - syncthing
   - gnome-themes-extra
   - realtime-setup
+  - guitarix
 
 flathub_applications:
   - com.discordapp.Discord
@@ -17,6 +18,7 @@ flathub_applications:
   - md.obsidian.Obsidian
   - com.valvesoftware.Steam
   - org.prismlauncher.PrismLauncher
+  - com.mattjakeman.ExtensionManager
 
 services:
   user:
