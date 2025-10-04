@@ -1,11 +1,15 @@
 ---
 hostname: laptop-fedora
 
+copr_repositories:
+  - ycollet/audinux
+
 rpm_packages:
   - '@multimedia'
   - code
   - syncthing
   - gnome-themes-extra
+  - realtime-setup
 
 flathub_applications:
   - com.discordapp.Discord
