@@ -1,20 +1,16 @@
 ---
 hostname: laptop-fedora
 
-copr_repositories:
-  - ycollet/audinux
-
 rpm_packages:
   - '@multimedia'
   - code
   - syncthing
-  - gnome-themes-extra
   - realtime-setup
-  - guitarix
 
 flathub_applications:
   - com.discordapp.Discord
   - org.keepassxc.KeePassXC
+  - org.guitarix.Guitarix
   - md.obsidian.Obsidian
   - com.valvesoftware.Steam
   - org.prismlauncher.PrismLauncher

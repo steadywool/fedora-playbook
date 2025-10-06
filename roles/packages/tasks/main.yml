@@ -9,15 +9,6 @@
   become: true
   tags: packages,vscode
 
-- name: Add Copr repositories
-  community.general.copr:
-    state: enabled
-    name: "{{ item }}"
-  loop: "{{ copr_repositories }}"
-  when: copr_repositories is defined
-  become: true
-  tags: packages,copr
-
 - name: Install packages
   ansible.builtin.dnf:
     name: "{{ rpm_packages }}"
