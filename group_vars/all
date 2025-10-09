@@ -10,7 +10,7 @@ rpm_packages:
 flathub_applications:
   - com.discordapp.Discord
   - org.keepassxc.KeePassXC
-  - org.guitarix.Guitarix
+  - studio.kx.carla
   - md.obsidian.Obsidian
   - com.valvesoftware.Steam
   - org.prismlauncher.PrismLauncher
