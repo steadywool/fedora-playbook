@@ -6,6 +6,7 @@ rpm_packages:
   - code
   - syncthing
   - realtime-setup
+  - gnome-themes-extra
 
 flathub_applications:
   - com.discordapp.Discord
