@@ -1,7 +1,5 @@
 {
   "telemetry.telemetryLevel": "off",
-  "chat.agent.enabled": false,
-  "chat.commandCenter.enabled": false,
   "update.mode": "none",
   "window.titleBarStyle": "custom",
   "dev.containers.dockerSocketPath": "unix://run/user/1000/podman/podman.sock",
