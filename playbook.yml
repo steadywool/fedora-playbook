@@ -6,5 +6,5 @@
     - packages
     - flatpak
     - system
-    - systemd_services
+    - services
     - user_environment
