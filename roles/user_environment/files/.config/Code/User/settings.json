@@ -2,6 +2,7 @@
   "telemetry.telemetryLevel": "off",
   "update.mode": "none",
   "window.titleBarStyle": "custom",
+  "chat.disableAIFeatures": true,
   "dev.containers.dockerSocketPath": "unix://run/user/1000/podman/podman.sock",
   "dev.containers.dockerPath": "podman"
 }

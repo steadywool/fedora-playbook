@@ -1,6 +1,7 @@
-# 🎩 Fedora Playbook
+# 💻 Fedora Playbook
 
-Fedora Workstation managed with Ansible.
+> [!NOTE]
+>This Ansible project is designed to manage my computer. Major changes are necessary to adapt to your needs.
 
 ## 📜 Preamble
 
