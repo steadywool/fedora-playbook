@@ -16,6 +16,7 @@ flathub_applications:
   - com.valvesoftware.Steam
   - org.prismlauncher.PrismLauncher
   - com.mattjakeman.ExtensionManager
+  - org.gnome.World.PikaBackup
 
 services:
   user:
